@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # A script that executes all of our expriments
 # and collects the required measurements
