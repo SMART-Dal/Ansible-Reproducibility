@@ -129,32 +129,5 @@ for i in "${arr[@]}"; do
   fi
 done
 
-
-# Executing NCF for PyTorch and TensorFlow
-for i in "${arr[@]}"; do
-  log "Executing NCF for $i"
-  cd "$i"/Recommendation/NCF/
-  docker build . -t nvidia_ncf
-  if [ "$i" == "PyTorch" ]; then
-    if [ "$test_type" == "train" ]; then
-      log "Training NCF for PyTorch"
-      collect_energy_measurements "ncf" "$i" "$repetitions" "docker run --runtime=nvidia -it --rm --ipc=host -v ${PWD}/data:/data nvidia_ncf python -m torch.distributed.launch --nproc_per_node=1 --use_env ncf.py --data ../../data/cache/ml-20m --checkpoint_dir ../../data/checkpoints/  -s 1 -e 1 -f 1 -b 64 --mode train"
-    else
-      log "Testing NCF for PyTorch"
-      collect_energy_measurements "ncf" "$i" "$repetitions" "docker run --runtime=nvidia -it --rm --ipc=host -v ${PWD}/data:/data nvidia_ncf python -m torch.distributed.launch --nproc_per_node=1 --use_env ncf.py --data ../../data/cache/ml-20m --checkpoint_dir ../../data/checkpoints/  -s 1 -e 1 -f 1 -b 64 --valid_batch_size 64 --mode test"
-    fi
-    cd ../../../
-  else
-    if [ "$test_type" == "train" ]; then
-      log "Training NCF for TensorFlow"
-      collect_energy_measurements "ncf" "$i" "$repetitions" "docker run --runtime=nvidia -it --rm --ipc=host -v ${PWD}/data:/data nvidia_ncf mpirun -np 1 --allow-run-as-root python ncf.py --amp --data ../../data/cache/ml-20m --checkpoint-dir ../../data/checkpoints/ -s 1 -e 1 -f 1 -b 64 --mode train"
-    else
-      log "Testing NCF for TensorFlow"
-      collect_energy_measurements "ncf" "$i" "$repetitions" "docker run --runtime=nvidia -it --rm --ipc=host -v ${PWD}/data:/data nvidia_ncf mpirun -np 1 --allow-run-as-root python ncf.py --amp --data ../../data/cache/ml-20m --checkpoint-dir ../../data/checkpoints/ -s 1 -e 1 -f 1 -b 64 --mode test"
-    fi
-    cd ../../../
-  fi
-done
-
 log "Done with all tests"
 return 0
