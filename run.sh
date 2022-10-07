@@ -100,6 +100,36 @@ cd DeepLearningExamples
 
 declare -a arr=("PyTorch" "TensorFlow")
 
+
+# Execute Transformer-XL for PyToch and TensorFlow
+for i in "${arr[@]}"; do
+  log "Executing Transofrmer-XL for $i"
+  cd "$i"/LanguageModeling/Transformer-XL/
+
+  if [ "$i" == "PyTorch" ]; then
+    bash pytorch/scripts/docker/build.sh
+    if [ "$test_type" == "train" ]; then
+      log "Training Transformer-XL for PyTorch"
+      collect_energy_measurements "transformer_xl" "$i" "$repetitions" "docker run --gpus all --init -it --rm --network=host --ipc=host -v $PWD:/workspace/transformer-xl transformer-xl bash run_wt103_base.sh train 1"
+    else
+      log "Testing Transformer-XL for PyTorch"
+      collect_energy_measurements "transformer_xl" "$i" "$repetitions" "docker run --gpus all --init -it --rm --network=host --ipc=host -v $PWD:/workspace/transformer-xl transformer-xl bash run_wt103_base.sh eval 1"
+    fi
+    cd ../../../
+  else
+    bash tf/scripts/docker/build.sh
+    if [ "$test_type" == "train" ]; then
+      log "Training Transformer-XL for TensorFlow"
+      collect_energy_measurements "transformer_xl" "$i" "$repetitions" "docker run --gpus all --init -it --rm --network=host --ipc=host -v $PWD:/workspace/transformer-xl transformer-xl bash run_wt103_base.sh train 1"
+    else
+      log "Testing Transformer-XL for TensorFlow"
+      collect_energy_measurements "transformer_xl" "$i" "$repetitions" "docker run --gpus all --init -it --rm --network=host --ipc=host -v $PWD:/workspace/transformer-xl transformer-xl bash run_wt103_base.sh eval 1"
+    fi
+    cd ../../../
+  fi
+done
+
+
 # Executing NCF for PyTorch and TensorFlow
 for i in "${arr[@]}"; do
   log "Executing NCF for $i"
