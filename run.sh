@@ -106,6 +106,7 @@ for i in "${arr[@]}"; do
   log "Executing Transofrmer-XL for $i"
   cd "$i"/LanguageModeling/Transformer-XL/
 
+
   if [ "$i" == "PyTorch" ]; then
     bash pytorch/scripts/docker/build.sh
     if [ "$test_type" == "train" ]; then
