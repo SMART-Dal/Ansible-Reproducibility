@@ -3,6 +3,16 @@
   gather_facts: false
 
   tasks:
+    - - name: Download apt key
+        get_url:
+          url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+          dest: /tmp # or /etc/pki/rpm-gpg depending on the infrastructure
+
+      - name: Add a key from a file
+        ansible.builtin.apt_key:
+          file: /tmp/apt-key.gpg
+          state: present
+
     - name: Update the apt package index
       tags: experiment
       become: yes

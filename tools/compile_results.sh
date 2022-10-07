@@ -5,7 +5,7 @@ if [ -z "$1" ]; then
   exit
 fi
 
-declare -a models=("gnmt" "ncf" "transformer_xl" "mask_rcnn" "ssd" "resnet50")
+declare -a models=("ncf")
 declare -a frameworks=("PyTorch" "TensorFlow")
 declare -a typeOfMeasurements=("perf" "nvidia_smi")
 
