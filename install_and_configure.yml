@@ -144,7 +144,7 @@
         cp configs/pytorch_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/PyTorch/Recommendation/NCF/ncf.py
         cd DeepLearningExamples/PyTorch/Recommendation/NCF
         rm -rf data || echo data dir not found
-        mkdir data
+#        mkdir data
         curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
       register: ncf_pytorch_output
 
