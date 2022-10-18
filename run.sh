@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# A script that executes all of our expriments
+# A script that executes all of our experiments
 # and collects the required measurements
 
 # Text fonts for Linux distros
@@ -10,7 +10,6 @@ default=$(tput sgr0)
 greenlabel=$(tput setab 2)
 redlabel=$(tput setab 1)
 yellowlabel=$(tput setab 3)
-
 
 # Set default values
 repetitions=1
