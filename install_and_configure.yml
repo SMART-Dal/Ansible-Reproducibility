@@ -134,6 +134,7 @@
       become: true
       become_user: "{{ user }}"
       shell: git clone https://github.com/NVIDIA/DeepLearningExamples.git
+
     # Build and configure Transformer-XL (Pytroch)
     - name: download data-set and build docker image for Pytorch's Transformer-XL
       tags: experiment
@@ -156,28 +157,6 @@
 
     - debug:
         msg: "{{ transformer_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
-    # Build and configure GNMT (Pytroch)
-    - name: download data-set and build docker image for Pytorch's GNMT
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/pytorch_gnmt_to_be_renamed_as_train.py DeepLearningExamples/PyTorch/Translation/GNMT/train.py
-        cd DeepLearningExamples/PyTorch/Translation/GNMT
-        bash scripts/docker/build.sh
-        docker run \
-          --gpus 1 \
-          --init --tty --rm \
-          --network=host \
-          --ipc=host \
-          -v $PWD:/workspace/gnmt/ \
-          gnmt bash scripts/wmt16_en_de.sh \
-      register: gnmt_tensorflow_output
-
-    - debug:
-        msg: "{{gnmt_tensorflow_output.stdout_lines|list }}"
       tags: experiment
 
     # Build and configure NCF (Pytroch)
@@ -343,4 +322,26 @@
 
     - debug:
         msg: "{{ transformer_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure GNMT (Pytroch)
+    - name: download data-set and build docker image for Pytorch's GNMT
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_gnmt_to_be_renamed_as_train.py DeepLearningExamples/PyTorch/Translation/GNMT/train.py
+        cd DeepLearningExamples/PyTorch/Translation/GNMT
+        bash scripts/docker/build.sh
+        docker run \
+          --gpus 1 \
+          --init --tty --rm \
+          --network=host \
+          --ipc=host \
+          -v $PWD:/workspace/gnmt/ \
+          gnmt bash scripts/wmt16_en_de.sh \
+      register: gnmt_tensorflow_output
+
+    - debug:
+        msg: "{{gnmt_tensorflow_output.stdout_lines|list }}"
       tags: experiment
