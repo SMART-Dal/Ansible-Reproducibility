@@ -135,47 +135,6 @@
       become_user: "{{ user }}"
       shell: git clone https://github.com/NVIDIA/DeepLearningExamples.git
 
-    # Build and configure Transformer-XL (Pytroch)
-    - name: download data-set and build docker image for Pytorch's Transformer-XL
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/pytorch_transformer_to_wt103_base.yml DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL/pytorch/wt103_base.yaml
-        cd DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL
-        mkdir data || echo Already exists
-        cd data
-        wget --continue https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-v1.zip
-        unzip -q wikitext-103-v1.zip
-        cd wikitext-103
-        mv wiki.train.tokens train.txt
-        mv wiki.valid.tokens valid.txt
-        mv wiki.test.tokens test.txt
-        cd ../..
-        rm data/wikitext-103-v1.zip
-      register: transformer_pytorch_output
-
-    - debug:
-        msg: "{{ transformer_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
-    # Build and configure NCF (TensorFlow)
-    - name: download data-set and build docker image for TensorFlow's NCF
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/tensorflow_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/TensorFlow/Recommendation/NCF/ncf.py
-        cd DeepLearningExamples/TensorFlow/Recommendation/NCF
-        rm -rf data || echo data dir not ounf
-        mkdir data
-        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
-      register: ncf_tensorflow_output
-
-    - debug:
-        msg: "{{ ncf_tensorflow_output.stdout_lines|list }}"
-      tags: experiment
-
     # Build and configure SSD (PyTorch)
     - name: download dataset and build docker image for PyTorch's SSD
       tags: experiment
@@ -279,6 +238,47 @@
 
     - debug:
         msg: "{{ rn_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure Transformer-XL (Pytroch)
+    - name: download data-set and build docker image for Pytorch's Transformer-XL
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_transformer_to_wt103_base.yml DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL/pytorch/wt103_base.yaml
+        cd DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL
+        mkdir data || echo Already exists
+        cd data
+        wget --continue https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-v1.zip
+        unzip -q wikitext-103-v1.zip
+        cd wikitext-103
+        mv wiki.train.tokens train.txt
+        mv wiki.valid.tokens valid.txt
+        mv wiki.test.tokens test.txt
+        cd ../..
+        rm data/wikitext-103-v1.zip
+      register: transformer_pytorch_output
+
+    - debug:
+        msg: "{{ transformer_pytorch_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure NCF (TensorFlow)
+    - name: download data-set and build docker image for TensorFlow's NCF
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/tensorflow_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/TensorFlow/Recommendation/NCF/ncf.py
+        cd DeepLearningExamples/TensorFlow/Recommendation/NCF
+        rm -rf data || echo data dir not ounf
+        mkdir data
+        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
+      register: ncf_tensorflow_output
+
+    - debug:
+        msg: "{{ ncf_tensorflow_output.stdout_lines|list }}"
       tags: experiment
 
     # Build, configure, and generate train data-set corpuse.json for Transformer-XL (Tensorflow)
