@@ -11,6 +11,7 @@ greenlabel=$(tput setab 2)
 redlabel=$(tput setab 1)
 yellowlabel=$(tput setab 3)
 
+
 # Set default values
 repetitions=1
 test_type="train"
