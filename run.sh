@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # A script that executes all of our expriments
 # and collects the required measurements
@@ -99,13 +99,6 @@ fi
 cd DeepLearningExamples
 
 declare -a arr=("PyTorch" "TensorFlow")
-
-
-# Execute Transformer-XL for PyToch and TensorFlow
-for i in "${arr[@]}"; do
-  log "Executing Transofrmer-XL for $i"
-  cd "$i"/LanguageModeling/Transformer-XL/
-
 
 # Executing SSD for PyTorch and TensorFlow
 for i in "${arr[@]}"; do
