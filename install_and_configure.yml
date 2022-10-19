@@ -135,22 +135,6 @@
       become_user: "{{ user }}"
       shell: git clone https://github.com/NVIDIA/DeepLearningExamples.git
 
-    # Build and configure SSD (PyTorch)
-    - name: download dataset and build docker image for PyTorch's SSD
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/pytorch_ssd_SSD300_FP16_1GPU.sh DeepLearningExamples/PyTorch/Detection/SSD/examples/SSD300_FP16_1GPU.sh
-        cd DeepLearningExamples/PyTorch/Detection/SSD
-        mkdir coco2017 || echo Already exists
-        bash download_dataset.sh ./coco2017
-      register: ssd_pytorch_output
-
-    - debug:
-        msg: "{{ ssd_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
     # Build and configure SSD (TensorFlow)
     - name: download dataset and build docker image for TensorFlows's SSD
       tags: experiment
@@ -344,4 +328,20 @@
 
     - debug:
         msg: "{{ ncf_pytorch_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure SSD (PyTorch)
+    - name: download dataset and build docker image for PyTorch's SSD
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_ssd_SSD300_FP16_1GPU.sh DeepLearningExamples/PyTorch/Detection/SSD/examples/SSD300_FP16_1GPU.sh
+        cd DeepLearningExamples/PyTorch/Detection/SSD
+        mkdir coco2017 || echo Already exists
+        bash download_dataset.sh ./coco2017
+      register: ssd_pytorch_output
+
+    - debug:
+        msg: "{{ ssd_pytorch_output.stdout_lines|list }}"
       tags: experiment
