@@ -98,7 +98,7 @@ fi
 # Go into the DeepLearning Examples repository
 cd DeepLearningExamples
 
-declare -a arr=("PyTorch" "TensorFlow")
+declare -a arr="PyTorch" "TensorFlow"
 
 # Executing SSD for PyTorch and TensorFlow
 for i in "${arr[@]}"; do
