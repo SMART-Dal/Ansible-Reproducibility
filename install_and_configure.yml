@@ -135,44 +135,6 @@
       become_user: "{{ user }}"
       shell: git clone https://github.com/NVIDIA/DeepLearningExamples.git
 
-    # Build and configure SSD (TensorFlow)
-    - name: download dataset and build docker image for TensorFlows's SSD
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/tensorflow_ssd_ssd320_full_1gpus.config DeepLearningExamples/TensorFlow/Detection/SSD/configs/ssd320_full_1gpus.config
-        cp configs/tensorflow_ssd_SSD320_FP16_1GPU.sh DeepLearningExamples/TensorFlow/Detection/SSD/examples/SSD320_FP16_1GPU.sh
-        cd DeepLearningExamples/TensorFlow/Detection/SSD
-        rm -rf coco2017 checkpoints || echo dirs not found
-        mkdir coco2017 checkpoints
-        sed -i 's/COPY\ qa\/\ qa\///g' Dockerfile
-        docker build . -t nvidia_ssd
-        bash download_all.sh nvidia_ssd $PWD/coco2017 $PWD/checkpoints
-      register: ssd_tensorflow_output
-
-    - debug:
-        msg: "{{ ssd_tensorflow_output.stdout_lines|list }}"
-      tags: experiment
-
-    # Build and configure MaskRCNN (TensorFlow)
-    - name: download dataset and build docker image for TensorFlows's MaskRCNN
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cd DeepLearningExamples/TensorFlow2/Segmentation/MaskRCNN
-        cd dataset
-        sed -i 's/python\ \$SCRIPT_DIR/python3\ \$SCRIPT_DIR/g' download_and_preprocess_coco.sh
-        bash download_and_preprocess_coco.sh ./data
-        cd ..
-        python scripts/download_weights.py --save_dir=./weights
-      register: maskrcnn_tensorflow_output
-
-    - debug:
-        msg: "{{ maskrcnn_tensorflow_output.stdout_lines|list }}"
-      tags: experiment
-
     # Build and configure ResNet50 (TensorFlow)
     - name: download dataset and build docker image for TensorFlow's ResNet50
       tags: experiment
@@ -233,4 +195,42 @@
 
     - debug:
         msg: "{{ ncf_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure SSD (TensorFlow)
+    - name: download dataset and build docker image for TensorFlows's SSD
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/tensorflow_ssd_ssd320_full_1gpus.config DeepLearningExamples/TensorFlow/Detection/SSD/configs/ssd320_full_1gpus.config
+        cp configs/tensorflow_ssd_SSD320_FP16_1GPU.sh DeepLearningExamples/TensorFlow/Detection/SSD/examples/SSD320_FP16_1GPU.sh
+        cd DeepLearningExamples/TensorFlow/Detection/SSD
+        rm -rf coco2017 checkpoints || echo dirs not found
+        mkdir coco2017 checkpoints
+        sed -i 's/COPY\ qa\/\ qa\///g' Dockerfile
+        docker build . -t nvidia_ssd
+        bash download_all.sh nvidia_ssd $PWD/coco2017 $PWD/checkpoints
+      register: ssd_tensorflow_output
+
+    - debug:
+        msg: "{{ ssd_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure MaskRCNN (TensorFlow)
+    - name: download dataset and build docker image for TensorFlows's MaskRCNN
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cd DeepLearningExamples/TensorFlow2/Segmentation/MaskRCNN
+        cd dataset
+        sed -i 's/python\ \$SCRIPT_DIR/python3\ \$SCRIPT_DIR/g' download_and_preprocess_coco.sh
+        bash download_and_preprocess_coco.sh ./data
+        cd ..
+        python scripts/download_weights.py --save_dir=./weights
+      register: maskrcnn_tensorflow_output
+
+    - debug:
+        msg: "{{ maskrcnn_tensorflow_output.stdout_lines|list }}"
       tags: experiment
