@@ -135,54 +135,30 @@
       become_user: "{{ user }}"
       shell: git clone https://github.com/NVIDIA/DeepLearningExamples.git
 
-    # Build and configure SSD (PyTorch)
-    - name: download dataset and build docker image for PyTorch's SSD
+
+    # Build and configure Transformer-XL (Pytroch)
+    - name: download data-set and build docker image for Pytorch's Transformer-XL
       tags: experiment
       become: true
       become_user: "{{ user }}"
       shell: |
-        cp configs/pytorch_ssd_SSD300_FP16_1GPU.sh DeepLearningExamples/PyTorch/Detection/SSD/examples/SSD300_FP16_1GPU.sh
-        cd DeepLearningExamples/PyTorch/Detection/SSD
-        mkdir coco2017 || echo Already exists
-        bash download_dataset.sh ./coco2017
-      register: ssd_pytorch_output
+        cp configs/pytorch_transformer_to_wt103_base.yml DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL/pytorch/wt103_base.yaml
+        cd DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL
+        mkdir data || echo Already exists
+        cd data
+        wget --continue https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-v1.zip
+        unzip -q wikitext-103-v1.zip
+        cd wikitext-103
+        mv wiki.train.tokens train.txt
+        mv wiki.valid.tokens valid.txt
+        mv wiki.test.tokens test.txt
+        cd ../..
+        rm data/wikitext-103-v1.zip
+      register: transformer_pytorch_output
 
     - debug:
-        msg: "{{ ssd_pytorch_output.stdout_lines|list }}"
+        msg: "{{ transformer_pytorch_output.stdout_lines|list }}"
       tags: experiment
-
-    # Build and configure MaskRCNN (PyTorch)
-    - name: download dataset and build docker image for PyTorch's MaskRCNN
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/pytorch_mask_r_cnn_e2e_mask_rcnn_R_50_FPN_1x_1GPU.yaml DeepLearningExamples/PyTorch/Segmentation/MaskRCNN/pytorch/configs
-        cp configs/pytorch_mask_r_cnn_paths_catalog.py DeepLearningExamples/PyTorch/Segmentation/MaskRCNN/pytorch/maskrcnn_benchmark/config/paths_catalog.py
-        cd DeepLearningExamples/PyTorch/Segmentation/MaskRCNN
-        cp -r ../../Detection/SSD/coco2017 ./data
-      register: maskrcnn_pytorch_output
-
-    - debug:
-        msg: "{{ maskrcnn_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
-    # Build and configure ResNet50 (PyTorch)
-    - name: download dataset and build docker image for PyTorch's ResNet50
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/pytorch_rn50_DGX1V_resnet50_AMP_90E.sh DeepLearningExamples/PyTorch/Classification/ConvNets/resnet50v1.5/training/AMP/DGX1V_resnet50_AMP_90E.sh
-        cd DeepLearningExamples/PyTorch/Classification/ConvNets
-        cp -r ../../Segmentation/MaskRCNN/download_dataset.sh ./
-        bash download_dataset.sh coco2014
-      register: rn_pytorch_output
-
-    - debug:
-        msg: "{{ rn_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
 
     # Build, configure, and generate train data-set corpuse.json for Transformer-XL (Tensorflow)
     - name: download data-set and build docker image for TensorFlow's Transformer-XL
@@ -210,6 +186,78 @@
         msg: "{{ transformer_tensorflow_output.stdout_lines|list }}"
       tags: experiment
 
+    # Build and configure GNMT (Pytroch)
+    - name: download data-set and build docker image for Pytorch's GNMT
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_gnmt_to_be_renamed_as_train.py DeepLearningExamples/PyTorch/Translation/GNMT/train.py
+        cd DeepLearningExamples/PyTorch/Translation/GNMT
+        bash scripts/docker/build.sh
+        docker run \
+          --gpus 1 \
+          --init --tty --rm \
+          --network=host \
+          --ipc=host \
+          -v $PWD:/workspace/gnmt/ \
+          gnmt bash scripts/wmt16_en_de.sh \
+      register: gnmt_tensorflow_output
+
+    - debug:
+        msg: "{{gnmt_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure NCF (Pytroch)
+    - name: download data-set and build docker image for Pytorch's NCF
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/PyTorch/Recommendation/NCF/ncf.py
+        cd DeepLearningExamples/PyTorch/Recommendation/NCF
+        rm -rf data || echo data dir not found
+        mkdir data
+        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
+      register: ncf_pytorch_output
+
+    - debug:
+        msg: "{{ ncf_pytorch_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure NCF (TensorFlow)
+    - name: download data-set and build docker image for TensorFlow's NCF
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/tensorflow_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/TensorFlow/Recommendation/NCF/ncf.py
+        cd DeepLearningExamples/TensorFlow/Recommendation/NCF
+        rm -rf data || echo data dir not ounf
+        mkdir data
+        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
+      register: ncf_tensorflow_output
+
+    - debug:
+        msg: "{{ ncf_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure SSD (PyTorch)
+    - name: download dataset and build docker image for PyTorch's SSD
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_ssd_SSD300_FP16_1GPU.sh DeepLearningExamples/PyTorch/Detection/SSD/examples/SSD300_FP16_1GPU.sh
+        cd DeepLearningExamples/PyTorch/Detection/SSD
+        mkdir coco2017 || echo Already exists
+        bash download_dataset.sh ./coco2017
+      register: ssd_pytorch_output
+
+    - debug:
+        msg: "{{ ssd_pytorch_output.stdout_lines|list }}"
+      tags: experiment
+
     # Build and configure SSD (TensorFlow)
     - name: download dataset and build docker image for TensorFlows's SSD
       tags: experiment
@@ -230,43 +278,71 @@
         msg: "{{ ssd_tensorflow_output.stdout_lines|list }}"
       tags: experiment
 
-    # Build and configure Transformer-XL (Pytroch)
-    - name: download data-set and build docker image for Pytorch's Transformer-XL
+    # Build and configure MaskRCNN (PyTorch)
+    - name: download dataset and build docker image for PyTorch's MaskRCNN
       tags: experiment
       become: true
       become_user: "{{ user }}"
       shell: |
-        cp configs/pytorch_transformer_to_wt103_base.yml DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL/pytorch/wt103_base.yaml
-        cd DeepLearningExamples/PyTorch/LanguageModeling/Transformer-XL
-        mkdir data || echo Already exists
-        cd data
-        wget --continue https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-v1.zip
-        unzip -q wikitext-103-v1.zip
-        cd wikitext-103
-        mv wiki.train.tokens train.txt
-        mv wiki.valid.tokens valid.txt
-        mv wiki.test.tokens test.txt
-        cd ../..
-        rm data/wikitext-103-v1.zip
-      register: transformer_pytorch_output
+        cp configs/pytorch_mask_r_cnn_e2e_mask_rcnn_R_50_FPN_1x_1GPU.yaml DeepLearningExamples/PyTorch/Segmentation/MaskRCNN/pytorch/configs
+        cp configs/pytorch_mask_r_cnn_paths_catalog.py DeepLearningExamples/PyTorch/Segmentation/MaskRCNN/pytorch/maskrcnn_benchmark/config/paths_catalog.py
+        cd DeepLearningExamples/PyTorch/Segmentation/MaskRCNN
+        cp -r ../../Detection/SSD/coco2017 ./data
+      register: maskrcnn_pytorch_output
 
     - debug:
-        msg: "{{ transformer_pytorch_output.stdout_lines|list }}"
+        msg: "{{ maskrcnn_pytorch_output.stdout_lines|list }}"
       tags: experiment
 
-    # Build and configure NCF (Pytroch)
-    - name: download data-set and build docker image for Pytorch's NCF
+    # Build and configure MaskRCNN (TensorFlow)
+    - name: download dataset and build docker image for TensorFlows's MaskRCNN
       tags: experiment
       become: true
       become_user: "{{ user }}"
       shell: |
-        cp configs/pytorch_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/PyTorch/Recommendation/NCF/ncf.py
-        cd DeepLearningExamples/PyTorch/Recommendation/NCF
-        rm -rf data || echo data dir not found
-        mkdir data
-        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
-      register: ncf_pytorch_output
+        cd DeepLearningExamples/TensorFlow2/Segmentation/MaskRCNN
+        cd dataset
+        sed -i 's/python\ \$SCRIPT_DIR/python3\ \$SCRIPT_DIR/g' download_and_preprocess_coco.sh
+        bash download_and_preprocess_coco.sh ./data
+        cd ..
+        python scripts/download_weights.py --save_dir=./weights
+      register: maskrcnn_tensorflow_output
 
     - debug:
-        msg: "{{ ncf_pytorch_output.stdout_lines|list }}"
+        msg: "{{ maskrcnn_tensorflow_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure ResNet50 (PyTorch)
+    - name: download dataset and build docker image for PyTorch's ResNet50
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/pytorch_rn50_DGX1V_resnet50_AMP_90E.sh DeepLearningExamples/PyTorch/Classification/ConvNets/resnet50v1.5/training/AMP/DGX1V_resnet50_AMP_90E.sh
+        cd DeepLearningExamples/PyTorch/Classification/ConvNets
+        cp -r ../../Segmentation/MaskRCNN/download_dataset.sh ./
+        bash download_dataset.sh coco2014
+      register: rn_pytorch_output
+
+    - debug:
+        msg: "{{ rn_pytorch_output.stdout_lines|list }}"
+      tags: experiment
+
+    # Build and configure ResNet50 (TensorFlow)
+    - name: download dataset and build docker image for TensorFlow's ResNet50
+      tags: experiment
+      become: true
+      become_user: "{{ user }}"
+      shell: |
+        cp configs/tensorflow_rn50_DGX1_RN50_AMP_90E.sh DeepLearningExamples/TensorFlow/Classification/ConvNets/resnet50v1.5/training/DGX1_RN50_AMP_90E.sh
+        cd DeepLearningExamples/TensorFlow/Classification/ConvNets
+        cp -r ../../../TensorFlow2/Segmentation/MaskRCNN/dataset ./
+        cd dataset
+        rm -rf data tf-models
+        sed 's/2017/2014/g' download_and_preprocess_coco.sh
+        bash download_and_preprocess_coco.sh ./data
+      register: rn_tensorflow_output
+
+    - debug:
+        msg: "{{ rn_tensorflow_output.stdout_lines|list }}"
       tags: experiment
