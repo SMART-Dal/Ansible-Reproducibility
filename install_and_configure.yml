@@ -208,40 +208,6 @@
         msg: "{{gnmt_tensorflow_output.stdout_lines|list }}"
       tags: experiment
 
-    # Build and configure NCF (Pytroch)
-    - name: download data-set and build docker image for Pytorch's NCF
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/pytorch_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/PyTorch/Recommendation/NCF/ncf.py
-        cd DeepLearningExamples/PyTorch/Recommendation/NCF
-        rm -rf data || echo data dir not found
-        mkdir data
-        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
-      register: ncf_pytorch_output
-
-    - debug:
-        msg: "{{ ncf_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
-    # Build and configure NCF (TensorFlow)
-    - name: download data-set and build docker image for TensorFlow's NCF
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/tensorflow_ncf_to_be_renamed_as_ncf.py DeepLearningExamples/TensorFlow/Recommendation/NCF/ncf.py
-        cd DeepLearningExamples/TensorFlow/Recommendation/NCF
-        rm -rf data || echo data dir not ounf
-        mkdir data
-        curl http://files.grouplens.org/datasets/movielens/ml-20m.zip --output ./data/ml-20m.zip && ./prepare_dataset.sh ml-20m data
-      register: ncf_tensorflow_output
-
-    - debug:
-        msg: "{{ ncf_tensorflow_output.stdout_lines|list }}"
-      tags: experiment
-
     # Build and configure SSD (PyTorch)
     - name: download dataset and build docker image for PyTorch's SSD
       tags: experiment
@@ -294,24 +260,6 @@
         msg: "{{ maskrcnn_pytorch_output.stdout_lines|list }}"
       tags: experiment
 
-    # Build and configure MaskRCNN (TensorFlow)
-    - name: download dataset and build docker image for TensorFlows's MaskRCNN
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cd DeepLearningExamples/TensorFlow2/Segmentation/MaskRCNN
-        cd dataset
-        sed -i 's/python\ \$SCRIPT_DIR/python3\ \$SCRIPT_DIR/g' download_and_preprocess_coco.sh
-        bash download_and_preprocess_coco.sh ./data
-        cd ..
-        python scripts/download_weights.py --save_dir=./weights
-      register: maskrcnn_tensorflow_output
-
-    - debug:
-        msg: "{{ maskrcnn_tensorflow_output.stdout_lines|list }}"
-      tags: experiment
-
     # Build and configure ResNet50 (PyTorch)
     - name: download dataset and build docker image for PyTorch's ResNet50
       tags: experiment
@@ -326,23 +274,4 @@
 
     - debug:
         msg: "{{ rn_pytorch_output.stdout_lines|list }}"
-      tags: experiment
-
-    # Build and configure ResNet50 (TensorFlow)
-    - name: download dataset and build docker image for TensorFlow's ResNet50
-      tags: experiment
-      become: true
-      become_user: "{{ user }}"
-      shell: |
-        cp configs/tensorflow_rn50_DGX1_RN50_AMP_90E.sh DeepLearningExamples/TensorFlow/Classification/ConvNets/resnet50v1.5/training/DGX1_RN50_AMP_90E.sh
-        cd DeepLearningExamples/TensorFlow/Classification/ConvNets
-        cp -r ../../../TensorFlow2/Segmentation/MaskRCNN/dataset ./
-        cd dataset
-        rm -rf data tf-models
-        sed 's/2017/2014/g' download_and_preprocess_coco.sh
-        bash download_and_preprocess_coco.sh ./data
-      register: rn_tensorflow_output
-
-    - debug:
-        msg: "{{ rn_tensorflow_output.stdout_lines|list }}"
       tags: experiment
