@@ -127,33 +127,6 @@ for i in "${arr[@]}"; do
   fi
 done
 
-# Executing GNMT for PyTorch and TensorFlow
-for i in "${arr[@]}"; do
-  log "Executing GNMT for $i"
-  cd "$i"/Translation/GNMT/
-  bash scripts/docker/build.sh
-
-  if [ "$i" == "PyTorch" ]; then
-    if [ "$test_type" == "train" ]; then
-      log "Training GNMT for PyTorch"
-      collect_energy_measurements "gnmt" "$i" "$repetitions" "docker run --gpus all --init -it --rm --network=host --ipc=host -v $PWD:/workspace/gnmt/ gnmt python3 -m torch.distributed.launch --nproc_per_node=1  train.py --seed 1 --train-global-batch-size 128"
-    else
-      log "Testing GNMT for PyTorch"
-      collect_energy_measurements "gnmt" "$i" "$repetitions" "docker run --gpus all --init -it --rm --network=host --ipc=host -v $PWD:/workspace/gnmt/ gnmt python3 translate.py --model gnmt/model_best.pth --input data/wmt16_de_en/newstest2014.en --reference data/wmt16_de_en/newstest2014.de --output /tmp/output --batch-size 128 --tables"
-    fi
-    cd ../../../
-  else
-    if [ "$test_type" == "train" ]; then
-      log "Training GNMT for TensorFlow"
-      collect_energy_measurements "gnmt" "$i" "$repetitions" "nvidia-docker run -it --rm --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/gnmt/ gnmt_tf python nmt.py --output_dir=results --batch_size=128 --learning_rate=2e-3"
-    else
-      log "Testing GNMT for TensorFlow"
-      collect_energy_measurements "gnmt" "$i" "$repetitions" "nvidia-docker run -it --rm --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/gnmt/ gnmt_tf python nmt.py --mode=infer --output_dir=results --infer_batch_size=128 --learning_rate=2e-3"
-    fi
-    cd ../../../
-  fi
-done
-
 # Execute Transformer-XL for PyToch and TensorFlow
 for i in "${arr[@]}"; do
   log "Executing Transofrmer-XL for $i"
@@ -197,15 +170,6 @@ for i in "${arr[@]}"; do
       collect_energy_measurements "resnet50" "$i" "$repetitions" "nvidia-docker run --rm -it -v ${PWD}/imagenet/:/imagenet --ipc=host nvidia_rn50 python ./launch.py --model resnet50 --precision AMP --mode benchmark_inference --platform DGX1V /imagenet --prof 100 --epochs 50 -b 32  --workspace ./ --raport-file inference.json"
     fi
     cd ../../../
-  else
-    if [ "$test_type" == "train" ]; then
-      log "Training ResNet50 for TensorFlow"
-      collect_energy_measurements "resnet50" "$i" "$repetitions" "nvidia-docker run --rm -it -v ${PWD}/imagenet/:/data/tfrecords --ipc=host nvidia_rn50 bash resnet50v1.5/training/DGX1_RN50_AMP_90E.sh"
-    else
-      log "Training ResNet50 for TensorFlow"
-      collect_energy_measurements "resnet50" "$i" "$repetitions" "nvidia-docker run --rm -it -v ${PWD}/imagenet/:/data/tfrecords --ipc=host nvidia_rn50 python main.py --mode=inference_benchmark --arch=resnet50 --num_iter=5000 --iter_unit batch --batch_size 32  --results_dir=./"
-    fi
-    cd ../../../
   fi
 done
 
@@ -222,16 +186,6 @@ for i in "${arr[@]}"; do
     else
       log "Testing MaskRCNN for PyTorch"
       collect_energy_measurements "mask_rcnn" "$i" "$repetitions" "docker run --runtime=nvidia -v $PWD/data:/datasets/data --rm --name=maskrcnn_interactice --shm-size=10g --ulimit memlock=-1 --ulimit stack=67108864 --ipc=host -t -i nvidia_joc_maskrcnn_pt python -m torch.distributed.launch tools/test_net.py --amp --config-file configs/e2e_mask_rcnn_R_50_FPN_1x_1GPU.yaml"
-    fi
-    cd ../../../
-  else
-    nvidia-docker build -t nvidia_mrcnn_tf2 .
-    if [ "$test_type" == "train" ]; then
-      log "Training MaskRCNN for TensorFlow"
-      collect_energy_measurements "mask_rcnn" "$i" "$repetitions" "docker run --gpus 1 -it --rm --shm-size=10g --ulimit memlock=-1 --ulimit stack=67108864 -v ${PWD}/dataset/data/:/data -v ${PWD}/dataset/weights/:/weights nvidia_mrcnn_tf2 python main.py train --epochs 1 --steps_per_epoch 1000 --amp --train_batch_size 4"
-    else
-      log "Testing MaskRCNN for TensorFlow"
-      collect_energy_measurements "mask_rcnn" "$i" "$repetitions" "docker run --gpus 1 -it --rm --shm-size=10g --ulimit memlock=-1 --ulimit stack=67108864 -v ${PWD}/dataset/data/:/data -v ${PWD}/dataset/weights/:/weights nvidia_mrcnn_tf2 python main.py infer --amp  --eval_samples 5000 --eval_batch_size 4"
     fi
     cd ../../../
   fi
