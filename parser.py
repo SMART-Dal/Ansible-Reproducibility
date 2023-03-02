@@ -9,7 +9,7 @@ from yaml.loader import SafeLoader
 # Open the file and load the file
 
 def direct_url_checker(task):
-    url_dict = task['get_url']
+    url_dict = task.get('get_url')
     url = url_dict['url']
     dst = url_dict['dest']
 
@@ -27,7 +27,7 @@ def direct_url_checker(task):
 
 
 def installer_checker(task):
-    installer = task['ansible.builtin.apt_key'] or task['apt'] or task['pip']
+    installer = task.get('installer')
     state = installer['state']
 
     file = installer['file']
@@ -111,10 +111,51 @@ with open('install_and_configure.yml') as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))
     tasks = data[0][0]['tasks']
 
-    for task in tasks:
-        url_msg = direct_url_checker(task=task)
-        apt_pkg_msg = installer_checker(task=task)
-        idempotency_msg = idempotency_checker(task=task)
-        key_msg = key_checker(task=task)
-        repo_msg = get_repository_checker(task=task)
-        stat_msg = stat_checker(task=task)
+
+    def create_object_from_task(task):
+        # Extract the relevant information from the task
+        task_name = task['name']
+        task_host = task['hosts']
+        task_status = task.get('failed', False)
+        task_result = task.get('result', {})
+
+        url_dict = task['get_url']
+
+        installer = task['ansible.builtin.apt_key'] or task['apt'] or task['pip']
+
+        shell = task['shell']
+        service = task['service']
+
+        apt_key = task['apt_key']
+
+        apt_repo = task['apt_repository']
+
+        stat = task['stat']
+
+        # Create an object for the task
+        task_object = {
+            'name': task_name,
+            'host': task_host,
+            'status': 'failed' if task_status else 'success',
+            'url_dict': url_dict,
+            'installer': installer,
+            'shell': shell,
+            'service': service,
+            'apt_key': apt_key,
+
+            'result': task_result
+        }
+
+        return task_object
+
+
+    # Create a list of objects for each task
+    task_objects = [create_object_from_task(task) for task in tasks]
+
+    for task_object in task_objects:
+        url_msg = direct_url_checker(task=task_object)
+        apt_pkg_msg = installer_checker(task=task_object)
+        idempotency_msg = idempotency_checker(task=task_object)
+        key_msg = key_checker(task=task_object)
+        repo_msg = get_repository_checker(task=task_object)
+        stat_msg = stat_checker(ttask=task_object)
