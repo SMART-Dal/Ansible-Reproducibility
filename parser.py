@@ -123,19 +123,21 @@ def parse_playbook(file_path):
 
 
 with open('install_and_configure.yml') as f:
-    # data = yaml.load(f, Loader=SafeLoader)
     data = list(yaml.load_all(f, Loader=SafeLoader))
     tasks = data[0][0]['tasks']
+    #
+    #     for task in tasks:
+    #         ansible_task_object = AnsibleTask()
+
     # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
 for task in tasks:
     print(dt.check_task_for_shell_service_systemd(task=task))
     print(dt.check_task_for_package_installer(task=task))
-    print(dt.check_task_for_outdated_package(task=task))
-    print(dt.check_task_for_idempotency(task=task))
-    print(dt.check_task_for_version_specific_package(task=task))
+    print(dt.check_task_for_missing_dependencies(task=task))
     print(dt.check_task_for_hardware_specific_commands(task=task))
     print(dt.check_task_for_software_specific_commands(task=task))
     print(dt.check_task_for_environment_assumptions(task=task))
-    print(dt.check_task_for_missing_dependencies(task=task))
-
+    print(dt.check_task_for_outdated_package(task=task))
+    print(dt.check_task_for_idempotency(task=task))
+    print(dt.check_task_for_version_specific_package(task=task))
