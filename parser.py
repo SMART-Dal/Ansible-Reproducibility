@@ -1,161 +1,141 @@
-# import pyyaml module
 import yaml
-from yaml.loader import SafeLoader
+from yaml import SafeLoader
+import smell_detection as dt
 
 
-# TODO - create an abject from each task
-# TODO - add Error handlers --> try except KeyError, continue
+class AnsibleTask:
+    def __init__(self, name, hosts, remote_user=None, gather_facts=None, become=None, become_user=None,
+                 become_method=None, check_mode=None, ignore_errors=None, max_fail_percentage=None, no_log=None,
+                 order=None, serial=None, strategy=None, tags=None, vars=None, vars_files=None, when=None, tasks=None):
+        self.name = name
+        self.hosts = hosts
+        self.remote_user = remote_user
+        self.gather_facts = gather_facts
+        self.become = become
+        self.become_user = become_user
+        self.become_method = become_method
+        self.check_mode = check_mode
+        self.ignore_errors = ignore_errors
+        self.max_fail_percentage = max_fail_percentage
+        self.no_log = no_log
+        self.order = order
+        self.serial = serial
+        self.strategy = strategy
+        self.tags = tags
+        self.vars = vars or {}
+        self.vars_files = vars_files or []
+        self.when = when
+        self.tasks = tasks or []
 
-# Open the file and load the file
+    def add_task(self, name, module, args=None):
+        task = {
+            'name': name,
+            module: {
+                'args': args or {}
+            }
+        }
+        self.tasks.append(task)
 
-def direct_url_checker(task):
-    url_dict = task.get('get_url')
-    url = url_dict['url']
-    dst = url_dict['dest']
+    def to_dict(self):
+        result = {
+            'name': self.name,
+            'hosts': self.hosts,
+            'vars': self.vars,
+            'tasks': self.tasks
+        }
 
-    msg = ''
+        if self.remote_user:
+            result['remote_user'] = self.remote_user
+        if self.gather_facts is not None:
+            result['gather_facts'] = self.gather_facts
+        if self.become is not None:
+            result['become'] = self.become
+        if self.become_user:
+            result['become_user'] = self.become_user
+        if self.become_method:
+            result['become_method'] = self.become_method
+        if self.check_mode is not None:
+            result['check_mode'] = self.check_mode
+        if self.ignore_errors is not None:
+            result['ignore_errors'] = self.ignore_errors
+        if self.max_fail_percentage is not None:
+            result['max_fail_percentage'] = self.max_fail_percentage
+        if self.no_log is not None:
+            result['no_log'] = self.no_log
+        if self.order is not None:
+            result['order'] = self.order
+        if self.serial is not None:
+            result['serial'] = self.serial
+        if self.strategy:
+            result['strategy'] = self.strategy
+        if self.tags:
+            result['tags'] = self.tags
+        if self.vars_files:
+            result['vars_files'] = self.vars_files
+        if self.when:
+            result['when'] = self.when
 
-    if url_dict:
-        if url:
-            msg = msg + 'Direct link is used --> execution problem'
-        if not dst.startswith('./'):
-            msg = msg + 'Using path specific declaration --> Assumption on environment'
-    else:
-        msg = 'no Url usage'
-
-    return msg
-
-
-def installer_checker(task):
-    installer = task.get('installer')
-    state = installer['state']
-
-    file = installer['file']
-
-    msg = ''
-
-    if installer:
-        msg = msg + 'using package managers can cause idempotency'
-    if not state:
-        msg = msg + 'not using state for a task is an anti-pattern'
-    if file:
-        msg = msg + 'The downloaded files can be outdated'
-    return msg
-
-
-def idempotency_checker(task):
-    shell = task['shell']
-    service = task['service']
-    state = service['state']
-    msg = ''
-
-    if shell:
-        msg = msg + 'Using shell can break idempotency'
-    if service:
-        msg = msg + 'changing state of a service can break idempotency'
-    if not state:
-        msg = msg + 'not using state for a task is an anti-pattern'
-
-    return msg
-
-
-def key_checker(task):
-    apt_key = task['apt_key']
-    url = apt_key['url']
-    state = apt_key['state']
-
-    msg = ''
-
-    if apt_key:
-        if url:
-            msg = msg + 'Direct link is used --> execution problem'
-        if not state:
-            msg = msg + 'not using state for a task is an anti-pattern'
-    else:
-        msg = 'no apt-key usage'
-
-    return msg
-
-
-def get_repository_checker(task):
-    apt_repo = task['apt_repository']
-    url = apt_repo['repo']
-    state = apt_repo['state']
-
-    msg = ''
-
-    if apt_repo:
-        if url:
-            msg = msg + 'Direct link is used --> execution problem'
-        if not state:
-            msg = msg + 'not using state for a task is an anti-pattern'
-    else:
-        msg = 'no apt-repo usage'
-
-    return msg
+        return result
 
 
-def stat_checker(task):
-    stat = task['stat']
-    path = stat['path']
+def parse_playbook(file_path):
+    tasks = []
 
-    msg = ''
-    if stat:
-        if not path.startswith('./'):
-            msg = msg + 'Using path specific declaration --> Assumption on environment'
-    return msg
+    with open(file_path, 'r') as f:
+        playbook = yaml.safe_load(f)
+
+        for play in playbook:
+            name = play.get('name', '')
+            hosts = play.get('hosts', '')
+
+            remote_user = play.get('remote_user', None)
+            gather_facts = play.get('gather_facts', None)
+            become = play.get('become', None)
+            become_user = play.get('become_user', None)
+            become_method = play.get('become_method', None)
+            check_mode = play.get('check_mode', None)
+            ignore_errors = play.get('ignore_errors', None)
+            max_fail_percentage = play.get('max_fail_percentage', None)
+            no_log = play.get('no_log', None)
+            order = play.get('order', None)
+            serial = play.get('serial', None)
+            strategy = play.get('strategy', None)
+            tags = play.get('tags', None)
+            vars_files = play.get('vars_files', None)
+            when = play.get('when', None)
+
+            vars = play.get('vars', None)
+
+            task = AnsibleTask(name, hosts, remote_user, gather_facts, become, become_user,
+                               become_method, check_mode, ignore_errors, max_fail_percentage, no_log,
+                               order, serial, strategy, tags, vars, vars_files, when)
+
+            for step in play['tasks']:
+                task_name = step.get('name', '')
+                module = list(step.keys())[1]
+                args = step[module]
+
+                task.add_task(task_name, module, args)
+
+            tasks.append(task)
+
+    return tasks
 
 
 with open('install_and_configure.yml') as f:
     # data = yaml.load(f, Loader=SafeLoader)
     data = list(yaml.load_all(f, Loader=SafeLoader))
     tasks = data[0][0]['tasks']
+    # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
+for task in tasks:
+    print(dt.check_task_for_shell_service_systemd(task=task))
+    print(dt.check_task_for_package_installer(task=task))
+    print(dt.check_task_for_outdated_package(task=task))
+    print(dt.check_task_for_idempotency(task=task))
+    print(dt.check_task_for_version_specific_package(task=task))
+    print(dt.check_task_for_hardware_specific_commands(task=task))
+    print(dt.check_task_for_software_specific_commands(task=task))
+    print(dt.check_task_for_environment_assumptions(task=task))
+    print(dt.check_task_for_missing_dependencies(task=task))
 
-    def create_object_from_task(task):
-        # Extract the relevant information from the task
-        task_name = task['name']
-        task_host = task['hosts']
-        task_status = task.get('failed', False)
-        task_result = task.get('result', {})
-
-        url_dict = task['get_url']
-
-        installer = task['ansible.builtin.apt_key'] or task['apt'] or task['pip']
-
-        shell = task['shell']
-        service = task['service']
-
-        apt_key = task['apt_key']
-
-        apt_repo = task['apt_repository']
-
-        stat = task['stat']
-
-        # Create an object for the task
-        task_object = {
-            'name': task_name,
-            'host': task_host,
-            'status': 'failed' if task_status else 'success',
-            'url_dict': url_dict,
-            'installer': installer,
-            'shell': shell,
-            'service': service,
-            'apt_key': apt_key,
-
-            'result': task_result
-        }
-
-        return task_object
-
-
-    # Create a list of objects for each task
-    task_objects = [create_object_from_task(task) for task in tasks]
-
-    for task_object in task_objects:
-        url_msg = direct_url_checker(task=task_object)
-        apt_pkg_msg = installer_checker(task=task_object)
-        idempotency_msg = idempotency_checker(task=task_object)
-        key_msg = key_checker(task=task_object)
-        repo_msg = get_repository_checker(task=task_object)
-        stat_msg = stat_checker(ttask=task_object)
