@@ -2,19 +2,25 @@ import yaml
 from yaml import SafeLoader
 
 
+# checks if a task uses the shell, service,
+# systemd modules and returns a message indicating which module was used
 def check_task_for_shell_service_systemd(task):
+    modules_to_check = ['shell', 'service', 'systemd']
     messages = []
 
     for t in task:
-        if 'shell' in t:
-            messages.append(f"Task '{t['name']}' uses the shell module.")
-        elif 'service' in t:
-            messages.append(f"Task '{t['name']}' uses the service module.")
-        elif 'systemd' in t and 'state' in t['systemd']:
-            if t['systemd']['state'] == 'reloaded':
-                messages.append(f"Task '{t['name']}' uses the systemd module with state 'reloaded'.")
-            else:
-                messages.append(f"Task '{t['name']}' uses the systemd module with state '{t['systemd']['state']}'.")
+        for module in modules_to_check:
+            if module in t:
+                if module == 'shell':
+                    messages.append(f"Task '{t['name']}' uses the shell module.")
+                elif module == 'service':
+                    messages.append(f"Task '{t['name']}' uses the service module.")
+                elif module == 'systemd' and 'state' in t['systemd']:
+                    if t['systemd']['state'] == 'reloaded':
+                        messages.append(f"Task '{t['name']}' uses the systemd module with state 'reloaded'.")
+                    else:
+                        messages.append(
+                            f"Task '{t['name']}' uses the systemd module with state '{t['systemd']['state']}'.")
 
     if messages:
         return '\n'.join(messages)
@@ -22,20 +28,16 @@ def check_task_for_shell_service_systemd(task):
         return "No tasks were found that use the shell, service, or systemd modules with a state other than 'reloaded'."
 
 
+# checks if a task uses one of the supported package installers
+# and returns a message indicating which installer was used
 def check_task_for_package_installer(task):
+    package_installers_to_check = ['apt', 'apt-get', 'yum', 'dnf', 'pacman', 'apk']
     messages = []
 
     for t in task:
-        if 'apt' in t or 'apt-get' in t:
-            messages.append(f"Task '{t['name']}' uses the apt or apt-get package installer.")
-        elif 'yum' in t:
-            messages.append(f"Task '{t['name']}' uses the yum package installer.")
-        elif 'dnf' in t:
-            messages.append(f"Task '{t['name']}' uses the dnf package installer.")
-        elif 'pacman' in t:
-            messages.append(f"Task '{t['name']}' uses the pacman package installer.")
-        elif 'apk' in t:
-            messages.append(f"Task '{t['name']}' uses the apk package installer.")
+        for installer in package_installers_to_check:
+            if installer in t:
+                messages.append(f"Task '{t['name']}' uses the {installer} package installer.")
 
     if messages:
         return '\n'.join(messages)
@@ -43,31 +45,27 @@ def check_task_for_package_installer(task):
         return "No tasks were found that use a package installer."
 
 
+# checks if a task installs or updates packages and returns a message indicating
+# whether the task installs the latest packages, updates packages, or installs specific packages.
 def check_task_for_outdated_package(task):
+    package_installers_to_check = [
+        {'name': 'apt', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
+        {'name': 'yum', 'latest_state': 'latest', 'update_actions': []},
+        {'name': 'dnf', 'latest_state': 'latest', 'update_actions': []},
+        {'name': 'pacman', 'latest_state': None, 'update_actions': []},
+        {'name': 'apk', 'latest_state': None, 'update_actions': []}
+    ]
     messages = []
 
     for t in task:
-        if 'apt' in t:
-            if 'upgrade' in t['apt'] or 'update_cache' in t['apt']:
-                messages.append(f"Task '{t['name']}' uses apt to update packages.")
-            elif 'state' in t['apt'] and t['apt']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' uses apt to install the latest packages.")
-            else:
-                messages.append(f"Task '{t['name']}' uses apt to install specific packages.")
-        elif 'yum' in t:
-            if 'state' in t['yum'] and t['yum']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' uses yum to install the latest packages.")
-            else:
-                messages.append(f"Task '{t['name']}' uses yum to install specific packages.")
-        elif 'dnf' in t:
-            if 'state' in t['dnf'] and t['dnf']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' uses dnf to install the latest packages.")
-            else:
-                messages.append(f"Task '{t['name']}' uses dnf to install specific packages.")
-        elif 'pacman' in t:
-            messages.append(f"Task '{t['name']}' uses pacman to install packages.")
-        elif 'apk' in t:
-            messages.append(f"Task '{t['name']}' uses apk to install packages.")
+        for installer in package_installers_to_check:
+            if installer['name'] in t:
+                if installer['latest_state'] and 'state' in t[installer['name']] and t[installer['name']]['state'] == installer['latest_state']:
+                    messages.append(f"Task '{t['name']}' uses {installer['name']} to install the latest packages.")
+                elif any(action in t[installer['name']] for action in installer['update_actions']):
+                    messages.append(f"Task '{t['name']}' uses {installer['name']} to update packages.")
+                else:
+                    messages.append(f"Task '{t['name']}' uses {installer['name']} to install specific packages.")
 
     if messages:
         return '\n'.join(messages)
@@ -75,53 +73,55 @@ def check_task_for_outdated_package(task):
         return "No tasks were found that install packages."
 
 
+# checks if a task violates idempotency by executing a command,
+# installing or upgrading packages, or updating the package cache.
 def check_task_for_idempotency(task):
     messages = []
+    idempotency_violations = [
+        ('command', "Task '{name}' violates idempotency because it executes a command."),
+        ('shell', "Task '{name}' violates idempotency because it executes a command."),
+        ('raw', "Task '{name}' violates idempotency because it executes a command."),
+        ('script', "Task '{name}' violates idempotency because it executes a command."),
+        ('win_command', "Task '{name}' violates idempotency because it executes a command."),
+        ('win_shell', "Task '{name}' violates idempotency because it executes a command."),
+        ('apt', "Task '{name}' violates idempotency because it installs or upgrades packages with apt."),
+        ('yum', "Task '{name}' violates idempotency because it installs or upgrades packages with yum."),
+        ('dnf', "Task '{name}' violates idempotency because it installs packages with dnf."),
+        ('pacman', "Task '{name}' violates idempotency because it installs packages with pacman.")
+    ]
 
     for t in task:
-        if 'command' in t or 'shell' in t or 'raw' in t or 'script' in t or 'win_command' in t or 'win_shell' in t:
-            messages.append(f"Task '{t['name']}' violates idempotency because it executes a command.")
-        elif 'apt' in t:
-            if 'state' in t['apt'] and t['apt']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' violates idempotency because it installs the latest packages.")
-            elif 'upgrade' in t['apt']:
-                messages.append(f"Task '{t['name']}' violates idempotency because it upgrades packages.")
-        elif 'yum' in t:
-            if 'state' in t['yum'] and t['yum']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' violates idempotency because it installs the latest packages.")
-            elif 'update_cache' in t['yum'] or 'check_update' in t['yum']:
-                messages.append(f"Task '{t['name']}' violates idempotency because it updates the package cache.")
-        elif 'dnf' in t:
-            if 'state' in t['dnf'] and t['dnf']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' violates idempotency because it installs the latest packages.")
-        elif 'pacman' in t:
-            if 'state' in t['pacman'] and t['pacman']['state'] == 'latest':
-                messages.append(f"Task '{t['name']}' violates idempotency because it installs the latest packages.")
+        for component, message in idempotency_violations:
+            if component in t:
+                if component == 'command' or component == 'shell' or component == 'raw' or component == 'script' or component == 'win_command' or component == 'win_shell':
+                    messages.append(message.format(name=t['name']))
+                elif 'state' in t[component] and t[component]['state'] == 'latest':
+                    messages.append(message.format(name=t['name']))
+                elif 'upgrade' in t[component] or 'update_cache' in t[component] or 'check_update' in t[component]:
+                    messages.append(message.format(name=t['name']))
+
     if messages:
         return '\n'.join(messages)
     else:
-        return "No tasks were found that violates idempotency."
+        return "No tasks were found that violate idempotency."
 
 
+# checks if a task installs a version-specific package
 def check_task_for_version_specific_package(task):
     messages = []
+    package_managers = [
+        {'name': 'apt', 'version_key': 'version'},
+        {'name': 'yum', 'version_key': 'version'},
+        {'name': 'dnf', 'version_key': 'version'},
+        {'name': 'pacman', 'version_key': 'version'},
+        {'name': 'apk', 'version_key': 'version'},
+    ]
 
     for t in task:
-        if 'apt' in t:
-            if 'version' in t['apt']:
-                messages.append(f"Task '{t['name']}' uses apt to install a specific version of a package.")
-        elif 'yum' in t:
-            if 'version' in t['yum']:
-                messages.append(f"Task '{t['name']}' uses yum to install a specific version of a package.")
-        elif 'dnf' in t:
-            if 'version' in t['dnf']:
-                messages.append(f"Task '{t['name']}' uses dnf to install a specific version of a package.")
-        elif 'pacman' in t:
-            if 'version' in t['pacman']:
-                messages.append(f"Task '{t['name']}' uses pacman to install a specific version of a package.")
-        elif 'apk' in t:
-            if 'version' in t['apk']:
-                messages.append(f"Task '{t['name']}' uses apk to install a specific version of a package.")
+        for pm in package_managers:
+            if pm['name'] in t:
+                if pm['version_key'] in t[pm['name']]:
+                    messages.append(f"Task '{t['name']}' uses {pm['name']} to install a specific version of a package.")
 
     if messages:
         return '\n'.join(messages)
@@ -129,17 +129,21 @@ def check_task_for_version_specific_package(task):
         return "No tasks were found that install version-specific packages."
 
 
+# checks if a task uses the hardware specific commands
 def check_task_for_hardware_specific_commands(task):
     messages = []
 
+    hardware_commands = ['lspci', 'lshw', 'lsblk', 'fdisk', 'parted', 'ip', 'ifconfig', 'route']
+
     for t in task:
-        if 'command' in t or 'shell' in t or 'raw' in t:
-            if 'lspci' in t['command'] or 'lshw' in t['command']:
-                messages.append(f"Task '{t['name']}' uses a hardware-specific command that may not be portable.")
-            elif 'lsblk' in t['command'] or 'fdisk' in t['command'] or 'parted' in t['command']:
-                messages.append(f"Task '{t['name']}' uses a disk management command that may not be portable.")
-            elif 'ip' in t['command'] or 'ifconfig' in t['command'] or 'route' in t['command']:
-                messages.append(f"Task '{t['name']}' uses a network management command that may not be portable.")
+        for component in ['command', 'shell', 'raw']:
+            if component in t and any(hc in t[component] for hc in hardware_commands):
+                if any(hc in t[component] for hc in ['lspci', 'lshw']):
+                    messages.append(f"Task '{t['name']}' uses a hardware-specific command that may not be portable.")
+                elif any(hc in t[component] for hc in ['lsblk', 'fdisk', 'parted']):
+                    messages.append(f"Task '{t['name']}' uses a disk management command that may not be portable.")
+                elif any(hc in t[component] for hc in ['ip', 'ifconfig', 'route']):
+                    messages.append(f"Task '{t['name']}' uses a network management command that may not be portable.")
 
     if messages:
         return '\n'.join(messages)
@@ -147,19 +151,17 @@ def check_task_for_hardware_specific_commands(task):
         return "No tasks were found that use hardware-specific commands."
 
 
+# checks if a task uses the software specific commands
 def check_task_for_software_specific_commands(task):
+    software_commands = ['npm', 'pip', 'docker', 'kubectl']
     messages = []
 
     for t in task:
         if 'command' in t or 'shell' in t or 'raw' in t:
-            if 'npm' in t['command']:
-                messages.append(f"Task '{t['name']}' uses an NPM command that may not be portable.")
-            elif 'pip' in t['command']:
-                messages.append(f"Task '{t['name']}' uses a pip command that may not be portable.")
-            elif 'docker' in t['command']:
-                messages.append(f"Task '{t['name']}' uses a Docker command that may not be portable.")
-            elif 'kubectl' in t['command']:
-                messages.append(f"Task '{t['name']}' uses a kubectl command that may not be portable.")
+            for command in software_commands:
+                if command in t['command']:
+                    messages.append(f"Task '{t['name']}' uses a {command} command that may not be portable.")
+                    break
 
     if messages:
         return '\n'.join(messages)
@@ -167,6 +169,7 @@ def check_task_for_software_specific_commands(task):
         return "No tasks were found that use software-specific commands."
 
 
+# checks if a task has any assumption on environment like the OS or distribution
 def check_task_for_environment_assumptions(task):
     messages = []
 
@@ -174,14 +177,18 @@ def check_task_for_environment_assumptions(task):
         if 'vars' in t:
             for var in t['vars']:
                 if 'ansible_distribution' in var:
-                    messages.append(f"Task '{t['name']}' assumes the running environment is {var['ansible_distribution']}.")
+                    messages.append(
+                        f"Task '{t['name']}' assumes the running environment is {var['ansible_distribution']}.")
                 if 'ansible_os_family' in var:
-                    messages.append(f"Task '{t['name']}' assumes the operating system family is {var['ansible_os_family']}.")
+                    messages.append(
+                        f"Task '{t['name']}' assumes the operating system family is {var['ansible_os_family']}.")
         if 'when' in t:
             if 'ansible_distribution' in t['when']:
-                messages.append(f"Task '{t['name']}' assumes the running environment is {t['when']['ansible_distribution']}.")
+                messages.append(
+                    f"Task '{t['name']}' assumes the running environment is {t['when']['ansible_distribution']}.")
             if 'ansible_os_family' in t['when']:
-                messages.append(f"Task '{t['name']}' assumes the operating system family is {t['when']['ansible_os_family']}.")
+                messages.append(
+                    f"Task '{t['name']}' assumes the operating system family is {t['when']['ansible_os_family']}.")
 
     if messages:
         return '\n'.join(messages)
@@ -189,6 +196,7 @@ def check_task_for_environment_assumptions(task):
         return "No tasks were found that make assumptions about the running environment."
 
 
+# checks if a task has missing dependencies
 def check_task_for_missing_dependencies(task):
     messages = []
 
@@ -311,8 +319,8 @@ def parse_playbook(file_path):
             vars = play.get('vars', None)
 
             task = AnsibleTask(name, hosts, remote_user, gather_facts, become, become_user,
-                 become_method, check_mode, ignore_errors, max_fail_percentage, no_log,
-                 order, serial, strategy, tags, vars, vars_files, when)
+                               become_method, check_mode, ignore_errors, max_fail_percentage, no_log,
+                               order, serial, strategy, tags, vars, vars_files, when)
 
             for step in play['tasks']:
                 task_name = step.get('name', '')
@@ -326,13 +334,11 @@ def parse_playbook(file_path):
     return tasks
 
 
-# tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
-
 with open('install_and_configure.yml') as f:
     # data = yaml.load(f, Loader=SafeLoader)
     data = list(yaml.load_all(f, Loader=SafeLoader))
     tasks = data[0][0]['tasks']
-
+    # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
 for task in tasks:
     print(check_task_for_shell_service_systemd(task=task))
@@ -346,14 +352,3 @@ for task in tasks:
     print(check_task_for_missing_dependencies(task=task))
 
     # print(task.to_dict())
-
-
-
-
-
-
-
-
-
-
-
