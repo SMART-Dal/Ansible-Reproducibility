@@ -125,11 +125,8 @@ def parse_playbook(file_path):
 with open('install_and_configure.yml') as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))
     tasks = data[0][0]['tasks']
-    #
-    #     for task in tasks:
-    #         ansible_task_object = AnsibleTask()
 
-    # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
+    tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
 for task in tasks:
     print(dt.check_task_for_shell_service_systemd(task=task))
