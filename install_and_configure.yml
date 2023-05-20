@@ -1,13 +1,13 @@
 ---
 - hosts: localhost
   gather_facts: false
-
+# TODO -- downloading from a url - violation? which smell? --> create a file for the requirements and sources
   tasks:
     - name: Download apt key
       get_url:
         url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
         dest: /tmp # or /etc/pki/rpm-gpg depending on the infrastructure
-
+# TODO -- checking to save on the absoulute path or not if we have "file" ? assumption?
     - name: Add a key from a file
       ansible.builtin.apt_key:
         file: /tmp/apt-key.gpg
@@ -59,6 +59,7 @@
         sh -c echo -1 >/proc/sys/kernel/perf_event_paranoid
         sysctl -w kernel.perf_event_paranoid=-1
 
+# TODO -- downloading from a url - violation? which smell?
     - name: add apt signing key from official docker repo
       tags: experiment
       become: true
