@@ -1,8 +1,10 @@
 import yaml
 from yaml import SafeLoader
 import smell_detection as dt
+import csv
 
 
+# Ansible class Object with attributes
 class AnsibleTask:
     def __init__(self, name, hosts, remote_user=None, gather_facts=None, become=None, become_user=None,
                  become_method=None, check_mode=None, ignore_errors=None, max_fail_percentage=None, no_log=None,
@@ -44,6 +46,7 @@ class AnsibleTask:
             'tasks': self.tasks
         }
 
+        # Add optional attributes if they exist
         if self.remote_user:
             result['remote_user'] = self.remote_user
         if self.gather_facts is not None:
@@ -78,12 +81,14 @@ class AnsibleTask:
         return result
 
 
+# Parse Ansible Playbook
 def parse_playbook(file_path):
     tasks = []
 
     with open(file_path, 'r') as f:
         playbook = yaml.safe_load(f)
 
+        # Get attribute values from the playbook
         for play in playbook:
             name = play.get('name', '')
             hosts = play.get('hosts', '')
@@ -106,10 +111,12 @@ def parse_playbook(file_path):
 
             vars = play.get('vars', None)
 
+            # Create Ansible task object based on attributes and values
             task = AnsibleTask(name, hosts, remote_user, gather_facts, become, become_user,
                                become_method, check_mode, ignore_errors, max_fail_percentage, no_log,
                                order, serial, strategy, tags, vars, vars_files, when)
 
+            # Add each step to the task object
             for step in play['tasks']:
                 task_name = step.get('name', '')
                 module = list(step.keys())[1]
@@ -122,19 +129,57 @@ def parse_playbook(file_path):
     return tasks
 
 
+# Open playbook file and extract tasks
 with open('install_and_configure.yml') as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))
     tasks = data[0][0]['tasks']
 
+    # Create lists to generate output file
+    output_tasks = []
+    csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
+                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands']
+
+    # Parse playbook into tasks
     tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
+# Call smell detection functions for each task
 for task in tasks:
-    print(dt.check_task_for_shell_service_systemd(task=task))
-    print(dt.check_task_for_package_installer(task=task))
-    print(dt.check_task_for_missing_dependencies(task=task))
-    print(dt.check_task_for_hardware_specific_commands(task=task))
-    print(dt.check_task_for_software_specific_commands(task=task))
-    print(dt.check_task_for_environment_assumptions(task=task))
-    print(dt.check_task_for_outdated_package(task=task))
-    print(dt.check_task_for_idempotency(task=task))
-    print(dt.check_task_for_version_specific_package(task=task))
+    # print(dt.check_task_for_shell_service_systemd(task=task))
+    # print(dt.check_task_for_package_installer(task=task))
+    # print(dt.check_task_for_missing_dependencies(task=task))
+    # print(dt.check_task_for_hardware_specific_commands(task=task))
+    # print(dt.check_task_for_software_specific_commands(task=task))
+    # print(dt.check_task_for_environment_assumptions(task=task))
+    # print(dt.check_task_for_outdated_package(task=task))
+    # print(dt.check_task_for_idempotency(task=task))
+    # print(dt.check_task_for_version_specific_package(task=task))
+
+    task_name = task['name']
+
+    idempotency = dt.check_task_for_shell_service_systemd(task=task)
+    pkg_installer = dt.check_task_for_package_installer(task=task)
+    missing = dt.check_task_for_missing_dependencies(task=task)
+    hardware = dt.check_task_for_hardware_specific_commands(task=task)
+    software = dt.check_task_for_software_specific_commands(task=task)
+    assumption = dt.check_task_for_environment_assumptions(task=task)
+    outdated = dt.check_task_for_outdated_package(task=task)
+    idempotency2 = dt.check_task_for_idempotency(task=task)
+    version = dt.check_task_for_version_specific_package(task=task)
+
+    # Store task smells in a dictionary
+    task_smells = {'Task name': task_name,
+                   'Idempotency': pkg_installer + ' ' + idempotency + ' ' + idempotency2,
+                   'Version specific installation': version,
+                   'Outdated dependencies': outdated,
+                   'Missing dependencies': missing,
+                   'Assumption about environment': assumption + ' ' + software,
+                   'Hardware specific commands': hardware}
+
+    output_tasks.append(task_smells)
+
+    # Write task smells to CSV file
+    output_file = 'Task Smells.csv'
+    with open(output_file, 'w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=csv_columns)
+        writer.writeheader()
+        writer.writerows(output_tasks)
