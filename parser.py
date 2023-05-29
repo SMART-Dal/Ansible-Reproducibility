@@ -130,9 +130,13 @@ def parse_playbook(file_path):
 
 
 # Open playbook file and extract tasks
-with open('install_and_configure.yml') as f:
+with open('testing scripts/setup-Archlinux.yml') as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))
-    tasks = data[0][0]['tasks']
+
+    try:
+        tasks = data[0][0]['tasks']
+    except KeyError:
+        tasks = data[0]
 
     # Create lists to generate output file
     output_tasks = []
@@ -140,7 +144,7 @@ with open('install_and_configure.yml') as f:
                    'Missing dependencies', 'Assumption about environment', 'Hardware specific commands']
 
     # Parse playbook into tasks
-    tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
+    # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
 # Call smell detection functions for each task
 for task in tasks:
@@ -154,17 +158,20 @@ for task in tasks:
     # print(dt.check_task_for_idempotency(task=task))
     # print(dt.check_task_for_version_specific_package(task=task))
 
-    task_name = task['name']
+    try:
+        task_name = task['name']
+    except KeyError:
+        task_name = 'None'
 
-    idempotency = dt.check_task_for_shell_service_systemd(task=task)
-    pkg_installer = dt.check_task_for_package_installer(task=task)
-    missing = dt.check_task_for_missing_dependencies(task=task)
-    hardware = dt.check_task_for_hardware_specific_commands(task=task)
-    software = dt.check_task_for_software_specific_commands(task=task)
-    assumption = dt.check_task_for_environment_assumptions(task=task)
-    outdated = dt.check_task_for_outdated_package(task=task)
-    idempotency2 = dt.check_task_for_idempotency(task=task)
-    version = dt.check_task_for_version_specific_package(task=task)
+    idempotency = dt.check_task_for_shell_service_systemd(task_name=task_name, task=task)
+    pkg_installer = dt.check_task_for_package_installer(task_name=task_name, task=task)
+    missing = dt.check_task_for_missing_dependencies(task_name=task_name, task=task)
+    hardware = dt.check_task_for_hardware_specific_commands(task_name=task_name, task=task)
+    software = dt.check_task_for_software_specific_commands(task_name=task_name, task=task)
+    assumption = dt.check_task_for_environment_assumptions(task_name=task_name, task=task)
+    outdated = dt.check_task_for_outdated_package(task_name=task_name, task=task)
+    idempotency2 = dt.check_task_for_idempotency(task_name=task_name, task=task)
+    version = dt.check_task_for_version_specific_package(task_name=task_name, task=task)
 
     # Store task smells in a dictionary
     task_smells = {'Task name': task_name,
