@@ -1,10 +1,10 @@
 # TODO add pip to package installers
 # checks if a task uses the shell, service,
 # systemd modules and returns a message indicating which module was used
-def check_task_for_shell_service_systemd(task):
+def check_task_for_shell_service_systemd(task_name,task):
     modules_to_check = ['shell', 'service', 'systemd']
     messages = []
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         for module in modules_to_check:
@@ -28,10 +28,10 @@ def check_task_for_shell_service_systemd(task):
 
 # checks if a task uses one of the supported package installers
 # and returns a message indicating which installer was used
-def check_task_for_package_installer(task):
+def check_task_for_package_installer(task_name, task):
     package_installers_to_check = ['apt', 'apt-get', 'yum', 'dnf', 'pacman', 'apk', 'pip']
     messages = []
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         for installer in package_installers_to_check:
@@ -68,7 +68,7 @@ def check_task_for_broken_dependency(task):
 
 # checks if a task installs or updates packages and returns a message indicating
 # whether the task installs the latest packages, updates packages, or installs specific packages.
-def check_task_for_outdated_package(task):
+def check_task_for_outdated_package(task_name, task):
     package_installers_to_check = [
         {'name': 'apt', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'yum', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
@@ -79,7 +79,7 @@ def check_task_for_outdated_package(task):
         {'name': 'apt-get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
     ]
     messages = []
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         for installer in package_installers_to_check:
@@ -99,7 +99,7 @@ def check_task_for_outdated_package(task):
 
 # checks if a task violates idempotency by executing a command,
 # installing or upgrading packages, or updating the package cache.
-def check_task_for_idempotency(task):
+def check_task_for_idempotency(task_name, task):
     messages = []
     idempotency_violations = [
         ('command', "Task '{name}' violates idempotency because it executes a command."),
@@ -113,7 +113,7 @@ def check_task_for_idempotency(task):
         ('dnf', "Task '{name}' violates idempotency because it installs packages with dnf."),
         ('pacman', "Task '{name}' violates idempotency because it installs packages with pacman.")
     ]
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         for component, message in idempotency_violations:
@@ -133,9 +133,6 @@ def check_task_for_idempotency(task):
             if 'state' not in task[t]:
                 messages.append(f"Task '{task_name}' change the state of file without checking.")
 
-
-
-
     if messages:
         return '\n'.join(messages)
     else:
@@ -143,7 +140,7 @@ def check_task_for_idempotency(task):
 
 
 # checks if a task installs a version-specific package
-def check_task_for_version_specific_package(task):
+def check_task_for_version_specific_package(task_name, task):
     messages = []
     package_managers = [
         {'name': 'apt', 'version_key': 'version'},
@@ -153,7 +150,7 @@ def check_task_for_version_specific_package(task):
         {'name': 'apk', 'version_key': 'version'},
         {'name': 'pip', 'version_key': 'version'}
     ]
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         for pm in package_managers:
@@ -168,7 +165,7 @@ def check_task_for_version_specific_package(task):
 
 
 # checks if a task uses the hardware specific commands
-def check_task_for_hardware_specific_commands(task):
+def check_task_for_hardware_specific_commands(task_name, task):
     messages = []
 
     hardware_commands = ['lspci', 'lshw', 'lsblk', 'fdisk', 'parted', 'ip', 'ifconfig', 'route', 'fwupd', 'smbios-util',
@@ -176,8 +173,7 @@ def check_task_for_hardware_specific_commands(task):
                          'acpi', 'ifup', 'ifdown', 'iptables', 'mkfs', 'nvidia-settings', 'nvidia-smi', 'sg3_utils', 'multipath',
                          'mpstat', 'xinput', 'smbus-tools', 'lm-sensors']
 
-    task_name = task['name']
-
+    task_name = task_name
     for t in task:
         for component in ['command', 'shell', 'raw']:
             if component in t and any(hc in task[t] for hc in hardware_commands):
@@ -219,10 +215,10 @@ def check_task_for_hardware_specific_commands(task):
 
 
 # checks if a task uses the software specific commands
-def check_task_for_software_specific_commands(task):
+def check_task_for_software_specific_commands(task_name, task):
     software_commands = ['npm', 'pip', 'docker', 'kubectl']
     messages = []
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         if 'command' in t or 'shell' in t or 'raw' in t:
@@ -238,28 +234,18 @@ def check_task_for_software_specific_commands(task):
 
 
 # checks if a task has any assumption on environment like the OS or distribution
-def check_task_for_environment_assumptions(task):
+def check_task_for_environment_assumptions(task_name, task):
     messages = []
-    task_name = task['name']
+    task_name = task_name
     key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
     for t in task:
-
-        if 'vars' in t:
-            for var in task[t]:
-                if 'ansible_distribution' in var:
-                    messages.append(
-                        f"Task '{task_name}' assumes the running environment is {var['ansible_distribution']}.")
-                if 'ansible_os_family' in var:
-                    messages.append(
-                        f"Task '{task_name}' assumes the operating system family is {var['ansible_os_family']}.")
-
-        if 'when' in t:
+        if 'vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t:
             if 'ansible_distribution' in task[t]:
                 messages.append(
-                    f"Task '{task_name}' assumes the running environment is {task[t]['ansible_distribution']}.")
+                    f"Task '{task_name}' assumes a default running environment.")
             if 'ansible_os_family' in task[t]:
                 messages.append(
-                    f"Task '{task_name}' assumes the operating system family is {task[t]['ansible_os_family']}.")
+                    f"Task '{task_name}' assumes the operating system family.")
 
         if 'ansible.posix.firewalld' in t or 'community.general.ufw' in t:
             if 'state' not in task[t]:
@@ -297,9 +283,9 @@ def check_task_for_environment_assumptions(task):
 
 
 # checks if a task has missing dependencies
-def check_task_for_missing_dependencies(task):
+def check_task_for_missing_dependencies(task_name, task):
     messages = []
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
         if 'name' in t:
