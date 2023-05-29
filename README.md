@@ -18,6 +18,6 @@ each function is trying to detect one smell according to the rules specified and
 
 # Run the program
 1- on line 133 of `parser.py` file provide the path to the ansible script you want to check.
-2- on line 181 of `parser.py` file provide the output file name you want.
+2- on line 188 of `parser.py` file provide the output file name you want.
 
 Then just navigate to the project directory and run the `parser.py`  -- `python3 parser.py` 
