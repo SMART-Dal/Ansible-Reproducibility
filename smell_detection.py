@@ -1,7 +1,7 @@
 # TODO add pip to package installers
 # checks if a task uses the shell, service,
 # systemd modules and returns a message indicating which module was used
-def check_task_for_shell_service_systemd(task_name,task):
+def check_task_for_shell_service_systemd(task_name, task):
     modules_to_check = ['shell', 'service', 'systemd']
     messages = []
     task_name = task_name
@@ -43,18 +43,19 @@ def check_task_for_package_installer(task_name, task):
     else:
         return f" Task '{task_name}' has not used a package installer."
 
+
 # checks if a task uses one of the supported package installers
 # and returns a message indicating which installer was used
-def check_task_for_broken_dependency(task):
-    package_installers_keys_to_check = ['apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key', 'ansible.builtin.rpm-key']
+def check_task_for_broken_dependency(task_name, task):
+    package_installers_keys_to_check = ['apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
+                                        'ansible.builtin.rpm-key']
     checkers = [('fingerprint', "Task '{name}' uses fixed fingerprint which can get outdated."),
                 ('id', "Task '{name}' uses fixed id which can get outdated or not correct across platfroms."),
                 ('url', "Task '{name}' uses fixed url to download key which can get outdated or removed.")]
     messages = []
-    task_name = task['name']
+    task_name = task_name
 
     for t in task:
-        keys = task[t].keys()
         for installer_key in package_installers_keys_to_check:
             if installer_key in t:
                 for checker, message in checkers:
@@ -84,9 +85,9 @@ def check_task_for_outdated_package(task_name, task):
     for t in task:
         for installer in package_installers_to_check:
             if installer['name'] in t:
-                if installer['latest_state'] and 'state' in task[t].keys() and task[t]['state'] == installer['latest_state']:
+                if installer['latest_state'] and 'state' in task[t] and task[t]['state'] == installer['latest_state']:
                     messages.append(f"Task '{task_name}' uses {installer['name']} to install the latest packages.")
-                elif 'update_cache' in task[t].keys() and any(action in task[t]['update_cache'] for action in installer['update_actions']):
+                elif 'update_cache' in task[t]:
                     messages.append(f"Task '{task_name}' uses {installer['name']} to update packages.")
                 else:
                     messages.append(f"Task '{task_name}' uses {installer['name']} to install specific packages.")
@@ -170,7 +171,8 @@ def check_task_for_hardware_specific_commands(task_name, task):
 
     hardware_commands = ['lspci', 'lshw', 'lsblk', 'fdisk', 'parted', 'ip', 'ifconfig', 'route', 'fwupd', 'smbios-util',
                          'mdadm', 'megacli', 'vconfig', 'tpmtool', 'efibootmgr', 'cpufrequtils', 'sysctl', 'powertop',
-                         'acpi', 'ifup', 'ifdown', 'iptables', 'mkfs', 'nvidia-settings', 'nvidia-smi', 'sg3_utils', 'multipath',
+                         'acpi', 'ifup', 'ifdown', 'iptables', 'mkfs', 'nvidia-settings', 'nvidia-smi', 'sg3_utils',
+                         'multipath',
                          'mpstat', 'xinput', 'smbus-tools', 'lm-sensors']
 
     task_name = task_name
@@ -188,25 +190,31 @@ def check_task_for_hardware_specific_commands(task_name, task):
                     messages.append(f"Task '{task_name}' uses a network management command that may not be portable.")
 
                 elif any(hc in task[t] for hc in ['fwupd', 'smbios-util']):
-                    messages.append(f"Task '{task_name}' uses a BIOS firmware management command that may not be portable.")
+                    messages.append(
+                        f"Task '{task_name}' uses a BIOS firmware management command that may not be portable.")
 
                 elif any(hc in task[t] for hc in ['mdadm', 'megacli']):
-                    messages.append(f"Task '{task_name}' uses a RAID arrays management command that may not be portable.")
+                    messages.append(
+                        f"Task '{task_name}' uses a RAID arrays management command that may not be portable.")
 
                 elif any(hc in task[t] for hc in ['tpmtool', 'efibootmgr']):
                     messages.append(f"Task '{task_name}' uses a security management command that may not be portable.")
 
                 elif any(hc in task[t] for hc in ['cpufrequtils', 'sysctl']):
-                    messages.append(f"Task '{task_name}' uses a performance settings management command that may not be portable.")
+                    messages.append(
+                        f"Task '{task_name}' uses a performance settings management command that may not be portable.")
 
                 elif any(hc in task[t] for hc in ['nvidia-settings', 'nvidia-smi']):
-                    messages.append(f"Task '{task_name}' uses a GPU settings management command that may not be portable.")
+                    messages.append(
+                        f"Task '{task_name}' uses a GPU settings management command that may not be portable.")
 
-                elif any(hc in task[t] for hc in ['xinput','xrandr']):
-                    messages.append(f"Task '{task_name}' uses a I/O device management command that may not be portable.")
+                elif any(hc in task[t] for hc in ['xinput', 'xrandr']):
+                    messages.append(
+                        f"Task '{task_name}' uses a I/O device management command that may not be portable.")
 
                 elif any(hc in task[t] for hc in ['smbus-tools', 'lm-sensors']):
-                    messages.append(f"Task '{task_name}' uses a system management bus command that may not be portable.")
+                    messages.append(
+                        f"Task '{task_name}' uses a system management bus command that may not be portable.")
 
     if messages:
         return '\n'.join(messages)
@@ -240,10 +248,10 @@ def check_task_for_environment_assumptions(task_name, task):
     key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
     for t in task:
         if 'vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t:
-            if 'ansible_distribution' in task[t]:
+            if 'ansible_distribution' in str(task[t]):
                 messages.append(
                     f"Task '{task_name}' assumes a default running environment.")
-            if 'ansible_os_family' in task[t]:
+            if 'ansible_os_family' in str(task[t]):
                 messages.append(
                     f"Task '{task_name}' assumes the operating system family.")
 
@@ -253,11 +261,13 @@ def check_task_for_environment_assumptions(task_name, task):
 
         if 'resolv.conf' in t:
             if 'state' not in task[t]:
-                messages.append(f"Task '{task_name}' assumes that the system is using a resolv.conf file to manage DNS settings")
+                messages.append(
+                    f"Task '{task_name}' assumes that the system is using a resolv.conf file to manage DNS settings")
 
         if 'resolv.conf' in t:
             if 'state' not in task[t]:
-                messages.append(f"Task '{task_name}' assumes that the system is using a resolv.conf file to manage DNS settings.")
+                messages.append(
+                    f"Task '{task_name}' assumes that the system is using a resolv.conf file to manage DNS settings.")
 
         if 'ethernets' in t:
             if 'state' not in task[t]:
@@ -265,11 +275,13 @@ def check_task_for_environment_assumptions(task_name, task):
 
         if 'ntp' in t:
             if 'state' not in task[t]:
-                messages.append(f"Task '{task_name}' the system is using the ntp service to manage time settings and that the provided NTP servers.")
+                messages.append(
+                    f"Task '{task_name}' the system is using the ntp service to manage time settings and that the provided NTP servers.")
 
         if 'sshd_config' in t:
             if 'state' not in task[t]:
-                messages.append(f"Task '{task_name}' assumes that the system is using a ssh without checking the state.")
+                messages.append(
+                    f"Task '{task_name}' assumes that the system is using a ssh without checking the state.")
 
         for key_checker in key_download_components:
             if key_checker in t:
