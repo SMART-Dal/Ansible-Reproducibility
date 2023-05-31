@@ -1,9 +1,11 @@
 # Reproducibility smell detector
-This code tries to find the coding smells from the ansible scripts that can lead to possible reproducibility issues.
+This tool detects programming practices, referred to as productivity smells, in Ansible scripts that can lead to reproducibility issues.
 
-In the code the parser first reads the given ansible script and creates an object from the playbook and its tasks and for each task it checks for the smells.
+The tool has a parser that reads the given Ansible script and creates a code model object from the playbook.
+The code model captures the Ansible tasks and their properties.
+Finally, the smell detector checks for the presence of smells by analyzing the source code model.
 
-# Content
+## Contents
 - **`script_extractor.py`**: This script tries to search for 'ansible' files or project that has ansible scripts on Github.
  -- Provide your GITHUB_ACCESS_TOKEN, and it will print the path of the repository.
   
@@ -16,7 +18,13 @@ each function is trying to detect one smell according to the rules specified and
 - creates an output csv file with messages for each task smell.
 
 
-# Run the program
+## Run the program
+
+### Build/Configure
+- This tool requires Python 3.8+
+- Install the packages from `requirements.txt`
+
+### Run
 1- on line 133 of `parser.py` file provide the path to the ansible script you want to check.
 2- on line 188 of `parser.py` file provide the output file name you want.
 
