@@ -1,7 +1,9 @@
+import csv
+
 import yaml
 from yaml import SafeLoader
+
 import smell_detection as dt
-import csv
 
 
 # Ansible class Object with attributes
@@ -128,9 +130,21 @@ def parse_playbook(file_path):
 
     return tasks
 
+# Make a test directory within the project directory and put the repository on that directory
+input_file = input("Enter the Relative path to your input file script: ")
+
+# Open the file and get the task line numbers
+task_line_numbers = []
+line_number = 0
+with open(input_file) as file:
+    for line in file:
+        line_number += 1
+        if line.startswith('-'):
+            task_line_numbers.append(line_number)
+    file.close()
 
 # Open playbook file and extract tasks
-with open('testing scripts/setup-Archlinux.yml') as f:
+with open(input_file) as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))
 
     try:
@@ -141,52 +155,81 @@ with open('testing scripts/setup-Archlinux.yml') as f:
     # Create lists to generate output file
     output_tasks = []
     csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
-                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands']
+                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands',
+                   'Broken Dependency']
+
+    new_csv_columns = ['Repository Name', 'File Name', 'Line Number', 'Task Name', 'Smell Name', 'Smell Description']
+
+    smell_name_description = {}
+    file_name = input_file.split('/')[-1]
+    repository_name = input_file.split('/')[0:-1]
+    new_output_tasks = []
 
     # Parse playbook into tasks
     # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
 # Call smell detection functions for each task
 for task in tasks:
-    # print(dt.check_task_for_shell_service_systemd(task=task))
-    # print(dt.check_task_for_package_installer(task=task))
-    # print(dt.check_task_for_missing_dependencies(task=task))
-    # print(dt.check_task_for_hardware_specific_commands(task=task))
-    # print(dt.check_task_for_software_specific_commands(task=task))
-    # print(dt.check_task_for_environment_assumptions(task=task))
-    # print(dt.check_task_for_outdated_package(task=task))
-    # print(dt.check_task_for_idempotency(task=task))
-    # print(dt.check_task_for_version_specific_package(task=task))
 
     try:
         task_name = task['name']
     except KeyError:
-        task_name = 'None'
+        task_name = 'Task ' + str(tasks.index(task) + 1)
 
-    idempotency = dt.check_task_for_shell_service_systemd(task_name=task_name, task=task)
-    pkg_installer = dt.check_task_for_package_installer(task_name=task_name, task=task)
-    missing = dt.check_task_for_missing_dependencies(task_name=task_name, task=task)
-    hardware = dt.check_task_for_hardware_specific_commands(task_name=task_name, task=task)
-    software = dt.check_task_for_software_specific_commands(task_name=task_name, task=task)
-    assumption = dt.check_task_for_environment_assumptions(task_name=task_name, task=task)
-    outdated = dt.check_task_for_outdated_package(task_name=task_name, task=task)
-    idempotency2 = dt.check_task_for_idempotency(task_name=task_name, task=task)
-    version = dt.check_task_for_version_specific_package(task_name=task_name, task=task)
+    idempotency = dt.check_task_for_shell_service_systemd(task=task) + \
+                  ' ' + dt.check_task_for_idempotency(task=task) + \
+                  ' ' + dt.check_task_for_package_installer(task=task)
+    smell_name_description['Idempotency'] = idempotency
+
+    version_specific = dt.check_task_for_version_specific_package(task=task)
+    smell_name_description['Version Specific Installation'] = version_specific
+
+    outdated_dependency = dt.check_task_for_outdated_package(task=task)
+    smell_name_description['Outdated Dependencies'] = outdated_dependency
+
+    missing_dependency = dt.check_task_for_missing_dependencies(task=task)
+    smell_name_description['Missing Dependencies'] = missing_dependency
+
+    hardware_specific = dt.check_task_for_hardware_specific_commands(task=task)
+    smell_name_description['Hardware Specific Commands'] = hardware_specific
+
+    assumption = dt.check_task_for_environment_assumptions(task=task) \
+                 + ' ' + dt.check_task_for_software_specific_commands(task=task)
+    smell_name_description['Assumption about Environment'] = assumption
+
+    broken_dependency = dt.check_task_for_broken_dependency(task=task)
+    smell_name_description['Broken Dependency Chain'] = broken_dependency
 
     # Store task smells in a dictionary
     task_smells = {'Task name': task_name,
-                   'Idempotency': pkg_installer + ' ' + idempotency + ' ' + idempotency2,
-                   'Version specific installation': version,
-                   'Outdated dependencies': outdated,
-                   'Missing dependencies': missing,
-                   'Assumption about environment': assumption + ' ' + software,
-                   'Hardware specific commands': hardware}
+                   'Idempotency': idempotency,
+                   'Version specific installation': version_specific,
+                   'Outdated dependencies': outdated_dependency,
+                   'Missing dependencies': missing_dependency,
+                   'Assumption about environment': assumption,
+                   'Hardware specific commands': hardware_specific,
+                   'Broken Dependency': broken_dependency}
+
+    for smell_name in smell_name_description.keys():
+        new_task_smells = {
+            'Repository Name': repository_name,
+            'File Name': file_name,
+            'Line Number': task_line_numbers[tasks.index(task) + 1],
+            'Task Name': task_name,
+            'Smell Name': smell_name,
+            'Smell Description': smell_name_description.get(smell_name),
+        }
+        new_output_tasks.append(new_task_smells)
 
     output_tasks.append(task_smells)
-
+    output_file = input_file.split('/')[-1] + '_smells.csv'
     # Write task smells to CSV file
-    output_file = 'Task Smells.csv'
     with open(output_file, 'w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=new_csv_columns)
+        writer.writeheader()
+        writer.writerows(new_output_tasks)
+
+    with open('task smells.csv', 'w', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=csv_columns)
         writer.writeheader()
         writer.writerows(output_tasks)
