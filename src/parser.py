@@ -3,7 +3,7 @@ import csv
 import yaml
 from yaml import SafeLoader
 
-from Src import smell_detection as detector
+from src import smell_detection as detector
 
 
 # Ansible class Object with attributes
