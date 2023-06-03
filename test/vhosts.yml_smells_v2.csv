@@ -1,0 +1,6 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Remove default nginx vhost config file (if configured).,None None None,None,None,None,None None,None,None
+Ensure nginx_vhost_path exists.,None None None,None,None,None,None None,None,None
+Add managed vhost config files.,None None None,None,None,None,None None,None,None
+Remove managed vhost config files.,None None None,None,None,None,None None,None,None
+Remove legacy vhosts.conf file.,None None None,None,None,None,None None,None,None

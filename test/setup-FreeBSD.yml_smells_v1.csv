@@ -1,0 +1,22 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Idempotency,None Task violates idempotency because it executes a command. None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,2,Update pkg cache.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,8,Ensure nginx is installed.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-FreeBSD.yml,13,Create logs directory.,Broken Dependency Chain,None

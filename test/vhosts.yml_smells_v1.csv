@@ -1,0 +1,36 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,2,Remove default nginx vhost config file (if configured).,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,10,Ensure nginx_vhost_path exists.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,18,Add managed vhost config files.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,31,Remove managed vhost config files.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",vhosts.yml,33,Remove legacy vhosts.conf file.,Broken Dependency Chain,None

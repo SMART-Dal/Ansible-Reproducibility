@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Idempotency,None None Task uses the pacman package installer.
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Outdated Dependencies,Task uses pacman to install specific packages.
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-Archlinux.yml,2,Ensure nginx is installed.,Broken Dependency Chain,None

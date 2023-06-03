@@ -1,0 +1,15 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,2,Ensure nginx is installed.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-OpenBSD.yml,7,Create logs directory.,Broken Dependency Chain,None

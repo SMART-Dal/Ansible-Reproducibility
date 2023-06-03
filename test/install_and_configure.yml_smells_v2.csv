@@ -1,0 +1,42 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Download apt key,None None None,None,None,None,None None,None,None
+Add a key from a file,None None Task uses the apt package installer.,None,Task uses apt to install specific packages.,None,None None,None,None
+Update the apt package index,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.,None,Task uses apt to install the latest packages.,None,None None,None,None
+install required modules,None None Task uses the apt package installer.,None,Task uses apt to install specific packages.,None,None None,None,None
+Install Pillow for Python3,None None Task uses the pip package installer.,None,Task uses pip to install specific packages.,None,None None,None,None
+Install TensorFlow for Python3,None None Task uses the pip package installer.,None,Task uses pip to install specific packages.,None,None None,None,None
+Install pycocotools for Python3,None None Task uses the pip package installer.,None,Task uses pip to install specific packages.,None,None None,None,None
+Install pandas for Python3,None None Task uses the pip package installer.,None,Task uses pip to install specific packages.,None,None None,None,None
+enable sudoless invocation for perf,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,Task uses a performance settings management command that may not be portable.,None
+add apt signing key from official docker repo,None None Task uses the apt package installer.,None,Task uses apt to install specific packages.,None,None None,None,None
+add docker official repository for Debian Stretch,None None Task uses the apt package installer.,None,Task uses apt to install specific packages.,None,None None,None,None
+Index new repo into the cache,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.,None,Task uses apt to install the latest packages.,None,None None,None,None
+install docker,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.,None,Task uses apt to install the latest packages.,None,None None,None,None
+ensure docker deamon is running,Task uses the service module. None None,None,None,None,None None,None,None
+add user to docker group,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None Task uses a docker command that may not be portable.,None,None
+define variable for nvidia-docker,None None None,None,None,None,None None,None,None
+clone and install nvidia-docker,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None Task uses a docker command that may not be portable.,None,None
+define variable for DeepLearningExamples,None None None,None,None,None,None None,None,None
+clone repo DeepLearningExamples,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,None,None
+download data-set and build docker image for Pytorch's Transformer-XL,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,Task uses a network management command that may not be portable.,None
+Task 21,None None None,None,None,None,None None,None,None
+download data-set and build docker image for TensorFlow's Transformer-XL,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None Task uses a docker command that may not be portable.,Task uses a network management command that may not be portable.,None
+Task 23,None None None,None,None,None,None None,None,None
+download data-set and build docker image for Pytorch's GNMT,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None Task uses a docker command that may not be portable.,Task uses a network management command that may not be portable.,None
+Task 25,None None None,None,None,None,None None,None,None
+download data-set and build docker image for Pytorch's NCF,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,Task uses a network management command that may not be portable.,None
+Task 27,None None None,None,None,None,None None,None,None
+download data-set and build docker image for TensorFlow's NCF,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,Task uses a network management command that may not be portable.,None
+Task 29,None None None,None,None,None,None None,None,None
+download dataset and build docker image for PyTorch's SSD,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,None,None
+Task 31,None None None,None,None,None,None None,None,None
+download dataset and build docker image for TensorFlows's SSD,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None Task uses a docker command that may not be portable.,None,None
+Task 33,None None None,None,None,None,None None,None,None
+download dataset and build docker image for PyTorch's MaskRCNN,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,None,None
+Task 35,None None None,None,None,None,None None,None,None
+download dataset and build docker image for TensorFlows's MaskRCNN,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,Task uses a network management command that may not be portable.,None
+Task 37,None None None,None,None,None,None None,None,None
+download dataset and build docker image for PyTorch's ResNet50,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,None,None
+Task 39,None None None,None,None,None,None None,None,None
+download dataset and build docker image for TensorFlow's ResNet50,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,None,None
+Task 41,None None None,None,None,None,None None,None,None

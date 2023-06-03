@@ -1,0 +1,288 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,2,Download apt key,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Idempotency,None None Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Outdated Dependencies,Task uses apt to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,6,Add a key from a file,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Idempotency,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Outdated Dependencies,Task uses apt to install the latest packages.
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,11,Update the apt package index,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Idempotency,None None Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Outdated Dependencies,Task uses apt to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,16,install required modules,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Idempotency,None None Task uses the pip package installer.
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Outdated Dependencies,Task uses pip to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,25,Install Pillow for Python3,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Idempotency,None None Task uses the pip package installer.
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Outdated Dependencies,Task uses pip to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,31,Install TensorFlow for Python3,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Idempotency,None None Task uses the pip package installer.
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Outdated Dependencies,Task uses pip to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,37,Install pycocotools for Python3,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Idempotency,None None Task uses the pip package installer.
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Outdated Dependencies,Task uses pip to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,43,Install pandas for Python3,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Hardware Specific Commands,Task uses a performance settings management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,49,enable sudoless invocation for perf,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Idempotency,None None Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Outdated Dependencies,Task uses apt to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,55,add apt signing key from official docker repo,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Idempotency,None None Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Outdated Dependencies,Task uses apt to install specific packages.
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,63,add docker official repository for Debian Stretch,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Idempotency,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Outdated Dependencies,Task uses apt to install the latest packages.
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,70,Index new repo into the cache,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Idempotency,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Outdated Dependencies,Task uses apt to install the latest packages.
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,77,install docker,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Idempotency,Task uses the service module. None None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,86,ensure docker deamon is running,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Assumption about Environment,None Task uses a docker command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,93,add user to docker group,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,100,define variable for nvidia-docker,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Assumption about Environment,None Task uses a docker command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,106,clone and install nvidia-docker,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,112,define variable for DeepLearningExamples,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,126,clone repo DeepLearningExamples,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Hardware Specific Commands,Task uses a network management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,132,download data-set and build docker image for Pytorch's Transformer-XL,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,141,Task 21,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Hardware Specific Commands,Task uses a network management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Assumption about Environment,None Task uses a docker command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,160,download data-set and build docker image for TensorFlow's Transformer-XL,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,165,Task 23,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Hardware Specific Commands,Task uses a network management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Assumption about Environment,None Task uses a docker command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,186,download data-set and build docker image for Pytorch's GNMT,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,191,Task 25,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Hardware Specific Commands,Task uses a network management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,200,download data-set and build docker image for Pytorch's NCF,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,201,Task 27,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Hardware Specific Commands,Task uses a network management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,202,download data-set and build docker image for TensorFlow's NCF,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,203,Task 29,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,204,download dataset and build docker image for PyTorch's SSD,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,208,Task 31,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Assumption about Environment,None Task uses a docker command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,213,download dataset and build docker image for TensorFlows's SSD,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,225,Task 33,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,230,download dataset and build docker image for PyTorch's MaskRCNN,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,242,Task 35,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Hardware Specific Commands,Task uses a network management command that may not be portable.
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,247,download dataset and build docker image for TensorFlows's MaskRCNN,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,258,Task 37,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,263,download dataset and build docker image for PyTorch's ResNet50,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,278,Task 39,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,283,download dataset and build docker image for TensorFlow's ResNet50,Broken Dependency Chain,None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Idempotency,None None None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Version Specific Installation,None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Outdated Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Missing Dependencies,None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Hardware Specific Commands,None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Assumption about Environment,None None
+"['..', 'testScripts']",install_and_configure.yml,294,Task 41,Broken Dependency Chain,None

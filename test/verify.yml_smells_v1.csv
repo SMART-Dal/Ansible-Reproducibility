@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Idempotency,None None None
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Version Specific Installation,None
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Missing Dependencies,None
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository3']",verify.yml,2,Check if port 5601 is open,Broken Dependency Chain,None

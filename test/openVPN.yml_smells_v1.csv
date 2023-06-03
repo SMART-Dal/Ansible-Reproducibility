@@ -1,0 +1,92 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Idempotency,None None Task uses the apt package installer.
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Outdated Dependencies,Task uses apt to install specific packages.
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,4,Install openvpn and easy-rsa,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Idempotency,None None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,5,Chceck for easy rsa directory,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Idempotency,None Task violates idempotency because it executes a command. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,6,Init easy-rsa directory,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Idempotency,None None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,7,Check for easy rsa pki directory,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Idempotency,None Task violates idempotency because it executes a command. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,8,Init easy-rsa pki directory,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Idempotency,None None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,9,Init other dirs,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Idempotency,None None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,10,Init other files,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Idempotency,None Task change the state of file without checking. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,12,Copy ca.crt,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Idempotency,None Task change the state of file without checking. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,17,Copy ca.key,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Idempotency,None Task change the state of file without checking. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,18,Copy server.key,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Idempotency,None Task change the state of file without checking. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,20,Copy ca.crt,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Idempotency,None None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,25,Check for /etc/openvpn directory,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Idempotency,None Task change the state of file without checking. None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Version Specific Installation,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Missing Dependencies,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository2']",openVPN.yml,29,Copy all files to /etc/openvpn,Broken Dependency Chain,None

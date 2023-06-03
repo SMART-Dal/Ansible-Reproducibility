@@ -1,0 +1,3 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Update apt cache.,None Task violates idempotency because it installs or upgrades packages with apt. Task uses the apt package installer.,None,Task uses apt to update packages.,None,None None,None,None
+Ensure nginx is installed.,None None Task uses the apt package installer.,None,Task uses apt to install specific packages.,None,None None,None,None

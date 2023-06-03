@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Idempotency,None None None
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Version Specific Installation,None
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Missing Dependencies,None
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository3']",prepare.yml,2,Prepare,Broken Dependency Chain,None

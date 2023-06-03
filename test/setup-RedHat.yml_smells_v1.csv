@@ -1,0 +1,15 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,2,Enable nginx repo.,Broken Dependency Chain,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Idempotency,None None None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Version Specific Installation,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Outdated Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Missing Dependencies,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Hardware Specific Commands,None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Assumption about Environment,None None
+"['..', 'testScripts', 'Repository1']",setup-RedHat.yml,11,Ensure nginx is installed.,Broken Dependency Chain,None

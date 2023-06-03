@@ -1,0 +1,4 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Update pkg cache.,None Task violates idempotency because it executes a command. None,None,None,None,None None,None,None
+Ensure nginx is installed.,None None None,None,None,None,None None,None,None
+Create logs directory.,None None None,None,None,None,None None,None,None
