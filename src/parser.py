@@ -3,7 +3,7 @@ import csv
 import yaml
 from yaml import SafeLoader
 
-import smell_detection as detector
+from Src import smell_detection as detector
 
 
 # Ansible class Object with attributes
@@ -138,6 +138,7 @@ def get_tasks_line_numbers(input_file):
     with open(input_file) as file:
         for line in file:
             line_number += 1
+            line = line.strip()
             if line.startswith('-'):
                 task_line_numbers.append(line_number)
         file.close()
@@ -234,10 +235,11 @@ def main_method():
 
         # Get the parsed tasks as a dictionary
         tasks = get_parsed_tasks(data=data)
-
+        task_number = 0
         for task in tasks:
+            task_number += 1
             smell_name_description = perform_smell_detection_for_task(task=task)
-            task_name = get_task_name(task=task, task_index=tasks.index(task) + 1)
+            task_name = get_task_name(task=task, task_index=task_number)
 
             # Store task smells in a dictionary
             task_smells = {'Task name': task_name,
@@ -254,7 +256,7 @@ def main_method():
                 new_task_smells = {
                     'Repository Name': repository_name,
                     'File Name': file_name,
-                    'Line Number': task_line_numbers[tasks.index(task) + 1],
+                    'Line Number': task_line_numbers[task_number],
                     'Task Name': task_name,
                     'Smell Name': smell_name,
                     'Smell Description': smell_name_description.get(smell_name),
@@ -262,7 +264,8 @@ def main_method():
                 new_output_tasks.append(new_task_smells)
 
             # Output file name
-            output_file = input_file.split('/')[-1] + '_smells.csv'
+            output_file = input_file.split('/')[-1] + '_smells_v1.csv'
+            output_file2 = input_file.split('/')[-1] + '_smells_v2.csv'
 
             # Write task smells to CSV file
             with open(output_file, 'w', newline='') as file:
@@ -271,7 +274,7 @@ def main_method():
                 writer.writerows(new_output_tasks)
             file.close()
 
-            with open('task smells.csv', 'w', newline='') as file:
+            with open(output_file2, 'w', newline='') as file:
                 writer = csv.DictWriter(file, fieldnames=csv_columns)
                 writer.writeheader()
                 writer.writerows(output_tasks)
