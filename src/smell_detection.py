@@ -1,4 +1,3 @@
-# TODO add pip to package installers
 # checks if a task uses the shell, service,
 # systemd modules and returns a message indicating which module was used
 def check_task_for_shell_service_systemd(task):
@@ -31,7 +30,6 @@ def check_task_for_package_installer(task):
     package_installers_to_check = ['apt', 'apt-get', 'yum', 'dnf', 'pacman', 'apk', 'pip']
     messages = []
 
-
     for t in task:
         for installer in package_installers_to_check:
             if installer in t:
@@ -52,7 +50,6 @@ def check_task_for_broken_dependency(task):
                 ('id', "Task uses fixed id which can get outdated or not correct across platfroms."),
                 ('url', "Task uses fixed url to download key which can get outdated or removed.")]
     messages = []
-
 
     for t in task:
         for installer_key in package_installers_keys_to_check:
@@ -79,7 +76,6 @@ def check_task_for_outdated_package(task):
         {'name': 'apt-get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
     ]
     messages = []
-
 
     for t in task:
         for installer in package_installers_to_check:
@@ -113,7 +109,6 @@ def check_task_for_idempotency(task):
         ('dnf', "Task violates idempotency because it installs packages with dnf."),
         ('pacman', "Task violates idempotency because it installs packages with pacman.")
     ]
-
 
     for t in task:
         for component, message in idempotency_violations:
@@ -151,7 +146,6 @@ def check_task_for_version_specific_package(task):
         {'name': 'pip', 'version_key': 'version'}
     ]
 
-
     for t in task:
         for pm in package_managers:
             if pm['name'] in t:
@@ -173,7 +167,6 @@ def check_task_for_hardware_specific_commands(task):
                          'acpi', 'ifup', 'ifdown', 'iptables', 'mkfs', 'nvidia-settings', 'nvidia-smi', 'sg3_utils',
                          'multipath',
                          'mpstat', 'xinput', 'smbus-tools', 'lm-sensors']
-
 
     for t in task:
         for component in ['command', 'shell', 'raw']:
@@ -225,7 +218,6 @@ def check_task_for_hardware_specific_commands(task):
 def check_task_for_software_specific_commands(task):
     software_commands = ['npm', 'pip', 'docker', 'kubectl']
     messages = []
-
 
     for t in task:
         if 'command' in t or 'shell' in t or 'raw' in t:
@@ -296,7 +288,6 @@ def check_task_for_environment_assumptions(task):
 # checks if a task has missing dependencies
 def check_task_for_missing_dependencies(task):
     messages = []
-
 
     for t in task:
         if 'name' in t:
