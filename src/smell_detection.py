@@ -250,10 +250,10 @@ def check_task_for_environment_assumptions(task):
             if 'state' not in task[t]:
                 messages.append(f"Task assumes the firewall and change the state without checking.")
 
-        if 'resolv.conf' in t:
+        if 'template' in t:
             if 'state' not in task[t]:
                 messages.append(
-                    f"Task assumes that the system is using a resolv.conf file to manage DNS settings")
+                    f"Task assumes that the template file exists to manage and configure settings")
 
         if 'resolv.conf' in t:
             if 'state' not in task[t]:
