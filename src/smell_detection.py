@@ -238,7 +238,7 @@ def check_task_for_environment_assumptions(task):
 
     key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
     for t in task:
-        if 'vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t:
+        if ('vars' in t or 'include_vars' in t or 'include_tasks' in t) and ('when' not in t or 'assert' not in t):
             if 'ansible_distribution' in str(task[t]):
                 messages.append(
                     f"Task assumes a default running environment.")
