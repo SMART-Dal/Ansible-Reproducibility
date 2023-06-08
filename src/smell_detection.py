@@ -125,7 +125,7 @@ def check_task_for_idempotency(task):
                 messages.append(f"Task change the state of firewall without checking.")
 
         if 'file' in t or 'ansible.builtin.copy' in t or 'copy' in t or 'lineinfile' in t:
-            if 'state' not in task[t]:
+            if 'state' not in task[t] or 'when' not in task[t]:
                 messages.append(f"Task change the state of file without checking.")
 
     if messages:
