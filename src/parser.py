@@ -264,8 +264,8 @@ def main_method():
                 new_output_tasks.append(new_task_smells)
 
             # Output file name
-            output_file = input_file.split('/')[-1] + '_smells_v1.csv'
-            output_file2 = input_file.split('/')[-1] + '_smells_v2.csv'
+            output_file = 'outputs/' + input_file.split('/')[-1] + '_smells_v1.csv'
+            output_file2 = 'outputs/' + input_file.split('/')[-1] + '_smells_v2.csv'
 
             # Write task smells to CSV file
             with open(output_file, 'w', newline='') as file:
