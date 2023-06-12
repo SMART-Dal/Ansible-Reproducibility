@@ -76,16 +76,13 @@ def check_task_for_outdated_package(task):
         {'name': 'apt-get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
     ]
     messages = []
-
     for t in task:
         for installer in package_installers_to_check:
             if installer['name'] in t:
-                if installer['latest_state'] and 'state' in task[t] and task[t]['state'] == installer['latest_state']:
+                if installer['latest_state'] and 'state' in task[t] and task[t]['state'] == installer['latest_state'] or 'update_cache' in task[t]:
                     messages.append(f"Task uses {installer['name']} to install the latest packages.")
-                elif 'update_cache' in task[t]:
-                    messages.append(f"Task uses {installer['name']} to update packages.")
                 else:
-                    messages.append(f"Task uses {installer['name']} to install specific packages.")
+                    messages.append(f"The package installed could get outdated because the script does not update")
 
     if messages:
         return '\n'.join(messages)
@@ -238,7 +235,7 @@ def check_task_for_environment_assumptions(task):
 
     key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
     for t in task:
-        if ('vars' in t or 'include_vars' in t or 'include_tasks' in t) and ('when' not in t or 'assert' not in t):
+        if 'vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t:
             if 'ansible_distribution' in str(task[t]):
                 messages.append(
                     f"Task assumes a default running environment.")
@@ -250,10 +247,10 @@ def check_task_for_environment_assumptions(task):
             if 'state' not in task[t]:
                 messages.append(f"Task assumes the firewall and change the state without checking.")
 
-        if 'template' in t:
+        if 'resolv.conf' in t:
             if 'state' not in task[t]:
                 messages.append(
-                    f"Task assumes that the template file exists to manage and configure settings")
+                    f"Task assumes that the system is using a resolv.conf file to manage DNS settings")
 
         if 'resolv.conf' in t:
             if 'state' not in task[t]:
