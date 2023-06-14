@@ -1,3 +1,6 @@
+# Todo check the debug and assert or when just one time -- outside the for loops.
+
+
 # checks if a task uses the shell, service,
 # systemd modules and returns a message indicating which module was used
 def check_task_for_shell_service_systemd(task):
@@ -57,6 +60,8 @@ def check_task_for_broken_dependency(task):
                 for checker, message in checkers:
                     if checker in task[t]:
                         messages.append(message)
+        if 'package_facts' not in t or 'debug' not in t or 'when' not in t:
+            messages.append('Task did not checked the correctness of execution.')
     if messages:
         return '\n'.join(messages)
     else:
@@ -270,6 +275,9 @@ def check_task_for_environment_assumptions(task):
             if 'state' not in task[t]:
                 messages.append(
                     f"Task assumes that the system is using a ssh without checking the state.")
+        
+        if 'assert' not in t or 'debug' not in t:
+            messages.append('Task did not checked the final execution of the task.')
 
         for key_checker in key_download_components:
             if key_checker in t:
