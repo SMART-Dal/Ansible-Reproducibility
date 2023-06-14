@@ -1,4 +1,5 @@
 # Todo check the debug and assert or when just one time -- outside the for loops.
+# Todo add 'register', 'ignore-errors', 'failed-when', 'skip-task:true' as bad practices -- separate funtion.
 
 
 # checks if a task uses the shell, service,
