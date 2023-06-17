@@ -2,32 +2,6 @@
 # Todo add 'register', 'ignore-errors', 'failed-when', 'skip-task:true' as bad practices -- separate funtion.
 
 
-# checks if a task uses the shell, service,
-# systemd modules and returns a message indicating which module was used
-def check_task_for_shell_service_systemd(task):
-    modules_to_check = ['shell', 'service', 'systemd']
-    messages = []
-
-    for t in task:
-        for module in modules_to_check:
-            if module in t:
-                if module == 'shell':
-                    messages.append(f"Task uses the shell module.")
-                elif module == 'service':
-                    messages.append(f"Task uses the service module.")
-                elif module == 'systemd' and 'state' in t['systemd']:
-                    if t['systemd']['state'] == 'reloaded':
-                        messages.append(f"Task uses the systemd module with state 'reloaded'.")
-                    else:
-                        messages.append(
-                            f"Task uses the systemd module with state '{t['systemd']['state']}'.")
-
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
-
-
 # checks if a task uses one of the supported package installers
 # and returns a message indicating which installer was used
 def check_task_for_package_installer(task):
@@ -103,6 +77,8 @@ def check_task_for_idempotency(task):
     idempotency_violations = [
         ('command', "Task violates idempotency because it executes a command."),
         ('shell', "Task violates idempotency because it executes a command."),
+        ('service', "Task violates idempotency because it executes a command."),
+        ('systemd', "Task violates idempotency because it executes a command.")
         ('raw', "Task violates idempotency because it executes a command."),
         ('script', "Task violates idempotency because it executes a command."),
         ('win_command', "Task violates idempotency because it executes a command."),
@@ -116,9 +92,10 @@ def check_task_for_idempotency(task):
     for t in task:
         for component, message in idempotency_violations:
             if component in t:
-                if component == 'command' or component == 'shell' or component == 'raw' or component == 'script' or component == 'win_command' or component == 'win_shell':
-                    messages.append(message)
-                elif 'state' in task[t] and task[t]['state'] == 'latest':
+                if component == 'command' or component == 'shell' or component == 'service' or component == 'systemd' or component == 'raw' or component == 'script' or component == 'win_command' or component == 'win_shell':
+                    if 'state' not in task[t] or 'when' not in task[t]:
+                        messages.append(message)
+                elif 'state' not in task[t] or 'when' not in task[t] and task[t]['state'] == 'latest':
                     messages.append(message)
                 elif 'upgrade' in task[t] or 'update_cache' in task[t] or 'check_update' in task[t]:
                     messages.append(message)
@@ -218,6 +195,7 @@ def check_task_for_hardware_specific_commands(task):
 
 
 # checks if a task uses the software specific commands
+# Todo add other executers -- idempotency
 def check_task_for_software_specific_commands(task):
     software_commands = ['npm', 'pip', 'docker', 'kubectl']
     messages = []
