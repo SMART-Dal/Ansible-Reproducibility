@@ -78,7 +78,7 @@ def check_task_for_idempotency(task):
         ('command', "Task violates idempotency because it executes a command."),
         ('shell', "Task violates idempotency because it executes a command."),
         ('service', "Task violates idempotency because it executes a command."),
-        ('systemd', "Task violates idempotency because it executes a command.")
+        ('systemd', "Task violates idempotency because it executes a command."),
         ('raw', "Task violates idempotency because it executes a command."),
         ('script', "Task violates idempotency because it executes a command."),
         ('win_command', "Task violates idempotency because it executes a command."),
