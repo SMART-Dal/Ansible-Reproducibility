@@ -1,9 +1,8 @@
+import argparse
 import csv
-
 import yaml
 from yaml import SafeLoader
-
-from src import smell_detection as detector
+import smell_detection as detector
 
 
 # Ansible class Object with attributes
@@ -207,10 +206,10 @@ def get_task_name(task, task_index):
     return task_name
 
 
-def main_method():
+def main_method(input_file):
     # 1- Get the input script file path from the user
     # Make a test directory within the project directory and put the repository on that directory
-    input_file = input("Enter the Relative path to your input file script: ")
+    # input_file = input("Enter the Relative path to your input file script: ")
 
     # Create lists to generate output file
     csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
@@ -282,4 +281,9 @@ def main_method():
 
 
 if __name__ == "__main__":
-    main_method()
+    parser = argparse.ArgumentParser(
+        prog='ARSD',
+        description='Ansible Reproducibility Smells Detector')
+    parser.add_argument('-i', '--input', dest='input_file', help='Path of the input Ansible script (yaml)')
+    args = parser.parse_args()
+    main_method(args.input_file)
