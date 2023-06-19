@@ -215,11 +215,6 @@ def check_task_for_environment_assumptions(task):
         if 'resolv.conf' in t:
             if 'state' not in task[t]:
                 messages.append(
-                    f"Task assumes that the system is using a resolv.conf file to manage DNS settings")
-
-        if 'resolv.conf' in t:
-            if 'state' not in task[t]:
-                messages.append(
                     f"Task assumes that the system is using a resolv.conf file to manage DNS settings.")
 
         if 'ethernets' in t:
@@ -241,7 +236,7 @@ def check_task_for_environment_assumptions(task):
 
         for key_checker in key_download_components:
             if key_checker in t:
-                if 'url' in task[t]:
+                if 'url' in task[t] or 'repo' in task[t]:
                     messages.append(
                         f"Task assumes that the package repository is available at a specific URL structure.")
     if messages:
@@ -252,32 +247,36 @@ def check_task_for_environment_assumptions(task):
 
 # checks if a task has missing dependencies
 def check_task_for_missing_dependencies(task):
+    from pathlib import Path
+
     messages = []
 
     for t in task:
-        if 'name' in t:
-            if 'msg' in t:
-                if 'dependencies are missing' in t['msg']:
-                    messages.append(f"Task has missing dependencies: {t['msg']}")
+        if 'msg' in t:
+            if 'dependencies are missing' in task[t] or 'dependency not found' in task[t]:
+                messages.append(f"Task has missing dependencies")
 
-            elif 'failed' in t:
-                if 'Dependency not found' in t['msg']:
-                    messages.append(f"Task has missing dependencies: {t['msg']}")
+        elif 'failed' in t:
+            if 'dependency not found' in str(task[t]):
+                messages.append(f"Task has missing dependencies")
 
-            elif 'failed_when' in t:
-                if 'Dependency not found' in t['msg']:
-                    messages.append(f"Task has missing dependencies: {t['msg']}")
+        elif 'failed_when' in t:
+            if 'dependency not found' in str(task[t]):
+                messages.append(f"Task has missing dependencies")
 
-            elif 'file' in t or 'ansible.builtin.copy' in t:
-                if 'dest' in task[t] or 'path' in task[t] or 'src' in task[t]:
-                    path_list = [('dest', task[t]['dest']), ('src', task[t]['src']), ('path', task[t]['path'])]
-                    for comp, path in path_list:
-                        from pathlib import Path
-                        if Path(str(path)).is_absolute():
-                            messages.append(f"Task is using absolut path")
-                        else:
-                            messages.append(f"Task is using relative path")
-
+        elif 'file' in t or 'ansible.builtin.copy' in t:
+            if 'src' in task[t]:
+                dest = task[t]['src']
+                if Path(str(dest)).is_absolute():
+                    messages.append(f"Task is using absolut path for source")
+                else:
+                    messages.append(f"Task is using relative path for source")
+            if 'path' in task[t]:
+                dest = task[t]['path']
+                if Path(str(dest)).is_absolute():
+                    messages.append(f"Task is using absolut path for source path")
+                else:
+                    messages.append(f"Task is using relative path for source path")
     if messages:
         return '\n'.join(messages)
     else:
