@@ -25,6 +25,4 @@ each function is trying to detect one smell according to the rules specified and
 - Install the packages from `requirements.txt`
 
 ### Run
-Run the parser.py file and give the path to your desired file.
-
-or just navigate to the project directory and run the `parser.py`  -- `python3 parser.py` 
+Run the `parser.py` file with the path to your desired Ansible yaml file.
