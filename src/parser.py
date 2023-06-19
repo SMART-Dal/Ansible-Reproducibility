@@ -1,8 +1,9 @@
-import argparse
 import csv
+
 import yaml
 from yaml import SafeLoader
-import smell_detection as detector
+
+from src import smell_detection as detector
 
 
 # Ansible class Object with attributes
@@ -171,8 +172,7 @@ def get_parsed_tasks(data):
 def perform_smell_detection_for_task(task):
     smell_name_description = {}
 
-    idempotency = detector.check_task_for_idempotency(task=task) + \
-                  ' ' + detector.check_task_for_package_installer(task=task)
+    idempotency = detector.check_task_for_idempotency(task=task)
     smell_name_description['Idempotency'] = idempotency
 
     version_specific = detector.check_task_for_version_specific_package(task=task)
@@ -205,10 +205,10 @@ def get_task_name(task, task_index):
     return task_name
 
 
-def main_method(input_file):
+def main_method():
     # 1- Get the input script file path from the user
     # Make a test directory within the project directory and put the repository on that directory
-    # input_file = input("Enter the Relative path to your input file script: ")
+    input_file = input("Enter the Relative path to your input file script: ")
 
     # Create lists to generate output file
     csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
@@ -262,8 +262,8 @@ def main_method(input_file):
                 new_output_tasks.append(new_task_smells)
 
             # Output file name
-            output_file = 'outputs/' + input_file.split('/')[-1] + '_smells_v1.csv'
-            output_file2 = 'outputs/' + input_file.split('/')[-1] + '_smells_v2.csv'
+            output_file = '/home/ghazal/prengdl-reproduce/outputs/' + input_file.split('/')[-1] + '_smells_v1.csv'
+            output_file2 = '/home/ghazal/prengdl-reproduce/outputs/' + input_file.split('/')[-1] + '_smells_v2.csv'
 
             # Write task smells to CSV file
             with open(output_file, 'w', newline='') as file:
@@ -280,9 +280,4 @@ def main_method(input_file):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        prog='ARSD',
-        description='Ansible Reproducibility Smells Detector')
-    parser.add_argument('-i', '--input', dest='input_file', help='Path of the input Ansible script (yaml)')
-    args = parser.parse_args()
-    main_method(args.input_file)
+    main_method()
