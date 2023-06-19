@@ -1,303 +1,283 @@
-# Todo check the debug and assert or when just one time -- outside the for loops.
-# Todo add 'register', 'ignore-errors', 'failed-when', 'skip-task:true' as bad practices -- separate funtion.
+import csv
+
+import yaml
+from yaml import SafeLoader
+
+from src import smell_detection as detector
 
 
-# checks if a task uses one of the supported package installers
-# and returns a message indicating which installer was used
-def check_task_for_package_installer(task):
-    package_installers_to_check = ['apt', 'apt-get', 'yum', 'dnf', 'pacman', 'apk', 'pip']
-    messages = []
+# Ansible class Object with attributes
+class AnsibleTask:
+    def __init__(self, name, hosts, remote_user=None, gather_facts=None, become=None, become_user=None,
+                 become_method=None, check_mode=None, ignore_errors=None, max_fail_percentage=None, no_log=None,
+                 order=None, serial=None, strategy=None, tags=None, vars=None, vars_files=None, when=None, tasks=None):
+        self.name = name
+        self.hosts = hosts
+        self.remote_user = remote_user
+        self.gather_facts = gather_facts
+        self.become = become
+        self.become_user = become_user
+        self.become_method = become_method
+        self.check_mode = check_mode
+        self.ignore_errors = ignore_errors
+        self.max_fail_percentage = max_fail_percentage
+        self.no_log = no_log
+        self.order = order
+        self.serial = serial
+        self.strategy = strategy
+        self.tags = tags
+        self.vars = vars or {}
+        self.vars_files = vars_files or []
+        self.when = when
+        self.tasks = tasks or []
 
-    for t in task:
-        for installer in package_installers_to_check:
-            if installer in t:
-                messages.append(f"Task uses the {installer} package installer.")
+    def add_task(self, name, module, args=None):
+        task = {
+            'name': name,
+            module: {
+                'args': args or {}
+            }
+        }
+        self.tasks.append(task)
 
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+    def to_dict(self):
+        result = {
+            'name': self.name,
+            'hosts': self.hosts,
+            'vars': self.vars,
+            'tasks': self.tasks
+        }
 
+        # Add optional attributes if they exist
+        if self.remote_user:
+            result['remote_user'] = self.remote_user
+        if self.gather_facts is not None:
+            result['gather_facts'] = self.gather_facts
+        if self.become is not None:
+            result['become'] = self.become
+        if self.become_user:
+            result['become_user'] = self.become_user
+        if self.become_method:
+            result['become_method'] = self.become_method
+        if self.check_mode is not None:
+            result['check_mode'] = self.check_mode
+        if self.ignore_errors is not None:
+            result['ignore_errors'] = self.ignore_errors
+        if self.max_fail_percentage is not None:
+            result['max_fail_percentage'] = self.max_fail_percentage
+        if self.no_log is not None:
+            result['no_log'] = self.no_log
+        if self.order is not None:
+            result['order'] = self.order
+        if self.serial is not None:
+            result['serial'] = self.serial
+        if self.strategy:
+            result['strategy'] = self.strategy
+        if self.tags:
+            result['tags'] = self.tags
+        if self.vars_files:
+            result['vars_files'] = self.vars_files
+        if self.when:
+            result['when'] = self.when
 
-# checks if a task uses one of the supported package installers
-# and returns a message indicating which installer was used
-def check_task_for_broken_dependency(task):
-    package_installers_keys_to_check = ['apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
-                                        'ansible.builtin.rpm-key']
-    checkers = [('fingerprint', "Task uses fixed fingerprint which can get outdated."),
-                ('id', "Task uses fixed id which can get outdated or not correct across platfroms."),
-                ('url', "Task uses fixed url to download key which can get outdated or removed.")]
-    messages = []
-
-    for t in task:
-        for installer_key in package_installers_keys_to_check:
-            if installer_key in t:
-                for checker, message in checkers:
-                    if checker in task[t]:
-                        messages.append(message)
-        if 'package_facts' not in t or 'debug' not in t or 'when' not in t:
-            messages.append('Task did not checked the correctness of execution.')
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
-
-
-# checks if a task installs or updates packages and returns a message indicating
-# whether the task installs the latest packages, updates packages, or installs specific packages.
-def check_task_for_outdated_package(task):
-    package_installers_to_check = [
-        {'name': 'apt', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'yum', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'dnf', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'pacman', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'apk', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'pip', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'apt-get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
-    ]
-    messages = []
-    for t in task:
-        for installer in package_installers_to_check:
-            if installer['name'] in t:
-                if installer['latest_state'] and 'state' in task[t] and task[t]['state'] == installer['latest_state'] or 'update_cache' in task[t]:
-                    messages.append(f"Task uses {installer['name']} to install the latest packages.")
-                else:
-                    messages.append(f"The package installed could get outdated because the script does not update")
-
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
-
-
-# checks if a task violates idempotency by executing a command,
-# installing or upgrading packages, or updating the package cache.
-def check_task_for_idempotency(task):
-    messages = []
-    idempotency_violations = [
-        ('command', "Task violates idempotency because it executes a command."),
-        ('shell', "Task violates idempotency because it executes a command."),
-        ('service', "Task violates idempotency because it executes a command."),
-        ('systemd', "Task violates idempotency because it executes a command."),
-        ('raw', "Task violates idempotency because it executes a command."),
-        ('script', "Task violates idempotency because it executes a command."),
-        ('win_command', "Task violates idempotency because it executes a command."),
-        ('win_shell', "Task violates idempotency because it executes a command."),
-        ('apt', "Task violates idempotency because it installs or upgrades packages with apt."),
-        ('yum', "Task violates idempotency because it installs or upgrades packages with yum."),
-        ('dnf', "Task violates idempotency because it installs packages with dnf."),
-        ('pacman', "Task violates idempotency because it installs packages with pacman.")
-    ]
-
-    for t in task:
-        for component, message in idempotency_violations:
-            if component in t:
-                if component == 'command' or component == 'shell' or component == 'service' or component == 'systemd' or component == 'raw' or component == 'script' or component == 'win_command' or component == 'win_shell':
-                    if 'state' not in task[t] or 'when' not in task[t]:
-                        messages.append(message)
-                elif 'state' not in task[t] or 'when' not in task[t] and task[t]['state'] == 'latest':
-                    messages.append(message)
-                elif 'upgrade' in task[t] or 'update_cache' in task[t] or 'check_update' in task[t]:
-                    messages.append(message)
-
-        if 'ansible.posix.firewalld' in t or 'community.general.ufw' in t:
-            if 'state' not in task[t]:
-                messages.append(f"Task change the state of firewall without checking.")
-
-        if 'file' in t or 'ansible.builtin.copy' in t or 'copy' in t or 'lineinfile' in t:
-            if 'state' not in task[t] or 'when' not in task[t]:
-                messages.append(f"Task change the state of file without checking.")
-
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+        return result
 
 
-# checks if a task installs a version-specific package
-def check_task_for_version_specific_package(task):
-    messages = []
-    package_managers = [
-        {'name': 'apt', 'version_key': 'version'},
-        {'name': 'yum', 'version_key': 'version'},
-        {'name': 'dnf', 'version_key': 'version'},
-        {'name': 'pacman', 'version_key': 'version'},
-        {'name': 'apk', 'version_key': 'version'},
-        {'name': 'pip', 'version_key': 'version'}
-    ]
+# Parse Ansible Playbook
+def parse_playbook(file_path):
+    tasks = []
 
-    for t in task:
-        for pm in package_managers:
-            if pm['name'] in t:
-                if pm['version_key'] in task[t]:
-                    messages.append(f"Task uses {pm['name']} to install a specific version of a package.")
+    with open(file_path, 'r') as f:
+        playbook = yaml.safe_load(f)
 
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+        # Get attribute values from the playbook
+        for play in playbook:
+            name = play.get('name', '')
+            hosts = play.get('hosts', '')
 
+            remote_user = play.get('remote_user', None)
+            gather_facts = play.get('gather_facts', None)
+            become = play.get('become', None)
+            become_user = play.get('become_user', None)
+            become_method = play.get('become_method', None)
+            check_mode = play.get('check_mode', None)
+            ignore_errors = play.get('ignore_errors', None)
+            max_fail_percentage = play.get('max_fail_percentage', None)
+            no_log = play.get('no_log', None)
+            order = play.get('order', None)
+            serial = play.get('serial', None)
+            strategy = play.get('strategy', None)
+            tags = play.get('tags', None)
+            vars_files = play.get('vars_files', None)
+            when = play.get('when', None)
 
-# checks if a task uses the hardware specific commands
-def check_task_for_hardware_specific_commands(task):
-    messages = []
+            vars = play.get('vars', None)
 
-    hardware_commands = ['lspci', 'lshw', 'lsblk', 'fdisk', 'parted', 'ip', 'ifconfig', 'route', 'fwupd', 'smbios-util',
-                         'mdadm', 'megacli', 'vconfig', 'tpmtool', 'efibootmgr', 'cpufrequtils', 'sysctl', 'powertop',
-                         'acpi', 'ifup', 'ifdown', 'iptables', 'mkfs', 'nvidia-settings', 'nvidia-smi', 'sg3_utils',
-                         'multipath',
-                         'mpstat', 'xinput', 'smbus-tools', 'lm-sensors']
+            # Create Ansible task object based on attributes and values
+            task = AnsibleTask(name, hosts, remote_user, gather_facts, become, become_user,
+                               become_method, check_mode, ignore_errors, max_fail_percentage, no_log,
+                               order, serial, strategy, tags, vars, vars_files, when)
 
-    for t in task:
-        for component in ['command', 'shell', 'raw']:
-            if component in t and any(hc in task[t] for hc in hardware_commands):
+            # Add each step to the task object
+            for step in play['tasks']:
+                task_name = step.get('name', '')
+                module = list(step.keys())[1]
+                args = step[module]
 
-                if any(hc in task[t] for hc in ['lspci', 'lshw']):
-                    messages.append(f"Task uses a hardware-specific command that may not be portable.")
+                task.add_task(task_name, module, args)
 
-                elif any(hc in task[t] for hc in ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath']):
-                    messages.append(f"Task uses a disk management command that may not be portable.")
+            tasks.append(task)
 
-                elif any(hc in task[t] for hc in ['ip', 'ifconfig', 'route', 'vconfig', 'ifup', 'ifdown', 'iptables']):
-                    messages.append(f"Task uses a network management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['fwupd', 'smbios-util']):
-                    messages.append(
-                        f"Task uses a BIOS firmware management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['mdadm', 'megacli']):
-                    messages.append(
-                        f"Task uses a RAID arrays management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['tpmtool', 'efibootmgr']):
-                    messages.append(f"Task uses a security management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['cpufrequtils', 'sysctl']):
-                    messages.append(
-                        f"Task uses a performance settings management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['nvidia-settings', 'nvidia-smi']):
-                    messages.append(
-                        f"Task uses a GPU settings management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['xinput', 'xrandr']):
-                    messages.append(
-                        f"Task uses a I/O device management command that may not be portable.")
-
-                elif any(hc in task[t] for hc in ['smbus-tools', 'lm-sensors']):
-                    messages.append(
-                        f"Task uses a system management bus command that may not be portable.")
-
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+    return tasks
 
 
-# checks if a task uses the software specific commands
-# Todo add other executers -- idempotency
-def check_task_for_software_specific_commands(task):
-    software_commands = ['npm', 'pip', 'docker', 'kubectl']
-    messages = []
-
-    for t in task:
-        if 'command' in t or 'shell' in t or 'raw' in t:
-            for command in software_commands:
-                if command in task[t]:
-                    messages.append(f"Task uses a {command} command that may not be portable.")
-                    break
-
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+def get_tasks_line_numbers(input_file):
+    task_line_numbers = []
+    line_number = 0
+    # Open the file and get the task line numbers
+    with open(input_file) as file:
+        for line in file:
+            line_number += 1
+            line = line.strip()
+            if line.startswith('-'):
+                task_line_numbers.append(line_number)
+        file.close()
+    return task_line_numbers
 
 
-# checks if a task has any assumption on environment like the OS or distribution
-def check_task_for_environment_assumptions(task):
-    messages = []
+def get_parsed_tasks(data):
+    try:
+        tasks = data[0][0]['tasks']
+    except KeyError:
+        tasks = data[0]
+    return tasks
 
-    key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
-    for t in task:
-        if 'vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t:
-            if 'ansible_distribution' in str(task[t]):
-                messages.append(
-                    f"Task assumes a default running environment.")
-            if 'ansible_os_family' in str(task[t]):
-                messages.append(
-                    f"Task assumes the operating system family.")
+    # Create lists to generate output file
+    output_tasks = []
+    csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
+                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands',
+                   'Broken Dependency']
 
-        if 'ansible.posix.firewalld' in t or 'community.general.ufw' in t:
-            if 'state' not in task[t]:
-                messages.append(f"Task assumes the firewall and change the state without checking.")
+    new_csv_columns = ['Repository Name', 'File Name', 'Line Number', 'Task Name', 'Smell Name', 'Smell Description']
 
-        if 'resolv.conf' in t:
-            if 'state' not in task[t]:
-                messages.append(
-                    f"Task assumes that the system is using a resolv.conf file to manage DNS settings")
+    smell_name_description = {}
+    file_name = input_file.split('/')[-1]
+    repository_name = input_file.split('/')[0:-1]
+    new_output_tasks = []
 
-        if 'resolv.conf' in t:
-            if 'state' not in task[t]:
-                messages.append(
-                    f"Task assumes that the system is using a resolv.conf file to manage DNS settings.")
-
-        if 'ethernets' in t:
-            if 'state' not in task[t]:
-                messages.append(f"Task changes ethenet interfaces settimgs without checking the state.")
-
-        if 'ntp' in t:
-            if 'state' not in task[t]:
-                messages.append(
-                    f"Task the system is using the ntp service to manage time settings and that the provided NTP servers.")
-
-        if 'sshd_config' in t:
-            if 'state' not in task[t]:
-                messages.append(
-                    f"Task assumes that the system is using a ssh without checking the state.")
-        
-        if 'assert' not in t or 'debug' not in t:
-            messages.append('Task did not checked the final execution of the task.')
-
-        for key_checker in key_download_components:
-            if key_checker in t:
-                if 'url' in task[t]:
-                    messages.append(
-                        f"Task assumes that the package repository is available at a specific URL structure.")
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+    # Parse playbook into tasks
+    # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
 
 
-# checks if a task has missing dependencies
-def check_task_for_missing_dependencies(task):
-    messages = []
+def perform_smell_detection_for_task(task):
+    smell_name_description = {}
 
-    for t in task:
-        if 'name' in t:
-            if 'msg' in t:
-                if 'dependencies are missing' in t['msg']:
-                    messages.append(f"Task has missing dependencies: {t['msg']}")
+    idempotency = detector.check_task_for_idempotency(task=task)
+    smell_name_description['Idempotency'] = idempotency
 
-            elif 'failed' in t:
-                if 'Dependency not found' in t['msg']:
-                    messages.append(f"Task has missing dependencies: {t['msg']}")
+    version_specific = detector.check_task_for_version_specific_package(task=task)
+    smell_name_description['Version Specific Installation'] = version_specific
 
-            elif 'failed_when' in t:
-                if 'Dependency not found' in t['msg']:
-                    messages.append(f"Task has missing dependencies: {t['msg']}")
+    outdated_dependency = detector.check_task_for_outdated_package(task=task)
+    smell_name_description['Outdated Dependencies'] = outdated_dependency
 
-            elif 'file' in t or 'ansible.builtin.copy' in t:
-                if 'dest' in task[t] or 'path' in task[t] or 'src' in task[t]:
-                    path_list = [('dest', task[t]['dest']), ('src', task[t]['src']), ('path', task[t]['path'])]
-                    for comp, path in path_list:
-                        from pathlib import Path
-                        if Path(str(path)).is_absolute():
-                            messages.append(f"Task is using absolut path")
-                        else:
-                            messages.append(f"Task is using relative path")
+    missing_dependency = detector.check_task_for_missing_dependencies(task=task)
+    smell_name_description['Missing Dependencies'] = missing_dependency
 
-    if messages:
-        return '\n'.join(messages)
-    else:
-        return "None"
+    hardware_specific = detector.check_task_for_hardware_specific_commands(task=task)
+    smell_name_description['Hardware Specific Commands'] = hardware_specific
+
+    assumption = detector.check_task_for_environment_assumptions(task=task) \
+                 + ' ' + detector.check_task_for_software_specific_commands(task=task)
+    smell_name_description['Assumption about Environment'] = assumption
+
+    broken_dependency = detector.check_task_for_broken_dependency(task=task)
+    smell_name_description['Broken Dependency Chain'] = broken_dependency
+
+    return smell_name_description
+
+
+def get_task_name(task, task_index):
+    try:
+        task_name = task['name']
+    except KeyError:
+        task_name = 'Task ' + str(task_index)
+    return task_name
+
+
+def main_method():
+    # 1- Get the input script file path from the user
+    # Make a test directory within the project directory and put the repository on that directory
+    input_file = input("Enter the Relative path to your input file script: ")
+
+    # Create lists to generate output file
+    csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
+                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands',
+                   'Broken Dependency']
+    output_tasks = []
+
+    new_csv_columns = ['Repository Name', 'File Name', 'Line Number', 'Task Name', 'Smell Name',
+                       'Smell Description']
+    new_output_tasks = []
+
+    # Get file name and repository name for output
+    file_name = input_file.split('/')[-1]
+    repository_name = input_file.split('/')[0:-1]
+
+    # 2- Create task lines list
+    task_line_numbers = get_tasks_line_numbers(input_file)
+
+    # 3- Open playbook file and extract tasks
+    with open(input_file) as f:
+        data = list(yaml.load_all(f, Loader=SafeLoader))
+
+        # Get the parsed tasks as a dictionary
+        tasks = get_parsed_tasks(data=data)
+        task_number = 0
+        for task in tasks:
+            task_number += 1
+            smell_name_description = perform_smell_detection_for_task(task=task)
+            task_name = get_task_name(task=task, task_index=task_number)
+
+            # Store task smells in a dictionary
+            task_smells = {'Task name': task_name,
+                           'Idempotency': smell_name_description['Idempotency'],
+                           'Version specific installation': smell_name_description['Version Specific Installation'],
+                           'Outdated dependencies': smell_name_description['Outdated Dependencies'],
+                           'Missing dependencies': smell_name_description['Missing Dependencies'],
+                           'Assumption about environment': smell_name_description['Assumption about Environment'],
+                           'Hardware specific commands': smell_name_description['Hardware Specific Commands'],
+                           'Broken Dependency': smell_name_description['Broken Dependency Chain']}
+            output_tasks.append(task_smells)
+
+            for smell_name in smell_name_description.keys():
+                new_task_smells = {
+                    'Repository Name': repository_name,
+                    'File Name': file_name,
+                    'Line Number': task_line_numbers[task_number],
+                    'Task Name': task_name,
+                    'Smell Name': smell_name,
+                    'Smell Description': smell_name_description.get(smell_name),
+                }
+                new_output_tasks.append(new_task_smells)
+
+            # Output file name
+            output_file = '/home/ghazal/prengdl-reproduce/outputs/' + input_file.split('/')[-1] + '_smells_v1.csv'
+            output_file2 = '/home/ghazal/prengdl-reproduce/outputs/' + input_file.split('/')[-1] + '_smells_v2.csv'
+
+            # Write task smells to CSV file
+            with open(output_file, 'w', newline='') as file:
+                writer = csv.DictWriter(file, fieldnames=new_csv_columns)
+                writer.writeheader()
+                writer.writerows(new_output_tasks)
+            file.close()
+
+            with open(output_file2, 'w', newline='') as file:
+                writer = csv.DictWriter(file, fieldnames=csv_columns)
+                writer.writeheader()
+                writer.writerows(output_tasks)
+            file.close()
+
+
+if __name__ == "__main__":
+    main_method()
