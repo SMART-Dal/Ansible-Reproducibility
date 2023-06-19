@@ -171,8 +171,7 @@ def get_parsed_tasks(data):
 def perform_smell_detection_for_task(task):
     smell_name_description = {}
 
-    idempotency = detector.check_task_for_shell_service_systemd(task=task) + \
-                  ' ' + detector.check_task_for_idempotency(task=task) + \
+    idempotency = detector.check_task_for_idempotency(task=task) + \
                   ' ' + detector.check_task_for_package_installer(task=task)
     smell_name_description['Idempotency'] = idempotency
 
