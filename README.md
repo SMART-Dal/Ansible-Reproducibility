@@ -13,10 +13,13 @@ Finally, the smell detector checks for the presence of smells by analyzing the s
 each function is trying to detect one smell according to the rules specified and provides a message.
 
 - **`parser.py`**: 
-- This scripts reads a .yml file (ansible script).
-- checks for the smells for each task on the script.
-- creates an output csv file with messages for each task smell.
+- This scripts parses a given ansible script and returns a dictionary containing the tasks of the script.
 
+- **`detector.py`**: 
+- This scripts contains the main logic of the tool.
+- It gets the path to the ansible script file and parse it.
+- using parsed tasks it detects the smells for each task.
+- creates 2 csv files in 2 formats as output. 
 
 ## Run the program
 
@@ -25,4 +28,4 @@ each function is trying to detect one smell according to the rules specified and
 - Install the packages from `requirements.txt`
 
 ### Run
-Run the `parser.py` file with the path to your desired Ansible yaml file.
+Run the `detector.py` file with the path to your desired Ansible yaml file.
