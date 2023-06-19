@@ -6,16 +6,17 @@ The code model captures the Ansible tasks and their properties.
 Finally, the smell detector checks for the presence of smells by analyzing the source code model.
 
 ## Contents
-- **`script_extractor.py`**: This script tries to search for 'ansible' files or project that has ansible scripts on Github.
+**`script_extractor.py`**: This script tries to search for 'ansible' files or project that has ansible scripts on Github.
  -- Provide your GITHUB_ACCESS_TOKEN, and it will print the path of the repository.
   
-- **`smell_detection.py`**: This scripts consists of the smell detection functions.
+**`smell_detection.py`**: 
+- This scripts consists of the smell detection functions.
 each function is trying to detect one smell according to the rules specified and provides a message.
 
-- **`parser.py`**: 
+**`parser.py`**: 
 - This scripts parses a given ansible script and returns a dictionary containing the tasks of the script.
 
-- **`detector.py`**: 
+**`detector.py`**: 
 - This scripts contains the main logic of the tool.
 - It gets the path to the ansible script file and parse it.
 - using parsed tasks it detects the smells for each task.
