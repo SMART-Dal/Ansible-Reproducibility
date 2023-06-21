@@ -1,3 +1,0 @@
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Enable nginx repo.,None None None,None,None,None,None None,None,None
-Ensure nginx is installed.,None None None,None,None,None,None None,None,None

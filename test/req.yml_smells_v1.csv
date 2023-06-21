@@ -1,8 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Idempotency,Task uses the shell module. Task violates idempotency because it executes a command. None
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Version Specific Installation,None
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Outdated Dependencies,None
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Missing Dependencies,None
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Hardware Specific Commands,None
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Assumption about Environment,None None
-"['..', 'testScripts', 'Repository3']",req.yml,4,Install collection ansible.posix,Broken Dependency Chain,None

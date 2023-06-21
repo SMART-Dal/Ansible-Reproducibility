@@ -1,2 +1,0 @@
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Ensure nginx is installed.,None None Task uses the pacman package installer.,None,Task uses pacman to install specific packages.,None,None None,None,None

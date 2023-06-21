@@ -2,7 +2,8 @@
 # and returns a message indicating which installer was used
 def check_task_for_broken_dependency(task):
     package_installers_keys_to_check = ['apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
-                                        'ansible.builtin.rpm-key','ansible.builtin.apt-key','ansible.builtin.dnf-key', 'ansible.builtin.pacman-key','ansible.builtin.yum-key']
+                                        'ansible.builtin.rpm-key', 'ansible.builtin.apt-key', 'ansible.builtin.dnf-key',
+                                        'ansible.builtin.pacman-key', 'ansible.builtin.yum-key']
     checkers = [('fingerprint', "Task uses fixed fingerprint which can get outdated."),
                 ('id', "Task uses fixed id which can get outdated or not correct across platfroms."),
                 ('url', "Task uses fixed url to download key which can get outdated or removed.")]
@@ -38,7 +39,8 @@ def check_task_for_outdated_package(task):
     for t in task:
         for installer in package_installers_to_check:
             if installer['name'] in t:
-                if installer['latest_state'] and 'state' in task[t] and task[t]['state'] == installer['latest_state'] or 'update_cache' in task[t]:
+                if installer['latest_state'] and 'state' in task[t] and task[t]['state'] == installer[
+                    'latest_state'] or 'update_cache' in task[t]:
                     messages.append(f"Task uses {installer['name']} to install the latest packages.")
                 else:
                     messages.append(f"The package installed could get outdated because the script does not update")
@@ -281,3 +283,89 @@ def check_task_for_missing_dependencies(task):
         return '\n'.join(messages)
     else:
         return "None"
+
+def get_task_name(task, task_index):
+    try:
+        task_name = task['name']
+    except KeyError:
+        task_name = 'Task ' + str(task_index)
+    return task_name
+
+
+def get_tasks_line_numbers(input_file):
+    task_line_numbers = []
+    line_number = 0
+    # Open the file and get the task line numbers
+    with open(input_file) as file:
+        for line in file:
+            line_number += 1
+            line = line.strip()
+            if line.startswith('-'):
+                task_line_numbers.append(line_number)
+        file.close()
+    return task_line_numbers
+
+
+def detect_smells(task, task_number, input_file):
+    output_tasks = []
+    new_output_tasks = []
+    # Get file name and repository name for output
+    file_name = input_file.split('/')[-1]
+    repository_name = input_file.split('/')[0:-1]
+
+    # 2- Create task lines list
+    task_line_numbers = get_tasks_line_numbers(input_file)
+
+    smell_name_description = perform_smell_detection_for_task(task=task)
+    task_name = get_task_name(task=task, task_index=task_number)
+
+    # Store task smells in a dictionary
+    task_smells = {'Task name': task_name,
+                   'Idempotency': smell_name_description['Idempotency'],
+                   'Version specific installation': smell_name_description['Version Specific Installation'],
+                   'Outdated dependencies': smell_name_description['Outdated Dependencies'],
+                   'Missing dependencies': smell_name_description['Missing Dependencies'],
+                   'Assumption about environment': smell_name_description['Assumption about Environment'],
+                   'Hardware specific commands': smell_name_description['Hardware Specific Commands'],
+                   'Broken Dependency': smell_name_description['Broken Dependency Chain']}
+    output_tasks.append(task_smells)
+
+    for smell_name in smell_name_description.keys():
+        new_task_smells = {
+            'Repository Name': repository_name,
+            'File Name': file_name,
+            'Line Number': task_line_numbers[task_number],
+            'Task Name': task_name,
+            'Smell Name': smell_name,
+            'Smell Description': smell_name_description.get(smell_name),
+        }
+        new_output_tasks.append(new_task_smells)
+    return output_tasks, new_output_tasks
+
+
+def perform_smell_detection_for_task(task):
+    smell_name_description = {}
+
+    idempotency = check_task_for_idempotency(task=task)
+    smell_name_description['Idempotency'] = idempotency
+
+    version_specific = check_task_for_version_specific_package(task=task)
+    smell_name_description['Version Specific Installation'] = version_specific
+
+    outdated_dependency = check_task_for_outdated_package(task=task)
+    smell_name_description['Outdated Dependencies'] = outdated_dependency
+
+    missing_dependency = check_task_for_missing_dependencies(task=task)
+    smell_name_description['Missing Dependencies'] = missing_dependency
+
+    hardware_specific = check_task_for_hardware_specific_commands(task=task)
+    smell_name_description['Hardware Specific Commands'] = hardware_specific
+
+    assumption = check_task_for_environment_assumptions(task=task) \
+                 + ' ' + check_task_for_software_specific_commands(task=task)
+    smell_name_description['Assumption about Environment'] = assumption
+
+    broken_dependency = check_task_for_broken_dependency(task=task)
+    smell_name_description['Broken Dependency Chain'] = broken_dependency
+
+    return smell_name_description

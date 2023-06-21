@@ -1,5 +1,0 @@
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Include assert.yml,None None None,None,None,None,None None,None,None
-Install kibana,None None None,None,None,None,None None,None,None
-Configure kibana,None None None,None,None,None,None None,None,None
-Start kibana,Task uses the service module. None None,None,None,None,None None,None,None

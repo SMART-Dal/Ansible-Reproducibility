@@ -1,2 +1,0 @@
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Install collection ansible.posix,Task uses the shell module. Task violates idempotency because it executes a command. None,None,None,None,None None,None,None

@@ -1,0 +1,25 @@
+import csv
+
+def write_results_csv(output_tasks, new_output_tasks, input_file):
+    # Create lists to generate output file
+    csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
+                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands',
+                   'Broken Dependency']
+    new_csv_columns = ['Repository Name', 'File Name', 'Line Number', 'Task Name', 'Smell Name',
+                       'Smell Description']
+    # Output file name
+    output_file = '/home/ghazal/prengdl-reproduce/outputs/' + input_file.split('/')[-1] + '_smells_v1.csv'
+    output_file2 = '/home/ghazal/prengdl-reproduce/outputs/' + input_file.split('/')[-1] + '_smells_v2.csv'
+
+    # Write task smells to CSV file
+    with open(output_file, 'w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=new_csv_columns)
+        writer.writeheader()
+        writer.writerows(new_output_tasks)
+    file.close()
+
+    with open(output_file2, 'w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=csv_columns)
+        writer.writeheader()
+        writer.writerows(output_tasks)
+    file.close()
