@@ -136,19 +136,3 @@ def get_parsed_tasks(input_file):
     except KeyError:
         tasks = data[0]
     return tasks
-
-    # Create lists to generate output file
-    output_tasks = []
-    csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
-                   'Missing dependencies', 'Assumption about environment', 'Hardware specific commands',
-                   'Broken Dependency']
-
-    new_csv_columns = ['Repository Name', 'File Name', 'Line Number', 'Task Name', 'Smell Name', 'Smell Description']
-
-    smell_name_description = {}
-    file_name = input_file.split('/')[-1]
-    repository_name = input_file.split('/')[0:-1]
-    new_output_tasks = []
-
-    # Parse playbook into tasks
-    # tasks = parse_playbook('/home/ghazal/prengdl-reproduce/install_and_configure.yml')
