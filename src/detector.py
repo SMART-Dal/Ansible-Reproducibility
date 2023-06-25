@@ -1,17 +1,13 @@
 import os
+import sys
 
-import src.smell_detection as detector
-import src.parser as parser
+import smell_detection as detector
+import parser as parser
 from results import write_results_csv
 
-import os
 
-
-def main_method():
+def main_method(input_path):
     try:
-        # Get the input path from the user
-        input_path = input("Enter the path to your input file or directory: ")
-
         # Check if the input path exists
         if not os.path.exists(input_path):
             print("Error: The specified input path does not exist.")
@@ -64,4 +60,9 @@ def get_files_from_directory(directory):
 
 
 if __name__ == "__main__":
-    main_method()
+    # Check if the input path is provided as a command-line argument
+    if len(sys.argv) < 2:
+        print("Error: No input path provided.")
+    else:
+        input_path = sys.argv[1]
+        main_method(input_path)

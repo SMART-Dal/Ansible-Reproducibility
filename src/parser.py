@@ -1,8 +1,6 @@
 import yaml
 from yaml import SafeLoader
 
-from src import smell_detection as detector
-
 
 # Ansible class Object with attributes
 class AnsibleTask:
