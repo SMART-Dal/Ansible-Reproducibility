@@ -1,28 +1,29 @@
 import csv
+import os
 
 
 def write_results_csv(output_tasks, new_output_tasks, input_file):
     try:
-        # Create lists to generate output file
+        # Define the output file names
+        output_file_v1 = f"{os.path.basename(input_file)}_smells_v1.csv"
+        output_file_v2 = f"{os.path.basename(input_file)}_smells_v2.csv"
+
+        # Define the CSV column names
         csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
                        'Missing dependencies', 'Assumption about environment', 'Hardware specific commands',
                        'Broken Dependency']
         new_csv_columns = ['Repository Name', 'File Name', 'Line Number', 'Task Name', 'Smell Name',
                            'Smell Description']
-        # Output file name
-        output_file = input_file.split('/')[-1] + '_smells_v1.csv'
-        output_file2 = input_file.split('/')[-1] + '_smells_v2.csv'
 
-        # Write task smells to CSV file
-        with open(output_file, 'w', newline='') as file:
-            writer = csv.DictWriter(file, fieldnames=new_csv_columns)
-            writer.writeheader()
-            writer.writerows(new_output_tasks)
+        # Write task smells to CSV files
+        with open(output_file_v1, 'w', newline='') as file_v1, open(output_file_v2, 'w', newline='') as file_v2:
+            writer_v1 = csv.DictWriter(file_v1, fieldnames=new_csv_columns)
+            writer_v1.writeheader()
+            writer_v1.writerows(new_output_tasks)
 
-        with open(output_file2, 'w', newline='') as file:
-            writer = csv.DictWriter(file, fieldnames=csv_columns)
-            writer.writeheader()
-            writer.writerows(output_tasks)
+            writer_v2 = csv.DictWriter(file_v2, fieldnames=csv_columns)
+            writer_v2.writeheader()
+            writer_v2.writerows(output_tasks)
 
     except Exception as e:
-        print("Error occurred while writing CSV file:", str(e))
+        print("Error occurred while writing CSV files:", str(e))

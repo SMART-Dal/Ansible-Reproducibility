@@ -1,14 +1,21 @@
 # checks if a task uses one of the supported package installers
 # and returns a message indicating which installer was used
+import os
+
+
 def check_task_for_broken_dependency(task):
     try:
-        package_installers_keys_to_check = ['apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
-                                            'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
-                                            'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key',
-                                            'ansible.builtin.yum-key']
-        checkers = [('fingerprint', "Task uses fixed fingerprint which can get outdated."),
-                    ('id', "Task uses fixed id which can get outdated or not correct across platforms."),
-                    ('url', "Task uses fixed URL to download key which can get outdated or removed.")]
+        package_installers_keys_to_check = [
+            'apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
+            'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
+            'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key',
+            'ansible.builtin.yum-key'
+        ]
+        checkers = [
+            ('fingerprint', "Task uses a fixed fingerprint which can become outdated."),
+            ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
+            ('url', "Task uses a fixed URL to download a key which can become outdated or removed.")
+        ]
         messages = []
 
         for t in task:
@@ -17,6 +24,7 @@ def check_task_for_broken_dependency(task):
                     for checker, message in checkers:
                         if checker in task[t]:
                             messages.append(message)
+
             if 'package_facts' not in t or 'debug' not in t or 'when' not in t:
                 messages.append('Task did not check the correctness of execution.')
 
@@ -33,7 +41,7 @@ def check_task_for_broken_dependency(task):
 # checks if a task installs or updates packages and returns a message indicating
 # whether the task installs the latest packages, updates packages, or installs specific packages.
 def check_task_for_outdated_package(task):
-    package_installers_to_check = [
+    package_installers = [
         {'name': 'apt', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'yum', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'dnf', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
@@ -45,13 +53,13 @@ def check_task_for_outdated_package(task):
     messages = []
     try:
         for t in task:
-            for installer in package_installers_to_check:
+            for installer in package_installers:
                 if installer['name'] in t:
-                    if (installer['latest_state'] and 'state' in task[t] and
-                        task[t]['state'] == installer['latest_state']) or 'update_cache' in task[t]:
+                    if is_latest_install(installer, task[t]) or is_update_cache(task[t]):
                         messages.append(f"Task uses {installer['name']} to install the latest packages.")
                     else:
-                        messages.append("The package installed could get outdated because the script does not update.")
+                        messages.append(
+                            "The installed package could become outdated because the script does not update it.")
 
         if messages:
             return '\n'.join(messages)
@@ -63,46 +71,49 @@ def check_task_for_outdated_package(task):
         return "Error"
 
 
+def is_latest_install(installer, task_attributes):
+    return (
+            'state' in task_attributes and task_attributes['state'] == installer['latest_state']
+    )
+
+
+def is_update_cache(task_attributes):
+    return 'update_cache' in task_attributes
+
+
 # checks if a task violates idempotency by executing a command,
 # installing or upgrading packages, or updating the package cache.
 def check_task_for_idempotency(task):
+    idempotency_violations = {
+        'command': "Task violates idempotency because it executes a command.",
+        'shell': "Task violates idempotency because it executes a command.",
+        'service': "Task violates idempotency because it executes a command.",
+        'systemd': "Task violates idempotency because it executes a command.",
+        'raw': "Task violates idempotency because it executes a command.",
+        'script': "Task violates idempotency because it executes a command.",
+        'win_command': "Task violates idempotency because it executes a command.",
+        'win_shell': "Task violates idempotency because it executes a command.",
+        'apt': "Task violates idempotency because it installs or upgrades packages with apt.",
+        'yum': "Task violates idempotency because it installs or upgrades packages with yum.",
+        'dnf': "Task violates idempotency because it installs packages with dnf.",
+        'pacman': "Task violates idempotency because it installs packages with pacman.",
+        'pip': "Task violates idempotency because it installs packages with pip.",
+        'apt-get': "Task violates idempotency because it installs packages with apt-get."
+    }
     messages = []
-    idempotency_violations = [
-        ('command', "Task violates idempotency because it executes a command."),
-        ('shell', "Task violates idempotency because it executes a command."),
-        ('service', "Task violates idempotency because it executes a command."),
-        ('systemd', "Task violates idempotency because it executes a command."),
-        ('raw', "Task violates idempotency because it executes a command."),
-        ('script', "Task violates idempotency because it executes a command."),
-        ('win_command', "Task violates idempotency because it executes a command."),
-        ('win_shell', "Task violates idempotency because it executes a command."),
-        ('apt', "Task violates idempotency because it installs or upgrades packages with apt."),
-        ('yum', "Task violates idempotency because it installs or upgrades packages with yum."),
-        ('dnf', "Task violates idempotency because it installs packages with dnf."),
-        ('pacman', "Task violates idempotency because it installs packages with pacman."),
-        ('pip', "Task violates idempotency because it installs packages with pip."),
-        ('apt-get', "Task violates idempotency because it installs packages with apt-get.")
-    ]
 
     try:
         for t in task:
-            for component, message in idempotency_violations:
+            for component, message in idempotency_violations.items():
                 if component in t:
-                    if component == 'command' or component == 'shell' or component == 'service' or component == 'systemd' or component == 'raw' or component == 'script' or component == 'win_command' or component == 'win_shell':
-                        if 'state' not in task[t] or 'when' not in task[t]:
-                            messages.append(message)
-                    elif 'state' not in task[t] or 'when' not in task[t] and task[t]['state'] == 'latest':
-                        messages.append(message)
-                    elif 'upgrade' in task[t] or 'update_cache' in task[t] or 'check_update' in task[t]:
+                    if is_idempotent_task(task[t], component):
                         messages.append(message)
 
-            if 'ansible.posix.firewalld' in t or 'community.general.ufw' in t:
-                if 'state' not in task[t]:
-                    messages.append(f"Task changes the state of the firewall without checking.")
+            if is_firewall_task(t) and 'state' not in task[t]:
+                messages.append("Task changes the state of the firewall without checking.")
 
-            if 'file' in t or 'ansible.builtin.copy' in t or 'copy' in t or 'lineinfile' in t:
-                if 'state' not in task[t]:
-                    messages.append(f"Task changes the state of the file without checking.")
+            if is_file_task(t) and 'state' not in task[t]:
+                messages.append("Task changes the state of the file without checking.")
 
         if messages:
             return '\n'.join(messages)
@@ -114,24 +125,34 @@ def check_task_for_idempotency(task):
         return "Error"
 
 
+def is_idempotent_task(task, component):
+    if component in ['command', 'shell', 'service', 'systemd', 'raw', 'script', 'win_command', 'win_shell']:
+        return 'state' not in task or 'when' not in task
+    elif 'state' not in task or 'when' not in task and task['state'] == 'latest':
+        return True
+    elif 'upgrade' in task or 'update_cache' in task or 'check_update' in task:
+        return True
+    return False
+
+
+def is_firewall_task(task):
+    return 'ansible.posix.firewalld' in task or 'community.general.ufw' in task
+
+
+def is_file_task(task):
+    return 'file' in task or 'ansible.builtin.copy' in task or 'copy' in task or 'lineinfile' in task
+
+
 # checks if a task installs a version-specific package
 def check_task_for_version_specific_package(task):
+    package_managers = ['apt', 'yum', 'dnf', 'pacman', 'apk', 'pip']
     messages = []
-    package_managers = [
-        {'name': 'apt', 'version_key': 'version'},
-        {'name': 'yum', 'version_key': 'version'},
-        {'name': 'dnf', 'version_key': 'version'},
-        {'name': 'pacman', 'version_key': 'version'},
-        {'name': 'apk', 'version_key': 'version'},
-        {'name': 'pip', 'version_key': 'version'}
-    ]
 
     try:
         for t in task:
             for pm in package_managers:
-                if pm['name'] in t:
-                    if pm['version_key'] in task[t]:
-                        messages.append(f"Task uses {pm['name']} to install a specific version of a package.")
+                if pm in t and 'version' in task[t]:
+                    messages.append(f"Task uses {pm} to install a specific version of a package.")
 
         if messages:
             return '\n'.join(messages)
@@ -143,56 +164,29 @@ def check_task_for_version_specific_package(task):
         return "Error"
 
 
+def check_hardware_components(task, components, message):
+    if any(component in task for component in components):
+        return message
+    return '\n'
+
+
 def check_task_for_hardware_specific_commands(task):
     messages = []
-
-    hardware_commands = ['lspci', 'lshw', 'lsblk', 'fdisk', 'parted', 'ip', 'ifconfig', 'route', 'fwupd', 'smbios-util',
-                         'mdadm', 'megacli', 'vconfig', 'tpmtool', 'efibootmgr', 'cpufrequtils', 'sysctl', 'powertop',
-                         'acpi', 'ifup', 'ifdown', 'iptables', 'mkfs', 'nvidia-settings', 'nvidia-smi', 'sg3_utils',
-                         'multipath',
-                         'mpstat', 'xinput', 'smbus-tools', 'lm-sensors']
 
     try:
         for t in task:
             for component in ['command', 'shell', 'raw']:
-                if component in t and any(hc in task[t] for hc in hardware_commands):
-
-                    if any(hc in task[t] for hc in ['lspci', 'lshw']):
-                        messages.append(f"Task uses a hardware-specific command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath']):
-                        messages.append(f"Task uses a disk management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in
-                             ['ip', 'ifconfig', 'route', 'vconfig', 'ifup', 'ifdown', 'iptables']):
-                        messages.append(f"Task uses a network management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['fwupd', 'smbios-util']):
-                        messages.append(
-                            f"Task uses a BIOS firmware management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['mdadm', 'megacli']):
-                        messages.append(
-                            f"Task uses a RAID arrays management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['tpmtool', 'efibootmgr']):
-                        messages.append(f"Task uses a security management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['cpufrequtils', 'sysctl', 'cpufreq-info']):
-                        messages.append(
-                            f"Task uses a performance settings management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['nvidia-settings', 'nvidia-smi']):
-                        messages.append(
-                            f"Task uses a GPU settings management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['xinput', 'xrandr']):
-                        messages.append(
-                            f"Task uses a I/O device management command that may not be portable.")
-
-                    elif any(hc in task[t] for hc in ['smbus-tools', 'lm-sensors']):
-                        messages.append(
-                            f"Task uses a system management bus command that may not be portable.")
+                if component in t:
+                    messages.append(check_hardware_components(task[t], ['lspci', 'lshw'], "Task uses a hardware-specific command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath'], "Task uses a disk management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['ip', 'ifconfig', 'route', 'vconfig', 'ifup', 'ifdown', 'iptables'], "Task uses a network management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['cpufrequtils', 'sysctl', 'cpufreq-info'], "Task uses a performance settings management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['nvidia-settings', 'nvidia-smi'], "Task uses a GPU settings management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['xinput', 'xrandr'], "Task uses an I/O device management command that may not be portable."))
+                    messages.append(check_hardware_components(task[t], ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
 
         if messages:
             return '\n'.join(messages)
@@ -228,49 +222,35 @@ def check_task_for_software_specific_commands(task):
 
 def check_task_for_environment_assumptions(task):
     messages = []
-
     key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
     try:
         for t in task:
-            if 'vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t:
-                if 'ansible_distribution' in str(task[t]):
-                    messages.append(
-                        f"Task assumes a default running environment.")
-                if 'ansible_os_family' in str(task[t]):
-                    messages.append(
-                        f"Task assumes the operating system family.")
+            if has_environment_assumption(task, t):
+                messages.append("Task assumes a default running environment.")
 
-            if 'ansible.posix.firewalld' in t or 'community.general.ufw' in t:
-                if 'state' not in task[t]:
-                    messages.append(f"Task assumes the firewall and change the state without checking.")
+            if has_os_family_assumption(task, t):
+                messages.append("Task assumes the operating system family.")
 
-            if 'resolv.conf' in t:
-                if 'state' not in task[t]:
-                    messages.append(
-                        f"Task assumes that the system is using a resolv.conf file to manage DNS settings.")
+            if has_firewall_assumption(task, t):
+                messages.append("Task assumes the firewall and changes the state without checking.")
 
-            if 'ethernets' in t:
-                if 'state' not in task[t]:
-                    messages.append(f"Task changes ethernet interfaces settings without checking the state.")
+            if has_dns_assumption(task, t):
+                messages.append("Task assumes that the system is using a resolv.conf file to manage DNS settings.")
 
-            if 'ntp' in t:
-                if 'state' not in task[t]:
-                    messages.append(
-                        f"Task the system is using the ntp service to manage time settings and that the provided NTP servers.")
+            if has_ethernet_assumption(task, t):
+                messages.append("Task changes ethernet interfaces settings without checking the state.")
 
-            if 'sshd_config' in t:
-                if 'state' not in task[t]:
-                    messages.append(
-                        f"Task assumes that the system is using a ssh without checking the state.")
+            if has_ntp_assumption(task, t):
+                messages.append("Task assumes the system is using the ntp service to manage time settings and the provided NTP servers.")
 
-            if 'assert' not in t or 'debug' not in t:
-                messages.append('Task did not checked the final execution of the task.')
+            if has_ssh_assumption(task, t):
+                messages.append("Task assumes that the system is using SSH without checking the state.")
 
-            for key_checker in key_download_components:
-                if key_checker in t:
-                    if 'url' in task[t] or 'repo' in task[t]:
-                        messages.append(
-                            f"Task assumes that the package repository is available at a specific URL structure.")
+            if not has_assert_debug(task, t):
+                messages.append("Task did not check the final execution of the task.")
+
+            if has_package_repository_assumption(task, t, key_download_components):
+                messages.append("Task assumes that the package repository is available at a specific URL structure.")
 
         if messages:
             return '\n'.join(messages)
@@ -282,37 +262,60 @@ def check_task_for_environment_assumptions(task):
         return "Error"
 
 
-def check_task_for_missing_dependencies(task):
-    from pathlib import Path
+def has_environment_assumption(task, t):
+    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_distribution' in str(task[t]))
 
+
+def has_os_family_assumption(task, t):
+    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_os_family' in str(task[t]))
+
+
+def has_firewall_assumption(task, t):
+    return ('ansible.posix.firewalld' in t or 'community.general.ufw' in t) and ('state' not in task[t])
+
+
+def has_dns_assumption(task, t):
+    return 'resolv.conf' in t and 'state' not in task[t]
+
+
+def has_ethernet_assumption(task, t):
+    return 'ethernets' in t and 'state' not in task[t]
+
+
+def has_ntp_assumption(task, t):
+    return 'ntp' in t and 'state' not in task[t]
+
+
+def has_ssh_assumption(task, t):
+    return 'sshd_config' in t and 'state' not in task[t]
+
+
+def has_assert_debug(task, t):
+    return 'assert' in t or 'debug' in t
+
+
+def has_package_repository_assumption(task, t, key_download_components):
+    return any(key_checker in t for key_checker in key_download_components) and ('url' in task[t] or 'repo' in task[t])
+
+
+def check_task_for_missing_dependencies(task):
     messages = []
+
     try:
         for t in task:
-            if 'msg' in t:
+            if 'msg' in t or 'failed_when' in t:
                 if 'dependencies are missing' in task[t] or 'dependency not found' in task[t]:
-                    messages.append(f"Task has missing dependencies")
+                    messages.append("Task has missing dependencies")
 
-            elif 'failed' in t:
-                if 'dependency not found' in str(task[t]):
-                    messages.append(f"Task has missing dependencies")
-
-            elif 'failed_when' in t:
-                if 'dependency not found' in str(task[t]):
-                    messages.append(f"Task has missing dependencies")
+            elif 'failed' in t and str(task[t]).lower() == 'false':
+                messages.append("Task has missing dependencies")
 
             elif 'file' in t or 'ansible.builtin.copy' in t:
-                if 'src' in task[t]:
-                    dest = task[t]['src']
-                    if Path(str(dest)).is_absolute():
-                        messages.append(f"Task is using absolute path for source")
-                    else:
-                        messages.append(f"Task is using relative path for source")
-                if 'path' in task[t]:
-                    dest = task[t]['path']
-                    if Path(str(dest)).is_absolute():
-                        messages.append(f"Task is using absolute path for source path")
-                    else:
-                        messages.append(f"Task is using relative path for source path")
+                src_message = check_path(task, t, 'src', "Task is using absolute path for source", "Task is using relative path for source")
+                path_message = check_path(task, t, 'path', "Task is using absolute path for source path", "Task is using relative path for source path")
+                messages.append(src_message)
+                messages.append(path_message)
+
         if messages:
             return '\n'.join(messages)
         else:
@@ -322,8 +325,17 @@ def check_task_for_missing_dependencies(task):
         print("Error occurred while checking task for missing dependencies:", str(e))
         return "Error"
 
-    else:
-        return "None"
+
+def check_path(task, t, key, absolute_message, relative_message):
+    from pathlib import Path
+    message = ''
+    if key in task[t]:
+        dest = task[t][key]
+        if Path(str(dest)).is_absolute():
+            message = absolute_message
+        else:
+            message = relative_message
+    return message
 
 
 def get_task_name(task, task_index):
@@ -360,76 +372,71 @@ def get_tasks_line_numbers(input_file):
         return []
 
 
+def create_task_smells(task_name, smell_name_description):
+    task_smells = {
+        'Task name': task_name,
+        'Idempotency': smell_name_description['Idempotency'],
+        'Version specific installation': smell_name_description['Version Specific Installation'],
+        'Outdated dependencies': smell_name_description['Outdated Dependencies'],
+        'Missing dependencies': smell_name_description['Missing Dependencies'],
+        'Assumption about environment': smell_name_description['Assumption about Environment'],
+        'Hardware specific commands': smell_name_description['Hardware Specific Commands'],
+        'Broken Dependency': smell_name_description['Broken Dependency Chain']
+    }
+    return task_smells
+
+
 def detect_smells(task, task_number, input_file):
     try:
         output_tasks = []
         new_output_tasks = []
-        # Get file name and repository name for output
-        file_name = input_file.split('/')[-1]
-        repository_name = input_file.split('/')[0:-1]
 
-        # 2- Create task lines list
+        # Extract file name and repository name for output
+        file_name = os.path.basename(input_file)
+        repository_name = os.path.dirname(input_file)
+
+        # Get task line numbers
         task_line_numbers = get_tasks_line_numbers(input_file)
 
         smell_name_description = perform_smell_detection_for_task(task=task)
         task_name = get_task_name(task=task, task_index=task_number)
 
         # Store task smells in a dictionary
-        task_smells = {'Task name': task_name,
-                       'Idempotency': smell_name_description['Idempotency'],
-                       'Version specific installation': smell_name_description['Version Specific Installation'],
-                       'Outdated dependencies': smell_name_description['Outdated Dependencies'],
-                       'Missing dependencies': smell_name_description['Missing Dependencies'],
-                       'Assumption about environment': smell_name_description['Assumption about Environment'],
-                       'Hardware specific commands': smell_name_description['Hardware Specific Commands'],
-                       'Broken Dependency': smell_name_description['Broken Dependency Chain']}
+        task_smells = create_task_smells(task_name, smell_name_description)
         output_tasks.append(task_smells)
 
-        for smell_name in smell_name_description.keys():
+        for smell_name, smell_description in smell_name_description.items():
             new_task_smells = {
                 'Repository Name': repository_name,
                 'File Name': file_name,
                 'Line Number': task_line_numbers[task_number],
                 'Task Name': task_name,
                 'Smell Name': smell_name,
-                'Smell Description': smell_name_description.get(smell_name),
+                'Smell Description': smell_description,
             }
             new_output_tasks.append(new_task_smells)
+
         return output_tasks, new_output_tasks
     except IndexError:
         print("Task number is out of range.")
-        return [], []
     except Exception as e:
         print("An error occurred:", str(e))
-        return [], []
+
+    return [], []
 
 
 def perform_smell_detection_for_task(task):
     smell_name_description = {}
 
     try:
-        idempotency = check_task_for_idempotency(task=task)
-        smell_name_description['Idempotency'] = idempotency
-
-        version_specific = check_task_for_version_specific_package(task=task)
-        smell_name_description['Version Specific Installation'] = version_specific
-
-        outdated_dependency = check_task_for_outdated_package(task=task)
-        smell_name_description['Outdated Dependencies'] = outdated_dependency
-
-        missing_dependency = check_task_for_missing_dependencies(task=task)
-        smell_name_description['Missing Dependencies'] = missing_dependency
-
-        hardware_specific = check_task_for_hardware_specific_commands(task=task)
-        smell_name_description['Hardware Specific Commands'] = hardware_specific
-
-        assumption = check_task_for_environment_assumptions(task=task) \
-                     + ' ' + check_task_for_software_specific_commands(task=task)
+        smell_name_description['Idempotency'] = check_task_for_idempotency(task=task)
+        smell_name_description['Version Specific Installation'] = check_task_for_version_specific_package(task=task)
+        smell_name_description['Outdated Dependencies'] = check_task_for_outdated_package(task=task)
+        smell_name_description['Missing Dependencies'] = check_task_for_missing_dependencies(task=task)
+        smell_name_description['Hardware Specific Commands'] = check_task_for_hardware_specific_commands(task=task)
+        assumption = check_task_for_environment_assumptions(task=task) + ' ' + check_task_for_software_specific_commands(task=task)
         smell_name_description['Assumption about Environment'] = assumption
-
-        broken_dependency = check_task_for_broken_dependency(task=task)
-        smell_name_description['Broken Dependency Chain'] = broken_dependency
-
+        smell_name_description['Broken Dependency Chain'] = check_task_for_broken_dependency(task=task)
     except Exception as e:
         print("An error occurred during smell detection:", str(e))
 

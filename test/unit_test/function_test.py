@@ -7,25 +7,25 @@ class TaskDependencyTestCase(unittest.TestCase):
         task = {'apt-key': {'fingerprint': 'ABC123'}}
         result = detector.check_task_for_broken_dependency(task)
         self.assertEqual(result,
-                         'Task uses fixed fingerprint which can get outdated.\nTask did not checked the correctness of execution.')
+                         'Task uses a fixed fingerprint which can become outdated.\nTask did not check the correctness of execution.')
 
     def test_id_dependency(self):
         task = {'yum-key': {'id': 'KEY123'}}
         result = detector.check_task_for_broken_dependency(task)
         self.assertEqual(result,
-                         'Task uses fixed id which can get outdated or not correct across platfroms.\nTask did not checked the correctness of execution.')
+                         'Task uses a fixed ID which can become outdated or incorrect across platforms.\nTask did not check the correctness of execution.')
 
     def test_url_dependency(self):
         task = {'ansible.builtin.rpm-key': {'url': 'https://example.com/key.rpm'}}
         result = detector.check_task_for_broken_dependency(task)
         self.assertEqual(result,
-                         'Task uses fixed url to download key which can get outdated or removed.\nTask did not checked the correctness of execution.')
+                         'Task uses a fixed URL to download a key which can become outdated or removed.\nTask did not check the correctness of execution.')
 
     def test_missing_dependency_check(self):
         task = {'apt-get-key': {'fingerprint': 'DEF456'}}
         result = detector.check_task_for_broken_dependency(task)
         self.assertEqual(result,
-                         'Task uses fixed fingerprint which can get outdated.\nTask did not checked the correctness of execution.')
+                         'Task uses a fixed fingerprint which can become outdated.\nTask did not check the correctness of execution.')
 
     def test_multiple_conditions(self):
         task = {
@@ -35,7 +35,7 @@ class TaskDependencyTestCase(unittest.TestCase):
             'when': {}
         }
         result = detector.check_task_for_broken_dependency(task)
-        expected_result = "Task uses fixed fingerprint which can get outdated.\nTask did not checked the correctness of execution.\nTask did not checked the correctness of execution.\nTask did not checked the correctness of execution.\nTask did not checked the correctness of execution."
+        expected_result = "Task uses a fixed fingerprint which can become outdated.\nTask did not check the correctness of execution.\nTask did not check the correctness of execution.\nTask did not check the correctness of execution.\nTask did not check the correctness of execution."
         self.assertEqual(result, expected_result)
 
     def test_no_broken_dependency(self):
@@ -44,7 +44,7 @@ class TaskDependencyTestCase(unittest.TestCase):
                 'debug': {},
                 'when': {}}
         result = detector.check_task_for_broken_dependency(task)
-        expected_result = 'Task uses fixed url to download key which can get outdated or removed.\nTask uses fixed url to download key which can get outdated or removed.\nTask did not checked the correctness of execution.\nTask did not checked the correctness of execution.\nTask did not checked the correctness of execution.\nTask did not checked the correctness of execution.'
+        expected_result = 'Task uses a fixed URL to download a key which can become outdated or removed.\nTask uses a fixed URL to download a key which can become outdated or removed.\nTask did not check the correctness of execution.\nTask did not check the correctness of execution.\nTask did not check the correctness of execution.\nTask did not check the correctness of execution.'
         self.assertEqual(result, expected_result)
 
 
@@ -62,7 +62,7 @@ class TaskPackageTestCase(unittest.TestCase):
     def test_no_update(self):
         task = {'dnf': {'state': 'installed'}}
         result = detector.check_task_for_outdated_package(task)
-        self.assertEqual(result, 'The package installed could get outdated because the script does not update')
+        self.assertEqual(result, "The installed package could become outdated because the script does not update it.")
 
     def test_multiple_packages(self):
         task = {
@@ -78,7 +78,7 @@ class TaskPackageTestCase(unittest.TestCase):
         expected_result = "Task uses apt to install the latest packages.\n" \
                           "Task uses yum to install the latest packages.\n" \
                           "Task uses pip to install the latest packages.\n" \
-                          "The package installed could get outdated because the script does not update"
+                          "The installed package could become outdated because the script does not update it."
         self.assertEqual(result, expected_result)
 
     def test_no_outdated_package(self):
@@ -164,7 +164,7 @@ class TaskIdempotencyTestCase(unittest.TestCase):
     def test_firewall_no_state(self):
         task = {'ansible.posix.firewalld': {'some_key': 'some_value'}}
         result = detector.check_task_for_idempotency(task)
-        self.assertEqual(result, 'Task change the state of firewall without checking.')
+        self.assertEqual(result, 'Task changes the state of the firewall without checking.')
 
     def test_firewall_with_state(self):
         task = {'ansible.posix.firewalld': {'state': 'enabled'}}
@@ -174,7 +174,7 @@ class TaskIdempotencyTestCase(unittest.TestCase):
     def test_ufw_no_state(self):
         task = {'community.general.ufw': {'some_key': 'some_value'}}
         result = detector.check_task_for_idempotency(task)
-        self.assertEqual(result, 'Task change the state of firewall without checking.')
+        self.assertEqual(result, 'Task changes the state of the firewall without checking.')
 
     def test_ufw_with_state(self):
         task = {'community.general.ufw': {'state': 'enabled'}}
@@ -184,7 +184,7 @@ class TaskIdempotencyTestCase(unittest.TestCase):
     def test_file_no_state(self):
         task = {'file': {'path': '/path/to/file'}}
         result = detector.check_task_for_idempotency(task)
-        self.assertEqual(result, 'Task change the state of file without checking.')
+        self.assertEqual(result, 'Task changes the state of the file without checking.')
 
     def test_file_with_state(self):
         task = {'file': {'path': '/path/to/file', 'state': 'file'}}
@@ -194,7 +194,7 @@ class TaskIdempotencyTestCase(unittest.TestCase):
     def test_copy_no_state(self):
         task = {'ansible.builtin.copy': {'src': 'file.txt', 'dest': '/path/to/file'}}
         result = detector.check_task_for_idempotency(task)
-        self.assertEqual(result, 'Task change the state of file without checking.')
+        self.assertEqual(result, 'Task changes the state of the file without checking.')
 
     def test_copy_with_state(self):
         task = {'ansible.builtin.copy': {'src': 'file.txt', 'dest': '/path/to/file', 'state': 'file'}}
@@ -204,7 +204,7 @@ class TaskIdempotencyTestCase(unittest.TestCase):
     def test_lineinfile_no_state(self):
         task = {'lineinfile': {'path': '/path/to/file', 'line': 'some_line'}}
         result = detector.check_task_for_idempotency(task)
-        self.assertEqual(result, 'Task change the state of file without checking.')
+        self.assertEqual(result, 'Task changes the state of the file without checking.')
 
     def test_lineinfile_with_state(self):
         task = {'lineinfile': {'path': '/path/to/file', 'line': 'some_line', 'state': 'present'}}
@@ -253,57 +253,57 @@ class TaskHardwareSpecificCommandsTestCase(unittest.TestCase):
     def test_hardware_specific_command_lspci(self):
         task = {'command': 'lspci -nn'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a hardware-specific command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a hardware-specific command that may not be portable.')
 
     def test_hardware_specific_command_lsblk(self):
         task = {'shell': 'lsblk'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a disk management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a disk management command that may not be portable.')
 
     def test_hardware_specific_command_ip(self):
         task = {'raw': 'ip link show'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a network management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a network management command that may not be portable.')
 
     def test_hardware_specific_command_fwupd(self):
         task = {'shell': 'fwupd'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a BIOS firmware management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a BIOS firmware management command that may not be portable.')
 
     def test_hardware_specific_command_mdadm(self):
         task = {'command': 'mdadm --create'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a RAID arrays management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a RAID arrays management command that may not be portable.')
 
     def test_hardware_specific_command_tpmtool(self):
         task = {'raw': 'tpmtool getcap'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a security management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a security management command that may not be portable.')
 
     def test_hardware_specific_command_cpufrequtils(self):
         task = {'shell': 'cpufrequtils'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a performance settings management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a performance settings management command that may not be portable.')
 
     def test_hardware_specific_command_nvidia_settings(self):
         task = {'command': 'nvidia-settings'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a GPU settings management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a GPU settings management command that may not be portable.')
 
     def test_hardware_specific_command_xinput(self):
         task = {'command': 'xinput list'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a I/O device management command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses an I/O device management command that may not be portable.')
 
     def test_hardware_specific_command_smbus_tools(self):
         task = {'shell': 'smbus-tools'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'Task uses a system management bus command that may not be portable.')
+        self.assertEqual(result.strip('\n'), 'Task uses a system management bus command that may not be portable.')
 
     def test_no_hardware_specific_command(self):
         task = {'command': 'echo "Hello, World!"'}
         result = detector.check_task_for_hardware_specific_commands(task)
-        self.assertEqual(result, 'None')
+        self.assertEqual(result.strip('\n'), '')
 
 
 class TaskSoftwareSpecificCommandsTestCase(unittest.TestCase):
@@ -337,52 +337,52 @@ class TaskEnvironmentAssumptionsTestCase(unittest.TestCase):
     def test_default_running_environment_assumption(self):
         task = {'vars': {'ansible_distribution': 'Ubuntu'}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task assumes a default running environment.\nTask did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task assumes a default running environment.\nTask did not check the final execution of the task.')
 
     def test_operating_system_family_assumption(self):
         task = {'include_vars': 'vars.yml'}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task did not check the final execution of the task.')
 
     def test_firewall_state_assumption(self):
         task = {'ansible.posix.firewalld': {'option': 'enable'}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task assumes the firewall and change the state without checking.\nTask did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task assumes the firewall and changes the state without checking.\nTask did not check the final execution of the task.')
 
     def test_resolv_conf_state_assumption(self):
         task = {'resolv.conf': {'nameservers': ['8.8.8.8']}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task assumes that the system is using a resolv.conf file to manage DNS settings.\nTask did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task assumes that the system is using a resolv.conf file to manage DNS settings.\nTask did not check the final execution of the task.')
 
     def test_ethernet_interfaces_state_assumption(self):
         task = {'ethernets': {'eth0': {'address': '192.168.0.100'}}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task changes ethernet interfaces settings without checking the state.\nTask did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task changes ethernet interfaces settings without checking the state.\nTask did not check the final execution of the task.')
 
     def test_ntp_state_assumption(self):
         task = {'ntp': {'servers': ['ntp1.example.com', 'ntp2.example.com']}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task the system is using the ntp service to manage time settings and that the provided NTP servers.\nTask did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task assumes the system is using the ntp service to manage time settings and the provided NTP servers.\nTask did not check the final execution of the task.')
 
     def test_sshd_config_state_assumption(self):
         task = {'sshd_config': {'Port': 22}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task assumes that the system is using a ssh without checking the state.\nTask did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task assumes that the system is using SSH without checking the state.\nTask did not check the final execution of the task.')
 
     def test_final_execution_check_assumption(self):
         task = {'assert': 'result is success'}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task did not checked the final execution of the task.')
+        self.assertEqual(result, 'None')
 
     def test_package_repository_url_structure_assumption(self):
         task = {'apt-repository': {'repo': 'https://example.com/repo'}}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task did not checked the final execution of the task.\nTask assumes that the package repository is available at a specific URL structure.')
+        self.assertEqual(result, 'Task did not check the final execution of the task.\nTask assumes that the package repository is available at a specific URL structure.')
 
     def test_no_environment_assumption(self):
         task = {'command': 'echo "Hello, World!"'}
         result = detector.check_task_for_environment_assumptions(task)
-        self.assertEqual(result, 'Task did not checked the final execution of the task.')
+        self.assertEqual(result, 'Task did not check the final execution of the task.')
 
 
 class TaskMissingDependenciesTestCase(unittest.TestCase):
@@ -404,12 +404,12 @@ class TaskMissingDependenciesTestCase(unittest.TestCase):
     def test_task_with_absolute_paths(self):
         task = {'file': {'path': '/var/www/html/index.html'}}
         result = detector.check_task_for_missing_dependencies(task)
-        self.assertEqual(result, 'Task is using absolut path for source path')
+        self.assertEqual(result.strip('\n'), 'Task is using absolute path for source path')
 
     def test_task_with_relative_paths(self):
         task = {'ansible.builtin.copy': {'src': 'app.py', 'dest': ' /opt/app/app.py'}}
         result = detector.check_task_for_missing_dependencies(task)
-        self.assertEqual(result, 'Task is using relative path for source')
+        self.assertEqual(result.strip('\n'), 'Task is using relative path for source')
 
     def test_no_missing_dependencies(self):
         task = {'name': 'Install packages', 'command': 'apt install package'}
