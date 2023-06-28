@@ -31,5 +31,9 @@ each function is trying to detect one smell according to the rules specified and
 
 ### Run
 Navigate to the src directory of the project.
+
 Run the `detector.py` file with the path to your desired Ansible yaml file 
 `python detector.py '/path/to/file/directory`
+or 
+Add the path to the desired ansible files or repositories to the script and then 
+Run `/bin/bash run_detector.sh`

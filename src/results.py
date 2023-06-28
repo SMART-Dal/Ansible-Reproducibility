@@ -4,9 +4,14 @@ import os
 
 def write_results_csv(output_tasks, new_output_tasks, input_file):
     try:
-        # Define the output file names
-        output_file_v1 = f"{os.path.basename(input_file)}_smells_v1.csv"
-        output_file_v2 = f"{os.path.basename(input_file)}_smells_v2.csv"
+        # Create the output directory if it doesn't exist
+        output_dir = "output"
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        # Define the output file paths
+        output_file_v1 = os.path.join(output_dir, f"{os.path.basename(input_file)}_smells_v1.csv")
+        output_file_v2 = os.path.join(output_dir, f"{os.path.basename(input_file)}_smells_v2.csv")
 
         # Define the CSV column names
         csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
