@@ -39,7 +39,7 @@ def process_file(input_file):
         # Open playbook file and extract tasks
         with open(input_file) as f:
             # Get the parsed tasks as a dictionary
-            tasks = parser.get_parsed_tasks(input_file=f)
+            tasks = parser.get_parsed_tasks(input_file=input_file)
             task_number = 0
             for task in tasks:
                 task_number += 1

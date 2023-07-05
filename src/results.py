@@ -21,7 +21,7 @@ def write_results_csv(output_tasks, new_output_tasks, input_file):
                            'Smell Description']
 
         # Write task smells to CSV files
-        with open(output_file_v1, 'w', newline='') as file_v1, open(output_file_v2, 'w', newline='') as file_v2:
+        with open(output_file_v1, 'a', newline='') as file_v1, open(output_file_v2, 'a', newline='') as file_v2:
             writer_v1 = csv.DictWriter(file_v1, fieldnames=new_csv_columns)
             writer_v1.writeheader()
             writer_v1.writerows(new_output_tasks)

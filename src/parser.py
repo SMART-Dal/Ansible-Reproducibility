@@ -1,5 +1,4 @@
 import yaml
-from yaml import SafeLoader
 
 
 # Ansible class Object with attributes
@@ -128,9 +127,10 @@ def parse_playbook(file_path):
 
 
 def get_parsed_tasks(input_file):
-    data = list(yaml.load_all(input_file, Loader=SafeLoader))
-    try:
-        tasks = data[0][0]['tasks']
-    except KeyError:
-        tasks = data[0]
-    return tasks
+    with open(input_file, 'r') as file:
+        data = yaml.safe_load(file)
+        try:
+            tasks = data[0]['tasks']
+        except KeyError:
+            tasks = data[0]
+        return tasks
