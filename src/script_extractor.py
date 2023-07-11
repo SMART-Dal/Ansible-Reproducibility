@@ -1,6 +1,3 @@
-import requests
-
-
 # Search for Ansible scripts on GitHub using the GitHub API
 # url = f"https://github.com/oracle/oci-ansible-collection/tree/master/samples"
 # url2 = 'https://galaxy.ansible.com/search?deprecated=false&tags=system&keywords=&order_by=-relevance'
@@ -38,3 +35,40 @@ directory_path = 'samples'
 
 # Call the function to clone and save the directory
 clone_directory(github_url, directory_path)
+
+
+def clone_github_yml_files(links):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    target_dir = os.path.join(base_dir, '..', 'test', 'testScripts')
+
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
+
+    for link in links:
+        # Extract the repository name from the link
+        repo_name = link.split('/')[-1].rstrip('.git')
+
+        # Clone the repository into a temporary directory
+        temp_dir = os.path.join(target_dir, 'temp')
+        subprocess.call(['git', 'clone', '--depth', '1', link, temp_dir])
+
+        # Find .yml files in the repository and move them to the target directory
+        for root, dirs, files in os.walk(temp_dir):
+            for file in files:
+                if file.endswith('.yml'):
+                    file_path = os.path.join(root, file)
+                    target_path = os.path.join(target_dir, repo_name, file)
+                    os.makedirs(os.path.dirname(target_path), exist_ok=True)
+                    os.rename(file_path, target_path)
+
+        # Remove the temporary directory
+        subprocess.call(['rm', '-rf', temp_dir])
+
+
+if __name__ == '__main__':
+    # Provide a list of GitHub repository links
+    repository_links = [
+        'https://github.com/netbox-community/ansible_modules',
+    ]
+
+    clone_github_yml_files(repository_links)
