@@ -1,0 +1,117 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."

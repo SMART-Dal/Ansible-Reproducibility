@@ -1,0 +1,49 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,11,Get all objects from bucket,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,27,Print objects list,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,29,Task to DELETE all objects created in bucket,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,sample.yaml,34,Task 5,Broken Dependency Chain,Task did not check the correctness of execution.

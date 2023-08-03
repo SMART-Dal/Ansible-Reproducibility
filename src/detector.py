@@ -59,6 +59,8 @@ def get_files_from_directory(directory):
     return files
 
 
+# main_method("/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy/sample.yaml")
+
 if __name__ == "__main__":
     # Check if the input path is provided as a command-line argument
     if len(sys.argv) < 2:

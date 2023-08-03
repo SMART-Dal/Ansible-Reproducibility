@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,teardown.yaml,9,Task 1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,teardown.yaml,9,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,teardown.yaml,14,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,teardown.yaml,14,Task 2,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,teardown.yaml,16,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,teardown.yaml,16,Task 3,Broken Dependency Chain

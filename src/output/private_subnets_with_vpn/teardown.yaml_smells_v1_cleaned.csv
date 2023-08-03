@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,8,Task 1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,13,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,13,Task 2,Broken Dependency Chain

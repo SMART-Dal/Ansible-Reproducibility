@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Task 1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Task 2,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Task 3,Broken Dependency Chain

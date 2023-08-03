@@ -5,7 +5,15 @@ import os
 def write_results_csv(output_tasks, new_output_tasks, input_file):
     try:
         # Create the output directory if it doesn't exist
-        output_dir = "output"
+        # output_dir = "output"
+        # if not os.path.exists(output_dir):
+        #     os.makedirs(output_dir)
+
+        # Get the parent directory name of the input file
+        input_parent_dir = os.path.basename(os.path.dirname(input_file))
+
+        # Create the output directory if it doesn't exist
+        output_dir = os.path.join("output", input_parent_dir)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 

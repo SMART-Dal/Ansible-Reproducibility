@@ -103,6 +103,7 @@
       shell: |
         groupadd docker
         usermod -aG docker {{ user }}
+
     - name: define variable for nvidia-docker
       tags: experiment
       stat:

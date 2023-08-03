@@ -2,6 +2,7 @@
 # and returns a message indicating which installer was used
 import os
 
+# TODO add when -- with_items to the broken dependency
 
 def check_task_for_broken_dependency(task):
     try:

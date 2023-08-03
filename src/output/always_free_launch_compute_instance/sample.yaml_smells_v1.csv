@@ -1,0 +1,201 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,11,Launch an instance,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,27,Print instance details,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,53,Task 4,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,55,Create a volume,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,72,Print volume details,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,75,Task 7,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,78,Attach volume to new instance,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,86,Print volume attachment details,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,89,Task 10,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,92,Get the VNIC attachment details of instance,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,100,Get details of the VNIC,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,103,Task 13,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,106,Print the public ip of the newly launched instance,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,112,Wait (upto 5 minutes) for port 22 to become open,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Hardware Specific Commands,"
+
+
+
+Task uses a network management command that may not be portable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,116,Attempt a ssh connection to the newly launced instance,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,119,Print SSH response from launched instance,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Assumption about Environment,Task did not check the final execution of the task. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,sample.yaml,123,Task 18,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution."

@@ -1,0 +1,86 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Task 1,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Task 2,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Assumption about Environment,"Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task.
+Task did not check the final execution of the task. None"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Task 3,Broken Dependency Chain,"Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution.
+Task did not check the correctness of execution."

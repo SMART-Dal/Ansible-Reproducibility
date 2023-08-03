@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Task 1,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Task 2,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Task 4,Broken Dependency Chain
