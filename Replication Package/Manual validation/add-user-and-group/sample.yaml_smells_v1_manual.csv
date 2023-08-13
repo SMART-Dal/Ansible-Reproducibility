@@ -1,0 +1,2 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/identity/add-user-and-group,sample.yaml,8,Task 1,Assumption about Environment
