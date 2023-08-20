@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,teardown.yaml,8,Task 1,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,teardown.yaml,8,Task 1,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,teardown.yaml,13,Task 2,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,teardown.yaml,13,Task 2,Broken Dependency Chain

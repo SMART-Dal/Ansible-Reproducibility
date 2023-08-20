@@ -1,4 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Task 1,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Task 1,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name

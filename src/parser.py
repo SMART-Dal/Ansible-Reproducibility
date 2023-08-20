@@ -129,8 +129,12 @@ def parse_playbook(file_path):
 def get_parsed_tasks(input_file):
     with open(input_file, 'r') as file:
         data = yaml.safe_load(file)
-        try:
-            tasks = data[0]['tasks']
-        except KeyError:
-            tasks = data[0]
+
+        if 'tasks' in data[0]:
+            if 'block' in data[0]['tasks'][0]:
+                tasks = data[0]['tasks'][0]['block']
+            else:
+                tasks = data[0]['tasks']
+        else:
+            tasks = data
         return tasks
