@@ -88,7 +88,6 @@ def main():
             continue
 
         print(f"Metrics for Smell: {smell}")
-        print(f"Occurrences: {smell_data[smell]} times")
         print(f"Total True Positive: {total_true_positive[smell]}")
         print(f"Total False Positive: {total_false_positive[smell]}")
         print(f"Total True Negative: {total_true_negative[smell]}")
