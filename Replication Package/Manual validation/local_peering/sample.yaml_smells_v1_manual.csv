@@ -2,4 +2,4 @@ Repository Name,File Name,Line Number,Task Name,Smell Name
 /home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Broken Dependency Chain
 Repository Name,File Name,Line Number,Task Name,Smell Name
 /home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Broken Dependency Chain
