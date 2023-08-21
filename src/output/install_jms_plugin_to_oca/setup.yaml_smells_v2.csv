@@ -1,0 +1,2 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Setting path facts so that they will be persisted in the fact cache,None,None,None,None,None None,None,None

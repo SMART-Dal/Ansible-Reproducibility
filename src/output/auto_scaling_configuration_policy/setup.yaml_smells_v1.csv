@@ -1,0 +1,193 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,8,Check pre-requisites,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,14,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,15,Generate a Private Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,19,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,24,Generate a Public Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,26,Create a VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,31,Task 8,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,33,Create a new Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,41,Task 10,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,48,Create route table to connect internet gateway to the VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,53,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,61,Create a security list for allowing access to public instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,66,Task 14,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,80,Task 16,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,87,Create instance configuration required for instance pool,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,95,Print instance configuration details,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,102,Task 19,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,107,Create a new instance pool for threshold based policy from this instance configuration,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,119,Task 21,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,124,Create a new instance pool for scheduling based policy from this instance configuration,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,144,Task 23,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,setup.yaml,148,Print instance pool details,Broken Dependency Chain,None

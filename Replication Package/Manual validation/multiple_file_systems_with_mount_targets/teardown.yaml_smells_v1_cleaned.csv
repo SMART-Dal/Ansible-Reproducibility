@@ -1,0 +1,16 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,9,Delete instance,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,15,Delete Export1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,21,Delete Export2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,27,Delete Export3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,33,Delete Mount Target1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,39,Delete Mount Target2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,45,Delete File System1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,51,Delete File System2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,57,Delete subnets,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,63,Delete Route Table,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,69,Delete Security List,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,75,Delete internet gateway,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,81,Delete  VCN,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/multiple_file_systems_with_mount_targets,teardown.yaml,87,Clean artifact path,Assumption about Environment

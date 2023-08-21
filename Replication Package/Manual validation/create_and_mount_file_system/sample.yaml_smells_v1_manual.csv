@@ -1,0 +1,41 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,11,Create Mount Target,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,52,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,53,Get Ip Address of the Mount Target,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,55,Task 5,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,64,Task 6,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,70,Create File System,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,74,Task 8,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,76,Create Export,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,80,Task 10,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,87,Get images list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,92,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,97,Launch first instance to mount filesystem,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,104,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,108,Task 15,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,116,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,120,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,121,Task 18,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,124,Print the public ip of the launched first instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,139,Wait (upto 5 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,142,Mount the filesystem in the first instance and create a directory,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,145,Task 22,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,151,Task 23,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,155,Launch another instance to check the filesystem,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,157,Print second instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,161,Task 26,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,170,Get the VNIC attachment details of second instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,179,Get details of the VNIC,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,181,Task 29,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,186,Print the public ip of the launched second instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,201,Wait (upto 5 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,204,Mount the filesystem in the second instance and list all content,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,207,Task 33,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,213,Task 34,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,217,Check whether directory created in the filesystem by first instance is getting listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,219,Create a Snapshot,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,223,List all Snapshots of the File System,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,235,Task 38,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,sample.yaml,245,Task 39,Broken Dependency Chain

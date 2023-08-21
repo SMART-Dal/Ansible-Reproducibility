@@ -1,0 +1,28 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,11,Task 2,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,32,Create DB System,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,52,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,84,List the specific Db System,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,86,Assert that specified Db System was listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,91,Get the DB Home Id,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,92,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,94,Get DB Node information of the DB System,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,96,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,118,Get Vnic Details for DB Node of DB System,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,121,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,126,Get the intial database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,129,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,131,Create backup from intial database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,137,Task 16,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,140,Restore Database from latest backup,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,147,Create database from backup,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,152,Task 19,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,159,Update freeform tags of database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,163,Assert that defined tag is updated,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,169,List databases,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,172,Assert resource was listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,179,Get database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,182,Assert resource was listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,sample.yaml,189,Task 26,Broken Dependency Chain

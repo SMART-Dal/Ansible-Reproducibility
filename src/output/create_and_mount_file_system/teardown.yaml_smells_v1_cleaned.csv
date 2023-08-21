@@ -1,0 +1,13 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Assumption about Environment

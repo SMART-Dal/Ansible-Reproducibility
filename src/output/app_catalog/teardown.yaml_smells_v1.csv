@@ -1,0 +1,57 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,8,Clean artifact path,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,14,Terminate the instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,20,Delete the subnet,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,26,Delete the security list,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,32,Delete the route table,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,38,Delete the Internet Gateway,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,teardown.yaml,44,Delete the VCN,Broken Dependency Chain,None

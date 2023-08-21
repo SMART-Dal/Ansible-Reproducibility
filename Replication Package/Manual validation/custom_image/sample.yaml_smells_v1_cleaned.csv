@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,11,Launch an instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,26,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,35,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,40,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,65,Create image with required parameters,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,66,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/custom_image,sample.yaml,68,Task 8,Broken Dependency Chain

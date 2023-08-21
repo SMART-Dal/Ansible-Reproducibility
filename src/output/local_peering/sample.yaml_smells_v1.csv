@@ -1,0 +1,24 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,11,Connects both the local peering gateways,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,sample.yaml,31,Task 3,Broken Dependency Chain,Task did not check the correctness of execution.

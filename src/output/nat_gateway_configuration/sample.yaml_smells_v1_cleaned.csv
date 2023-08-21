@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,11,Wait (upto 10 minutes) for ssh to start in public instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,36,Wait (upto 5 minutes) for ssh to start in private instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,42,Print sample SSH invocation to test if internet access is available in the private instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,68,Check internet access from private instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,69,Print ping response from the private instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,sample.yaml,73,Task 7,Broken Dependency Chain

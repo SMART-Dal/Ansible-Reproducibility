@@ -1,0 +1,297 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Broken Dependency Chain,None

@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,8,Clean artifact path,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,13,Terminate instances,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,18,Delete the subnets,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,19,Delete the security lists,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,21,Delete the route tables,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,26,Delete the Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,27,Delete the NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,teardown.yaml,29,Delete the VCN,Broken Dependency Chain

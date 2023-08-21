@@ -1,0 +1,35 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,8,Remove logrotate config,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,13,Remove Usage Tracker logs folder,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,18,Remove Usage Tracker properties folder,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,teardown.yaml,23,Disable OCA-MACS Plugin,Broken Dependency Chain,None

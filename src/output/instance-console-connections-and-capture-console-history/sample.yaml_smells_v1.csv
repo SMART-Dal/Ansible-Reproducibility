@@ -1,0 +1,209 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,Broken Dependency Chain,Task did not check the correctness of execution.

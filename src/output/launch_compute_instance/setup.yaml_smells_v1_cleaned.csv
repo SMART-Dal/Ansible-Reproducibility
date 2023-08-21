@@ -1,0 +1,20 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,13,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,14,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,15,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,17,Create a new Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,18,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,23,Create route table to connect internet gateway to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,25,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,30,create ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,32,create egress yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,39,load the variables defined in the ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,46,print loaded_ingress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,49,load the variables defined in the egress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,57,print loaded_egress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,60,Create a security list for allowing access to public instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,68,Task 16,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,74,Create a subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,setup.yaml,76,Task 18,Assumption about Environment

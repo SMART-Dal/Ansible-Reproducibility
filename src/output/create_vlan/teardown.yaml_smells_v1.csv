@@ -1,0 +1,40 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,8,Delete the vlan,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,13,Delete network_security_group,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,18,Delete the route table,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,23,Delete the Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,teardown.yaml,28,Delete the VCN,Broken Dependency Chain,Task did not check the correctness of execution.

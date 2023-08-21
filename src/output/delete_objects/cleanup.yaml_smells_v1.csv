@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,cleanup.yaml,8,Delete sample bucket,Broken Dependency Chain,Task did not check the correctness of execution.

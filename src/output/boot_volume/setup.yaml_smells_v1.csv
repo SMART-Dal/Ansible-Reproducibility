@@ -1,0 +1,112 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,8,Check pre-requisities,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,13,Create a VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,14,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,15,Create a new Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,19,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,26,Create route table to connect internet gateway to the VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,31,Task 7,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,39,Create a security list for allowing access to public instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,44,Task 9,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,52,Create a subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,58,Task 11,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,65,Launch an instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,73,Print instance details,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/boot_volume,setup.yaml,80,Task 14,Broken Dependency Chain,None

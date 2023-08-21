@@ -1,0 +1,17 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Broken Dependency Chain

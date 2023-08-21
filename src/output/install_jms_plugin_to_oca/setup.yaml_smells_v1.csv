@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_oca,setup.yaml,10,Setting path facts so that they will be persisted in the fact cache,Broken Dependency Chain,None

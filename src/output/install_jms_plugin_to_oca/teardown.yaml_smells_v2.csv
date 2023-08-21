@@ -1,0 +1,11 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Remove logrotate config,None,None,None,"
+Task is using relative path for source path",None None,None,Task did not check the correctness of execution.
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Remove Usage Tracker logs folder,None,None,None,"
+Task is using relative path for source path",None None,None,Task did not check the correctness of execution.
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Remove Usage Tracker properties folder,None,None,None,"
+Task is using relative path for source path",None None,None,Task did not check the correctness of execution.
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+Disable OCA-MACS Plugin,None,None,None,None,None None,None,None

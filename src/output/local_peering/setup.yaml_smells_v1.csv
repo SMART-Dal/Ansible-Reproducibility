@@ -1,0 +1,176 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,8,Check pre-requisites,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,13,Create the VCN1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,14,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,19,Create the LPG for peering for VCN1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,26,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,34,Create internet gateway for vcn1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,41,Task 7,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,46,"Create route table to connect internet gateway, local peering gateway to the VCN1",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,54,Task 9,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,59,Update default security_list for VCN1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,67,Task 11,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,72,Create a subnet to host the public instance. Link security_list and route_table for VCN1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,77,Task 13,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,84,Create the VCN2,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,88,Task 15,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,94,Create the LPG for peering for VCN2,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,97,Task 17,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,102,Create route table to connect  local peering gateway to the VCN2,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,114,Task 19,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,122,Update default security_list for VCN2,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,129,Create a subnet to host the private instance. Link security_list and route_table in VCN2.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/local_peering,setup.yaml,137,Task 22,Broken Dependency Chain,None

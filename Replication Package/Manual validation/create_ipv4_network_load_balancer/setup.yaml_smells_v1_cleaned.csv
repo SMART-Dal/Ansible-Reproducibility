@@ -1,0 +1,24 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Assumption about Environment

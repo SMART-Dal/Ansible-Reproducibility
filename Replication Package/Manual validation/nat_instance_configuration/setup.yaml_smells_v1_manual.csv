@@ -1,0 +1,40 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,15,Generate a Private Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,19,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,24,Generate a Public Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,26,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,31,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,33,Create a security list for the public subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,41,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,47,Create a new Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,59,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,66,Create a route table to connect internet gateway to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,68,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,76,Create the public subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,79,Task 16,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,84,Launch an instance in the public subnet to act as the NAT instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,92,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,97,Task 19,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,105,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,110,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,121,Task 22,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,126,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,145,Get VNIC attachment of the launched NAT instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,148,List private IPs in the subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,153,Get OCID of primary private IP of the instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,158,Create a security list for the private subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,162,Task 28,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,165,Create a route table to connect all access from the private subnet to the NAT instance's private IP,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,171,Task 30,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,179,Create the private subnet to host the private instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,184,Task 32,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,199,Launch an instance in the private subnet from which internet access would go through the NAT instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,206,Task 34,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,214,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,217,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,222,Task 37,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,setup.yaml,230,Print the private ip of the newly launched instance,Assumption about Environment

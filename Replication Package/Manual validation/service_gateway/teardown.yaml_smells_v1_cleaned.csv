@@ -1,0 +1,21 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,8,Clean artifact path,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,8,Clean artifact path,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,14,Delete bucket,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,20,Remove the test user from the test group,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,26,Terminate test user,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,32,Terminate test policy,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,38,Terminate test group,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,44,Terminate public instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,50,Terminate private instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,56,Delete the public subnet,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,62,Delete the private subnet,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,68,Delete the public security list,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,74,Delete the private security list,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,80,Delete the public route table,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,86,Delete the private route table,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,92,Delete the Service Gateway,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,98,Delete the Internet Gateway,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,104,Delete the NAT Gateway,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,teardown.yaml,110,Delete the VCN,Assumption about Environment

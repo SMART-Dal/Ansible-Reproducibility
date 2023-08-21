@@ -1,0 +1,539 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Hardware Specific Commands,"
+
+
+
+Task uses a network management command that may not be portable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,28 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,11,Launch an instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,27,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,52,Task 4,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,53,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,57,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,70,Task 7,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,73,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,78,Wait (upto 5 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,84,Create a new console connection to the instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,88,Task 11,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,91,Task 12,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,97,Task 13,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,108,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,114,Task 15,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,116,Capture instance console history,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,119,Task 17,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,125,create temporary directory to write instance console history content to,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,129,Task 19,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,134,Task 20,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,139,Get instance console history data of the new instance and write the data to a file,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,144,Copy the console history data into a file,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,149,Task 23,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,151,Check that the instance console history content was written to the file,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,154,Task 25,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/instance-console-connections-and-capture-console-history,sample.yaml,161,Task 26,None

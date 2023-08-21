@@ -1,0 +1,120 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,11,Create Public Load Balancer,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,41,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,61,Task 4,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,65,Create Backend Set,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,92,Create Certificate for Listener,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,95,Create Listener for HTTP traffic,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,115,Create Listener for HTTPS traffic,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,136,Create First Backend,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,137,Create Second Backend,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Assumption about Environment,Task assumes that the package repository is available at a specific URL structure. None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,138,Check whether the Load Balancer able to access Backends,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,148,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,149,Task 13,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,152,Task 14,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,sample.yaml,154,Task 15,Broken Dependency Chain,Task did not check the correctness of execution.

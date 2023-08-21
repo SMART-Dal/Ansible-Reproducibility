@@ -1,0 +1,92 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,9,Delete instance 1,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,15,Delete instance 2,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,21,Delete Export,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,27,Delete Mount Target,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Missing Dependencies,"
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,33,Delete File System,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,39,Delete subnets,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,45,Delete Route Table,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,51,Delete Security List,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,57,Delete internet gateway,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,63,Delete  VCN,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/file_storage/create_and_mount_file_system,teardown.yaml,69,Clean artifact path,Broken Dependency Chain,None

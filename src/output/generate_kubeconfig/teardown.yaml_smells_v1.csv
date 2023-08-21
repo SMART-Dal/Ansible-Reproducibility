@@ -1,0 +1,56 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Broken Dependency Chain,Task did not check the correctness of execution.

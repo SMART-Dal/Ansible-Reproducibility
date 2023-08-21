@@ -1,0 +1,14 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,11,Create a new block volume,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,27,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,53,attach the volume to the instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,55,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,61,Register the volume in the instance with iscsiadm,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,64,Configure iSCSI to automatically connect to the authenticated block storage volumes after a reboot,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,71,Login to the iSCSI endpoint,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,75,Check if the iSCSI device is mountable on the instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,80,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,84,Task 11,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/block_volume/attach_connect_block_volume,sample.yaml,90,Task 12,Broken Dependency Chain

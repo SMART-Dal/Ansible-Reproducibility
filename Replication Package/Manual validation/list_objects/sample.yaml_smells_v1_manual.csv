@@ -1,0 +1,5 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,8,Get all the buckets in the namespace,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,11,Get all objects from all the buckets,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/list_objects,sample.yaml,26,Print objects list,None

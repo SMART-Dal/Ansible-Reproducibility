@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,8,Create new global zone,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,11,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,26,Create steering_policy with required parameters,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,28,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,36,Create steering_policy_attachment with required parameters,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,39,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,sample.yaml,46,Task 7,Broken Dependency Chain

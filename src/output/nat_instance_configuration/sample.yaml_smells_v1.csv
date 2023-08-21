@@ -1,0 +1,125 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,11,Wait (upto 10 minutes) for port 22 to become open,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Hardware Specific Commands,"
+
+
+
+Task uses a network management command that may not be portable.
+
+
+
+
+
+
+Task uses a performance settings management command that may not be portable.
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,35,Connect to the public instance to show that ip forwarding is enabled on the NAT instance.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,41,Print SSH response from launched instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Hardware Specific Commands,"
+
+
+
+Task uses a network management command that may not be portable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,67,Wait (upto 5 minutes) for ssh to start in private instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,68,Print sample SSH invocation to test if internet access is available in the private instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Hardware Specific Commands,"
+
+
+
+Task uses a network management command that may not be portable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,72,Print sample SSH invocation to test if internet access is available in the private instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,84,Print ping response from the private instance,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_instance_configuration,sample.yaml,87,Task 9,Broken Dependency Chain,Task did not check the correctness of execution.

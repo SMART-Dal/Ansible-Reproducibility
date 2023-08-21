@@ -1,0 +1,21 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,11,Create a new basic compute instance configuration that has launch_details and VNIC configuration,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,27,Print instance configuration details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,53,Task 4,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,54,Create a new instance pool from this instance configuration,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,58,Task 6,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,78,Print instance pool details,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,82,Get instance details of instances in the instance pool,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,87,Print details of instances in the new instance pool,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,95,Get the first instance from the pool,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,99,Get the VNIC attachment details of that instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,102,Get details of the VNIC of that VNIC attachment,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,108,Task 13,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,113,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,117,Wait (upto 10 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,123,Attempt a ssh connection to the newly launced instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,123,Attempt a ssh connection to the newly launced instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,129,Print SSH response from launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,sample.yaml,133,Task 18,Broken Dependency Chain

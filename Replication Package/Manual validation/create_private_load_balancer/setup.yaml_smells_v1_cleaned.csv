@@ -1,0 +1,30 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,13,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,15,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,23,Get a availability domain for subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,26,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,30,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,33,Create security list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,35,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,42,Create NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,49,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,52,Create route_table,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,55,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,61,Create a subnet in AD1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,64,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,69,Get images list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,73,Task 16,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,76,Launch First App Server Instance in Availability Domain 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,89,Task 18,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,93,Get VNIC attachments of App Server Instance 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,101,Get Private Ip address of App Server Instance 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,105,Task 21,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,106,Task 22,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,108,Launch Second App Server Instance in Availability Domain 1,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,122,Task 24,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,125,Get VNIC attachments of App Server Instance 2,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,131,Get Private Ip address of App Server Instance 2,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,136,Task 27,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,setup.yaml,139,Task 28,Assumption about Environment

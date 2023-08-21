@@ -1,0 +1,176 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,8,Check pre-requisites,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,13,Create a VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,14,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,17,Get availability domain for subnets,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,25,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,28,Task 6,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,32,Create Internet Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,35,Task 8,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,38,Create a Route Table,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,46,Task 10,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,49,Create security list,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,55,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,60,Create a subnet in AD1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,64,Task 14,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,72,Get images list,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,79,Task 16,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,86,Launch First App Server Instance in Availability Domain 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,89,Task 18,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,92,Get VNIC attachments of App Server Instance 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,103,Get Private Ip address of App Server Instance 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,108,Task 21,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/network_load_balancer/create_ipv4_network_load_balancer,setup.yaml,116,Task 22,Broken Dependency Chain,None

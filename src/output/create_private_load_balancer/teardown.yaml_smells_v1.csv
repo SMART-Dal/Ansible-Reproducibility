@@ -1,0 +1,56 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,Broken Dependency Chain,Task did not check the correctness of execution.

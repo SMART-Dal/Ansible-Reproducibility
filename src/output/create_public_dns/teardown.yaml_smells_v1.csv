@@ -1,0 +1,24 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Broken Dependency Chain,None

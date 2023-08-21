@@ -1,0 +1,16 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,11,Create a new Always Free Autonomous Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,31,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,33,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,38,"List All Autonomous Databases in a compartment, filtered by Display Name",Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,39,Assert that specified Autonomous Database is listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,41,Stop an Autonomous Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,53,Assert that specified Autonomous Database is stopped,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,56,Start Autonomous Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,58,Assert that specified Autonomous Database is started and available,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,61,Get a specific Autonomous Database's facts,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,67,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,70,Assert that specified Autonomous Database is listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,sample.yaml,73,Task 14,Broken Dependency Chain

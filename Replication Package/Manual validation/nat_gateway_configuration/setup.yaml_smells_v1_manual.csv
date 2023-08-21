@@ -1,0 +1,39 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,15,Generate a Private Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,19,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,24,Generate a Public Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,27,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,32,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,35,Create a security list for the public subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,43,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,49,Create a new NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,61,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,68,Create a new Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,76,Task 14,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,79,Create a route table to connect internet gateway to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,84,Task 16,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,90,Create the public subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,95,Task 18,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,102,Launch an instance in the public subnet to act as the bastion instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,107,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,114,Task 21,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,119,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,130,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,135,Task 24,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,150,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,153,Create a security list for the private subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,158,Task 27,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,163,Create a route table to connect all access from the private subnet to the NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,167,Task 29,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,170,Create the private subnet to host the private instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,183,Task 31,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,190,Launch an instance in the private subnet from which internet access would go through the NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,198,Task 33,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,201,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,206,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,213,Task 36,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/nat_gateway_configuration,setup.yaml,218,Print the private ip of the newly launched instance,Assumption about Environment

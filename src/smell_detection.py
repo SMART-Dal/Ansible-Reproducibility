@@ -17,16 +17,21 @@ def check_task_for_broken_dependency(task):
             ('url', "Task uses a fixed URL to download a key which can become outdated or removed.")
         ]
         messages = []
+        task_parts = []
 
         for t in task:
+            task_parts.append(t)
             for installer_key in package_installers_keys_to_check:
                 if installer_key in t:
                     for checker, message in checkers:
                         if checker in task[t]:
                             messages.append(message)
 
-            if 'package_facts' not in t or 'debug' not in t or 'when' not in t:
-                messages.append('Task did not check the correctness of execution.')
+        if 'package_facts' in task_parts or 'debug' in task_parts or 'when' in task_parts \
+                or 'set_fact' in task_parts or 'assert' in task_parts or 'with_items' in task_parts or 'set_facts' in task_parts:
+            messages.append("None")
+        else:
+            messages.append('Task did not check the correctness of execution.')
 
         if messages:
             return '\n'.join(messages)
@@ -246,9 +251,6 @@ def check_task_for_environment_assumptions(task):
             if has_ssh_assumption(task, t):
                 messages.append("Task assumes that the system is using SSH without checking the state.")
 
-            if not has_assert_debug(task, t):
-                messages.append("Task did not check the final execution of the task.")
-
             if has_package_repository_assumption(task, t, key_download_components):
                 messages.append("Task assumes that the package repository is available at a specific URL structure.")
 
@@ -288,10 +290,6 @@ def has_ntp_assumption(task, t):
 
 def has_ssh_assumption(task, t):
     return 'sshd_config' in t and 'state' not in task[t]
-
-
-def has_assert_debug(task, t):
-    return 'assert' in t or 'debug' in t
 
 
 def has_package_repository_assumption(task, t, key_download_components):

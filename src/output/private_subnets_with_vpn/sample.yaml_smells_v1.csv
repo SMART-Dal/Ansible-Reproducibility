@@ -1,0 +1,216 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,153 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,8,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,11,Download Agent,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,12,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Idempotency,Task violates idempotency because it installs or upgrades packages with yum.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Outdated Dependencies,Task uses yum to install the latest packages.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,27,Install Agent,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,28,Task 5,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,33,Setup Agent,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,39,Remove input.rsp file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,43,Remove agent rpm file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,51,Create directory for usagetracker,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,58,Create properties file for usagetracker,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,61,Task 11,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,66,Create directory for usagetracker logs,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,75,Create file for usagetracker logs,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Idempotency,Task violates idempotency because it installs or upgrades packages with yum.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Outdated Dependencies,Task uses yum to install the latest packages.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,83,Install logrotate,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,90,Task 15,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/jms/install_jms_plugin_to_mgmt_agent,sample.yaml,94,Task 16,Broken Dependency Chain,Task did not check the correctness of execution.

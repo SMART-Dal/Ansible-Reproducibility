@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,8,Detach the block volume,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,13,Terminate the block volume,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,18,Terminate the instance,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,23,Delete the subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,28,Delete the security list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,33,Delete the route table,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,38,Delete the Internet Gateway,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/always_free_launch_compute_instance,teardown.yaml,43,Delete the VCN,Broken Dependency Chain

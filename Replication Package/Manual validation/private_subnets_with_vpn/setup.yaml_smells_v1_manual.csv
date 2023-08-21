@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,13,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,15,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,16,"Create two private subnets with default values for route table, security list & DHCP options.",Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,18,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,setup.yaml,25,Task 7,Assumption about Environment
