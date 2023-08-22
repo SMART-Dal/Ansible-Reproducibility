@@ -1,0 +1,534 @@
+Broken Dependency Chain
+---
+- name: Deploy Web App
+  hosts: web_servers
+  tasks:
+    - name: Database Setup
+      mysql_db:
+        name: my_database
+        state: present
+        login_user: root
+        login_password: mypassword
+      # This task sets up the database required by the web app.
+
+    - name: Web App Deployment
+      debug:
+        msg: "Deploying the web app..."
+      # This task deploys the web app and requires the database to be set up first.
+
+- name: Playbook Fix - Define Role Dependencies
+  hosts: web_servers
+  roles:
+    - role: database_setup
+    - role: web_app_deployment
+  # Using the 'roles' parameter ensures the correct execution order of roles.
+
+- name: Playbook Fix - Use Ansible Handlers
+  hosts: web_servers
+  tasks:
+    - name: Database Setup
+      mysql_db:
+        name: my_database
+        state: present
+        login_user: root
+        login_password: mypassword
+      # This task sets up the database required by the web app.
+      notify:
+        - deploy_web_app
+    - name: Web App Deployment
+      debug:
+        msg: "Deploying the web app..."
+      # This task deploys the web app and requires the database to be set up first.
+      handlers:
+        - name: deploy_web_app
+          debug:
+            msg: "Deploying the web app after database setup."
+
+- name: Playbook Fix - List Roles in Required Order
+  hosts: web_servers
+  roles:
+    - role: database_setup
+  tasks:
+    - name: Web App Deployment
+      debug:
+        msg: "Deploying the web app after database setup."
+      # This task deploys the web app and requires the database to be set up first.
+
+Outdated Dependency
+---
+- name: Update Software Library
+  hosts: app_servers
+  tasks:
+    - name: Install Updated Library
+      yum:
+        name: my-library
+        state: latest
+      # This task installs the latest version of the 'my-library' software.
+
+    - name: Configure Application
+      debug:
+        msg: "Configuring the application..."
+      # This task configures the application that relies on the 'my-library' software.
+
+- name: Playbook Fix - Regularly Update Dependencies
+  hosts: app_servers
+  tasks:
+    - name: Check for Updates
+      yum:
+        list: my-library
+      register: library_update_result
+      # This task checks if updates are available for the 'my-library' software.
+
+    - name: Update Library if Available
+      yum:
+        name: my-library
+        state: latest
+      when: library_update_result|changed
+      # This task updates the 'my-library' software if updates are available.
+
+- name: Playbook Fix - Use Latest Compatible Version
+  hosts: app_servers
+  tasks:
+    - name: Install Latest Compatible Library
+      yum:
+        name: my-library
+        state: latest
+      # This task installs the latest version of the 'my-library' software.
+
+    - name: Configure Application
+      debug:
+        msg: "Configuring the application..."
+      # This task configures the application that relies on the 'my-library' software.
+
+Version-Specific Installation
+---
+- name: Deploy Web App
+  hosts: web_servers
+  tasks:
+    - name: Install Python Library with Exact Version
+      pip:
+        name: my_library
+        version: 1.2.3
+      # This task installs the specified version of the Python library.
+
+- name: Playbook Fix - Regularly Update Version Ranges
+  hosts: web_servers
+  tasks:
+    - name: Install Python Library with Version Range
+      pip:
+        name: my_library
+        version: ">1.2,<2.0"
+      # This task installs a version range of the Python library to avoid conflicts.
+
+- name: Playbook Fix - Embrace Version Control
+  hosts: web_servers
+  tasks:
+    - name: Install Python Library with Latest Version
+      pip:
+        name: my_library
+        state: latest
+      # This task installs the latest version of the Python library.
+
+- name: Deploy Web App with Version Control
+  hosts: web_servers
+  tasks:
+    - name: Install Dependencies with Version Control
+      pip:
+        requirements: /path/to/requirements.txt
+      # This task installs dependencies listed in a requirements file, enabling version control.
+
+- name: Playbook Fix - Use Ansible Variables for Versions
+  hosts: web_servers
+  vars:
+    my_library_version: "1.2.3"
+  tasks:
+    - name: Install Python Library with Variable Version
+      pip:
+        name: my_library
+        version: "{{ my_library_version }}"
+      # This task installs the Python library using a variable for the version.
+
+Missing Dependencies-1
+---
+- name: Deploy Web Application
+  hosts: web_servers
+  tasks:
+    - name: Check Database Server
+      command: systemctl is-active mysql
+      ignore_errors: yes
+      register: db_server_status
+      # This task checks if the database server is active.
+
+    - name: Install Database Server
+      apt:
+        name: mysql-server
+        state: present
+      when: db_server_status.rc != 0
+      # This task installs the MySQL database server if it's not already installed.
+
+    - name: Deploy Web App
+      debug:
+        msg: "Deploying the web app..."
+      # This task deploys the web app and requires the database server to be set up.
+
+- name: Alternative Fix - Utilize Conditionals
+  hosts: web_servers
+  tasks:
+    - name: Check Database Server
+      command: systemctl is-active mysql
+      ignore_errors: yes
+      register: db_server_status
+      # This task checks if the database server is active.
+
+    - name: Deploy Web App with Conditional
+      debug:
+        msg: "Deploying the web app..."
+      when: db_server_status.rc == 0
+      # This task deploys the web app only if the database server is active.
+
+Missing Dependencies-2
+---
+- name: Generate Performance Files
+  hosts: performance_servers
+  tasks:
+    - name: Install perf tool
+      package:
+        name: perf
+        state: latest
+      # This task installs the "perf" tool on the performance servers.
+
+    - name: Run perf command
+      command: perf record -o output.data sleep 5
+      args:
+        creates: output.data
+      # This task attempts to generate performance files using the "perf" tool.
+
+- name: Playbook Fix - Include Installation Commands
+  hosts: performance_servers
+  tasks:
+    - name: Install perf tool and dependencies
+      package:
+        name: ['perf', 'other_dependency']
+        state: latest
+      # This task installs the "perf" tool and potential dependencies on the performance servers.
+
+    - name: Run perf command with dependencies
+      command: perf record -o output.data sleep 5
+      args:
+        creates: output.data
+      # This task attempts to generate performance files using the "perf" tool and installed dependencies.
+
+- name: Playbook Fix - Utilize Dockerfiles
+  hosts: docker_servers
+  tasks:
+    - name: Create Docker container
+      docker_container:
+        name: perf_container
+        image: my_perf_image
+        state: started
+      # This task creates a Docker container with the necessary environment, including the "perf" tool and dependencies.
+
+    - name: Run perf command in Docker container
+      docker_container_exec:
+        name: perf_container
+        command: perf record -o output.data sleep 5
+        creates: output.data
+      # This task attempts to generate performance files using the "perf" tool within the Docker container.
+
+---
+- name: Deploy Web App
+  hosts: target_servers
+  tasks:
+    - name: Check Operating System Version
+      setup:
+      register: ansible_facts
+      # Gather information about the target system using Ansible's facts.
+
+    - name: Deploy Based on OS Version
+      debug:
+        msg: "Deploying based on OS version..."
+      when: "'Ubuntu' in ansible_facts['ansible_distribution'] and ansible_facts['ansible_distribution_major_version'] == '20'"
+
+    - name: Deploy Based on OS Distribution
+      debug:
+        msg: "Deploying based on OS distribution..."
+      when: "'RedHat' in ansible_facts['ansible_distribution']"
+
+Assumption about Environment-1
+---
+- name: Refactored Playbook
+  hosts: target_servers
+  tasks:
+    - name: Gather System Facts
+      setup:
+      register: ansible_facts
+      # Gather information about the target system using Ansible's facts.
+
+    - name: Deploy Web App
+      debug:
+        msg: "Deploying the web app..."
+      # Actual tasks for deploying the web app go here.
+
+      # Refactor the playbook using conditionals based on gathered facts
+      when: "'Ubuntu' in ansible_facts['ansible_distribution'] and ansible_facts['ansible_distribution_major_version'] == '20'"
+
+    - name: Deploy Web App on RedHat
+      debug:
+        msg: "Deploying the web app on RedHat..."
+      # Actual tasks for deploying the web app on RedHat go here.
+      when: "'RedHat' in ansible_facts['ansible_distribution']"
+
+    - name: Deploy Web App on Other OS
+      debug:
+        msg: "Deploying the web app on other OS..."
+      # Tasks for handling other OS distributions or versions.
+
+- name: Use Ansible Facts
+  hosts: target_servers
+  tasks:
+    - name: Gather System Facts
+      setup:
+      register: ansible_facts
+      # Gather information about the target system using Ansible's facts.
+
+    - name: Deploy Web App
+      debug:
+        msg: "Deploying the web app..."
+      # Actual tasks for deploying the web app go here.
+
+      # Utilize Ansible's facts to adapt the playbook dynamically
+      when: "'Debian' in ansible_facts['ansible_os_family']"
+
+    - name: Deploy Web App on RedHat
+      debug:
+        msg: "Deploying the web app on RedHat..."
+      # Actual tasks for deploying the web app on RedHat go here.
+      when: "'RedHat' in ansible_facts['ansible_os_family']"
+
+Assumption about Environment-2
+---
+- name: Deploy App with Package Dependency
+  hosts: app_servers
+  tasks:
+    - name: Install Required Package
+      package:
+        name: mypackage
+        state: present
+      # This task attempts to install the 'mypackage' package assuming it's available.
+
+    - name: Deploy App
+      debug:
+        msg: "Deploying the app..."
+      # This task deploys the app that relies on the 'mypackage' package.
+
+- name: Playbook Fix - Check Package Presence
+  hosts: app_servers
+  tasks:
+    - name: Check Package Presence
+      command: "which mypackage"
+      register: package_result
+      failed_when: package_result.rc != 0
+      changed_when: false
+      # This task checks if the 'mypackage' package is available.
+
+    - name: Deploy App
+      debug:
+        msg: "Deploying the app..."
+      when: package_result.rc == 0
+      # This task deploys the app only if the 'mypackage' package is available.
+
+- name: Playbook Fix - Utilize Ansible Roles
+  hosts: app_servers
+  roles:
+    - role: package_installer
+      package_name: mypackage
+    - role: app_deployer
+  # Using roles abstracts package installation and app deployment.
+
+- name: Deploy App with Role Fix
+  hosts: app_servers
+  tasks:
+    - name: Include Role: Package Installer
+      include_role:
+        name: package_installer
+      vars:
+        package_name: mypackage
+      # This task uses an included role to install the 'mypackage' package.
+
+    - name: Include Role: App Deployer
+      include_role:
+        name: app_deployer
+      # This task uses an included role to deploy the app.
+
+Hardware Specific Commands-1
+---
+- name: Optimize Network Settings
+  hosts: network_servers
+  tasks:
+    - name: Optimize Network Settings for Specific Network Card
+      command: ethtool --set-irq 5 rx-usecs 10
+      when: ansible_facts['default_ipv4']['interface'] == 'eth0'
+      # This task optimizes network settings for the specific 'eth0' network card.
+
+    - name: Optimize Network Settings for Another Network Card
+      command: ethtool --set-irq 3 rx-usecs 15
+      when: ansible_facts['default_ipv4']['interface'] == 'eth1'
+      # This task optimizes network settings for the specific 'eth1' network card.
+
+- name: Playbook Fix - Replace Hardware-Specific Commands
+  hosts: network_servers
+  tasks:
+    - name: Optimize Network Settings
+      command: ethtool --set-irq 5 rx-usecs 10
+      # This task is now a more general networking configuration task.
+
+- name: Playbook Fix - Utilize Ansible Variables
+  hosts: network_servers
+  tasks:
+    - name: Optimize Network Settings
+      command: ethtool --set-irq {{ irq_value }} rx-usecs {{ rx_value }}
+      # This task uses Ansible variables to abstract hardware-dependent values.
+
+Hardware Specific Commands-2
+---
+- name: Install GPU Acceleration
+  hosts: gpu_servers
+  tasks:
+    - name: Check for Compatible GPU
+      shell: lspci | grep -i "VGA compatible controller" | grep -i "NVIDIA"
+      register: compatible_gpu
+      failed_when: compatible_gpu.rc != 0
+      changed_when: false
+      # This task checks if a compatible NVIDIA GPU is present.
+
+    - name: Install Graphics Card Driver
+      apt:
+        name: nvidia-driver
+        state: present
+      when: compatible_gpu.rc == 0
+      # This task installs the NVIDIA graphics card driver if a compatible GPU is present.
+
+    - name: GPU-Accelerated Task
+      command: some_gpu_accelerated_task
+      # This task requires the GPU driver to be installed and can fail without compatible hardware.
+
+- name: Playbook Fix - Update Driver and Condition
+  hosts: gpu_servers
+  tasks:
+    - name: Update Graphics Card Driver
+      apt:
+        name: generic-driver
+        state: present
+      when: compatible_gpu.rc == 0
+      # This task installs a generic graphics card driver as a potential fix.
+
+    - name: GPU-Accelerated Task with Condition
+      command: some_gpu_accelerated_task
+      when: compatible_gpu.rc == 0
+      # This task includes a conditional statement to check for compatible hardware.
+
+Unguarded operations-1
+---
+- name: Create User Account
+  hosts: target_system
+  tasks:
+    - name: Create User Account
+      user:
+        name: myuser
+        state: present
+        shell: /bin/bash
+        create_home: yes
+        password: mypassword
+      # This task creates a user account, but it doesn't check for existing users.
+
+- name: Playbook Fix - Check for Existing User
+  hosts: target_system
+  tasks:
+    - name: Check if User Exists
+      command: "id myuser"
+      register: user_exists
+      ignore_errors: yes
+      changed_when: false
+      # This task checks if the user 'myuser' already exists.
+
+    - name: Create User Account
+      user:
+        name: myuser
+        state: present
+        shell: /bin/bash
+        create_home: yes
+        password: mypassword
+      when: user_exists.rc != 0
+      # This task creates the user account only if the user doesn't exist.
+
+- name: Playbook Fix - Use Ansible When Conditionals
+  hosts: target_system
+  tasks:
+    - name: Create User Account
+      user:
+        name: myuser
+        state: present
+        shell: /bin/bash
+        create_home: yes
+        password: mypassword
+      when: "'myuser' not in ansible_users"
+      # This task creates the user account only if 'myuser' is not present in ansible_users.
+
+- name: Additional Tasks
+  hosts: target_system
+  tasks:
+    - name: Perform Other Tasks
+      debug:
+        msg: "Other tasks to perform after user creation..."
+      # Add other tasks that need to be performed after the user account is created.
+
+Unguarded operations-2
+---
+- name: Append Duplicate Lines and Create Files
+  hosts: target_hosts
+  tasks:
+    - name: Append Duplicate Lines to Configuration File
+      lineinfile:
+        path: /etc/app/config.conf
+        line: "duplicate_option: value"
+        state: present
+        create: yes
+      # This task appends a line to the configuration file.
+
+    - name: Create Files Without Checking Existence
+      copy:
+        src: /path/to/source_file.txt
+        dest: /tmp/destination_file.txt
+      # This task copies a file to a destination without checking if it already exists.
+
+- name: Playbook Fix - Check Duplicate Lines Before Appending
+  hosts: target_hosts
+  tasks:
+    - name: Check Duplicate Lines
+      shell: "grep -q 'duplicate_option: value' /etc/app/config.conf"
+      failed_when: false
+      register: grep_result
+
+    - name: Append Lines to Configuration File Conditionally
+      lineinfile:
+        path: /etc/app/config.conf
+        line: "duplicate_option: value"
+        state: present
+        create: yes
+      when: grep_result.rc != 0
+      # This task appends a line to the configuration file conditionally if it doesn't already exist.
+
+- name: Playbook Fix - Check File Existence Before Copying
+  hosts: target_hosts
+  tasks:
+    - name: Check If File Exists
+      stat:
+        path: /tmp/destination_file.txt
+      register: file_stat
+
+    - name: Copy File Conditionally
+      copy:
+        src: /path/to/source_file.txt
+        dest: /tmp/destination_file.txt
+      when: file_stat.stat.exists == false
+      # This task copies a file to a destination only if the file doesn't already exist.
