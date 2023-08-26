@@ -1,6 +1,16 @@
-# checks if a task uses one of the supported package installers
-# and returns a message indicating which installer was used
 import os
+import requests
+
+
+def check_url_validity(url):
+    try:
+        response = requests.head(url)
+        if response.status_code == 200:
+            return True
+        else:
+            return False
+    except requests.ConnectionError:
+        return False
 
 
 def check_task_for_broken_dependency(task):
@@ -16,6 +26,9 @@ def check_task_for_broken_dependency(task):
             ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
             ('url', "Task uses a fixed URL to download a key which can become outdated or removed.")
         ]
+
+        url_download_components = ['apt-repository', 'get-url', 'uri']
+
         messages = []
         task_parts = []
 
@@ -26,6 +39,11 @@ def check_task_for_broken_dependency(task):
                     for checker, message in checkers:
                         if checker in task[t]:
                             messages.append(message)
+
+            if has_package_repository_assumption(task, t, url_download_components):
+                url = task[t].get('url') or task[t].get('repo')
+                if url and not check_url_validity(url):
+                    messages.append(f"Task assumes a package repository with an invalid URL: {url}")
 
         if 'package_facts' in task_parts or 'debug' in task_parts or 'when' in task_parts \
                 or 'set_fact' in task_parts or 'assert' in task_parts or 'with_items' in task_parts or 'set_facts' in task_parts:
@@ -227,7 +245,10 @@ def check_task_for_software_specific_commands(task):
 
 def check_task_for_environment_assumptions(task):
     messages = []
-    key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key']
+    key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key', 'apt-get-key', 'yum-key',
+                               'dnf-key', 'pacman-key', 'apk-key',
+                               'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
+                               'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key', 'ansible.builtin.yum-key']
     try:
         for t in task:
             if has_environment_assumption(task, t):
@@ -434,6 +455,8 @@ def perform_smell_detection_for_task(task):
         smell_name_description['Hardware Specific Commands'] = check_task_for_hardware_specific_commands(task=task)
         assumption = check_task_for_environment_assumptions(task=task) + ' ' + check_task_for_software_specific_commands(task=task)
         smell_name_description['Assumption about Environment'] = assumption
+
+        #Todo after certain components we should check for broken dependency
         smell_name_description['Broken Dependency Chain'] = check_task_for_broken_dependency(task=task)
     except Exception as e:
         print("An error occurred during smell detection:", str(e))
