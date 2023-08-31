@@ -74,7 +74,10 @@ if __name__ == '__main__':
         # 'https://github.com/openafs-contrib/ansible-openafs.git'
         # 'https://github.com/marmorag/ansodium.git'
         # 'https://github.com/marmorag/chunk.git'
-        'https://github.com/ionos-cloud/module-ansible.git'
+        # 'https://github.com/ionos-cloud/module-ansible.git'
+        # 'https://github.com/samdoran/ansible-collection-macos.git'
+        # 'https://github.com/aplatform64/aplatform64.git'
+        'https://github.com/charlesrocket/essential-collection.git'
 
     ]
 

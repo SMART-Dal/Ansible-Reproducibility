@@ -288,7 +288,7 @@ def check_task_for_environment_assumptions(task):
                                'dnf-key', 'pacman-key', 'apk-key',
                                'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
                                'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key', 'ansible.builtin.yum-key', 'url',
-                               'git']
+                               'git', 'remote_vars']
     try:
         for t in task:
             if has_environment_assumption(task, t):
