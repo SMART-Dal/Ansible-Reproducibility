@@ -15,6 +15,9 @@ def check_url_validity(url):
 
 def check_task_for_broken_dependency(task):
     try:
+        messages = []
+        task_parts = []
+
         package_installers_keys_to_check = [
             'apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
             'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
@@ -26,27 +29,31 @@ def check_task_for_broken_dependency(task):
             ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
             ('url', "Task uses a fixed URL to download a key which can become outdated or removed.")
         ]
-
         url_download_components = ['apt-repository', 'get-url', 'uri']
 
-        messages = []
-        task_parts = []
-
-        for t in task:
-            task_parts.append(t)
+        def check_package_installers(task_part):
             for installer_key in package_installers_keys_to_check:
-                if installer_key in t:
+                if installer_key in task_part:
                     for checker, message in checkers:
-                        if checker in task[t]:
+                        if checker in task_part[installer_key]:
                             messages.append(message)
 
-            if has_package_repository_assumption(task, t, url_download_components):
-                url = task[t].get('url') or task[t].get('repo')
+        def check_repository_assumption(task_part):
+            if has_package_repository_assumption(task, task_part, url_download_components):
+                url = task_part.get('url') or task_part.get('repo')
                 if url and not check_url_validity(url):
                     messages.append(f"Task assumes a package repository with an invalid URL: {url}")
 
-        if 'package_facts' in task_parts or 'debug' in task_parts or 'when' in task_parts \
-                or 'set_fact' in task_parts or 'assert' in task_parts or 'with_items' in task_parts or 'set_facts' in task_parts:
+        def check_task_parts(task_part):
+            task_parts.append(task_part)
+            check_package_installers(task_part)
+            check_repository_assumption(task_part)
+
+        for t in task:
+            check_task_parts(task[t])
+
+        special_task_parts = ['package_facts', 'debug', 'when', 'set_fact', 'assert', 'with_items', 'set_facts']
+        if any(part in task_parts for part in special_task_parts):
             messages.append("None")
         else:
             messages.append('Task did not check the correctness of execution.')
