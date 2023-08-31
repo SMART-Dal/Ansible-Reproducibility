@@ -1,0 +1,85 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,7,1 - Test contact creation,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,15,1 - ASSERT,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,18,Test duplicate contact,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,19,2 - ASSERT,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,20,3 - Test update,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,21,3 - ASSERT,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,22,4 - Test delete,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,24,4 - ASSERT,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,32,5 - Create contact with all parameters,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_contact.yml,35,5 - ASSERT,Broken Dependency Chain,None

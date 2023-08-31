@@ -1,0 +1,20 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN 1: Necessary info creation,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN 1: ASSERT - Necessary info creation,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN 2: Create duplicate,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN 2: ASSERT - Create duplicate,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN 4: ASSERT - Update,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN: ASSERT - Updated,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN: ASSERT - Delete,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+L2VPN 6: ASSERT - Delete,None,None,None,None,None None,None,None

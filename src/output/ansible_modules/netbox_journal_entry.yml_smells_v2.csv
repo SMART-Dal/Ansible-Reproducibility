@@ -1,0 +1,5 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+JOURNAL ENTRY 1: Creation,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+JOURNAL_ENTRY 1: ASSERT - Creation,None,None,None,None,None None,None,None

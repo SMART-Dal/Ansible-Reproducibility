@@ -1,0 +1,56 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,2,Reset test counter,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,7,Test first lookup,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,11,Test second lookup,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,12,Test current lookup,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,13,Test first with_counter,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,14,Test second with_counter,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,test_counter.yml,16,Test second with_counter,Broken Dependency Chain,None

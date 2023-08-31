@@ -1,0 +1,31 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 0: Create device for testing virtual chassis,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 1: Necessary info creation,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 1: ASSERT - Necessary info creation,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 2: Create duplicate,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 2: ASSERT - Create duplicate,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+POWER_FEED 3: Update virtual_chassis with other fields,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+POWER_FEED 3: ASSERT - Update virtual_chassis with other fields,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 4: Create device for testing virtual chassis deletion,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 4: Create Virtual Chassis for Delete Test,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 4: ASSERT - Create Virtual Chassis for Delete Test,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 5: Delete Virtual Chassis,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+VIRTUAL_CHASSIS 5: ASSERT - Delete Virtual Chassis,None,None,None,None,None None,None,None

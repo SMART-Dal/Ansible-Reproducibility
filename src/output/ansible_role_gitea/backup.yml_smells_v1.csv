@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,backup.yml,2,Backup block,Broken Dependency Chain,None

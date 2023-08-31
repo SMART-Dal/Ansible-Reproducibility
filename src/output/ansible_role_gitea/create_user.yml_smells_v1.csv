@@ -1,0 +1,43 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,2,Create Gitea Group,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,9,Switch shell when not using the builtin ssh server,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,create_user.yml,13,Create Gitea user,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,20 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 1: Test FHRP group assignment creation,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment: ASSERT - Necessary info creation,None,None,None,None,None None,None,Task did not check the correctness of execution.
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 2: Create duplicate,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 2: ASSERT - Create duplicate,None,None,None,None,None None,None,Task did not check the correctness of execution.
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 3: Update FHRP group assignment,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 3: ASSERT - Update FHRP group assignment,None,None,None,None,None None,None,Task did not check the correctness of execution.
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 4: Delete FHRP group assignment,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+FHRP group assignment 3: ASSERT - Delete FHRP group assignment,None,None,None,None,None None,None,Task did not check the correctness of execution.

@@ -1,0 +1,30 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 1: Create provider within NetBox with only required information,None,None,None,None,None None,None,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 1: ASSERT - Necessary info creation,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 2: Duplicate,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 2: ASSERT - Create duplicate,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 3: Update provider with other fields,None,None,None,None,None None,None,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 3: ASSERT - Updated,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 4: Create Z Side,None,None,None,None,None None,None,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 4: ASSERT - Create Z Side,None,None,None,None,None None,None,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+None"
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 5: Delete provider within netbox,None,None,None,None,None None,None,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_CIRCUIT_TERMINATION 5: ASSERT - Delete,None,None,None,None,None None,None,None

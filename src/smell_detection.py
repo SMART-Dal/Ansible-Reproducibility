@@ -3,6 +3,8 @@ import requests
 
 
 def check_url_validity(url):
+    if url.startswith("http://localhost") or url.startswith("https://localhost"):
+        return True
     try:
         response = requests.head(url)
         if response.status_code == 200:
@@ -27,13 +29,26 @@ def check_task_for_broken_dependency(task):
         checkers = [
             ('fingerprint', "Task uses a fixed fingerprint which can become outdated."),
             ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
-            ('url', "Task uses a fixed URL to download a key which can become outdated or removed.")
+            ('token', "Task uses a fixed token which can become outdated.")
         ]
-        url_download_components = ['apt-repository', 'get-url', 'uri']
+        url_download_components = ['apt-repository', 'get-url', 'uri', 'url']
+
+        def check_key_assumption(task_part):
+            if isinstance(task_part, dict):
+                # If task_part is a dictionary, loop through its items
+                for key, value in task_part.items():
+                    for checker, message in checkers:
+                        if checker in key:
+                            messages.append(message)
+            elif isinstance(task_part, str):
+                # If task_part is a string, check against checkers directly
+                for checker, message in checkers:
+                    if checker in task_part:
+                        messages.append(message)
 
         def check_package_installers(task_part):
             for installer_key in package_installers_keys_to_check:
-                if installer_key in task_part:
+                if installer_key in str(task_part):
                     for checker, message in checkers:
                         if checker in task_part[installer_key]:
                             messages.append(message)
@@ -45,12 +60,15 @@ def check_task_for_broken_dependency(task):
                     messages.append(f"Task assumes a package repository with an invalid URL: {url}")
 
         def check_task_parts(task_part):
-            task_parts.append(task_part)
+            # task_parts.append(task_part)
             check_package_installers(task_part)
             check_repository_assumption(task_part)
+            check_key_assumption(task_part)
 
         for t in task:
+            task_parts.append(t)
             check_task_parts(task[t])
+
 
         special_task_parts = ['package_facts', 'debug', 'when', 'set_fact', 'assert', 'with_items', 'set_facts']
         if any(part in task_parts for part in special_task_parts):
@@ -128,7 +146,8 @@ def check_task_for_idempotency(task):
         'dnf': "Task violates idempotency because it installs packages with dnf.",
         'pacman': "Task violates idempotency because it installs packages with pacman.",
         'pip': "Task violates idempotency because it installs packages with pip.",
-        'apt-get': "Task violates idempotency because it installs packages with apt-get."
+        'apt-get': "Task violates idempotency because it installs packages with apt-get.",
+        'netbox.netbox.netbox_service': 'Task violates idempotency because it executes a command.'
     }
     messages = []
 
@@ -156,7 +175,7 @@ def check_task_for_idempotency(task):
 
 
 def is_idempotent_task(task, component):
-    if component in ['command', 'shell', 'service', 'systemd', 'raw', 'script', 'win_command', 'win_shell']:
+    if component in ['command', 'shell', 'service', 'systemd', 'raw', 'script', 'win_command', 'win_shell','netbox.netbox.netbox_service']:
         return 'state' not in task or 'when' not in task
     elif 'state' not in task or 'when' not in task and task['state'] == 'latest':
         return True
@@ -255,7 +274,8 @@ def check_task_for_environment_assumptions(task):
     key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key', 'apt-get-key', 'yum-key',
                                'dnf-key', 'pacman-key', 'apk-key',
                                'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
-                               'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key', 'ansible.builtin.yum-key']
+                               'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key', 'ansible.builtin.yum-key', 'url',
+                               'git']
     try:
         for t in task:
             if has_environment_assumption(task, t):
@@ -297,7 +317,7 @@ def has_environment_assumption(task, t):
 
 
 def has_os_family_assumption(task, t):
-    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_os_family' in str(task[t]))
+    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_os_family' in str(task[t])) or ('selinux' in t)
 
 
 def has_firewall_assumption(task, t):
@@ -321,7 +341,7 @@ def has_ssh_assumption(task, t):
 
 
 def has_package_repository_assumption(task, t, key_download_components):
-    return any(key_checker in t for key_checker in key_download_components) and ('url' in task[t] or 'repo' in task[t])
+    return any(key_checker in str(t) for key_checker in key_download_components) and ('url' in str(task[t]) or 'repo' in task[t])
 
 
 def check_task_for_missing_dependencies(task):
@@ -333,7 +353,7 @@ def check_task_for_missing_dependencies(task):
                 if 'dependencies are missing' in task[t] or 'dependency not found' in task[t]:
                     messages.append("Task has missing dependencies")
 
-            elif 'failed' in t and str(task[t]).lower() == 'false':
+            elif 'failed' in t and str(task[t]).lower() == 'false' or 'fail' in t:
                 messages.append("Task has missing dependencies")
 
             elif 'file' in t or 'ansible.builtin.copy' in t:
@@ -462,8 +482,6 @@ def perform_smell_detection_for_task(task):
         smell_name_description['Hardware Specific Commands'] = check_task_for_hardware_specific_commands(task=task)
         assumption = check_task_for_environment_assumptions(task=task) + ' ' + check_task_for_software_specific_commands(task=task)
         smell_name_description['Assumption about Environment'] = assumption
-
-        #Todo after certain components we should check for broken dependency
         smell_name_description['Broken Dependency Chain'] = check_task_for_broken_dependency(task=task)
     except Exception as e:
         print("An error occurred during smell detection:", str(e))

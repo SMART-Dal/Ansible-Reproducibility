@@ -1,0 +1,68 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,7,FHRP group 1: Test FHRP group creation,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,17,FHRP group: ASSERT - Necessary info creation,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,20,FHRP group 2: Create duplicate,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,21,FHRP group 2: ASSERT - Create duplicate,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,22,FHRP group 3: Update FHRP group with other fields,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,23,FHRP group 3: ASSERT - Update FHRP group with other fields,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,24,FHRP group 4: ASSERT - Delete,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group.yml,25,FHRP group 4: ASSERT - Delete,Broken Dependency Chain,Task did not check the correctness of execution.

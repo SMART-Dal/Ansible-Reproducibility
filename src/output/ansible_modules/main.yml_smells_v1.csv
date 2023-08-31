@@ -1,0 +1,8 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,main.yml,7,TEST NETBOX CONNECTION FAILURE,Broken Dependency Chain,Task did not check the correctness of execution.

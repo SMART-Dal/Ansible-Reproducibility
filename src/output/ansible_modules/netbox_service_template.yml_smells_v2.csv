@@ -1,0 +1,30 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 1: Necessary info creation,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command.",None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 2: Create duplicate,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command.",None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 2: ASSERT - Create duplicate,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 3: Update Service Template with other fields,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command.",None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 4: Create Service Template for Delete Test,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command.",None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 5: Delete Service Template,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command.",None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,None,None,None,None,None None,None,None

@@ -1,0 +1,90 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Idempotency,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,7,SERVICE_TEMPLATE 1: Necessary info creation,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,14,SERVICE_TEMPLATE 1: ASSERT - Necessary info creation,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Idempotency,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,19,SERVICE_TEMPLATE 2: Create duplicate,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,22,SERVICE_TEMPLATE 2: ASSERT - Create duplicate,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Idempotency,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,23,SERVICE_TEMPLATE 3: Update Service Template with other fields,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,24,SERVICE_TEMPLATE 3: ASSERT - Update Service Template with other fields,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Idempotency,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,25,SERVICE_TEMPLATE 4: Create Service Template for Delete Test,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,26,SERVICE_TEMPLATE 4: ASSERT - Create Service Template for Delete Test,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Idempotency,"Task violates idempotency because it executes a command.
+Task violates idempotency because it executes a command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,27,SERVICE_TEMPLATE 5: Delete Service Template,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_service_template.yml,28,SERVICE_TEMPLATE 5: ASSERT - Delete Service Template,Broken Dependency Chain,None

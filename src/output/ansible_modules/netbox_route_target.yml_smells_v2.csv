@@ -1,0 +1,42 @@
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_ADD: Check Mode - Add all fields except description,None,None,None,None,None None,None,Error
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_ADD: (ASSERT) Check Mode - Add all fields except description,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_ADD: Add all fields except description,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_ADD: (ASSERT) Add all fields except description,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_ADD_IDEM: (IDEMPOTENT) Add all fields except description,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_ADD_IDEM: (IDEMPOTENT) Add all fields except description,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_UPDATE: Check Mode - Update description,None,None,None,None,None None,None,Error
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_UPDATE: (ASSERT) Check Mode - Update description,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_UPDATE: Update description,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_UPDATE: (ASSERT) Update description,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_UPDATE_IDEM: (IDEMPOTENT) Update description,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_UPDATE_IDEM: (IDEMPOTENT) Update description,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_DELETE: Check Mode - Delete route target,None,None,None,None,None None,None,Error
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_DELETE: (ASSERT) Check Mode - Delete route target,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_DELETE: Delete route target,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_DELETE: (ASSERT) Delete route target,None,None,None,None,None None,None,None
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_DELETE_IDEM: (IDEMPOTENT) Delete route target,None,None,None,None,None None,None,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
+NETBOX_ROUTE_TARGET_DELETE_IDEM: (IDEMPOTENT) Delete route target,None,None,None,None,None None,None,None

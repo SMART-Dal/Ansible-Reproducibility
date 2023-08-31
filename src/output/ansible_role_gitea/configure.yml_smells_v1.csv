@@ -1,0 +1,24 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,2,Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,10,Configure gitea,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_role_gitea,configure.yml,20,Service gitea,Broken Dependency Chain,Task did not check the correctness of execution.

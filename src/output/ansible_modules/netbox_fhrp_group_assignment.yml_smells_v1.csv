@@ -1,0 +1,68 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,7,FHRP group assignment 1: Test FHRP group assignment creation,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,19,FHRP group assignment: ASSERT - Necessary info creation,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,22,FHRP group assignment 2: Create duplicate,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,23,FHRP group assignment 2: ASSERT - Create duplicate,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,24,FHRP group assignment 3: Update FHRP group assignment,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,25,FHRP group assignment 3: ASSERT - Update FHRP group assignment,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,26,FHRP group assignment 4: Delete FHRP group assignment,Broken Dependency Chain,"Task uses a fixed token which can become outdated.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible_modules,netbox_fhrp_group_assignment.yml,27,FHRP group assignment 3: ASSERT - Delete FHRP group assignment,Broken Dependency Chain,Task did not check the correctness of execution.

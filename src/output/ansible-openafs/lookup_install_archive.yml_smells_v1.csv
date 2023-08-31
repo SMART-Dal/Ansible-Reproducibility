@@ -1,0 +1,96 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,2,Task 1,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,5,Task 2,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,8,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,12,Task 4,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,16,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,20,Task 6,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,23,Lookup install tarballs,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,24,Task 8,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,26,Task 9,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,29,Verify install tarball was found,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,30,Task 11,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-openafs,lookup_install_archive.yml,32,Task 12,Broken Dependency Chain,None

@@ -13,28 +13,28 @@ import shutil
 import subprocess
 
 
-def clone_directory(url, directory_path):
-    # Clone the GitHub repository
-    subprocess.run(['git', 'clone', url])
-
-    # Get the repository name
-    repo_name = url.split('/')[-1].split('.')[0]
-
-    # Move the directories to the desired project location
-    source_path = os.path.join(repo_name, directory_path)
-    destination_path = os.path.join('/home/ghazal/Ansible-Reproducibility/test/testScripts', directory_path)
-    shutil.move(source_path, destination_path)
-
-    # Remove the cloned repository
-    shutil.rmtree(repo_name)
-
-
-# Provide the GitHub repository URL and directory path
-github_url = 'https://github.com/oracle/oci-ansible-collection.git'
-directory_path = 'samples'
-
-# Call the function to clone and save the directory
-clone_directory(github_url, directory_path)
+# def clone_directory(url, directory_path):
+#     # Clone the GitHub repository
+#     subprocess.run(['git', 'clone', url])
+#
+#     # Get the repository name
+#     repo_name = url.split('/')[-1].split('.')[0]
+#
+#     # Move the directories to the desired project location
+#     source_path = os.path.join(repo_name, directory_path)
+#     destination_path = os.path.join('/home/ghazal/Ansible-Reproducibility/test/testScripts', directory_path)
+#     shutil.move(source_path, destination_path)
+#
+#     # Remove the cloned repository
+#     shutil.rmtree(repo_name)
+#
+#
+# # Provide the GitHub repository URL and directory path
+# github_url = 'https://github.com/oracle/oci-ansible-collection.git'
+# directory_path = 'samples'
+#
+# # Call the function to clone and save the directory
+# clone_directory(github_url, directory_path)
 
 
 def clone_github_yml_files(links):
@@ -68,7 +68,11 @@ def clone_github_yml_files(links):
 if __name__ == '__main__':
     # Provide a list of GitHub repository links
     repository_links = [
-        'https://github.com/netbox-community/ansible_modules',
+        # 'https://github.com/netbox-community/ansible_modules',
+        # 'https://github.com/roles-ansible/ansible_role_gitea.git'
+        # 'https://github.com/geerlingguy/ansible-collection-mac.git'
+        # 'https://github.com/openafs-contrib/ansible-openafs.git'
+        ''
     ]
 
     clone_github_yml_files(repository_links)
