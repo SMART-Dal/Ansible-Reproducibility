@@ -69,7 +69,6 @@ def check_task_for_broken_dependency(task):
             task_parts.append(t)
             check_task_parts(task[t])
 
-
         special_task_parts = ['package_facts', 'debug', 'when', 'set_fact', 'assert', 'with_items', 'set_facts']
         if any(part in task_parts for part in special_task_parts):
             messages.append("None")
@@ -134,6 +133,7 @@ def is_update_cache(task_attributes):
 def check_task_for_idempotency(task):
     idempotency_violations = {
         'command': "Task violates idempotency because it executes a command.",
+        'run': "Task violates idempotency because it executes a command.",
         'shell': "Task violates idempotency because it executes a command.",
         'service': "Task violates idempotency because it executes a command.",
         'systemd': "Task violates idempotency because it executes a command.",
@@ -147,7 +147,11 @@ def check_task_for_idempotency(task):
         'pacman': "Task violates idempotency because it installs packages with pacman.",
         'pip': "Task violates idempotency because it installs packages with pip.",
         'apt-get': "Task violates idempotency because it installs packages with apt-get.",
-        'netbox.netbox.netbox_service': 'Task violates idempotency because it executes a command.'
+        'volume': "Task violates idempotency because it creates an object without checking the existence.",
+        'user': "Task violates idempotency because it creates a user without checking the existence.",
+        'group': "Task violates idempotency because it creates a group without checking the existence.",
+        'snapshot': "Task violates idempotency because it creates a snapshot without checking the existence.",
+        'server': "Task violates idempotency because it creates a server without checking the existence."
     }
     messages = []
 
@@ -157,7 +161,6 @@ def check_task_for_idempotency(task):
                 if component in t:
                     if is_idempotent_task(task[t], component):
                         messages.append(message)
-
             if is_firewall_task(t) and 'state' not in task[t]:
                 messages.append("Task changes the state of the firewall without checking.")
 
@@ -213,7 +216,7 @@ def check_task_for_version_specific_package(task):
         return "Error"
 
 
-def check_hardware_components(task, components, message):
+def check_hardware_or_software_components(task, components, message):
     if any(component in task for component in components):
         return message
     return '\n'
@@ -226,17 +229,25 @@ def check_task_for_hardware_specific_commands(task):
         for t in task:
             for component in ['command', 'shell', 'raw']:
                 if component in t:
-                    messages.append(check_hardware_components(task[t], ['lspci', 'lshw'], "Task uses a hardware-specific command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath'], "Task uses a disk management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['ip', 'ifconfig', 'route', 'vconfig', 'ifup', 'ifdown', 'iptables'], "Task uses a network management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['cpufrequtils', 'sysctl', 'cpufreq-info'], "Task uses a performance settings management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['nvidia-settings', 'nvidia-smi'], "Task uses a GPU settings management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['xinput', 'xrandr'], "Task uses an I/O device management command that may not be portable."))
-                    messages.append(check_hardware_components(task[t], ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
-
+                    messages.append(check_hardware_or_software_components(task[t], ['lspci', 'lshw'], "Task uses a hardware-specific command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath', 'disk_type'], "Task uses a disk management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['cpufrequtils', 'sysctl', 'cpufreq-info'], "Task uses a performance settings management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['nvidia-settings', 'nvidia-smi'], "Task uses a GPU settings management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['xinput', 'xrandr'], "Task uses an I/O device management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
+                else:
+                    messages.append(check_hardware_or_software_components(t, ['lspci', 'lshw'], "Task uses a hardware-specific command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath', 'disk_type'], "Task uses a disk management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['cpufrequtils', 'sysctl', 'cpufreq-info'], "Task uses a performance settings management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['nvidia-settings', 'nvidia-smi'], "Task uses a GPU settings management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['xinput', 'xrandr'], "Task uses an I/O device management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
         if messages:
             return '\n'.join(messages)
         else:
@@ -248,7 +259,8 @@ def check_task_for_hardware_specific_commands(task):
 
 
 def check_task_for_software_specific_commands(task):
-    software_commands = ['npm', 'pip', 'docker', 'kubectl']
+    software_commands = ['npm', 'pip', 'docker', 'kubectl', 'ipblock',
+                         'ip', 'ifconfig', 'route', 'vconfig', 'ifup', 'ifdown', 'iptables', 'k8s_cluster']
     messages = []
 
     try:
@@ -258,7 +270,8 @@ def check_task_for_software_specific_commands(task):
                     if command in task[t]:
                         messages.append(f"Task uses a {command} command that may not be portable.")
                         break
-
+            else:
+                messages.append(check_hardware_or_software_components(t, software_commands, "task uses a software specific command."))
         if messages:
             return '\n'.join(messages)
         else:
@@ -321,7 +334,7 @@ def has_os_family_assumption(task, t):
 
 
 def has_firewall_assumption(task, t):
-    return ('ansible.posix.firewalld' in t or 'community.general.ufw' in t) and ('state' not in task[t])
+    return ('ansible.posix.firewalld' in t or 'community.general.ufw' in t or 'firewall_rule' in t) and ('state' not in task[t])
 
 
 def has_dns_assumption(task, t):

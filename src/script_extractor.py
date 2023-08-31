@@ -72,7 +72,10 @@ if __name__ == '__main__':
         # 'https://github.com/roles-ansible/ansible_role_gitea.git'
         # 'https://github.com/geerlingguy/ansible-collection-mac.git'
         # 'https://github.com/openafs-contrib/ansible-openafs.git'
-        ''
+        # 'https://github.com/marmorag/ansodium.git'
+        # 'https://github.com/marmorag/chunk.git'
+        'https://github.com/ionos-cloud/module-ansible.git'
+
     ]
 
     clone_github_yml_files(repository_links)

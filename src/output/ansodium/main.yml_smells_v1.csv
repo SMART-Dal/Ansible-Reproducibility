@@ -1,0 +1,56 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,5,role - set fact,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,10,role - generate key pair,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,12,Task 3,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,13,role - encrypt data,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,15,Task 5,Broken Dependency Chain,None
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,21,role - decrypt data,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Hardware Specific Commands,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Assumption about Environment,None None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansodium,main.yml,23,Task 7,Broken Dependency Chain,None
