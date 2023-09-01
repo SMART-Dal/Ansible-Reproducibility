@@ -1,0 +1,119 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Assumption about Environment,"None 
+
+task uses a software specific command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,service-member-certificate-absent.yml,2,Ensure service certificate is absent,Broken Dependency Chain,"Task uses a fixed certificate which can become outdated.
+Task uses a fixed certificate which can become outdated.
+Task did not check the correctness of execution."

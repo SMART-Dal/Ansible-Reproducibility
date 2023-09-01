@@ -77,7 +77,11 @@ if __name__ == '__main__':
         # 'https://github.com/ionos-cloud/module-ansible.git'
         # 'https://github.com/samdoran/ansible-collection-macos.git'
         # 'https://github.com/aplatform64/aplatform64.git'
-        'https://github.com/charlesrocket/essential-collection.git'
+        # 'https://github.com/charlesrocket/essential-collection.git'
+        # 'https://github.com/freeipa/ansible-freeipa.git'
+        # 'https://github.com/linux-system-roles/linux-system-roles.github.io.git'
+        # 'https://github.com/nautobot/nautobot-ansible.git'
+        'https://github.com/VeeamHub/veeam-ansible.git'
 
     ]
 

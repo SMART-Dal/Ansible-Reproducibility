@@ -1,0 +1,119 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Idempotency,Task violates idempotency because it creates a user without checking the existence.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Assumption about Environment,"None 
+
+task uses a software specific command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,add-user-external-idp.yml,2,Create user associated with an external IdP,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."

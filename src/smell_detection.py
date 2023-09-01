@@ -29,7 +29,8 @@ def check_task_for_broken_dependency(task):
         checkers = [
             ('fingerprint', "Task uses a fixed fingerprint which can become outdated."),
             ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
-            ('token', "Task uses a fixed token which can become outdated.")
+            ('token', "Task uses a fixed token which can become outdated."),
+            ('certificate', "Task uses a fixed certificate which can become outdated."),
         ]
         url_download_components = ['apt-repository', 'get-url', 'uri', 'url']
 
@@ -139,8 +140,10 @@ def check_task_for_idempotency(task):
         'systemd': "Task violates idempotency because it executes a command.",
         'raw': "Task violates idempotency because it executes a command.",
         'script': "Task violates idempotency because it executes a command.",
-        'win_command': "Task violates idempotency because it executes a command.",
-        'win_shell': "Task violates idempotency because it executes a command.",
+        'win_command': "Task violates idempotency because it executes a command on windows.",
+        'win_shell': "Task violates idempotency because it executes a command on windows.",
+        'ansible.windows.win_optional_feature': "Task violates idempotency because it executes a command on windows.",
+        'ansible.windows.win_package': 'Task violates idempotency because it installs a package on windows.',
         'apt': "Task violates idempotency because it installs or upgrades packages with apt.",
         'yum': "Task violates idempotency because it installs or upgrades packages with yum.",
         'dnf': "Task violates idempotency because it installs packages with dnf.",
@@ -192,7 +195,7 @@ def is_firewall_task(task):
 
 
 def is_file_task(task):
-    return 'file' in task or 'ansible.builtin.copy' in task or 'copy' in task or 'lineinfile' in task
+    return 'file' in task or 'ansible.builtin.copy' in task or 'copy' in task or 'lineinfile' in task or 'mount' in task
 
 
 # checks if a task installs a version-specific package
@@ -315,6 +318,9 @@ def check_task_for_environment_assumptions(task):
             if has_package_repository_assumption(task, t, key_download_components):
                 messages.append("Task assumes that the package repository is available at a specific URL structure.")
 
+            if check_windows_command(t):
+                messages.append("Task assume the environment is windows.")
+
         if messages:
             return '\n'.join(messages)
         else:
@@ -325,12 +331,19 @@ def check_task_for_environment_assumptions(task):
         return "Error"
 
 
+def check_windows_command(task_part):
+    if 'windows.win' in task_part:
+        return True
+
+
 def has_environment_assumption(task, t):
-    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_distribution' in str(task[t]))
+    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_distribution' in str(task[t])) \
+           or ('selinux' in t or 'ansible.windows.win_optional_feature' in t or 'ansible.windows.win_package' in t)
 
 
 def has_os_family_assumption(task, t):
-    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_os_family' in str(task[t])) or ('selinux' in t)
+    return ('vars' in t or 'include_vars' in t or 'include_tasks' in t or 'when' in t) and ('ansible_os_family' in str(task[t])) \
+           or ('selinux' in t or 'ansible.windows.win_optional_feature' in t or 'ansible.windows.win_package' in t)
 
 
 def has_firewall_assumption(task, t):
@@ -369,7 +382,7 @@ def check_task_for_missing_dependencies(task):
             elif 'failed' in t and str(task[t]).lower() == 'false' or 'fail' in t:
                 messages.append("Task has missing dependencies")
 
-            elif 'file' in t or 'ansible.builtin.copy' in t:
+            elif 'file' in t or 'ansible.builtin.copy' in t or 'mount' in t:
                 src_message = check_path(task, t, 'src', "Task is using absolute path for source", "Task is using relative path for source")
                 path_message = check_path(task, t, 'path', "Task is using absolute path for source path", "Task is using relative path for source path")
                 messages.append(src_message)

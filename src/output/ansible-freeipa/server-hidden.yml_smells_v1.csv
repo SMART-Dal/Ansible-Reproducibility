@@ -1,0 +1,119 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Idempotency,Task violates idempotency because it creates a server without checking the existence.
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Assumption about Environment,"None 
+
+task uses a software specific command."
+/home/ghazal/Ansible-Reproducibility/test/testScripts/ansible-freeipa,server-hidden.yml,2,"Ensure server ""ipareplica1.example.com"" is hidden",Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
