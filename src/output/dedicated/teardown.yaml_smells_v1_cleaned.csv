@@ -1,7 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,teardown.yaml,12,Delete Autonomous Database,Assumption about Environment
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,teardown.yaml,19,Assert that specified Autonomous Database is deleted,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,teardown.yaml,22,Wait for autonomous container database to be in active state,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,teardown.yaml,23,Delete autonomous_container_database,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,teardown.yaml,27,Assert that specified Autonomous Container Database is deleted,Assumption about Environment

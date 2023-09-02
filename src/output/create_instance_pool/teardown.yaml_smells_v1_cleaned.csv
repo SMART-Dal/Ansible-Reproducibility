@@ -1,9 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,8,Terminate the instance pool,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,14,Delete the instance configuration,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,19,Delete the subnet,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,24,Delete the security list,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,29,Delete the route table,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,34,Delete the Internet Gateway,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/create_instance_pool,teardown.yaml,39,Delete the VCN,Broken Dependency Chain

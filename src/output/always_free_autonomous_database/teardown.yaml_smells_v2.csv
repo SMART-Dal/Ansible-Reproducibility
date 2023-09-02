@@ -1,4 +1,0 @@
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Delete Autonomous Database,None,None,None,None,None None,None,Task did not check the correctness of execution.
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Assert that specified Autonomous Database is deleted,None,None,None,None,None None,None,None

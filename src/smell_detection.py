@@ -21,7 +21,7 @@ def check_task_for_broken_dependency(task):
         task_parts = []
 
         package_installers_keys_to_check = [
-            'apt-key', 'apt-get-key', 'yum-key', 'dnf-key', 'pacman-key', 'apk-key',
+            'apt_key', 'apt_get_key', 'yum_key', 'dnf_key', 'pacman_key', 'apk_key', 'rpm_key'
             'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
             'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key',
             'ansible.builtin.yum-key'
@@ -145,6 +145,8 @@ def check_task_for_idempotency(task):
         'ansible.windows.win_optional_feature': "Task violates idempotency because it executes a command on windows.",
         'ansible.windows.win_package': 'Task violates idempotency because it installs a package on windows.',
         'apt': "Task violates idempotency because it installs or upgrades packages with apt.",
+        'apk': "Task violates idempotency because it installs or upgrades packages with apk.",
+        'package': "Task violates idempotency because it installs or upgrades packages.",
         'yum': "Task violates idempotency because it installs or upgrades packages with yum.",
         'dnf': "Task violates idempotency because it installs packages with dnf.",
         'pacman': "Task violates idempotency because it installs packages with pacman.",
@@ -195,7 +197,8 @@ def is_firewall_task(task):
 
 
 def is_file_task(task):
-    return 'file' in task or 'ansible.builtin.copy' in task or 'copy' in task or 'lineinfile' in task or 'mount' in task
+    return 'file' in task or 'ansible.builtin.copy' in task \
+           or 'copy' in task or 'lineinfile' in task or 'mount' in task or 'blockinfile' in task
 
 
 # checks if a task installs a version-specific package
@@ -233,7 +236,7 @@ def check_task_for_hardware_specific_commands(task):
             for component in ['command', 'shell', 'raw']:
                 if component in t:
                     messages.append(check_hardware_or_software_components(task[t], ['lspci', 'lshw'], "Task uses a hardware-specific command that may not be portable."))
-                    messages.append(check_hardware_or_software_components(task[t], ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath', 'disk_type'], "Task uses a disk management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath', 'disk_type', 'fstype'], "Task uses a disk management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
@@ -243,7 +246,7 @@ def check_task_for_hardware_specific_commands(task):
                     messages.append(check_hardware_or_software_components(task[t], ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
                 else:
                     messages.append(check_hardware_or_software_components(t, ['lspci', 'lshw'], "Task uses a hardware-specific command that may not be portable."))
-                    messages.append(check_hardware_or_software_components(t, ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath', 'disk_type'], "Task uses a disk management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['lsblk', 'fdisk', 'parted', 'mkfs', 'sg3_utils', 'multipath', 'disk_type', 'fstype'], "Task uses a disk management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
@@ -291,7 +294,7 @@ def check_task_for_environment_assumptions(task):
                                'dnf-key', 'pacman-key', 'apk-key',
                                'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
                                'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key', 'ansible.builtin.yum-key', 'url',
-                               'git', 'remote_vars']
+                               'git', 'remote_vars', 'repository']
     try:
         for t in task:
             if has_environment_assumption(task, t):
@@ -367,7 +370,8 @@ def has_ssh_assumption(task, t):
 
 
 def has_package_repository_assumption(task, t, key_download_components):
-    return any(key_checker in str(t) for key_checker in key_download_components) and ('url' in str(task[t]) or 'repo' in task[t])
+    return any(key_checker in str(t) for key_checker in key_download_components) \
+           and ('url' in str(task[t]) or 'repo' in task[t] or 'repository' in task[t])
 
 
 def check_task_for_missing_dependencies(task):

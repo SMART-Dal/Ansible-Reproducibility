@@ -1,5 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,8,Delete steering_policy_attachment,Assumption about Environment
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,14,Delete steering_policy,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/dns/create_public_dns,teardown.yaml,20,Delete zone,Assumption about Environment

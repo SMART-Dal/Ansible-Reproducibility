@@ -1,9 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,8,Task 1,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,11,Create bucket in private instance,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,52,Print bucket create response,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,57,get the bucket details,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,62,Task 5,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,77,verify that the bucket is created,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,sample.yaml,87,Task 7,Broken Dependency Chain
