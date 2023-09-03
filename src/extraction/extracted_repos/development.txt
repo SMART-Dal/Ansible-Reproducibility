@@ -33,15 +33,14 @@ https://github.com/geerlingguy/ansible-role-php-pecl.git
 https://github.com/robertdebock/ansible-role-git.git
 https://github.com/roles-ansible/ansible_role_gitea.git
 https://github.com/Comcast/ansible-sdkman.git
-
 https://github.com/robertdebock/ansible-role-gitlab_runner.git
 https://github.com/FGtatsuro/ansible-python-requirements.git
 https://github.com/jlund/ansible-go.git
 https://github.com/geerlingguy/ansible-role-packer.git
 https://github.com/zzet/rbenv.git
+https://github.com/thomas-maurice/ansible-role-gitea.git
 https://github.com/geerlingguy/ansible-role-passenger.git
 https://github.com/Azure/azure_modules.git
-https://github.com/thomas-maurice/ansible-role-gitea.git
 https://github.com/gantsign/ansible-role-visual-studio-code.git
 https://github.com/azavea/ansible-java.git
 https://github.com/geerlingguy/ansible-role-dotfiles.git

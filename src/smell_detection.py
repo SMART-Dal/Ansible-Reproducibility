@@ -24,16 +24,17 @@ def check_task_for_broken_dependency(task):
             'apt_key', 'apt_get_key', 'yum_key', 'dnf_key', 'pacman_key', 'apk_key', 'rpm_key'
             'ansible.builtin.rpm_key', 'ansible.builtin.apt_key',
             'ansible.builtin.dnf_key', 'ansible.builtin.pacman_key',
-            'ansible.builtin.yum_key'
+            'ansible.builtin.yum_key', 'gpgkey'
         ]
         checkers = [
             ('fingerprint', "Task uses a fixed fingerprint which can become outdated."),
             ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
             ('token', "Task uses a fixed token which can become outdated."),
             ('certificate', "Task uses a fixed certificate which can become outdated."),
-            ('ssl_crt', "Task uses a fixed certificate which can become outdated.")
+            ('ssl_crt', "Task uses a fixed certificate which can become outdated."),
+            ('gpgkey',  "Task uses a fixed key which can become outdated.")
         ]
-        url_download_components = ['apt_repository', 'get_url', 'uri', 'url', 'yum_repository', 'mirrorlist']
+        url_download_components = ['apt_repository', 'get_url', 'uri', 'url', 'yum_repository', 'mirrorlist', 'baseurl']
 
         def check_key_assumption(task_part):
             if isinstance(task_part, dict):
@@ -57,7 +58,7 @@ def check_task_for_broken_dependency(task):
 
         def check_repository_assumption(task_part):
             if has_package_repository_assumption(task, task_part, url_download_components):
-                url = task_part.get('url') or task_part.get('repo') or task_part.get('mirrorlist')
+                url = task_part.get('url') or task_part.get('repo') or task_part.get('mirrorlist') or task_part.get('baseurl')
                 if url and not check_url_validity(url):
                     messages.append(f"Task assumes a package repository with an invalid URL: {url}")
 
@@ -295,7 +296,7 @@ def check_task_for_environment_assumptions(task):
                                'dnf_key', 'pacman_key', 'apk_key',
                                'ansible.builtin.rpm_key', 'ansible.builtin.apt_key',
                                'ansible.builtin.dnf_key', 'ansible.builtin.pacman_key', 'ansible.builtin.yum_key', 'url',
-                               'git', 'remote_vars', 'repository']
+                               'git', 'remote_vars', 'repository', 'baseurl', 'gpgkey']
     try:
         for t in task:
             if has_environment_assumption(task, t):

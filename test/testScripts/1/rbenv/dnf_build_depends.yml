@@ -1,0 +1,11 @@
+---
+- name: install build depends
+  dnf:
+    name: "{{ rbenv_dnf_packages }}"
+    state: present
+  become: true
+
+- name: install build depends
+  dnf:
+    name: "{{ rbenv_extra_depends }}"
+  become: true
