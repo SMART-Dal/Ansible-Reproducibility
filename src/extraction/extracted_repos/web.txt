@@ -8,7 +8,6 @@ https://github.com/sensu/sensu-ansible.git
 https://github.com/ansible-ThoTeam/nexus3-oss.git
 https://github.com/ansistrano/rollback.git
 https://github.com/geerlingguy/ansible-role-certbot.git
-
 https://github.com/geerlingguy/ansible-role-kibana.git
 https://github.com/geerlingguy/ansible-role-elasticsearch.git
 https://github.com/geerlingguy/ansible-role-varnish.git
@@ -37,6 +36,7 @@ https://github.com/buluma/ansible-role-php_versions.git
 https://github.com/hispanico/ansible-nginx-revproxy.git
 https://github.com/arknoll/ansible-role-selenium.git
 https://github.com/CSCfi/ansible-role-apache.git
+
 https://github.com/wcm-io-devops/ansible-aem-service.git
 https://github.com/geerlingguy/ansible-role-fluentd.git
 https://github.com/wcm-io-devops/ansible-conga-maven.git

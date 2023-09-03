@@ -1,0 +1,51 @@
+---
+- name: Converge
+  hosts: all
+  pre_tasks:
+    - name: Install dependencies
+      package:
+        name:
+          - curl
+          - rsyslog
+          - openssl
+    - name: Ensure dummy certificate is in place
+      command: >-
+        openssl req -x509 -nodes -days 365 -newkey rsa:2048
+        -keyout /etc/ssl/certs/dummy.pem -out /etc/ssl/certs/dummy.pem
+        -subj "/CN=localhost"
+      args:
+        creates: /etc/ssl/certs/dummy.pem
+      become: true
+
+  roles:
+    - role: ome.haproxy
+      haproxy_syslog_enable: true
+      haproxy_syslog_configure_udp: true
+      haproxy_frontends:
+        - name: hafrontend-http
+          address: '*:80'
+          extra_addresses:
+            - '*:8080'
+          # params:
+          #   - 'some extra frontend param, acl for example'
+          backend: habackend
+        - name: hafrontend-tcp
+          address: '*:81'
+          mode: tcp
+          backend: habackend
+        - name: hafrontend-https
+          address: '*:443'
+          bind_params: 'ssl crt /etc/ssl/certs/dummy.pem'
+          mode: http
+          backend: habackend
+      haproxy_backends:
+        - name: habackend
+          mode: http
+          params:
+            - 'default-server inter 3s'
+          servers:
+            - name: app1
+              address: 192.168.0.1:80
+              extra_opts: 'inter 2s'
+            - name: app2
+              address: 192.168.0.2:80
