@@ -28,13 +28,12 @@ https://github.com/geerlingguy/ansible-role-solr.git
 https://github.com/srsp/ansible-oracle-java.git
 https://github.com/GROG/ansible-role-debug-variable.git
 https://github.com/avanov/ansible-galaxy-pyenv.git
-
 https://github.com/andrewrothstein/ansible-kubernetes-helm.git
-https://github.com/gantsign/ansible-role-java.git
 https://github.com/geerlingguy/ansible-role-php-pecl.git
 https://github.com/robertdebock/ansible-role-git.git
 https://github.com/roles-ansible/ansible_role_gitea.git
 https://github.com/Comcast/ansible-sdkman.git
+
 https://github.com/robertdebock/ansible-role-gitlab_runner.git
 https://github.com/FGtatsuro/ansible-python-requirements.git
 https://github.com/jlund/ansible-go.git

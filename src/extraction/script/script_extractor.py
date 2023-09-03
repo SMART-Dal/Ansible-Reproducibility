@@ -67,6 +67,6 @@ def clone_github_yml_files(links):
 
 if __name__ == '__main__':
     # Provide a list of GitHub repository links
-    repository_links = ['https://github.com/avanov/ansible-galaxy-pyenv.git']
+    repository_links = ['https://github.com/Comcast/ansible-sdkman.git']
 
     clone_github_yml_files(repository_links)
