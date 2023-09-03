@@ -59,12 +59,10 @@ def get_files_from_directory(directory):
     return files
 
 
-# if __name__ == "__main__":
-#     # Check if the input path is provided as a command-line argument
-#     if len(sys.argv) < 2:
-#         print("Error: No input path provided.")
-#     else:
-#         input_path = sys.argv[1]
-#         main_method(input_path)
-
-main_method('/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-role-docker/converge.yml')
+if __name__ == "__main__":
+    # Check if the input path is provided as a command-line argument
+    if len(sys.argv) < 2:
+        print("Error: No input path provided.")
+    else:
+        input_path = sys.argv[1]
+        main_method(input_path)

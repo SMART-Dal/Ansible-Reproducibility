@@ -158,7 +158,8 @@ def check_task_for_idempotency(task):
         'user': "Task violates idempotency because it creates a user without checking the existence.",
         'group': "Task violates idempotency because it creates a group without checking the existence.",
         'snapshot': "Task violates idempotency because it creates a snapshot without checking the existence.",
-        'server': "Task violates idempotency because it creates a server without checking the existence."
+        'server': "Task violates idempotency because it creates a server without checking the existence.",
+        'container': "Task violates idempotency because it creates a container without checking the existence."
     }
     messages = []
 
