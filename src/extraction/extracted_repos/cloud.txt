@@ -9,10 +9,10 @@ https://github.com/ansible-collections/community.yang
 https://github.com/ovirt/ovirt-ansible-collection
 https://github.com/MGDIS/infra-ovh-ansible-module
 https://github.com/manala/ansible-roles
-http://github.com/OpenTelekomCloud/ansible_collections/issue/tracker
+https://github.com/OpenTelekomCloud/ansible_collections/issue/tracker
 https://github.com/infobloxopen/infoblox-ansible/tree/master
 https://github.com/openshift/community.okd
-http://github.com/skupperproject/skupper-ansible
+https://github.com/skupperproject/skupper-ansible
 https://github.com/LydraFr
 https://github.com/itd27m01/ansible-oci-collection
 https://github.com/ansible-collections/cloud.common
@@ -104,5 +104,3 @@ https://github.com/ansible-collections/ansible.yang
 https://github.com/Nebulon/NebulonON-Collection
 https://github.com/linuxhq
 https://github.com/serverscom/serverscom-ansible
-https://netapp.io/configuration-management-and-automation/
-https://avatars3.githubusercontent.com/u/324574?v=4
