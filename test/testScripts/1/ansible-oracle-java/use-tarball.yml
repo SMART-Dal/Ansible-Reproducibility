@@ -1,0 +1,33 @@
+---
+# Install Oracle JDK 1.x on distributions other than the CentOS/RHEL family
+#
+# See: https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html
+
+- name: Make directory for Java
+  file:
+    path: "{{ java_install_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "u=rwx,go=rx"
+  become: true
+
+- name: Make directory for specific Java version
+  file:
+    path: "{{ java_install_dir }}/jdk{{ jdk_version }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "u=rwx,go=rx"
+  become: true
+  when: java_version == 8
+
+- name: Install JDK via tarball file
+  unarchive:
+    src: "{{ java_download_path }}/{{ jdk_file_name }}.{{ install_file_extension }}"
+    dest: "{{ java_install_dir }}"
+    owner: root
+    group: root
+    mode: "go-w"
+    copy: false
+  become: true

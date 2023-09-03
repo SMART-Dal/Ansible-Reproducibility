@@ -1,0 +1,48 @@
+---
+# Install Oracle JDK 1.x on CentOS
+#
+# Adapted from: http://blog.trifork.com/2013/04/02/ansible-example-playbook-to-setup-jenkins-slave/
+# See also: http://java.dzone.com/articles/installing-oracle-java6-ubuntu
+
+- name: Uninstall messy packages to avoid blocking conditions
+  script: "cleanup_scripts/uninstall-messy-jdk-packages.sh"
+  become: true
+
+- name: Delete messy .rpm files to avoid blocking conditions
+  script: "cleanup_scripts/delete-messy-rpm-files.sh {{ java_download_path }}"
+  become: true
+
+- name: Install JDK via RPM file with yum
+  yum:
+    name: "{{ java_download_path }}/{{ jdk_file_name }}.{{ install_file_extension }}"
+    state: present
+  become: true
+  when: ansible_pkg_mgr == "yum" or ansible_pkg_mgr == "dnf"
+
+- block:
+    - name: Symlink /usr/sbin/update-alternatives to /usr/sbin/alternatives
+      file: src=/usr/sbin/update-alternatives dest=/usr/sbin/alternatives state=link
+      become: true
+
+    - name: Check if pkg already installed
+      shell: rpm -ql $(rpm -qp "{{ java_download_path }}/{{ jdk_file_name }}.{{ install_file_extension }}")
+      args:
+        warn: false
+      register: reg_validate
+      failed_when: reg_validate.rc != 0 and reg_validate.rc != 1
+
+    - name: Install JDK via RPM file with rpm (for zypper)
+      command: rpm -ivh --nodeps "{{ java_download_path }}/{{ jdk_file_name }}.{{ install_file_extension }}"
+      args:
+        warn: false
+      become: true
+      when: reg_validate.rc != 0
+  when: ansible_pkg_mgr == "zypper"
+
+- name: Uninstall messy packages to avoid blocking conditions
+  script: "cleanup_scripts/uninstall-messy-jdk-packages.sh"
+  become: true
+
+- name: Delete messy .rpm files to avoid blocking conditions
+  script: "cleanup_scripts/delete-messy-rpm-files.sh {{ java_download_path }}"
+  become: true

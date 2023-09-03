@@ -1,0 +1,14 @@
+---
+# Fetches .rpm, .tar.gz or .dmg files directly from user defined mirror
+
+- name: Precondition - java_mirror
+  fail: msg="ERROR - Required variable 'java_mirror' missing."
+  when: java_mirror is not defined
+
+- name: Download JDK from mirror ({{ install_file_extension }})
+  get_url:
+    url: "{{ java_mirror }}"
+    dest: "{{ java_download_path }}/{{ jdk_file_name }}.{{ install_file_extension }}"
+    force: true
+  register: jdk_download_response
+  ignore_errors: true

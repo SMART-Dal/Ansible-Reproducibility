@@ -24,11 +24,11 @@ https://github.com/angstwad/docker.ubuntu.git
 https://github.com/gantsign/ansible-role-golang.git
 https://github.com/gantsign/ansible-role-maven.git
 https://github.com/shelleg/ansible-role-portainer.git
-
 https://github.com/geerlingguy/ansible-role-solr.git
 https://github.com/srsp/ansible-oracle-java.git
 https://github.com/GROG/ansible-role-debug-variable.git
 https://github.com/avanov/ansible-galaxy-pyenv.git
+
 https://github.com/andrewrothstein/ansible-kubernetes-helm.git
 https://github.com/gantsign/ansible-role-java.git
 https://github.com/geerlingguy/ansible-role-php-pecl.git

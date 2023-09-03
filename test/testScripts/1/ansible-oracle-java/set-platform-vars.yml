@@ -1,0 +1,49 @@
+---
+# Architecture & platform-specific variables
+
+- name: Set Java architecture
+  set_fact:
+    jdk_arch: "{{ 'i586' if ansible_architecture == 'i386' else 'x64' }}"
+
+# OS
+
+- name: Set Java OS for Linux
+  set_fact:
+    jdk_os: linux
+  when: ansible_system == 'Linux'
+
+- name: Set Java OS for Mac OS X
+  set_fact:
+    jdk_os: macosx
+  when: ansible_os_family == 'Darwin'
+
+- name: Set Java OS for Mac OS X
+  set_fact:
+    jdk_os: osx
+  when: ansible_os_family == 'Darwin' and java_version > 8
+
+# Installation binary
+
+- name: Set RPM binary
+  set_fact:
+    use_rpm: true
+    use_tarball: false
+    use_dmg: false
+    install_file_extension: rpm
+  when: (ansible_pkg_mgr == "yum" or ansible_pkg_mgr == "dnf" or ansible_pkg_mgr == "zypper") and ansible_os_family != 'Darwin'
+
+- name: Set Gzipped Tarball binary
+  set_fact:
+    use_tarball: true
+    use_rpm: false
+    use_dmg: false
+    install_file_extension: tar.gz
+  when: ansible_pkg_mgr != "yum" and ansible_pkg_mgr != "dnf" and ansible_pkg_mgr != "zypper" and ansible_os_family != "Darwin"
+
+- name: Set dmg binary
+  set_fact:
+    use_dmg: true
+    use_rpm: false
+    use_tarball: false
+    install_file_extension: dmg
+  when: ansible_pkg_mgr != "yum" and ansible_pkg_mgr != "dnf" and ansible_pkg_mgr != "zypper" and ansible_os_family == "Darwin"
