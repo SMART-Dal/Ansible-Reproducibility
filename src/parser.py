@@ -130,6 +130,7 @@ def get_parsed_tasks(input_file):
     tasks = []
     pre_tasks = []
     post_tasks = []
+    block_tasks = []
     with open(input_file, 'r') as file:
         data = yaml.safe_load(file)
         if 'tasks' in data[0]:
@@ -143,10 +144,12 @@ def get_parsed_tasks(input_file):
         if 'post_tasks' in data[0]:
             for task in data[0]['post_tasks']:
                 post_tasks.append(task)
-
+        if 'block' in data[0]:
+            for task in data[0]['block']:
+                block_tasks.append(task)
         # Check if at least one of the keys is present in data[0]
-        if 'tasks' in data[0] or 'pre_tasks' in data[0] or 'post_tasks' in data[0]:
-            tasks = tasks + pre_tasks + post_tasks
+        if 'tasks' in data[0] or 'pre_tasks' in data[0] or 'post_tasks' in data[0] or 'block' in data[0]:
+            tasks = tasks + pre_tasks + post_tasks + block_tasks
         else:
             tasks = data
     return tasks

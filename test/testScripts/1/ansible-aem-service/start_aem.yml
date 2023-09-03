@@ -1,0 +1,33 @@
+---
+- name: Start AEM (restricted).
+  block:
+    - name: Retrieve AEM status (restricted).
+      raw: "{{ _aem_service_status_command }}"
+      changed_when: false
+      register: _aem_status_result_1
+      failed_when: _aem_status_result_1.rc not in aem_service_status_valid_status_codes
+
+    - name: Start AEM (restricted).
+      raw: "{{ _aem_service_start_command }}"
+      when: _aem_status_result_1.rc != 0
+      register: aem_service_start_result_restricted
+
+    - name: Start AEM (escalated).
+      service:
+        name: "{{ aem_service_name }}"
+      register: aem_service_start_result_escalated
+      when: not aem_service_restricted_mode
+
+    - name: "Wait for AEM startup. [{{ inventory_hostname }}]"
+      uri:
+        url: "{{ aem_service_login_url }}"
+        return_content: yes
+      register: result
+      until: result.content.find("QUICKSTART_HOMEPAGE") != -1
+      retries: "{{ aem_service_timeout // 10 }}"
+      delay: 10
+      tags:
+        - skip_ansible_lint
+
+  when: aem_service_restricted_mode
+

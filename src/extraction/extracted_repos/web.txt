@@ -36,8 +36,8 @@ https://github.com/buluma/ansible-role-php_versions.git
 https://github.com/hispanico/ansible-nginx-revproxy.git
 https://github.com/arknoll/ansible-role-selenium.git
 https://github.com/CSCfi/ansible-role-apache.git
-
 https://github.com/wcm-io-devops/ansible-aem-service.git
+
 https://github.com/geerlingguy/ansible-role-fluentd.git
 https://github.com/wcm-io-devops/ansible-conga-maven.git
 https://github.com/wcm-io-devops/ansible-aem-dispatcher-flush.git
