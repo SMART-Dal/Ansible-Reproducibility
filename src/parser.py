@@ -127,14 +127,26 @@ def parse_playbook(file_path):
 
 
 def get_parsed_tasks(input_file):
+    tasks = []
+    pre_tasks = []
+    post_tasks = []
     with open(input_file, 'r') as file:
         data = yaml.safe_load(file)
-
         if 'tasks' in data[0]:
             if 'block' in data[0]['tasks'][0]:
                 tasks = data[0]['tasks'][0]['block']
             else:
                 tasks = data[0]['tasks']
+        if 'pre_tasks' in data[0]:
+            for task in data[0]['pre_tasks']:
+                pre_tasks.append(task)
+        if 'post_tasks' in data[0]:
+            for task in data[0]['post_tasks']:
+                post_tasks.append(task)
+
+        # Check if at least one of the keys is present in data[0]
+        if 'tasks' in data[0] or 'pre_tasks' in data[0] or 'post_tasks' in data[0]:
+            tasks = tasks + pre_tasks + post_tasks
         else:
             tasks = data
-        return tasks
+    return tasks
