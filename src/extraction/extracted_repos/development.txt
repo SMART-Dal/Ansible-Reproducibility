@@ -8,11 +8,10 @@ https://github.com/geerlingguy/ansible-role-homebrew.git
 https://github.com/geerlingguy/ansible-role-jenkins.git
 https://github.com/geerlingguy/ansible-role-git.git
 https://github.com/buluma/ansible-role-buildtools.git
-
 https://github.com/elliotweiser/ansible-osx-command-line-tools.git
 https://github.com/geerlingguy/ansible-role-redis.git
-https://github.com/robertdebock/ansible-role-buildtools.git
 https://github.com/nginxinc/ansible-role-nginx-config.git
+
 https://github.com/geerlingguy/ansible-role-ansible.git
 https://github.com/rvm/rvm1-ansible.git
 https://github.com/geerlingguy/ansible-role-ruby.git

@@ -31,6 +31,7 @@ def check_task_for_broken_dependency(task):
             ('id', "Task uses a fixed ID which can become outdated or incorrect across platforms."),
             ('token', "Task uses a fixed token which can become outdated."),
             ('certificate', "Task uses a fixed certificate which can become outdated."),
+            ('ssl_crt', "Task uses a fixed certificate which can become outdated.")
         ]
         url_download_components = ['apt-repository', 'get-url', 'uri', 'url']
 
@@ -240,7 +241,7 @@ def check_task_for_hardware_specific_commands(task):
                     messages.append(check_hardware_or_software_components(task[t], ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
-                    messages.append(check_hardware_or_software_components(task[t], ['cpufrequtils', 'sysctl', 'cpufreq-info'], "Task uses a performance settings management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(task[t], ['cpufrequtils', 'sysctl', 'cpufreq-info', 'cpu_affinity'], "Task uses a performance settings management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['nvidia-settings', 'nvidia-smi'], "Task uses a GPU settings management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['xinput', 'xrandr'], "Task uses an I/O device management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(task[t], ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
@@ -250,7 +251,7 @@ def check_task_for_hardware_specific_commands(task):
                     messages.append(check_hardware_or_software_components(t, ['fwupd', 'smbios-util'], "Task uses a BIOS firmware management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['mdadm', 'megacli'], "Task uses a RAID arrays management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['tpmtool', 'efibootmgr'], "Task uses a security management command that may not be portable."))
-                    messages.append(check_hardware_or_software_components(t, ['cpufrequtils', 'sysctl', 'cpufreq-info'], "Task uses a performance settings management command that may not be portable."))
+                    messages.append(check_hardware_or_software_components(t, ['cpufrequtils', 'sysctl', 'cpufreq-info', 'cpu_affinity'], "Task uses a performance settings management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['nvidia-settings', 'nvidia-smi'], "Task uses a GPU settings management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['xinput', 'xrandr'], "Task uses an I/O device management command that may not be portable."))
                     messages.append(check_hardware_or_software_components(t, ['smbus-tools', 'lm-sensors'], "Task uses a system management bus command that may not be portable."))
