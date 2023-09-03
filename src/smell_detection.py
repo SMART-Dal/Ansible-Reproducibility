@@ -22,9 +22,9 @@ def check_task_for_broken_dependency(task):
 
         package_installers_keys_to_check = [
             'apt_key', 'apt_get_key', 'yum_key', 'dnf_key', 'pacman_key', 'apk_key', 'rpm_key'
-            'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
-            'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key',
-            'ansible.builtin.yum-key'
+            'ansible.builtin.rpm_key', 'ansible.builtin.apt_key',
+            'ansible.builtin.dnf_key', 'ansible.builtin.pacman_key',
+            'ansible.builtin.yum_key'
         ]
         checkers = [
             ('fingerprint', "Task uses a fixed fingerprint which can become outdated."),
@@ -33,7 +33,7 @@ def check_task_for_broken_dependency(task):
             ('certificate', "Task uses a fixed certificate which can become outdated."),
             ('ssl_crt', "Task uses a fixed certificate which can become outdated.")
         ]
-        url_download_components = ['apt-repository', 'get-url', 'uri', 'url']
+        url_download_components = ['apt_repository', 'get_url', 'uri', 'url', 'yum_repository', 'mirrorlist']
 
         def check_key_assumption(task_part):
             if isinstance(task_part, dict):
@@ -57,7 +57,7 @@ def check_task_for_broken_dependency(task):
 
         def check_repository_assumption(task_part):
             if has_package_repository_assumption(task, task_part, url_download_components):
-                url = task_part.get('url') or task_part.get('repo')
+                url = task_part.get('url') or task_part.get('repo') or task_part.get('mirrorlist')
                 if url and not check_url_validity(url):
                     messages.append(f"Task assumes a package repository with an invalid URL: {url}")
 
@@ -97,7 +97,7 @@ def check_task_for_outdated_package(task):
         {'name': 'pacman', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'apk', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'pip', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'apt-get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
+        {'name': 'apt_get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
     ]
     messages = []
     try:
@@ -152,7 +152,7 @@ def check_task_for_idempotency(task):
         'dnf': "Task violates idempotency because it installs packages with dnf.",
         'pacman': "Task violates idempotency because it installs packages with pacman.",
         'pip': "Task violates idempotency because it installs packages with pip.",
-        'apt-get': "Task violates idempotency because it installs packages with apt-get.",
+        'apt_get': "Task violates idempotency because it installs packages with apt-get.",
         'volume': "Task violates idempotency because it creates an object without checking the existence.",
         'user': "Task violates idempotency because it creates a user without checking the existence.",
         'group': "Task violates idempotency because it creates a group without checking the existence.",
@@ -291,10 +291,10 @@ def check_task_for_software_specific_commands(task):
 
 def check_task_for_environment_assumptions(task):
     messages = []
-    key_download_components = ['apt-repository', 'get-url', 'uri', 'apt-key', 'rpm-key', 'apt-get-key', 'yum-key',
-                               'dnf-key', 'pacman-key', 'apk-key',
-                               'ansible.builtin.rpm-key', 'ansible.builtin.apt-key',
-                               'ansible.builtin.dnf-key', 'ansible.builtin.pacman-key', 'ansible.builtin.yum-key', 'url',
+    key_download_components = ['apt_repository', 'get_url', 'uri', 'apt_key', 'rpm_key', 'apt_get_key', 'yum_key',
+                               'dnf_key', 'pacman_key', 'apk_key',
+                               'ansible.builtin.rpm_key', 'ansible.builtin.apt_key',
+                               'ansible.builtin.dnf_key', 'ansible.builtin.pacman_key', 'ansible.builtin.yum_key', 'url',
                                'git', 'remote_vars', 'repository']
     try:
         for t in task:
@@ -336,7 +336,7 @@ def check_task_for_environment_assumptions(task):
 
 
 def check_windows_command(task_part):
-    if 'windows.win' in task_part:
+    if 'windows.win' in task_part or 'win_' in task_part:
         return True
 
 

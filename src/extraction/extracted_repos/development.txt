@@ -11,7 +11,6 @@ https://github.com/buluma/ansible-role-buildtools.git
 https://github.com/elliotweiser/ansible-osx-command-line-tools.git
 https://github.com/geerlingguy/ansible-role-redis.git
 https://github.com/nginxinc/ansible-role-nginx-config.git
-
 https://github.com/geerlingguy/ansible-role-ansible.git
 https://github.com/rvm/rvm1-ansible.git
 https://github.com/geerlingguy/ansible-role-ruby.git
@@ -25,6 +24,7 @@ https://github.com/angstwad/docker.ubuntu.git
 https://github.com/gantsign/ansible-role-golang.git
 https://github.com/gantsign/ansible-role-maven.git
 https://github.com/shelleg/ansible-role-portainer.git
+
 https://github.com/geerlingguy/ansible-role-solr.git
 https://github.com/srsp/ansible-oracle-java.git
 https://github.com/GROG/ansible-role-debug-variable.git
