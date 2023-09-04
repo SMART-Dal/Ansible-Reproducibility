@@ -8,7 +8,6 @@ https://github.com/ansiblebit/oracle-java.git
 https://github.com/igor-nikiforov/ansible-role-docker.git
 https://github.com/Pandemonium1986/ansible-collection-openstack.git
 https://github.com/osism/ansible-collection-validations.git
-
 https://github.com/lablabs/ansible-collection-wireguard.git
 https://github.com/ansiblebit.git
 https://github.com/tomkivlin/ansible-collection-maas.git
@@ -20,13 +19,10 @@ https://github.com/samdoran/ansible-collection-testing.git
 https://github.com/dseeley/inventory_lookup.git
 https://gitlab.com/enmanuelmoreira/ansible-collection-k3s.git
 https://github.com/serdigital64/aplatform64.git
-https://github.com/mrlesmithjr/netbox/docs.git
-https://github.com/mrlesmithjr.git
 https://github.com/dseeley/tasks_serial.git
 https://github.com/samdoran/ansible-collection-dev.git
 https://github.com/scrufulufugus/ansible.collection.init.git
 https://github.com/samdoran/ansible-collection-armbian.git
-https://github.com/mrlesmithjr/ansible-collection-system/docs.git
 https://github.com/dsglaser/cis-security.git
 https://github.com/ataha/patch-Linux-servers-Centos-Redhat-to-the-latest-release.git
 https://github.com/ajsalminen.git
@@ -35,6 +31,7 @@ https://github.com/samdoran/ansible-collection-macos.git
 https://github.com/lantossl/ansible_collection_general.git
 https://github.com/geerlingguy/ansible-role-homebrew.git
 https://github.com/openafs-contrib.git
+
 https://github.com/geerlingguy/ansible-role-docker.git
 https://github.com/rdiff-backup/rdiff-backup-ansible.git
 https://github.com/dseeley/blockdevmap.git

@@ -1,0 +1,13 @@
+- name: Run the equivalent of "apt-get update" as a separate step
+apt:
+    update_cache: yes
+  tags: 
+    - apt
+    - update_cache
+
+- name: Update all packages to their latest version
+apt:
+    name: "*"
+  tags:
+    - apt
+    - upgrade_all
