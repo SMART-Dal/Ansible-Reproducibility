@@ -98,7 +98,8 @@ def check_task_for_outdated_package(task):
         {'name': 'pacman', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'apk', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
         {'name': 'pip', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
-        {'name': 'apt_get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
+        {'name': 'apt_get', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']},
+        {'name': 'snap', 'latest_state': 'latest', 'update_actions': ['upgrade', 'update_cache']}
     ]
     messages = []
     try:
@@ -150,6 +151,7 @@ def check_task_for_idempotency(task):
         'ansible.windows.win_optional_feature': "Task violates idempotency because it executes a command on windows.",
         'ansible.windows.win_package': 'Task violates idempotency because it installs a package on windows.',
         'apt': "Task violates idempotency because it installs or upgrades packages with apt.",
+        'snap': "Task violates idempotency because it installs or upgrades packages with snap.",
         'opkg': "Task violates idempotency because it installs or upgrades packages with pkg.",
         'apk': "Task violates idempotency because it installs or upgrades packages with apk.",
         'package': "Task violates idempotency because it installs or upgrades packages.",
@@ -210,7 +212,7 @@ def is_file_task(task):
 
 # checks if a task installs a version-specific package
 def check_task_for_version_specific_package(task):
-    package_managers = ['apt', 'yum', 'dnf', 'pacman', 'apk', 'pip']
+    package_managers = ['apt', 'yum', 'dnf', 'pacman', 'apk', 'pip', 'snap']
     messages = []
 
     try:

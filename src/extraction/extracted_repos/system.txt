@@ -78,7 +78,6 @@ https://github.com/samdoran.git
 https://github.com/codeaffen/phpipam-ansible-modules.git
 https://github.com/vladgh/ansible-collection-vladgh-system.git
 https://github.com/LeConTesteur/ansible-module-ganeti-cli.git
-
 https://github.com/borari/pentesting_collection.git
 https://github.com/alphanodes.git
 https://github.com/mrlesmithjr/ansible-collection-system.git
