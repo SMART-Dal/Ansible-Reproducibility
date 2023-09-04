@@ -1,0 +1,26 @@
+---
+- name: "Run enforce ssl test for tenant"
+  include_tasks: ssl-enforce-test.yml
+  vars:
+    enforce_ssl_config: "{{ _tenant.config }}"
+  when: _tenant.config.httpd.ssl.enforce
+  with_items: "{{ conga_tenants }}"
+  loop_control:
+    loop_var: _tenant
+  tags:
+    - conga-aemdst-ssl-enforce
+    - conga-aemdst-ssl-enforce-publish
+
+- name: "Check for HTTP code 200 in final http(s) response"
+  include_tasks: response-test.yml
+  vars:
+    response_test_config: "{{ _tenant.config }}"
+    response_test_expected_http_code: "{{ conga_aemdst_publish_expected_http_code }}"
+    response_test_lazy: "{{ conga_aemdst_publish_lazy }}"
+    response_test_follow_redirects: "{{ conga_aemdst_publish_follow_redirects }}"
+  with_items: "{{ conga_tenants }}"
+  loop_control:
+    loop_var: _tenant
+  tags:
+    - conga-aemdst-response
+    - conga-aemdst-response-publish

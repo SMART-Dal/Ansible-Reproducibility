@@ -37,7 +37,6 @@ https://github.com/hispanico/ansible-nginx-revproxy.git
 https://github.com/arknoll/ansible-role-selenium.git
 https://github.com/CSCfi/ansible-role-apache.git
 https://github.com/wcm-io-devops/ansible-aem-service.git
-
 https://github.com/geerlingguy/ansible-role-fluentd.git
 https://github.com/wcm-io-devops/ansible-conga-maven.git
 https://github.com/wcm-io-devops/ansible-aem-dispatcher-flush.git
@@ -50,6 +49,7 @@ https://github.com/wcm-io-devops/ansible-conga-aem-packages.git
 https://github.com/wcm-io-devops/ansible-conga-aem-smoke-test.git
 https://github.com/roles-ansible/ansible_role_acmetool.git
 https://github.com/weareinteractive/ansible-nginx.git
+
 https://github.com/wcm-io-devops/ansible-aem-cms.git
 https://github.com/cbrunnkvist/ansistrano-symfony-deploy.git
 https://github.com/thefinn93/ansible-letsencrypt.git

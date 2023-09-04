@@ -74,7 +74,6 @@ https://github.com/geerlingguy/ansible-role-ntp.git
 https://github.com/marmorag/chunk.git
 https://github.com/aorfanos/ansible-pmm-admin.git
 https://github.com/linux-system-roles/linux-system-roles.github.io.git
-https://git.sr.ht/~kravietz/ansible-collection-freebsd.git
 https://github.com/damex/ansible-collections-apt.git
 https://github.com/Stouts.git
 https://github.com/samdoran.git
@@ -89,7 +88,6 @@ https://github.com/mrlesmithjr/ansible-collection-system.git
 https://github.com/robertdebock.git
 https://github.com/alphanodes/ansible-collection-setup.git
 https://github.com/scrufulufugus/ansible.collection.init.git
-https://api.github.com/repos/0x0I/ansible-role-systemd.git
 https://github.com/usegalaxy-eu/ansible-collection-handy.git
 https://github.com/lablabs.git
 https://github.com/kravietz.git
