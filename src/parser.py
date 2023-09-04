@@ -131,25 +131,75 @@ def get_parsed_tasks(input_file):
     pre_tasks = []
     post_tasks = []
     block_tasks = []
+    final_tasks = []
+
     with open(input_file, 'r') as file:
         data = yaml.safe_load(file)
-        if 'tasks' in data[0]:
-            if 'block' in data[0]['tasks'][0]:
-                tasks = data[0]['tasks'][0]['block']
+
+        for item in data:
+            if 'tasks' in item:
+                for task in item['tasks']:
+                    if 'block' in task:
+                        for item_task in task['block']:
+                            tasks.append(item_task)
+                    else:
+                        tasks.append(task)
+            if 'pre_tasks' in item:
+                for task in item['pre_tasks']:
+                    if 'block' in task:
+                        for item_pre in task['block']:
+                            pre_tasks.append(item_pre)
+                    else:
+                        pre_tasks.append(task)
+            if 'post_tasks' in item:
+                for task in item['post_tasks']:
+                    if 'block' in task:
+                        for item_post in task['block']:
+                            post_tasks.append(item_post)
+                    else:
+                        post_tasks.append(task)
+            if 'block' in item:
+                for task in item['block']:
+                    block_tasks.append(task)
+            # Check if at least one of the keys is present in the item
+            if 'tasks' in item or 'pre_tasks' in item or 'post_tasks' in item or 'block' in item:
+                for task_item in tasks:
+                    final_tasks.append(task_item)
+                for pre_task_item in pre_tasks:
+                    final_tasks.append(pre_task_item)
+                for post_task_item in post_tasks:
+                    final_tasks.append(post_task_item)
+                for block_task_item in block_tasks:
+                    final_tasks.append(block_task_item)
             else:
-                tasks = data[0]['tasks']
-        if 'pre_tasks' in data[0]:
-            for task in data[0]['pre_tasks']:
-                pre_tasks.append(task)
-        if 'post_tasks' in data[0]:
-            for task in data[0]['post_tasks']:
-                post_tasks.append(task)
-        if 'block' in data[0]:
-            for task in data[0]['block']:
-                block_tasks.append(task)
-        # Check if at least one of the keys is present in data[0]
-        if 'tasks' in data[0] or 'pre_tasks' in data[0] or 'post_tasks' in data[0] or 'block' in data[0]:
-            tasks = tasks + pre_tasks + post_tasks + block_tasks
-        else:
-            tasks = data
-    return tasks
+                final_tasks.append(item)
+
+    return final_tasks
+
+# def get_parsed_tasks(input_file):
+#     tasks = []
+#     pre_tasks = []
+#     post_tasks = []
+#     block_tasks = []
+#     with open(input_file, 'r') as file:
+#         data = yaml.safe_load(file)
+#         if 'tasks' in data[0]:
+#             if 'block' in data[0]['tasks'][0]:
+#                 tasks = data[0]['tasks'][0]['block']
+#             else:
+#                 tasks = data[0]['tasks']
+#         if 'pre_tasks' in data[0]:
+#             for task in data[0]['pre_tasks']:
+#                 pre_tasks.append(task)
+#         if 'post_tasks' in data[0]:
+#             for task in data[0]['post_tasks']:
+#                 post_tasks.append(task)
+#         if 'block' in data[0]:
+#             for task in data[0]['block']:
+#                 block_tasks.append(task)
+#         # Check if at least one of the keys is present in data[0]
+#         if 'tasks' in data[0] or 'pre_tasks' in data[0] or 'post_tasks' in data[0] or 'block' in data[0]:
+#             tasks = tasks + pre_tasks + post_tasks + block_tasks
+#         else:
+#             tasks = data
+#     return tasks

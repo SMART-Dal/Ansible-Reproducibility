@@ -1,0 +1,12 @@
+---
+- name: Test playbook
+  hosts: ansible-test
+  gather_facts: true
+  become: true
+
+  environment:
+    PY_COLORS: '1'
+    ANSIBLE_FORCE_COLOR: '1'
+
+  roles:
+    - role: 'jfx/common/roles/install_opt'

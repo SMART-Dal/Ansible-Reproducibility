@@ -1,0 +1,24 @@
+---
+- name: Make ssh pipelining working
+  hosts: manager
+  vars:
+    ansible_ssh_pipelining: false
+
+  tasks:
+    - name: Do not require tty for all users  # noqa: ignore-errors
+      become: true
+      ansible.builtin.replace:
+        # NOTE: parameter changes to path after 2.3
+        dest: /etc/sudoers
+        regexp: "^Defaults.*requiretty$"
+        replace: "Defaults !requiretty"
+        mode: 0440
+      ignore_errors: true
+
+- name: Apply role operator
+  hosts: manager
+
+  roles:
+    - role: osism.commons.operator
+      tags: operator
+      ignore_errors: true

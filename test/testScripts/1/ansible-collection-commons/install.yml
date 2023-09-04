@@ -1,0 +1,34 @@
+---
+- name: Remove docker-compose apt preferences file
+  become: true
+  ansible.builtin.file:
+    path: /etc/apt/preferences.d/docker-compose
+
+
+- name: Remove docker-compose binary
+  become: true
+  ansible.builtin.file:
+    path: /usr/local/bin/docker-compose
+
+
+- name: Unnstall docker-compose package
+  become: true
+  ansible.builtin.apt:
+    name:
+      - "{{ docker_compose_package_name }}"
+    lock_timeout: "{{ apt_lock_timeout | default(300) }}"
+
+- name: Copy docker-compose script
+  become: true
+  ansible.builtin.copy:
+    src: docker-compose
+    dest: /usr/local/bin/docker-compose
+    mode: 0755
+
+- name: Install docker-compose-plugin package
+  become: true
+  ansible.builtin.apt:
+    name:
+      - "{{ docker_compose_plugin_package_name }}"
+    lock_timeout: "{{ apt_lock_timeout | default(300) }}"
+    install_recommends: false

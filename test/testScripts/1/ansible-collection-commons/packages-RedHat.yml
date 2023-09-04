@@ -1,0 +1,22 @@
+---
+- name: Cleanup installed packages
+  become: true
+  ansible.builtin.dnf:
+    name: "{{ cleanup_packages }}"
+
+- name: Remove cloudinit package
+  become: true
+  ansible.builtin.dnf:
+    name: "{{ cleanup_cloudinit_package_name }}"
+  when: cleanup_cloudinit | bool
+
+- name: Remove useless packages from the cache
+  become: true
+  ansible.builtin.command:
+    cmd: "dnf clean all"
+  changed_when: false
+
+- name: Remove dependencies that are no longer required
+  become: true
+  ansible.builtin.dnf:
+    autoremove: true

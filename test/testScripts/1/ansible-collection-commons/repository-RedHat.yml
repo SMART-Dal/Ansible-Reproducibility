@@ -1,0 +1,26 @@
+---
+- name: Add mirrorlist repositories
+  become: true
+  ansible.builtin.yum_repository:
+    name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    mirrorlist: "{{ item.mirrorlist }}"
+    gpgkey: "{{ item.gpgkey }}"
+    gpgcheck: true
+    enabled: true
+    file: "{{ item.file }}"
+  loop: "{{ repositories }}"
+  when: item.mirrorlist is defined
+
+- name: Add metalink repositories
+  become: true
+  ansible.builtin.yum_repository:
+    name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    metalink: "{{ item.metalink }}"
+    gpgkey: "{{ item.gpgkey }}"
+    gpgcheck: true
+    enabled: true
+    file: "{{ item.file }}"
+  loop: "{{ repositories }}"
+  when: item.metalink is defined

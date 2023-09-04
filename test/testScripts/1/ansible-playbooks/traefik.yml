@@ -1,0 +1,6 @@
+---
+- name: Apply role traefik
+  hosts: manager
+
+  roles:
+    - role: osism.services.traefik

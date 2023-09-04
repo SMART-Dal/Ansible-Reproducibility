@@ -1,0 +1,9 @@
+---
+- name: Apply role hddtemp
+  hosts: "{{ hosts_hddtemp|default('hddtemp') }}"
+  serial: "{{ osism_serial['hddtemp']|default(osism_serial_default)|default(0) }}"
+  strategy: "{{ osism_strategy|default('linear') }}"
+
+  roles:
+    - role: osism.services.hddtemp
+      when: ansible_lsb.major_release|int < 22

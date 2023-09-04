@@ -1,0 +1,6 @@
+- hosts: all
+  name: Reboots Device
+  tasks:
+    - name: Reboot
+      ansible.builtin.command: /sbin/reboot
+      become: true

@@ -24,7 +24,7 @@ def check_task_for_broken_dependency(task):
             'apt_key', 'apt_get_key', 'yum_key', 'dnf_key', 'pacman_key', 'apk_key', 'rpm_key'
             'ansible.builtin.rpm_key', 'ansible.builtin.apt_key',
             'ansible.builtin.dnf_key', 'ansible.builtin.pacman_key',
-            'ansible.builtin.yum_key', 'gpgkey'
+            'ansible.builtin.yum_key', 'gpgkey', 'secret'
         ]
         checkers = [
             ('fingerprint', "Task uses a fixed fingerprint which can become outdated."),
@@ -136,10 +136,13 @@ def is_update_cache(task_attributes):
 def check_task_for_idempotency(task):
     idempotency_violations = {
         'command': "Task violates idempotency because it executes a command.",
+        'cmd': "Task violates idempotency because it executes a command.",
+        'cmds': "Task violates idempotency because it executes a command.",
         'run': "Task violates idempotency because it executes a command.",
         'shell': "Task violates idempotency because it executes a command.",
         'service': "Task violates idempotency because it executes a command.",
         'systemd': "Task violates idempotency because it executes a command.",
+        'sysctl': "Task violates idempotency because it executes a command.",
         'raw': "Task violates idempotency because it executes a command.",
         'script': "Task violates idempotency because it executes a command.",
         'win_command': "Task violates idempotency because it executes a command on windows.",
@@ -147,6 +150,7 @@ def check_task_for_idempotency(task):
         'ansible.windows.win_optional_feature': "Task violates idempotency because it executes a command on windows.",
         'ansible.windows.win_package': 'Task violates idempotency because it installs a package on windows.',
         'apt': "Task violates idempotency because it installs or upgrades packages with apt.",
+        'opkg': "Task violates idempotency because it installs or upgrades packages with pkg.",
         'apk': "Task violates idempotency because it installs or upgrades packages with apk.",
         'package': "Task violates idempotency because it installs or upgrades packages.",
         'yum': "Task violates idempotency because it installs or upgrades packages with yum.",

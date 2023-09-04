@@ -1,0 +1,6 @@
+- hosts: all
+  name: Dotfiles
+  tasks:
+    - name: Dotfiles
+      ansible.builtin.import_role:
+        name: dotfiles

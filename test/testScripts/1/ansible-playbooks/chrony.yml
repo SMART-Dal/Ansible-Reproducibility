@@ -1,0 +1,23 @@
+---
+- name: Group hosts based on configuration
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Group hosts based on enabled services
+      ansible.builtin.group_by:
+        key: "{{ item }}"
+      with_items:
+        - enable_chrony_{{ enable_chrony | default('true') | bool }}
+      tags: always
+      changed_when: false
+
+- name: Apply role chrony
+  hosts:
+    - "{{ hosts_chrony|default('all') }}"
+    - "&enable_chrony_True"
+  serial: "{{ osism_serial['chrony']|default(osism_serial_default)|default(0) }}"
+  strategy: "{{ osism_strategy|default('linear') }}"
+
+  roles:
+    - role: osism.services.chrony

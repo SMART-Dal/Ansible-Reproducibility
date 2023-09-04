@@ -1,0 +1,7 @@
+- hosts: all
+  name: Install Meshcentral
+  strategy: free
+  tasks:
+    - name: Meshcentral
+      ansible.builtin.import_role:
+        name: meshcentral

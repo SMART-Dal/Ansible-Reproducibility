@@ -1,0 +1,58 @@
+---
+- name: "Get extension info - {{ _extension }}"
+  ansible.builtin.uri:
+    url: "https://extensions.gnome.org/extension-info/?pk={{ _extension }}&shell_version={{ _gnome_shell_version }}"
+    return_content: true
+  check_mode: false
+  register: _extension_info
+
+- name: "Set variables - {{ _extension }}"
+  ansible.builtin.set_fact:
+    _extension_uuid: "{{ _extension_info.json.uuid }}"
+    _extension_name: "{{ _extension_info.json.name }}"
+    _extension_url: "{{ _extension_info.json.download_url }}"
+
+- name: "Check if extension is installed - {{ _extension_name }}"
+  ansible.builtin.stat:
+    path: "{{ _gnome_shell_extensions_dir }}/{{ _extension_uuid }}/metadata.json"
+  register: _extension_metadata
+
+- name: Install extension
+  when: not _extension_metadata.stat.exists
+  block:
+    - name: "Create temporary directory - {{ _extension_name }}"
+      ansible.builtin.tempfile:
+        state: directory
+        suffix: gnome_extension
+      register: _gnome_extension_temp_dir
+
+    - name: "Download {{ _extension_name }}"
+      ansible.builtin.get_url:
+        url: "https://extensions.gnome.org{{ _extension_url }}"
+        dest: "{{ _gnome_extension_temp_dir.path }}/{{ _extension_uuid }}.zip"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0644"
+
+    - name: "Create extension directory - {{ _extension_name }}"
+      ansible.builtin.file:
+        path: "{{ _gnome_shell_extensions_dir }}/{{ _extension_uuid }}"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0755"
+        state: directory
+
+    - name: "Extract archive - {{ _extension_name }}"
+      ansible.builtin.unarchive:
+        src: "{{ _gnome_extension_temp_dir.path }}/{{ _extension_uuid }}.zip"
+        dest: "{{ _gnome_shell_extensions_dir }}/{{ _extension_uuid }}"
+        remote_src: true
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    # TODO Enable extension
+  always:
+    - name: "Delete temporary directory - {{ _extension_name }}"
+      ansible.builtin.file:
+        path: "{{ _gnome_extension_temp_dir.path }}"
+        state: absent

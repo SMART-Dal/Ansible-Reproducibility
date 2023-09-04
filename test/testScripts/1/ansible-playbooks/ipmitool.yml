@@ -1,0 +1,8 @@
+---
+- name: Apply role ipmitool
+  hosts: "{{ hosts_ipmitool|default('all') }}"
+  serial: "{{ osism_serial['ipmitool']|default('0') }}"
+  strategy: "{{ osism_strategy|default('linear') }}"
+
+  roles:
+    - role: osism.commons.ipmitool

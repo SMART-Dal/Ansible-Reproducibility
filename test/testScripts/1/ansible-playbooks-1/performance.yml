@@ -1,0 +1,7 @@
+- hosts: all
+  name: Performance
+  strategy: free
+  tasks:
+    - name: Perfomance
+      ansible.builtin.import_role:
+        name: performance

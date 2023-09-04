@@ -1,0 +1,49 @@
+---
+- name: Copy ceph keys to the configuration repository
+  hosts: manager
+
+  vars:
+    ceph_ansible_container_name: ceph-ansible
+    ceph_keys:
+      - src: ceph.client.admin.keyring
+        dest: "{{ configuration_directory }}/environments/infrastructure/files/ceph/ceph.client.admin.keyring"
+
+      - src: ceph.client.cinder.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/cinder/cinder-volume/ceph.client.cinder.keyring"
+
+      - src: ceph.client.cinder.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/cinder/cinder-backup/ceph.client.cinder.keyring"
+
+      - src: ceph.client.cinder-backup.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/cinder/cinder-backup/ceph.client.cinder-backup.keyring"
+
+      - src: ceph.client.cinder.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/nova/ceph.client.cinder.keyring"
+
+      - src: ceph.client.nova.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/nova/ceph.client.nova.keyring"
+
+      - src: ceph.client.glance.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/glance/ceph.client.glance.keyring"
+
+      - src: ceph.client.gnocchi.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/gnocchi/ceph.client.gnocchi.keyring"
+
+      - src: ceph.client.manila.keyring
+        dest: "{{ configuration_directory }}/environments/kolla/files/overlays/manila/ceph.client.manila.keyring"
+
+  tasks:
+    - name: Fetch ceph keys from the first monitor node
+      ansible.builtin.command: "osism apply ceph-fetch-keys"
+      environment:
+        INTERACTIVE: "false"
+      changed_when: true
+
+    - name: Copy ceph keys to the configuration repository  # noqa: ignore-errors
+      ansible.builtin.command: "docker cp {{ ceph_ansible_container_name }}:/share/{{ ceph_cluster_fsid }}/etc/ceph/{{ item.src }} {{ item.dest }}"
+      changed_when: true
+      # It is possible that certain keys are not available in an environment
+      # or certain services have not been activated. In this case, errors are
+      # ignored.
+      ignore_errors: true
+      loop: "{{ ceph_keys }}"

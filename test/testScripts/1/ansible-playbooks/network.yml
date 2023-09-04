@@ -1,0 +1,7 @@
+---
+- name: Apply role network
+  hosts: manager
+  become: true
+
+  roles:
+    - role: osism.commons.network

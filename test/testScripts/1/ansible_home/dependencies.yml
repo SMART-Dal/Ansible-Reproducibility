@@ -1,0 +1,91 @@
+---
+
+- name: Ensure PostgreSQL is installed
+  ansible.builtin.include_role:
+    name: jgoutin.home.postgresql
+  vars:
+    postgresql_database: nextcloud
+    postgresql_user: nextcloud
+    postgresql_data: /var/lib/nextcloud/pgsql
+
+- name: Ensure PHP-FPM is installed
+  ansible.builtin.include_role:
+    name: jgoutin.home.php_fpm
+  vars:
+    php_fpm_user: nextcloud
+    php_fpm_site: nextcloud
+    php_fpm_domain: "{{ nextcloud_domain }}"
+    php_fpm_inaccessible_paths: /var/lib/nextcloud/pgsql
+    php_memory_limit: "{{ nextcloud_upload_max_size }}"
+    php_upload_max_filesize: "{{ nextcloud_upload_max_size }}"
+    php_opcache_interned_strings_buffer: 32
+    php_disable_functions: false  # TODO: fix in #62
+    php_session_sid_length: 36  # Fail with higher values
+    php_modules: "{{ [_php_core, _php_preview, _php_external, _php_ldap] | flatten | unique }}"
+
+- name: Ensure Redis is installed
+  ansible.builtin.include_role:
+    name: jgoutin.home.redis
+  vars:
+    redis_user: nextcloud
+
+- name: Ensure Nginx is installed
+  ansible.builtin.include_role:
+    name: jgoutin.home.nginx
+  vars:
+    nginx_server_name: "{{ nextcloud_domain }}"
+    nginx_site: nextcloud
+    nginx_site_user: nextcloud
+    nginx_site_conf: "{{ nexcloud_role_path }}/files/nginx-site-nextcloud.j2"
+    nginx_php_fpm: true
+    nginx_can_network_connect: true
+    nginx_can_use_cifs: "{{ 'files_external' in nextcloud_applications }}"
+    nginx_can_use_fusefs: "{{ 'files_external' in nextcloud_applications }}"
+    nginx_can_sendmail: true
+    nginx_can_use_gpg: "{{ 'mail' in nextcloud_applications }}"
+    nginx_can_connect_ldap: "{{ 'user_ldap' in nextcloud_applications }}"
+    nginx_client_max_body_size: "{{ nextcloud_upload_max_size }}"
+    nginx_client_body_timeout: "{{ nextcloud_upload_timeout }}"
+    nginx_read_user_content: true
+    nginx_unified: "{{ nextcloud_allow_web_update | bool }}"
+    nginx_security_header_referrer_policy: true
+    nginx_security_header_x_content_type_options: true
+    nginx_security_header_x_download_options: true
+    nginx_security_header_x_frame_options: true
+    nginx_security_header_x_permitted_cross_domain_policies: true
+    nginx_security_header_x_xss_protection: true
+    nginx_inaccessible_paths: /var/www/nextcloud/config /var/lib/nextcloud
+
+- name: Ensure RpmFusion-free repository is installed
+  ansible.builtin.include_role:
+    name: jgoutin.home.rpmfusion
+  vars:
+    rpmfusion_free: true  # Required for "ffmpeg"
+  when: nextcloud_enable_previews | bool
+
+- name: Ensure preview generation Nextcloud requirements are installed
+  ansible.builtin.dnf:
+    state: present
+    name:
+      - ffmpeg
+      - libreoffice
+    install_weak_deps: false
+  retries: 10
+  delay: 1
+  register: _
+  until: _ is successful
+  when: nextcloud_enable_previews | bool
+
+- name: Ensure other Nextcloud requirements are installed
+  ansible.builtin.dnf:
+    state: present
+    name:
+      # For OCC command auto-completion
+      - bash-completion
+      # If not already installed by "common" role
+      - fail2ban
+    install_weak_deps: false
+  retries: 10
+  delay: 1
+  register: _
+  until: _ is successful

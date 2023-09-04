@@ -1,0 +1,34 @@
+- hosts: all
+  name: Desktop
+  strategy: free
+  tasks:
+    - name: Base
+      ansible.builtin.import_role:
+        name: base
+    - name: Desktop
+      ansible.builtin.import_role:
+        name: desktop
+    - name: Hugo
+      ansible.builtin.import_role:
+        name: hugo
+    - name: Macchina
+      ansible.builtin.import_role:
+        name: macchina
+    - name: Dotfiles
+      ansible.builtin.import_role:
+        name: dotfiles
+    - name: Perforamance
+      ansible.builtin.import_role:
+        name: performance
+    - name: Hardening
+      ansible.builtin.import_role:
+        name: hardening
+    - name: Timezone
+      ansible.builtin.import_role:
+        name: timezone
+    - name: Codium
+      ansible.builtin.import_role:
+        name: codium
+    - name: Brave
+      ansible.builtin.import_role:
+        name: brave

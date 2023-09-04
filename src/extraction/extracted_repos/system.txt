@@ -33,7 +33,6 @@ https://github.com/geerlingguy/ansible-role-homebrew.git
 https://github.com/openafs-contrib.git
 https://github.com/geerlingguy/ansible-role-docker.git
 https://github.com/VeeamHub/veeam-ansible.git
-
 https://github.com/rdiff-backup/rdiff-backup-ansible.git
 https://github.com/dseeley/blockdevmap.git
 https://github.com/FragmentedPacket/netbox_modules.git
@@ -76,10 +75,10 @@ https://github.com/linux-system-roles/linux-system-roles.github.io.git
 https://github.com/damex/ansible-collections-apt.git
 https://github.com/Stouts.git
 https://github.com/samdoran.git
-https://github.com/singleplatform-eng.git
 https://github.com/codeaffen/phpipam-ansible-modules.git
 https://github.com/vladgh/ansible-collection-vladgh-system.git
 https://github.com/LeConTesteur/ansible-module-ganeti-cli.git
+
 https://github.com/borari/pentesting_collection.git
 https://github.com/alphanodes.git
 https://github.com/mrlesmithjr/ansible-collection-system.git
@@ -90,7 +89,6 @@ https://github.com/usegalaxy-eu/ansible-collection-handy.git
 https://github.com/lablabs.git
 https://github.com/kravietz.git
 https://github.com/mmorev/ansible-consul-template.git
-https://github.com/osism/ansible-playbooks-manager.git
 https://github.com/dseeley/ansible_vault_pipe.git
 https://github.com/yeoldegrove/ansible.iscsi_target_server.git
 https://github.com/o0-o/ansible_collection_host.git
