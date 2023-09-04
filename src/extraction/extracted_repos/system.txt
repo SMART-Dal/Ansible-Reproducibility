@@ -2,11 +2,13 @@ https://github.com/nautobot/nautobot-ansible.git
 https://github.com/netbox-community/ansible_modules.git
 https://github.com/maxhoesel-ansibleansible-collection-borg.git
 https://github.com/iorchard/iorchard.p5x.git
+https://github.com/iorchard/pbos-ansible.git
 https://github.com/ericsysmin/ansible-collection-system.git
 https://github.com/ansiblebit/oracle-java.git
 https://github.com/igor-nikiforov/ansible-role-docker.git
 https://github.com/Pandemonium1986/ansible-collection-openstack.git
 https://github.com/osism/ansible-collection-validations.git
+
 https://github.com/lablabs/ansible-collection-wireguard.git
 https://github.com/ansiblebit.git
 https://github.com/tomkivlin/ansible-collection-maas.git
