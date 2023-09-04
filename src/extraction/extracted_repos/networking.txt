@@ -4,7 +4,6 @@ https://github.com/jefvantongerloo/jefvantongerloo.alcatel.git
 https://github.com/ansible-collections/arista.eos.git
 https://github.com/ansible-collections/dellemc.enterprise_sonic.git
 https://github.com/sachaboudjema/ansible-collection-tipsconfig.git
-https://github.com/opengear.git
 https://github.com/NN708/ansible-openwrt.git
 https://github.com/aruba/aos-switch-ansible-collection.git
 https://github.com/CiscoDevNet/ansible-meraki.git

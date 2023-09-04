@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # List of file or repositories absolute paths to be passed as arguments
+# todo folder instead of file
 file_paths=(
     "/home/ghazal/Ansible-Reproducibility/test/testScripts/Repository1"
     "/home/ghazal/Ansible-Reproducibility/test/testScripts/Repository2"
