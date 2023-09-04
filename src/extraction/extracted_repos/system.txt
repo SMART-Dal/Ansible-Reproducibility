@@ -31,11 +31,11 @@ https://github.com/samdoran/ansible-collection-macos.git
 https://github.com/lantossl/ansible_collection_general.git
 https://github.com/geerlingguy/ansible-role-homebrew.git
 https://github.com/openafs-contrib.git
-
 https://github.com/geerlingguy/ansible-role-docker.git
+https://github.com/VeeamHub/veeam-ansible.git
+
 https://github.com/rdiff-backup/rdiff-backup-ansible.git
 https://github.com/dseeley/blockdevmap.git
-https://github.com/VeeamHub/veeam-ansible.git
 https://github.com/FragmentedPacket/netbox_modules.git
 https://github.com/mto79/ansible_collection_mto79.system.git
 https://github.com/arillso/ansible.system.git
@@ -78,7 +78,6 @@ https://github.com/Stouts.git
 https://github.com/samdoran.git
 https://github.com/singleplatform-eng.git
 https://github.com/codeaffen/phpipam-ansible-modules.git
-https://github.com/davidban77/ansible-collection-gns3.git
 https://github.com/vladgh/ansible-collection-vladgh-system.git
 https://github.com/LeConTesteur/ansible-module-ganeti-cli.git
 https://github.com/borari/pentesting_collection.git
