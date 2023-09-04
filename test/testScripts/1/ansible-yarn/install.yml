@@ -1,0 +1,7 @@
+# tasks file
+---
+- name: install | dependencies
+  ansible.builtin.apt:
+    name: "{{ yarn_dependencies }}"
+  tags:
+    - yarn-install-dependencies

@@ -67,6 +67,6 @@ def clone_github_yml_files(links):
 
 if __name__ == '__main__':
     # Provide a list of GitHub repository links
-    repository_links = ['https://github.com/weareinteractive/ansible-nginx.git']
+    repository_links = ['https://github.com/lukasic/ansible-role-multi-php.git']
 
     clone_github_yml_files(repository_links)
