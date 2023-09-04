@@ -1,0 +1,7 @@
+---
+- hosts: windows
+  name: Rollback playbook
+  tasks:
+    - name: "Rollback this step"
+      ansible.builtin.debug:
+        msg: "Rolling back this step"

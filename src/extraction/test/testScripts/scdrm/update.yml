@@ -1,0 +1,372 @@
+# Update SCDRM configuration
+---
+- name: Adminstart
+  become: true
+  import_role:
+    name: adminstart
+
+- name: Prepare for update
+  become: true
+  #command: chattr -R -i /usr/local/sbin/scdrm* /usr/local/sbin/adminst* /usr/local/bin/adminstart /etc/systemd/system 2>/dev/null
+  command: chattr -R -i /usr/local/sbin/ /usr/local/bin/adminstart /etc/ 2>/dev/null
+  failed_when: false
+  changed_when: true
+
+- name: Check network service
+  become: true
+  command: systemctl is-active network.service
+  #changed_when: false
+  failed_when: false
+  when: '"el" in release.stdout'
+  register: networkcheck
+
+- name: Check NetworkManager service
+  become: true
+  command: systemctl is-active NetworkManager.service
+  failed_when: false
+  #changed_when: false
+  when: '"el" in release.stdout'
+  register: nmcheck
+
+- name: Check networking service
+  become: true
+  command: systemctl is-active networking.service
+  failed_when: false
+  #changed_when: false
+  register: networkingcheck
+  when: '"Debian" in distro.stdout'
+
+- name: Check systemd-networkd.service
+  become: true
+  command: systemctl is-active systemd-networkd.service
+  failed_when: false
+  #changed_when: false
+  register: systemdnetworkd
+  when: '"Ubuntu" in distro.stdout'
+
+- name: Set fact
+  set_fact:
+    netservice: network
+  when:
+    - '"el" in release.stdout'
+    - networkcheck is defined
+    - networkcheck.stdout == "active"
+
+- name: Set fact
+  set_fact:
+    netservice: NetworkManager
+  when:
+    - '"el" in release.stdout'
+    - nmcheck is defined
+    - nmcheck.stdout == "active"
+
+- name: Set fact
+  set_fact:
+    netservice: networking
+  when:
+    - '"Debian" in distro.stdout'
+    - networkingcheck is defined
+    - networkingcheck.stdout == "active"
+
+- name: Set fact
+  set_fact:
+    netservice: systemd-networkd
+  when:
+    - '"Ubuntu" in distro.stdout'
+    - systemdnetworkd is defined
+    - systemdnetworkd.stdout == "active"
+
+- name: Copy scdrmd
+  become: true
+  template:
+    src: ../files/check.j2
+    dest: /usr/local/sbin/scdrmd
+    mode: 0750
+    owner: root
+    group: root
+    attributes: +i
+
+- name: Copy "{{ scdrm_conf }}"
+  become: true
+  template:
+    src: ../files/scdrm.j2
+    dest: "{{ scdrm_conf }}"
+    mode: 0755
+    owner: root
+    group: root
+    attributes: +i
+
+- name: Copy scdrm-paranoid
+  become: true
+  template:
+    src: ../files/paranoid.j2
+    dest: /usr/local/sbin/scdrm-paranoid
+    mode: 0755
+    owner: root
+    group: root
+    attributes: +i
+
+- name: Copy gitignore EL
+  become: true
+  template:
+    src: ../files/gitignore.j2
+    dest: "{{ item }}/.gitignore"
+    mode: 0640
+    owner: root
+    attributes: +i
+  with_items: "{{ dirlist_el }}"
+  when: '"el" in release.stdout'
+
+- name: Copy gitignore Deb
+  become: true
+  template:
+    src: ../files/gitignore.j2
+    dest: "{{ item }}/.gitignore"
+    mode: 0640
+    owner: root
+    attributes: +i
+  with_items: "{{ dirlist_deb }}"
+  when: '"el" not in release.stdout'
+
+- name: Copy cron-check
+  become: true
+  template:
+    src: ../files/scdrm-slow.j2
+    dest: /usr/local/sbin/scdrm-slow
+    mode: '0750'
+    owner: root
+    group: root
+    attributes: +i
+
+- name: Copy fast-check
+  become: true
+  template:
+    src: ../files/scdrm-fast.j2
+    dest: /usr/local/sbin/scdrm-fast
+    mode: '0750'
+    owner: root
+    group: root
+    attributes: +i
+
+- name: Copy scdrm-service-restart
+  become: true
+  template:
+    src: ../files/scdrm-service-restart.j2
+    dest: /usr/local/sbin/scdrm-service-restart
+    mode: 0750
+    owner: root
+    group: root
+    attributes: +i
+
+- name: Copy MOTD
+  become: true
+  template:
+    src: ../files/motd.j2
+    dest: /etc/motd.d/scdrm
+    mode: 0644
+    owner: root
+    group: root
+  when: set_motd is true
+
+- name: Setup Git GC cron
+  cron:
+    name: "SCDRM Git GC"
+    minute: "16"
+    hour: "16"
+    day: "1"
+    job: /usr/local/sbin/scdrm-gitcron
+    user: root
+    state: present
+
+- name: Check SELinux
+  become: false
+  command: /usr/sbin/getenforce
+  changed_when: false
+  register: selinux
+  when:
+    - disable_aide is undefined
+    - '"el" in release.stdout'
+
+- name: Copy RHEL7 aide.conf
+  become: true
+  template:
+    src: ../../aide/files/aide-rhel7.j2
+    dest: /etc/aide.conf
+    mode: 0600
+    attributes: +i
+  when: '"el7" in release.stdout'
+
+- name: Copy RHEL8 aide.conf
+  become: true
+  template:
+    src: ../../aide/files/aide-rhel8.j2
+    dest: /etc/aide.conf
+    mode: 0600
+    attributes: +i
+  when: '"el8" in release.stdout'
+
+- name: Copy RHEL9 aide.conf
+  become: true
+  template:
+    src: ../../aide/files/aide-rhel9.j2
+    dest: /etc/aide.conf
+    mode: 0600
+    attributes: +i
+  when: '"el9" in release.stdout'
+
+- name: Copy Debian/Ubuntu aide.conf
+  become: true
+  template:
+    src: ../../aide/files/98_aide_scdrm.j2
+    dest: /etc/aide/aide.conf.d/98_aide_scdrm
+    mode: 0644
+    attributes: +i
+  when: '"Debian" in distro.stdout or "Ubuntu" in distro.stdout'
+
+- name: Copy aide-auto-check
+  become: true
+  template:
+    src: ../../aide/files/aide-auto-check.j2
+    dest: /usr/local/sbin/aide-auto-check
+    mode: '0750'
+    owner: root
+    group: root
+    attributes: +i
+  when: aide_auto_check is true
+
+- name: Setup AIDE check timer
+  become: true
+  copy:
+    content: |
+      [Unit]
+      Description=AIDE check timer
+
+      [Timer]
+      OnCalendar={{ aide_check }}
+      RandomizedDelaySec=8h
+      AccuracySec=1us
+
+      [Install]
+      WantedBy=timers.target
+    dest: /etc/systemd/system/aide-check.timer
+    mode: 0644
+    owner: root
+    group: root
+    attributes: +i
+  when: disable_aide is undefined
+
+- name: Disable AIDE
+  become: true
+  systemd:
+    name: aide-check.timer
+    enabled: false
+    state: stopped
+    daemon-reload: true
+  when: disable_aide is defined
+
+- name: Setup AIDE auto-check
+  become: true
+  copy:
+    content: |
+      [Unit]
+      Description=AIDE auto-check
+
+      [Service]
+      Type=simple
+      ExecStart=/usr/local/sbin/aide-auto-check
+      #Restart=on-failure
+
+      [Install]
+      WantedBy=scdrm.service
+    dest: /etc/systemd/system/aide-auto-check.service
+    mode: 0644
+    owner: root
+    group: root
+    attributes: +i
+  when: aide_auto_check is true
+
+- name: Setup AIDE auto-check timer
+  become: true
+  copy:
+    content: |
+      [Unit]
+      Description=AIDE auto-check timer
+
+      [Timer]
+      OnCalendar=hourly
+      RandomizedDelaySec=5s
+      AccuracySec=1us
+      Persistent=true
+
+      [Install]
+      WantedBy=timers.target
+    dest: /etc/systemd/system/aide-auto-check.timer
+    mode: 0644
+    owner: root
+    group: root
+    attributes: +i
+  when: aide_auto_check is true
+
+- name: Update adminstart
+  include_tasks: adminstart.yml
+
+- name: Update route-guard
+  import_role:
+    name: route_guard
+  when: disable_route_guard is undefined
+
+- name: Adminstop
+  become: true
+  import_role:
+    name: adminstop
+
+- name: Restart SCDRMd
+  become: true
+  systemd:
+    name: scdrm.service
+    enabled: true
+    state: restarted
+    daemon-reload: true
+
+- name: Restart AIDE
+  become: true
+  systemd:
+    name: aide-check.timer
+    enabled: true
+    state: restarted
+    daemon-reload: true
+  when: disable_aide is undefined
+
+- name: Disable AIDE
+  become: true
+  systemd:
+    name: aide-check.timer
+    enabled: false
+    state: stopped
+    daemon-reload: true
+  when: disable_aide is defined
+
+- name: Disable services
+  systemd:
+    name: "{{ item }}"
+    enabled: false
+    state: stopped
+    daemon_reload: true
+  with_items:
+    - aide-check.timer
+    - aide-auto-check.timer
+    - aide-check.service
+    - aide-auto-check.service
+  when: disable_aide is defined
+
+- name: Remove AIDE stuff
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - /etc/systemd/system/timers.target.wants/aide-auto-check.timer
+    - /etc/systemd/system/timers.target.wants/aide-check.timer
+    - /etc/systemd/system/aide-auto-check.timer
+    - /etc/systemd/system/aide-check.timer
+  when: disable_aide is defined
+...

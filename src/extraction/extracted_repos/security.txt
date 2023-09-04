@@ -2,7 +2,6 @@ https://github.com/Venafi/ansible-collection-venafi.git
 https://github.com/Lunik/ansible-wabbit-collection.git
 https://github.com/cyberark/ansible-security-automation-collection.git
 https://github.com/dseeley/ansible_vault_pipe.git
-https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiswitch-collection/tree/fsw_v7.0.0/galaxy_1.1.3.git
 https://github.com/GMedian/vulners-ansible.git
 https://github.com/ansible-middleware.git
 https://github.com/ansible-collections/cisco.asa.git
@@ -37,16 +36,14 @@ https://github.com/ansible-collections/community.yang.git
 https://github.com/telekom-mms/ansible-collection-acme.git
 https://github.com/CiscoDevNet/ansible-cisco-cdo.git
 https://github.com/nleiva/capirca_acl.git
-https://gitlab.com/shiftsystems/ansible-playbooks/-/tree/main/docs.git
-https://github.com/shiftsystems.git
 https://github.com/mayaCostantini/sigstore-roles.git
 https://github.com/dimitry-dukhovny/ddansible.git
-https://github.com/illumio.git
 https://github.com/charlesrocket/freebsd-collection.git
 https://github.com/RedHatInsights/ansible-collections-insights.git
 https://github.com/lablabs/ansible-collection-wireguard.git
 https://github.com/ubikasec.git
 https://github.com/Tirasa/SyncopeAnsible.git
+
 https://github.com/DaftPyPosh/vSphereSCG.git
 https://github.com/ansible-collections/.git
 https://github.com/ansible-collections/azure.git
@@ -77,5 +74,3 @@ https://github.com/ansible-collections/trendmicro.deepsec.git
 https://github.com/ansibleguy/collection_opnsense.git
 https://github.com/ansible-collections/ansible.snmp.git
 https://github.com/joelwking/pensando/issue/tracker.git
-https://github.com/acoby/ansible-collection/tree/main/docs/.git
-https://github.com/andreygubarev

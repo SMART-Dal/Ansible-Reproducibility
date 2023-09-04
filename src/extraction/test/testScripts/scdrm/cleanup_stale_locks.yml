@@ -1,0 +1,32 @@
+# Cleanup stale locks when broken before adminstop removed them
+# 
+---
+- name: Cleanup stale admin lock
+  hosts: all
+  gather_facts: false
+  serial: 96
+  ignore_errors: true
+  vars_files: ./vars/main.yml
+  tasks:
+    - name: Remove lock
+      become: True
+      file:
+        state: absent
+        path: /run/scdrm-admin.lock
+
+    - name: Prepare scdrm.conf
+      become: True
+      shell: chattr -i "{{ scdrm_config }}"
+
+    - name: Close adminmode
+      become: True
+      lineinfile:
+        path: "{{ scdrm_config }}"
+        regexp: '^ADMINMODE=1'
+        line: ADMINMODE=0
+        state: present
+
+    - name: Close scdrm.conf
+      become: True
+      shell: chattr +i "{{ scdrm_config }}"
+...

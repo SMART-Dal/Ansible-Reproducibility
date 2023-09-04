@@ -1,0 +1,62 @@
+# Record Git commits for managed dirs
+---
+- name: Get commits for managed dirs
+  become: true
+  shell:
+    chdir: "{{ item }}"
+    cmd: git log | head -3 | awk '/commit/ {print $2}'
+  args:
+    executable: /bin/bash
+  register: elgitcommit
+  with_items:
+    - "{{ dirlist_el }}"
+  when: '"el" in release.stdout'
+
+- name: Get commits for managed dirs
+  become: true
+  shell:
+    chdir: "{{ item }}"
+    cmd: git log | head -3 | awk '/commit/ {print $2}'
+  args:
+    executable: /bin/bash
+  register: debgitcommit
+  with_items:
+    - "{{ dirlist_deb }}"
+  when: '"el" not in release.stdout'
+
+- name: Prepare host vars file
+  copy:
+    content: |
+      last_commit:
+    dest: "{{ scdrm_install_dir }}/host_vars/{{ inventory_hostname }}"
+    force: true
+    mode: 0660
+    owner: "{{ myuser }}"
+    group: scdrm
+  delegate_to: localhost
+
+- name: Record commits EL
+  blockinfile:
+    path: "{{ scdrm_install_dir }}/host_vars/{{ inventory_hostname }}"
+    block: |
+      - {{ item.stdout }}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.item }}"
+    state: present
+  with_items:
+    - "{{ elgitcommit.results }}"
+  delegate_to: localhost
+  when: '"el" in release.stdout'
+
+- name: Record commits Deb
+  blockinfile:
+    path: "{{ scdrm_install_dir }}/host_vars/{{ inventory_hostname }}"
+    block: |
+      - {{ item.stdout }}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.item }}"
+    state: present
+  with_items:
+    - "{{ debgitcommit.results }}"
+  delegate_to: localhost
+  when: '"el" not in release.stdout'
+
+...

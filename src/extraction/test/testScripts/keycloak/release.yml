@@ -1,0 +1,26 @@
+---
+name: Release collection
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: ansible-middleware/github-actions/.github/workflows/release.yml@main
+    secrets: inherit
+    with:
+      collection_fqcn: 'middleware_automation.keycloak'
+
+  dispatch:
+    needs: release
+    strategy:
+      matrix:
+        repo: ['ansible-middleware/cross-dc-rhsso-demo', 'ansible-middleware/flange-demo', 'ansible-middleware/ansible-middleware-ee']
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.TRIGGERING_PAT }}
+          repository: ${{ matrix.repo }}
+          event-type: "Dependency released - Keycloak v${{ needs.release.outputs.tag_version }}"
+          client-payload: '{ "github": ${{toJson(github)}} }'

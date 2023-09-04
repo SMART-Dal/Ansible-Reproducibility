@@ -1,0 +1,12 @@
+- hosts: all
+  remote_user: root
+  gather_facts: yes
+  tasks:
+  - name: Enable IP Blacklist
+    blacklist_enable:
+      login_id: "{{ web.id }}"
+      login_pwd: "{{ web.password }}"
+      rule_id: "{{ blacklist_enable.id }}"
+      enable: "{{ blacklist_enable.enable }}"
+    register: result
+  - debug: var=result
