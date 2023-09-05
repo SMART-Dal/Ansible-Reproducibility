@@ -1,0 +1,9 @@
+---
+
+- name: Services > Ensure service is started or restarted
+  ansible.builtin.service:
+    name: "{{ item }}"
+    enabled: true
+  loop:
+    - mysql
+  when: manala_mysql_server

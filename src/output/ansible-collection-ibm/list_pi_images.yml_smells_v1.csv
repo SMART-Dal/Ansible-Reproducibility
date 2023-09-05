@@ -1,0 +1,181 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Assumption about Environment,"None 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,2,Task 1,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Idempotency,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Version Specific Installation,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Outdated Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Missing Dependencies,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Hardware Specific Commands,"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Assumption about Environment,"None 
+"
+/home/ghazal/Ansible-Reproducibility/test/testScripts/1/ansible-collection-ibm,list_pi_images.yml,5,Task 2,Broken Dependency Chain,None

@@ -1,0 +1,46 @@
+- name: 'Install dnf package requirements'
+  ansible.builtin.package:
+    name: '{{ venv["package_requirements"] | d([]) }}'
+
+- name: '{{ venv["python_executable"] | d("python3") }} -m venv {% if venv["system_site_packages"] | d("true") %} --system-site-packages {% endif %}{{ venv["name"] }}'
+  ansible.builtin.command:
+    cmd: '{{ venv["python_executable"] | d("python3") }} -m venv {% if venv["system_site_packages"] | d("true") %} --system-site-packages {% endif %}{{ venv["name"] }}'
+    chdir: '/opt/python-venv'
+    creates: '/opt/python-venv/{{ venv["name"] }}/bin/activate'
+  ignore_errors: "{{ ansible_check_mode }}" # ignore errors if `--check` is specified
+
+- name: 'Make sure the venv is root-owned and not writeable by others to prevent privilege escalation'
+  ansible.builtin.file:
+    path: '/opt/python-venv/{{ venv["name"] }}'
+    owner: 'root'
+    group: 'root'
+    mode: 0o755 # executable for all users and groups, as they might need to execute the installed python packages
+
+- name: 'pip install -U pip wheel setuptools'
+  ansible.builtin.pip:
+    name:
+      - 'pip'
+      - 'wheel'
+      - 'setuptools'
+    state: 'latest'
+    virtualenv: '/opt/python-venv/{{ venv["name"] }}'
+    extra_args: '{{ ("--cert " ~ python_venv__pip_cert) if python_venv__pip_cert is defined and python_venv__pip_cert | length }}'
+
+- name: 'Install packages using pip'
+  ansible.builtin.pip:
+    name: '{{ venv["packages"] }}'
+    virtualenv: '/opt/python-venv/{{ venv["name"] }}'
+    extra_args: '{{ ("--cert " ~ python_venv__pip_cert) if python_venv__pip_cert is defined and python_venv__pip_cert | length }}'
+
+- name: 'Link choosen binaries to /usr/local/bin'
+  ansible.builtin.file:
+    src: '/opt/python-venv/{{ venv["name"] }}/bin/{{ item }}'
+    path: '/usr/local/bin/{{ item }}'
+  loop: '{{ venv["exposed_binaries"] | d([]) }}'
+
+# - ansible.builtin.name: 'systemctl {{ duplicity__timer_enabled | bool | ternary("enable", "disable") }} python-venv-update@.timer --now'
+#   systemd:
+#       name: 'python-venv-update@.timer'
+#       state: '{{ duplicity__timer_enabled | bool | ternary("started", "stopped") }}'
+#       enabled: '{{ duplicity__timer_enabled }}'
+#       daemon_reload: true
