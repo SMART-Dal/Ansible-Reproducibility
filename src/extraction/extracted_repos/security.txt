@@ -43,7 +43,6 @@ https://github.com/RedHatInsights/ansible-collections-insights.git
 https://github.com/lablabs/ansible-collection-wireguard.git
 https://github.com/ubikasec.git
 https://github.com/Tirasa/SyncopeAnsible.git
-
 https://github.com/DaftPyPosh/vSphereSCG.git
 https://github.com/ansible-collections/.git
 https://github.com/ansible-collections/azure.git
@@ -73,4 +72,3 @@ https://github.com/PaloAltoNetworks/pan-os-ansible.git
 https://github.com/ansible-collections/trendmicro.deepsec.git
 https://github.com/ansibleguy/collection_opnsense.git
 https://github.com/ansible-collections/ansible.snmp.git
-https://github.com/joelwking/pensando/issue/tracker.git

@@ -1,8 +1,0 @@
----
-galaxy_info:
-  role_name: adminstop
-  author: Kresimir Lovric
-  description: Stops adminmode as part of SCDRM
-  company: IBM
-dependencies: []
-...

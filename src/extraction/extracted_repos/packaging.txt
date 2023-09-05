@@ -1,7 +1,6 @@
 https://github.com/chocolatey/chocolatey-ansible.git
 https://github.com/geerlingguy/ansible-role-pip.git
 https://github.com/geerlingguy/ansible-role-packer.git
-https://github.com/lean-delivery/ansible-role-docker.git
 https://github.com/HanXHX/ansible-nodejs.git
 https://github.com/mullholland/ansible-role-repository_hashicorp.git
 https://github.com/andrewrothstein/ansible-packer.git
@@ -54,8 +53,6 @@ https://github.com/zaxos.git
 https://github.com/gabops/ansible-role-packages-os.git
 https://github.com/diodonfrost/ansible-role-java.git
 https://github.com/sbaerlocher.git
-https://www.github.com/elreydetoda/ansible_virtualization.git
-https://github.com/Oefenweb/ansible-yarn.git
 https://www.github.com/crivetimihai/ansible_virtualization.git
 https://github.com/cchurch/ansible-role-virtualenv.git
 https://github.com/diodonfrost/ansible-role-terraform.git

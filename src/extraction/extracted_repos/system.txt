@@ -73,8 +73,6 @@ https://github.com/marmorag/chunk.git
 https://github.com/aorfanos/ansible-pmm-admin.git
 https://github.com/linux-system-roles/linux-system-roles.github.io.git
 https://github.com/damex/ansible-collections-apt.git
-https://github.com/Stouts.git
-https://github.com/samdoran.git
 https://github.com/codeaffen/phpipam-ansible-modules.git
 https://github.com/vladgh/ansible-collection-vladgh-system.git
 https://github.com/LeConTesteur/ansible-module-ganeti-cli.git
