@@ -1,0 +1,27 @@
+---
+- name: Download PGDG GPG key
+  ansible.builtin.rpm_key:
+    key: "{{ percona_gpg_key }}"
+    state: present
+  when: ansible_os_family == 'RedHat'
+  become: true
+
+# Install Repoistory
+- name: Install percona repository in RedHat
+  ansible.builtin.package:
+    name: "{{ percona_repo }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'RedHat'
+
+- name: Install percona repository in Debian
+  ansible.builtin.apt:
+    deb: "{{ percona_repo }}"
+  become: true
+  when: ansible_os_family == 'Debian'
+
+- name: Install pmm2-client
+  ansible.builtin.package:
+    name: pmm2-client
+    state: present
+  become: true

@@ -1,0 +1,54 @@
+---
+- name: Set package names for RedHat distribution
+  set_fact:
+    _barman_package: "https://ftp.postgresql.org/pub/repos/yum/common/redhat/\
+      rhel-{{ ansible_distribution_major_version }}-x86_64/{{ barman_package }}.\
+      rhel{{ ansible_distribution_major_version }}.noarch.rpm"
+    _python_barman_package: "https://ftp.postgresql.org/pub/repos/yum/common/redhat/\
+      rhel-{{ ansible_distribution_major_version }}-x86_64/{{ python_barman_package }}.\
+      rhel{{ ansible_distribution_major_version }}.noarch.rpm"
+    _barman_cli_package: "https://ftp.postgresql.org/pub/repos/yum/common/redhat/\
+      rhel-{{ ansible_distribution_major_version }}-x86_64/{{ barman_cli_package }}.\
+      rhel{{ ansible_distribution_major_version }}.noarch.rpm"
+  when:
+    - ansible_os_family == 'RedHat'
+
+- name: Install Barman python packages on RHEL 7
+  yum:
+    name:
+      - "{{ _python_barman_package }}"
+      - "{{ _barman_package }}"
+      - "{{ _barman_cli_package }}"
+      - policycoreutils-python
+      - libselinux-python
+  when:
+    - ansible_distribution_major_version == '7'
+    - ansible_os_family == 'RedHat'
+  become: true
+
+- name: Install Barman python packages on RHEL 8 or Higher
+  yum:
+    name:
+      - "{{ _python_barman_package }}"
+      - "{{ _barman_package }}"
+      - "{{ _barman_cli_package }}"
+      - python3-policycoreutils
+      - python3-argcomplete
+    disable_gpg_check: true
+  when:
+    - ansible_distribution_major_version >= '8'
+    - ansible_os_family == 'RedHat'
+  become: true
+
+- name: Install Barman packages on Debian
+  apt:
+    name:
+      - barman
+      - barman-cli
+      - barman-cli-cloud
+      - libselinux-python
+      - policycoreutils-python
+    state: present
+  when:
+    - ansible_os_family == 'Debian'
+  become: true

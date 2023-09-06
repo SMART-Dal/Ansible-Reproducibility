@@ -1,0 +1,81 @@
+---
+- name: Check required variables for this role
+  include_role:
+    name: common
+    tasks_from: check_required_variables
+  vars:
+    required_variables:
+      - pg_extension
+
+- name: Check extension supported
+  include_tasks: check_extension.yml
+
+- name: Set fact extension_info
+  set_fact:
+    extension_info: "{{ supported_extension|selectattr('name', 'search', pg_extension)|join('\n') }}"
+  when: pg_extension is defined
+
+- name: Install json-c 0.13.1-3.el8 on rhel8
+  ansible.builtin.package:
+    name: http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/json-c-0.13.1-3.el8.x86_64.rpm
+    state: "present" 
+  when: 
+    - ansible_os_family == 'RedHat'
+    - ansible_distribution_major_version == '8'
+
+- name: Install Required Package for extension
+  ansible.builtin.package:
+    name: "{{ package }}"
+    state: "present"
+  with_items: "{{ extension_info.required_package }}"
+  loop_control:
+    loop_var: package
+  when:
+    - extension_info is defined
+    - extension_info.required_package is defined
+    - extension_info.required_package|length > 0
+  become: true
+
+- name: Manage Extension {{ extension_info.name }} from package manager
+  ansible.builtin.package:
+    name: "{{ extension_info.extension_package }}"
+    state: "{{ extension_info.state | default('present') }}"
+  when:
+    - extension_info is defined
+    - extension_info.pg_repo|default('true')
+  become: true
+
+- name: Manage Extension {{ extension_info.name }} from external uri
+  ansible.builtin.yum:
+    name: "{{ extension_info.uri }}"
+    state: "{{ extension_info.state | default('present') }}"
+  when:
+    - extension_info is defined
+    - extension_info.uri is defined
+    - extension_info.uri|length > 0
+    - not extension_info.pg_repo|default('true')
+    - ansible_os_family == 'RedHat'
+  become: true
+
+- name: Manage Extension {{ extension_info.name }} from external uri
+  ansible.builtin.apt:
+    deb: "{{ extension_info.uri }}"
+    state: "{{ extension_info.state | default('present') }}"
+  when:
+    - extension_info is defined
+    - extension_info.uri is defined
+    - extension_info.uri|length > 0
+    - not extension_info.pg_repo|default('true')
+    - ansible_os_family == 'Debian'
+  become: true
+
+- name: Install {{ extension_info.name }} using source code
+  include_tasks: install_source.yml
+  vars:
+    extension_name: "{{ extension_info.name }}"
+    extension_source_src: "{{ extension_info.source_src }}"
+    extension_source_dest: "{{ extension_info.source_dest }}"
+  when:
+    - extension_info is defined
+    - extension_info.install_source is defined
+    - extension_info.install_source

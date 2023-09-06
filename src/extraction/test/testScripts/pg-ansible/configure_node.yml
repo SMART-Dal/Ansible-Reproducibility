@@ -1,0 +1,70 @@
+---
+- name: Add password in pgpass
+  include_role:
+    name: manage_dbserver
+    tasks_from: manage_pgpass
+  vars:
+    input_pg_pgpass_values:
+      - user: "{{ pg_replication_user }}"
+        password: "{{ pg_replication_user_password }}"
+        create: true
+  no_log: "{{ disable_logging }}"
+
+- name: Register upstream node ping state
+  community.postgresql.postgresql_ping:
+    db: "{{ pg_database }}"
+    login_host: "{{ hostvars[inventory_hostname].upstream_node_private_ip }}"
+    login_user: "{{ pg_replication_user }}"
+    login_password: "{{ pg_replication_user_password }}"
+    port: "{{ pg_port }}"
+  become: true
+  become_user: "{{ pg_owner }}"
+  no_log: "{{ disable_logging }}"
+  register: ping_result
+
+- name: Check upstream node ping state
+  fail:
+    msg: "Unable to access primary node to create standby node."
+  when: not ping_result.is_available
+
+- name: Create standby
+  shell: >
+    PGAPPNAME={{ inventory_hostname }} {{ pg_basebackup }}
+  args:
+    creates: "{{ pg_data }}/PG_VERSION"
+  become: true
+  become_user: "{{ pg_owner }}"
+  async: 180000
+  poll: 60
+
+- name: Enable and start the service
+  systemd:
+    name: "{{ pg_service }}"
+    daemon_reload: true
+    state: started
+    enabled: true
+  when: use_system_user
+  become: true
+
+- name: Include ensure_postgresql_process.yml tasks
+  include_tasks: ensure_postgresql_process.yml
+  vars:
+    - _postgresql_exists: ""
+  when: not use_system_user
+
+- name: Start pg process
+  ansible.builtin.command: >
+    {{ pg_bin_path }}/pg_ctl -D {{ pg_default_data }} start
+  when:
+    - not use_system_user
+    - _postgresql_exists.rc is not defined or _postgresql_exists.rc != 0
+  become: true
+  become_user: "{{ pg_owner }}"
+
+- name: Update standby hba config
+  include_role:
+    name: manage_dbserver
+    tasks_from: manage_hba_conf
+  vars:
+    input_pg_hba_ip_addresses: "{{ pg_allow_ip_addresses }}"
+  no_log: "{{ disable_logging }}"

@@ -1,0 +1,56 @@
+---
+- name: Check pcp_users validation
+  fail:
+    msg: "pcp_users.password is not defined."
+  with_items: "{{ input_pcp_users }}"
+  loop_control:
+    loop_var: user_item
+  when:
+    - input_pcp_users|length > 0
+    - user_item.state is not defined or user_item.state == 'present'
+    - user_item.pass is not defined or user_item.pass|length < 1
+
+- name: Check if we have pcp.conf file
+  stat:
+    path: "{{ pcp_configuration_file }}"
+  register: pcp_conf
+  when: input_pcp_users|length > 0
+
+- name: Create pcp.conf if not exists
+  copy:
+    src: "{{ pcp_configuration_file }}.sample"
+    dest: "{{ pcp_configuration_file }}"
+    owner: "{{ pgpool2_user }}"
+    group: "{{ pgpool2_user }}"
+    mode: 0600
+    remote_src: true
+  when:
+    - not pcp_conf.stat.exists
+    - input_pcp_users|length > 0
+  become: true
+  become_user: "{{ pgpool2_user }}"
+
+- name: Remove pcp users
+  lineinfile:
+    path: "{{ pcp_configuration_file }}"
+    line: >-
+      {{ user_item.name }}:
+    regexp: "^{{ user_item.name | regex_escape() }}\\:"
+    state: "absent"
+  loop: "{{ input_pcp_users }}"
+  loop_control:
+    loop_var: user_item
+  when:
+    - input_pcp_users|length > 0
+    - user_item.state is defined
+    - user_item.state == 'absent'
+  become: true
+
+- name: Add pcp users
+  include_tasks: pcp_add_user.yml
+  loop: "{{ input_pcp_users }}"
+  loop_control:
+    loop_var: pcp_user
+  when:
+    - input_pcp_users|length > 0
+    - pcp_user.state is not defined or pcp_user.state == 'present'

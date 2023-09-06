@@ -1,0 +1,78 @@
+---
+- name: Gather service facts
+  ansible.builtin.service_facts:
+
+- name: Set fact pg_service for Debian
+  set_fact:
+    pg_service: "postgresql@{{ pg_major_version }}-{{ deb_cluster_name }}.service"
+  when: ansible_os_family == 'Debian'
+
+- name: Stop pg service if running
+  ansible.builtin.systemd:
+    name: "{{ pg_service }}"
+    state: stopped
+    enabled: false
+  when:
+    - ansible_facts.services[pg_service] is defined
+    - ansible_facts.services[pg_service].state == 'running'
+    - use_system_user
+  become: true
+
+- name: Include ensure_postgresql_process.yml tasks
+  include_tasks: ensure_postgresql_process.yml
+  vars:
+    - _postgresql_exists: ""
+  when: not use_system_user
+
+- name: Stop pg process
+  ansible.builtin.command: >
+    {{ pg_bin_path }}/pg_ctl -D {{ pg_default_data }} stop
+  when:
+    - not use_system_user
+    - _postgresql_exists.rc is defined
+    - _postgresql_exists.rc == 0
+  become: true
+  become_user: "{{ pg_owner }}"
+
+- name: Remove postgreSQL
+  package:
+    name:
+      - python3-psycopg2
+      - postgresql-{{ pg_major_version }}
+      - postgresql-client-{{ pg_major_version }}
+      - postgresql-server-dev-{{ pg_major_version }}
+    state: absent
+    update_cache: true
+  become: true
+
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Check PostgreSQL other versions
+  command: echo {{ version }}
+  loop: "{{ supported_pg_version }}"
+  loop_control:
+    loop_var: version
+  when: ansible_facts.packages[ 'postgresql-' ~ version|int ] is defined
+  register: other_version_exist
+
+- name: Remove postgreSQL-common
+  package:
+    name:
+      - postgresql-common
+      - postgresql-client-common
+    state: absent
+    update_cache: true
+  become: true
+  when: not other_version_exist.changed
+
+- name: Remove python-psycopg2
+  package:
+    name:
+      - python-psycopg2
+    state: absent
+    update_cache: true
+  when:
+    - os in ['Ubuntu18','Debian9', 'Debian10']
+  become: true

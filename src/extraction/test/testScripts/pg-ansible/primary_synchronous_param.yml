@@ -1,0 +1,32 @@
+---
+- name: Set _synchronous_standby_names
+  set_fact:
+    _synchronous_standby_names: "{{ ' ' + _synchronous_standbys | default([]) | length | string() + '(' + \
+    _synchronous_standbys | map('to_json') | join(',') + ')' }}"
+  when:
+    - synchronous_standby_names|length < 1
+
+- name: Check Quorum type
+  fail:
+    msg: standby_quorum_type is not defined as 'any' or 'first'
+  when: standby_quorum_type not in ['any', 'first']
+
+- name: Add standby quorum string
+  set_fact:
+    synchronous_standby_names: "{{ standby_quorum_type + _synchronous_standby_names }}"
+  when:
+    - synchronous_standby_names|length < 1
+    - standby_quorum_type|length > 0
+    - _synchronous_standby_names is defined
+    - _synchronous_standby_names|length > 0
+
+- name: Call manage_dbserver tasks for synchronous_standby_names
+  include_role:
+    name: manage_dbserver
+    tasks_from: manage_postgres_params
+  vars:
+    input_pg_postgres_conf_params:
+      - name: synchronous_standby_names
+        value: "{{ synchronous_standby_names }}"
+  when: synchronous_standby_names|length > 0
+  no_log: "{{ disable_logging }}"

@@ -1,0 +1,63 @@
+---
+- name: Gather service facts
+  service_facts:
+
+- name: Stop pg service if running
+  systemd:
+    name: "{{ pg_service }}"
+    state: stopped
+    enabled: false
+  when:
+    - ansible_facts.services[pg_service] is defined
+    - ansible_facts.services[pg_service].state == 'running'
+    - user_system_user
+  become: true
+
+- name: Include ensure_postgresql_process.yml tasks
+  include_tasks: ensure_postgresql_process.yml
+  vars:
+    - _postgresql_exists: ""
+  when: not use_system_user
+
+- name: Stop pg process
+  ansible.builtin.command: >
+    {{ pg_bin_path }}/pg_ctl -D {{ pg_default_data }} stop
+  when:
+    - not use_system_user
+    - _postgresql_exists.rc is defined
+    - _postgresql_exists.rc == 0
+  become: true
+  become_user: "{{ pg_owner }}"
+
+- name: Remove postgres data directory if exists
+  file:
+    path: "{{ pg_data }}"
+    state: absent
+  become: true
+
+- name: Remove postgres default data directory if exists
+  file:
+    path: "{{ pg_default_data }}"
+    state: absent
+  become: true
+
+- name: Remove postgres log directory if exists
+  file:
+    path: "{{ pg_log }}"
+    state: absent
+  become: true
+  when: pg_log|length > 0
+
+- name: Remove postgres wal directory if exists
+  file:
+    path: "{{ pg_wal }}"
+    state: absent
+  become: true
+  when: pg_wal|length > 0
+
+- name: Remove postgres local wal archive directory if exists
+  file:
+    path: "{{ pg_local_wal_archive_dir }}"
+    state: absent
+  become: true
+  when: pg_local_wal_archive_dir|length > 0

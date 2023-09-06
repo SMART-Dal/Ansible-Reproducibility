@@ -1,0 +1,76 @@
+---
+- name: Ensure barman system group {{ barman_group }} exists
+  group:
+    name: "{{ barman_group }}"
+    state: present
+  become: true
+
+- name: Ensure barman system user {{ barman_user }} exists
+  user:
+    name: "{{ barman_user }}"
+    system: true
+    group: "{{ barman_group }}"
+    state: present
+    create_home: true
+    home: "{{ barman_home }}"
+  become: true
+
+- name: Check barman user home directory
+  ansible.builtin.stat:
+    path: "{{ barman_home }}"
+  register: barman_home_stat
+
+- name: Verify barman home directory permissions
+  ansible.builtin.fail:
+    msg: Barman System user do not have permission to access the home directory. Check user barman_home parameter.
+  when: barman_home_stat.stat.pw_name != barman_user
+
+- name: Check if getenforce is installed
+  ansible.builtin.shell: command -v getenforce > /dev/null 2>&1
+  register: getenforce_installed
+  become: true
+  ignore_errors: true
+  changed_when: false
+
+- name: Set default value for selinux_enforcing
+  ansible.builtin.set_fact:
+    selinux_enforcing: false
+
+- name: Test whether SELinux is enabled
+  command: getenforce
+  register: selinux_status
+  changed_when: false
+  when: getenforce_installed.rc == 0
+
+- name: Set selinux_enforcing
+  ansible.builtin.set_fact:
+    selinux_enforcing: true
+  when:
+    - getenforce_installed.rc == 0
+    - selinux_status.stdout == 'Enforcing'
+
+- name: Set SELinux context of custom located barman home directory
+  community.general.sefcontext:
+    target: "{{ barman_home }}(/.*)?"
+    setype: user_home_t
+    state: present
+  register: barman_home_dir
+  when:
+    - selinux_enforcing
+    - barman_home != barman_default_home
+
+- name: Set SELinux context of barman's ssh directory
+  community.general.sefcontext:
+    target: "{{ barman_home }}/.ssh(/.*)?"
+    setype: ssh_home_t
+    state: present
+  register: barman_ssh_home_dir
+  when:
+    - selinux_enforcing
+    - barman_home != barman_default_home
+
+- name: Apply new SELinux context for custom located barman home directory
+  command: "restorecon -irv {{ barman_home }}"
+  when:
+    - selinux_enforcing
+    - barman_home_dir.changed or barman_ssh_home_dir.changed

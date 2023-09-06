@@ -1,0 +1,189 @@
+---
+- name: Gather service facts
+  service_facts:
+
+- name: Open TCP, UDP port
+  when:
+    - ansible_facts.services['firewalld.service'] is defined
+    - ansible_facts.services['firewalld.service'].state == 'running'
+    - ansible_facts.services['firewalld.service'].status == 'enabled'
+  become: true
+  block:
+    - name: Open listening TCP port {{ pgpool2_port | default('') }}
+      ansible.posix.firewalld:
+        port: "{{ pgpool2_port }}/tcp"
+        permanent: true
+        state: enabled
+        immediate: true
+      when:
+        - pgpool2_port is defined
+
+    - name: Open PCP TCP, UDP port {{ pgpool2_pcp_port | default('') }}
+      ansible.posix.firewalld:
+        port: "{{ open_port }}"
+        permanent: true
+        state: enabled
+        immediate: true
+      loop:
+        - "{{ pgpool2_pcp_port }}/tcp"
+        - "{{ pgpool2_pcp_port }}/udp"
+      loop_control:
+        loop_var: open_port
+      when:
+        - pgpool2_pcp_port is defined
+
+    - name: Open Watchdog TCP, UDP port {{ pgpool2_wd_port | default('') }}
+      ansible.posix.firewalld:
+        port: "{{ open_port }}"
+        permanent: true
+        state: enabled
+        immediate: true
+      loop:
+        - "{{ pgpool2_wd_port }}/tcp"
+        - "{{ pgpool2_wd_port }}/udp"
+      loop_control:
+        loop_var: open_port
+      when:
+        - pgpool2_wd_port is defined
+        - pgpool2_watchdog
+
+    - name: Open Watchdog heartbeat TCP, UDP port {{ pgpool2_wd_heartbeat_port | default('') }}
+      ansible.posix.firewalld:
+        port: "{{ open_port }}"
+        permanent: true
+        state: enabled
+        immediate: true
+      loop:
+        - "{{ pgpool2_wd_heartbeat_port }}/tcp"
+        - "{{ pgpool2_wd_heartbeat_port }}/udp"
+      loop_control:
+        loop_var: open_port
+      when:
+        - pgpool2_wd_heartbeat_port is defined
+        - pgpool2_watchdog
+
+# Tasks for setting up pgpoolII
+- name: Create pgpoolII system group {{ pgpool2_group }}
+  group:
+    name: "{{ pgpool2_group }}"
+    state: present
+  become: true
+
+- name: Create pgpoolII system user {{ pgpool2_user }}
+  user:
+    name: "{{ pgpool2_user }}"
+    system: true
+    group: "{{ pgpool2_group }}"
+    state: present
+    create_home: false
+  become: true
+
+- name: Create configuration directory {{ pgpool2_configuration_file | dirname }}
+  file:
+    path: "{{ pgpool2_configuration_file | dirname }}"
+    state: directory
+    owner: "{{ pgpool2_user }}"
+    group: "{{ pgpool2_group }}"
+    mode: 0755
+  become: true
+
+- name: Create pgpoolII logging directory {{ pgpool2_logdir }}
+  file:
+    path: "{{ pgpool2_logdir }}"
+    state: directory
+    owner: "{{ pgpool2_user }}"
+    group: "{{ pgpool2_group }}"
+    mode: 0755
+  when: pgpool2_logdir is defined
+  become: true
+
+- name: Create running directory {{ pgpool2_pid_file_name | default('') | dirname }}
+  file:
+    path: "{{ pgpool2_pid_file_name | dirname }}"
+    state: directory
+    owner: "{{ pgpool2_user }}"
+    group: "{{ pgpool2_group }}"
+    mode: 0700
+  when: pgpool2_pid_file_name is defined
+  become: true
+
+# Build the configuration file
+- name: Build configuration file {{ pgpool2_configuration_file }}
+  template:
+    src: "./templates/pgpool.conf.template"
+    dest: "{{ pgpool2_configuration_file }}"
+    owner: "{{ pgpool2_user }}"
+    group: "{{ pgpool2_group }}"
+    mode: 0600
+  become: true
+
+- name: Create pgpoolII systemd directory
+  file:
+    path: "{{ pgpool2_systemd_unit_file | dirname }}"
+    state: directory
+    owner: "root"
+    group: "root"
+    mode: 0700
+  when:
+    - pg_type == 'PG'
+    - use_system_user
+  become: true
+
+- name: Generate pgpoolII systemd unit file
+  template:
+    backup: true
+    dest: "{{ pgpool2_systemd_unit_file }}"
+    src: ./templates/pgpool-II.unit.service.template
+    mode: 0644
+  when:
+    - pg_type == 'PG'
+    - use_system_user
+  become: true
+
+- name: Generate pgpoolII systemd conf file
+  template:
+    backup: true
+    dest: "{{ pgpool2_systemd_conf_file }}"
+    src: ./templates/pgpool-II.unit.conf.template
+    mode: 0644
+  when:
+    - pg_type == 'PG'
+    - use_system_user
+  become: true
+
+- name: Stop pgpoolII service
+  systemd:
+    name: "{{ pgpool2_service_name }}"
+    state: stopped
+  when: use_system_user
+  become: true
+
+- name: Include ensure_pgpool2_process.yml tasks
+  include_tasks: ensure_pgpool2_process.yml
+  vars:
+    - _pgpool2_exists: ""
+  when: not use_system_user
+
+- name: Stop pgpool-II process
+  command: "{{ pgpool_stop_command }}"
+  when:
+    - not use_system_user
+    - _pgpool2_exists.rc is defined
+    - _pgpool2_exists.rc == 0
+  become: true
+  become_user: "{{ pgpool2_user }}"
+
+- name: Enable and start pgpoolII service
+  systemd:
+    name: "{{ pgpool2_service_name }}"
+    enabled: true
+    daemon_reload: true
+    state: started
+  when: use_system_user
+  become: true
+
+- name: Start pgpoolII process
+  command: "{{ pgpool_start_command }} -D"
+  when: not use_system_user
+  become: true
+  become_user: "{{ pgpool2_user }}"

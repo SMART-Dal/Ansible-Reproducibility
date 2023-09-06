@@ -1,0 +1,23 @@
+# Playbook to create protection policy.
+---
+- hosts: localhost
+  # => We need to gather facts to determine the OS type of
+  # => the machine
+  gather_facts: true
+  become: false
+  collections:
+    - cohesity.dataprotect
+  tasks:
+    - name: Create protection policy to cohesity server.
+      cohesity_policy:
+        cluster: "{{ cohesity_server }}"
+        username: "{{ cohesity_username }}"
+        password: "{{ cohesity_password }}"
+        validate_certs: "{{ cohesity_validate_certs }}"
+        name: 'Ansible'
+        state: 'present'
+        replication_copy:
+          - cluster_name: ClusterA
+          - cluster_name: ClusterB
+        incremental_backup_schedule:
+          periodicity: Daily

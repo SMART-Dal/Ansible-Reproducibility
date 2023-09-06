@@ -1,0 +1,104 @@
+---
+- name: Update the ca-certificates package
+  ansible.builtin.package:
+    name: ca-certificates
+    state: latest
+  become: true
+
+- name: Download PGDG GPG key for EL8, EL9
+  ansible.builtin.rpm_key:
+    key: "{{ pg_gpg_key }}"
+    state: present
+  when:
+    - ansible_distribution_major_version in ['8','9']
+    - pg_type == 'PG'
+  become: true
+
+- name: Download EPEL GPG key for EL8, EL9
+  ansible.builtin.rpm_key:
+    key: "{{ epel_gpg_key }}"
+    state: present
+  when:
+    - ansible_distribution_major_version in ['8','9']
+  become: true
+
+- name: Install EPEL repo for EL7, EL8, EL9
+  ansible.builtin.package:
+    name: "{{ epel_repo }}"
+    state: present
+  become: true
+  register: repo_try
+  retries: "{{ external_package_retries }}"
+  delay: "{{ package_retry_delay }}"
+  until: "repo_try is not failed"
+
+- name: Install PG repo for EL7, EL8, EL9
+  ansible.builtin.package:
+    name: "{{ pg_rpm_repo }}"
+    state: present
+  become: true
+  when:
+    - pg_type == 'PG'
+  register: repo_try
+  retries: "{{ external_package_retries }}"
+  until: "repo_try is not failed"
+
+- name: Install dnf-plugins-core for EL8
+  ansible.builtin.package:
+    name: dnf-plugins-core
+    state: present
+  become: true
+  when: ansible_distribution_major_version == '8'
+
+- name: Check for ubi-EL8
+  ansible.builtin.stat:
+    path: /etc/yum.repos.d/ubi.repo
+  register: ubi_state
+
+- name: Enable ubi-8-codeready-builder
+  ansible.builtin.command: >
+    dnf config-manager --set-enabled ubi-8-codeready-builder
+  when: ubi_state.stat.exists
+
+- name: Enable powertools for EL8
+  ansible.builtin.command: >
+    dnf config-manager --set-enabled powertools
+  become: true
+  when:
+    - ansible_distribution_major_version == '8'
+    - not ubi_state.stat.exists
+
+- name: Enable codeready-builder for rhel9
+  ansible.builtin.command: >
+    dnf config-manager --enable crb
+  when:
+    - ansible_distribution_major_version == '9'
+
+- name: Add additional Redhat repositories
+  ansible.builtin.yum_repository:
+    name: "{{ item.name }}"
+    description: "{{ item.description | default(item.name) }}"
+    state: present
+    baseurl: "{{ item.baseurl }}"
+    gpgcheck: "{{ item.gpgcheck | default('no') }}"
+    gpgkey: "{{ item.gpgkey | default(None) }}"
+  become: true
+  loop: "{{ yum_additional_repos }}"
+  when: yum_additional_repos | length > 0
+  register: repo_try
+  retries: "{{ external_package_retries }}"
+  delay: "{{ package_retry_delay }}"
+  until: "repo_try is not failed"
+
+# This is needed for some fresh versions of CentOS8 where this issue is met:
+# https://bugzilla.redhat.com/show_bug.cgi?id=1768206
+# Executing yum/dnf updateinfo -y makes the import of GPG keys effective even
+# if command's return is different from 0.
+- name: Execute yum updateinfo
+  ansible.builtin.shell: >
+    set -o pipefail;
+    yum updateinfo -y
+  register: updateinfo_output
+  become: true
+  failed_when: false
+  changed_when: updateinfo_output.rc != 0

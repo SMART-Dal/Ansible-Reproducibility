@@ -1,0 +1,90 @@
+---
+- name: Enable failover command
+  set_fact:
+    pgpool2_failover_configuration: >-
+      [
+        {
+          'key': 'failover_command',
+          'value': '{{ pgpool2_failover_file }} %d %h %p %D %m %H %M %P %r %R %N %S',
+          'state': 'present',
+          'quoted': true
+        },
+        {
+          'key': 'follow_primary_command',
+          'value': '{{ pgpool2_follow_primary_file }} %d %h %p %D %m %H %M %P %r %R',
+          'state': 'present',
+          'quoted': true
+        }
+      ]
+
+- name: Initialize the hba_entries variable
+  set_fact:
+    pg_hba_entries: >-
+      {{ pg_hba_entries | default([]) + [
+          {
+            'contype': 'hostssl',
+            'users': pg_superuser,
+            'databases': pg_database,
+            'source': server.private_ip + '/32'
+          }
+        ] }}
+  loop: "{{ _pg_cluster_nodes }}"
+  loop_control:
+    loop_var: server
+
+# Apply PostgreSQL hba
+- name: Allow access to between PostgreSQL servers
+  include_role:
+    name: manage_dbserver
+    tasks_from: manage_hba_conf
+    apply:
+      delegate_to: "{{ server.inventory_hostname }}"
+  vars:
+    input_pg_hba_ip_addresses: "{{ pg_hba_entries }}"
+  loop: "{{ _pg_cluster_nodes }}"
+  loop_control:
+    loop_var: server
+
+# Apply configuration changes
+- name: Include pgpool2_manage_configuration
+  include_role:
+    name: manage_pgpool2
+    tasks_from: pgpool2_manage_configuration
+  vars:
+    pgpool2_configuration_lines: "{{ pgpool2_failover_configuration }}"
+
+# This task need that manage_dbserver done 'cause need password file of pg_owner as superuser
+- name: Check {{ pg_superuser }} password file
+  ansible.builtin.stat:
+    path: "~/.pgpassfile/{{ pg_superuser }}_pass"
+  become: false
+  delegate_to: localhost
+  register: pg_superuser_pass_file
+
+- name: Read {{ pg_superuser }} pass
+  set_fact:
+    pg_superuser_password: "{{ lookup('file', '~/.pgpassfile/{{ pg_superuser }}_pass').split('\n') }}"
+  become: false
+  delegate_to: localhost
+  when: pg_superuser_pass_file.stat.exists
+
+- name: Prepare regex and entry line
+  set_fact:
+    pgpass_line: "*:{{ pg_port }}:*:{{ pg_superuser }}:{{ pg_superuser_password[0] }}"
+
+- name: Manage entries in .pgpass
+  lineinfile:
+    path: "{{ pgpass_file | default('~/.pgpass') }}"
+    line: "{{ pgpass_line }}"
+    state: "present"
+    create: true
+    owner: "{{ pg_owner }}"
+    group: "{{ pg_group }}"
+    mode: "0600"
+  no_log: "{{ disable_logging }}"
+  become: true
+  become_user: "{{ pg_owner }}"
+  delegate_to: "{{ server.inventory_hostname }}"
+  loop: "{{ _pg_cluster_nodes }}"
+  loop_control:
+    loop_var: server
