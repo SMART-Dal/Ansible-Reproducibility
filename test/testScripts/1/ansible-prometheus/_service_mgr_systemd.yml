@@ -1,0 +1,12 @@
+---
+- name: Create {{ ansible_service_mgr }} configuration file for {{ prometheus_software_service_name }} service
+  become: true
+  template:
+    dest: '/etc/systemd/system/{{ prometheus_software_service_name }}.service'
+    src: templates/daemon-systemd.j2
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - Force systemd to reread configs
+    - Restart Prometheus service

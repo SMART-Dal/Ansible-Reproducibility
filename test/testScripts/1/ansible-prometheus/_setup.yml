@@ -1,0 +1,10 @@
+---
+- name: Gather Architecture specific variables
+  include_vars: 'os-architecture/{{ ansible_system }}-{{ ansible_architecture }}.yml'
+
+- name: Include role mesaguy.prometheus common task
+  include: _common.yml
+
+- name: Define setup as complete
+  set_fact:
+    prometheus_setup_task_executed: true

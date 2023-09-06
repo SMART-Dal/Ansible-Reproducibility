@@ -1,0 +1,5 @@
+---
+- name: install tor package from universe
+  ansible.builtin.apt:
+    name: tor
+...

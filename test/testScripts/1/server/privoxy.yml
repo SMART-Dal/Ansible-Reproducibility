@@ -1,0 +1,64 @@
+---
+- name: install privoxy package (changes might be hidden)
+  ansible.builtin.apt:
+    name: privoxy
+  register: apt_privoxy_result
+  ## default privoxy configuration on bionic+ fails without ipv6 loopback
+  failed_when:
+    - apt_privoxy_result is failed
+    - ipv6_or_xenial |bool
+  ## workaround for idempotence - setup is not complete if post-install actions failed
+  changed_when:
+    - apt_privoxy_result is changed
+    - ipv6_or_xenial |bool
+  vars:
+    ipv6_or_xenial: "{{ ansible_lo.ipv6 is defined
+                     or ansible_lsb.codename == 'xenial' }}"
+  ## silence verbose error message
+  no_log: "{{ hide_secrets |bool }}"
+
+- name: disable listener on ipv6 loopback (fails on travis)
+  ansible.builtin.lineinfile:
+    path: /etc/privoxy/config
+    regexp: '^(listen-address\s+\[::1\]:.*)'
+    line: '#\1'
+    backrefs: true
+  notify: restart privoxy service
+
+- name: finish privoxy installation after fixing listener (for idempotence)
+  ansible.builtin.apt:
+    name: privoxy
+
+- name: configure privoxy listen port
+  ansible.builtin.lineinfile:
+    path: /etc/privoxy/config
+    ## default configuration on bionic+ has two listen addresses:
+    ##  listen-address  127.0.0.1:8118
+    ##  listen-address  [::1]:8118
+    ## we want to skip the second line and avoid service error
+    regexp: '^#?listen-address(?!\s+\[::1\])'
+    line: 'listen-address  {{ tor_privoxy_bindip }}:{{ tor_privoxy_port }}'
+  notify: restart privoxy service
+
+- name: configure tor forwarding in privoxy
+  ansible.builtin.lineinfile:
+    path: /etc/privoxy/config
+    regexp: "^#?forward-socks5"
+    line: "forward-socks5 / 127.0.0.1:{{ tor_socks_port }} ."
+  notify: restart privoxy service
+
+- name: activate privoxy service
+  ansible.builtin.systemd:
+    name: privoxy
+    enabled: true
+
+- name: configure privoxy log compression
+  ansible.builtin.replace:
+    path: /etc/logrotate.d/privoxy
+    regexp: "{{ lookbehind }}(compress|delaycompress)"
+    replace: "{{ commentout }}\\1"
+  vars:
+    lookbehind: "{{ lin_compress_logs |bool |ternary('(?:#\\s*)','(?<!#)') }}"
+    commentout: "{{ lin_compress_logs |bool |ternary('','#') }}"
+  when: lin_compress_logs is not none
+...

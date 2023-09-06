@@ -1,0 +1,93 @@
+---
+- name: Install icinga agent without agent registration
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - telekom_mms.ansible_collection_icinga.icinga_agent
+  vars:
+    icinga_agent_endpoints:
+      - name: icinga2-master1.localdomain
+        host: 192.154.44.101
+      - name: icinga2-satellite1.localdomain
+        host: 192.154.44.107
+    icinga_agent_zones:
+      - name: master
+        endpoints:
+          - icinga2-master1.localdomain
+      - name: satellite
+        endpoints:
+          - icinga2-satellite1.localdomain
+        parent: master
+  post_tasks:
+    - name: Verify that icinga2.conf exists
+      ansible.builtin.file:
+        path: /etc/icinga2/icinga2.conf
+      register: result_icinga2_conf
+
+    - name: Validate icinga2.conf results
+      ansible.builtin.assert:
+        that:
+          - result_icinga2_conf.state == 'file'
+          - result_icinga2_conf.mode == '0640'
+          - result_icinga2_conf.changed == true
+
+    - name: Verify that constants.conf exists
+      ansible.builtin.file:
+        path: /etc/icinga2/constants.conf
+      register: result_constants_conf
+
+    - name: Validate constants.conf results
+      ansible.builtin.assert:
+        that:
+          - result_constants_conf.state == 'file'
+          - result_constants_conf.mode == '0640'
+          - result_constants_conf.changed == true
+
+    - name: Verify that zones.conf exists
+      ansible.builtin.file:
+        path: /etc/icinga2/zones.conf
+      register: result_zones_conf
+
+    - name: Validate zones.conf results
+      ansible.builtin.assert:
+        that:
+          - result_zones_conf.state == 'file'
+          - result_zones_conf.mode == '0640'
+          - result_zones_conf.changed == true
+
+    - name: Verify that api.conf exists
+      ansible.builtin.file:
+        path: /etc/icinga2/features-available/api.conf
+      register: result_api_conf
+
+    - name: Validate api.conf results
+      ansible.builtin.assert:
+        that:
+          - result_api_conf.state == 'file'
+          - result_api_conf.mode == '0640'
+          - result_api_conf.changed == true
+
+    - name: Verify that icinga2 package is installed
+      ansible.builtin.yum:
+        name: icinga2
+      register: redhat_package_check
+      when: ansible_facts['os_family'] == "RedHat"
+
+    - name: Verify that icinga2 package is installed
+      ansible.builtin.command: dpkg-query -l icinga2
+      register: debian_package_check
+      changed_when: false
+      failed_when: debian_package_check.rc != 0
+      when: ansible_facts['os_family'] == "Debian"
+
+    - name: Validate that package icinga2 is installed
+      ansible.builtin.assert:
+        that:
+          - redhat_package_check.changed == false
+      when: ansible_facts['os_family'] == "RedHat"
+
+    - name: Validate that package icinga2 is installed
+      ansible.builtin.assert:
+        that:
+          - debian_package_check.state == 'installed'
+      when: ansible_facts['os_family'] == "Debian"

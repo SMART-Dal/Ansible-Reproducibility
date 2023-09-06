@@ -82,19 +82,19 @@ collections:
     type: git
     version: master
 
-  - name: https://github.com/osism/ansible-collection-commons.git
+  - name: https://github.com/osism/ansible-collection-mon-commons.git
     type: git
     version: main
 
-  - name: https://github.com/osism/ansible-collection-services.git
+  - name: https://github.com/osism/ansible-collection-mon-services.git
     type: git
     version: main
 
-  - name: https://github.com/osism/ansible-collection-validations.git
+  - name: https://github.com/osism/ansible-collection-mon-validations.git
     type: git
     version: main
 
-  - name: https://github.com/stackhpc/ansible-collection-cephadm.git
+  - name: https://github.com/stackhpc/ansible-collection-mon-cephadm.git
     type: git
     version: master
 

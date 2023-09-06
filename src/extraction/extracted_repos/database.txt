@@ -1,6 +1,5 @@
 https://github.com/zauberpony.git
 https://api.github.com/repos/jradtilbrook/ansible-role-pgbouncer.git
-https://github.com/ansible-collections/community.elastic/tree/master/docs.git
 https://github.com/natefoo.git
 https://api.github.com/repos/andrewrothstein/ansible-couchdb.git
 https://api.github.com/repos/geerlingguy/ansible-role-mysql.git
@@ -8,13 +7,11 @@ https://github.com/cohesity/ansible-collection.git
 https://github.com/tmaxopensql/pg-ansible.git
 https://github.com/akimrx/community.proxysql.git
 https://github.com/stuvusIT.git
-https://github.com/Azure.git
 https://github.com/ivansible.git
 https://github.com/ns1.git
 https://github.com/alikins.git
 https://api.github.com/repos/DevoInc/ansible-redis.git
 https://api.github.com/repos/lesmyrmidons/ansible-role-mongodb.git
-https://twitter.com/devsecio.git
 https://github.com/jabdr/sql_query.git
 https://api.github.com/repos/girder/ansible-role-girder-mongodb.git
 https://api.github.com/repos/trainline-eu/ansible-barman-role.git
@@ -65,12 +62,9 @@ https://api.github.com/repos/hifis-net/ansible-role-redis.git
 https://api.github.com/repos/buluma/ansible-role-mysql.git
 https://ansible-collections.github.io/community.cassandra/.git
 https://github.com/ansible-collections/community.cockroachdb.git
-https://github.com/manala/ansible-roles.git
 https://api.github.com/repos/DavidWittman/ansible-redis.git
 https://github.com/DavidWittman.git
-https://github.com/manala.git
 https://github.com/tmaxopensql.git
-https://docs.ansible.com/ansible/latest/collections/community/postgresql.git
 https://api.github.com/repos/inmotionhosting/ansible-role-mysql.git
 https://api.github.com/repos/webplates/ansible-role-xtrabackup.git
 https://github.com/linux-system-roles/mssql.git

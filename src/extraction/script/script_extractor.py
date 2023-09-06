@@ -67,6 +67,5 @@ def clone_github_yml_files(links):
 
 if __name__ == '__main__':
     # Provide a list of GitHub repository links
-    repository_links = ['https://github.com/serverscom/serverscom-ansible']
-
+    repository_links = ['https://github.com/achinnapurkar/ansible_virsec_vsp']
     clone_github_yml_files(repository_links)

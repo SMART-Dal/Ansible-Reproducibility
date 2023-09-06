@@ -1,0 +1,5 @@
+---
+- name: "{{ icinga2_state }} service icinga2"
+  service:
+    name: icinga2
+    enabled: "{{ icinga2_enabled }}"

@@ -1,0 +1,7 @@
+---
+
+- name: JMX_EXPORTER | Configuring service
+  systemd:
+    name: jmx_exporter
+    enabled: "{{ jmx_exporter_service_enabled }}"
+    daemon_reload: true

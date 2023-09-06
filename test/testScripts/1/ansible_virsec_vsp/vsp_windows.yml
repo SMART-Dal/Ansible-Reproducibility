@@ -1,0 +1,46 @@
+---
+- hosts: all
+  vars_files:
+   - vars/windows.yml
+  remote_user: "{{ansible_user}}"
+  become_method: runas
+  become: no
+  gather_facts: False
+  tasks:
+    - name: Remove if executable present on Local Machine
+      shell: chdir=/tmp {{ item }}
+      with_items:
+      - rm -f vsp_install_vm.sh
+      when: lfr_ip is defined
+      ignore_errors: true
+      delegate_to: 127.0.0.1
+      args:
+        warn: false
+    - name: Download Virsec ASI Installables
+      get_url:
+        url: http://{{ lfr_ip }}/vsp/vsp_install_vm.bat
+        dest: /tmp
+        mode: '0755'
+      when: lfr_ip is defined
+      delegate_to: 127.0.0.1
+    - name: Remove a installation file, before newer download
+      win_file:
+         path: C:\vsp_install_vm.bat
+      when: lfr_ip is defined
+    - name: Copy a single file keeping the filename
+      win_copy:
+         src: /tmp/vsp_install_vm.bat
+         dest: C:\
+      when: lfr_ip is defined
+    - name: Install Virsec ASI
+      win_shell: "{{ install_var }}"
+      args:
+         executable: cmd.exe
+         chdir: 'C:\'
+    - name: wait till installation complete
+      command: sleep 30
+      delegate_to: 127.0.0.1
+    - name: Restart VSP service
+      win_service:
+          name: VSP ASI
+      when: lfr_ip is defined
