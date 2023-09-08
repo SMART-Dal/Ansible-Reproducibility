@@ -1,0 +1,38 @@
+---
+name: Consistency tests
+
+on: [push, pull_request]
+
+jobs:
+  consistency-tests:
+    if: |
+      github.event_name == 'push' ||
+      github.event_name == 'pull_request' && github.event.pull_request.head.repo.owner.login != 'tarantool'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Cache python dependencies
+        id: python-dependencies
+        uses: actions/cache@v2
+        with:
+          path: 'venv'
+          key: venv-3.9-${{ hashFiles('./requirements.txt') }}
+
+      - name: Install Python requirements
+        if: steps.python-dependencies.outputs.cache-hit != 'true'
+        run: |
+          python -V
+          python -m venv venv
+          venv/bin/pip install --upgrade -r requirements.txt
+
+      - name: Run linter
+        run: venv/bin/python -m flake8 consistency
+
+      - name: Run consistency tests
+        run: venv/bin/python -m unittest discover -v consistency

@@ -1,0 +1,11 @@
+---
+- name: Clean up docker containers
+  community.docker.docker_container:
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ docker_containers }}"
+
+- name: Clean up docker volumes
+  community.docker.docker_volume:
+    name: "{{ item }}"
+  with_items: "{{ docker_volumes }}"

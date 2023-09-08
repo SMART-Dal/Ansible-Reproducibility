@@ -1,0 +1,36 @@
+---
+
+- when:
+    - cartridge_restore_backup_path is none
+    - cartridge_restore_backup_path_local is not none
+  block:
+    - name: 'Create backups dir'
+      file:
+        path: '{{ cartridge_remote_backups_dir }}'
+        owner: '{{ cartridge_app_user }}'
+        group: '{{ cartridge_app_group }}'
+        mode: 0750
+      when: inventory_hostname in single_instances_for_each_machine
+
+    - name: 'Upload local backup'
+      copy:
+        src: '{{ cartridge_restore_backup_path_local }}'
+        dest: '{{ cartridge_remote_backups_dir | cartridge_add_trailing_slash }}'
+      register: cartridge_upload_archive_res
+
+    - name: 'Set remote restore path'
+      set_fact:
+        cartridge_restore_backup_path: '{{ cartridge_upload_archive_res.dest }}'
+
+- name: 'Restore instance from archive'
+  cartridge_restore_instance:
+    instance_info: '{{ instance_info }}'
+    app_user: '{{ cartridge_app_user }}'
+    app_group: '{{ cartridge_app_group }}'
+    paths_to_keep_before_restore: '{{ cartridge_paths_to_keep_before_restore }}'
+    restore_backup_path: '{{ cartridge_restore_backup_path }}'
+    remote_backups_dir: '{{ cartridge_remote_backups_dir }}'
+    force_restore: '{{ cartridge_force_restore }}'
+    allow_alien_backups: '{{ cartridge_allow_alien_backup }}'
+    skip_cleanup_on_restore: '{{ cartridge_skip_cleanup_on_restore }}'
+  register: cartridge_restore_instance_res

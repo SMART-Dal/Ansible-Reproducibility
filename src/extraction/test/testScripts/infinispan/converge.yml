@@ -1,0 +1,83 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: yes
+  roles:
+    - role: infinispan
+      infinispan_nodename: instance1
+      infinispan_service_name: instance1
+      infinispan_supervisor_password: "remembertochangeme"
+      infinispan_users:
+        - { name: 'testuser', password: 'test', roles: 'observer' }
+      infinispan_caches:
+        - cache_xml: >
+            <local-cache name="teststaticcachexml" statistics="true">
+              <encoding media-type="application/x-protostream"/>
+            </local-cache>
+        - cache_config:
+            name: configuredstaticcache
+            template: replicated
+            mode: ASYNC
+            statistics: True
+    - role: infinispan
+      infinispan_nodename: instance2
+      infinispan_service_name: instance2
+      infinispan_supervisor_password: "remembertochangeme2"
+      infinispan_port_offset: 100
+      infinispan_dest: /opt/infinispan-2/
+      infinispan_users:
+        - { name: 'testuser2', password: 'test2', roles: 'deployer' }
+      infinispan_caches:
+        - cache_xml: >
+            <local-cache name="teststaticcachexml" statistics="true">
+              <encoding media-type="application/x-protostream"/>
+            </local-cache>
+        - cache_config:
+            name: configuredstaticcache
+            template: replicated
+            mode: ASYNC
+            statistics: True
+    - role: infinispan_cache
+      infinispan_deployer_user: "supervisor"
+      infinispan_deployer_password: "remembertochangeme"
+      infinispan_cache_xml: >
+        <local-cache name="testcachexml" statistics="true">
+          <encoding media-type="application/x-protostream"/>
+        </local-cache>
+    - role: infinispan_cache
+      infinispan_deployer_user: "supervisor"
+      infinispan_deployer_password: "remembertochangeme"
+      infinispan_cache_config:
+        name: configuredcache
+        template: replicated
+        mode: ASYNC
+        unreliable_return_values: true
+        transaction_mode: NONE
+        transaction_locking: PESSIMISTIC
+        memory_max_size: '100000000'
+        memory_when_full: 'REMOVE'
+        expiration_lifespan: 60000
+        expiration_max_idle: 10000
+        persistence: false
+        indexing: false
+        statistics: True
+    - role: infinispan_cache
+      infinispan_deployer_user: "supervisor"
+      infinispan_deployer_password: "remembertochangeme"
+      infinispan_cache_config:
+        name: configuredcachexa
+        template: distributed
+        mode: SYNC
+        unreliable_return_values: true
+        transaction_mode: FULL_XA
+        transaction_locking: PESSIMISTIC
+        memory_max_count: '1000'
+        memory_when_full: 'REMOVE'
+        expiration_lifespan: 600000
+        expiration_max_idle: 30000
+        persistence: false
+        statistics: false
+        indexing: true
+        indexing_entities:
+          - org.infinispan.sample.Car
+          - book_sample.Book

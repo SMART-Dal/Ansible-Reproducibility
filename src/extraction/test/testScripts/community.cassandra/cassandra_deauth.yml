@@ -1,0 +1,82 @@
+---
+# (c) 2020,  Rhys Campbell <rhys.james.campbell@googlemail.com>
+
+# This file contains tasks to remove auth from a Cassandra instance
+
+# This file is part of Ansible
+#
+# Ansible is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# Ansible is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
+
+# ============================================================
+- name: Include vars for os family
+  include_vars:
+    file: "{{ ansible_os_family }}.yml"
+
+- name: Unset authenticator in cassandra.yml
+  lineinfile:
+    path: "{{ cassandra_yml_file }}"
+    regexp: "{{ cassandra_regexp }}"
+    line: "authenticator: AllowAllAuthenticator"
+
+- name: Unset authorizer in cassandra.yml
+  lineinfile:
+    path: "{{ cassandra_yml_file }}"
+    regexp: "{{ cassandra_regexp_auth }}"
+    line: "authorizer: AllowAllAuthorizer"
+
+- name: Remove lines for nodetool auth to cassandra-env.sh
+  blockinfile:
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - nodetool auth"
+    dest: "{{ cassandra_env_file }}"
+    block: |
+      JVM_OPTS="$JVM_OPTS -Djava.security.auth.login.config=$CASSANDRA_HOME/cassandra-jaas.config"
+      JVM_OPTS="$JVM_OPTS -Dcassandra.jmx.authorizer=org.apache.cassandra.auth.jmx.AuthorizationProxy"
+
+- name: Deactivate local jmx
+  lineinfile:
+    path:  "{{ cassandra_env_file }}"
+    regexp: '^if \[ \"\$LOCAL_JMX\" \=*'
+    line: 'if [ "$LOCAL_JMX" = "yes" ]; then'
+
+- name: Remove jmx auth options
+  blockinfile:
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - JMX Auth -->"
+    path: "{{ cassandra_env_file }}"
+    block: |
+      JVM_OPTS="$JVM_OPTS -Dcom.sun.management.jmxremote.authenticate=true"
+      JVM_OPTS="$JVM_OPTS -Dcom.sun.management.jmxremote.password.file=/etc/cassandra/jmxremote.password"
+      JVM_OPTS="$JVM_OPTS -Dcom.sun.management.jmxremote.access.file=/etc/cassandra/jmxremote.access"
+
+- name: Restart cassandra
+  service:
+    name: "{{ cassandra_service }}"
+  register: cassandra_restarted
+
+- name: Wait for Cassandra to become active
+  wait_for:
+    port: 9042
+    host: 0.0.0.0
+    delay: 10
+  when: cassandra_restarted.changed == True
+
+- pause:
+    seconds: 10
+  when: cassandra_restarted.changed == True
+
+- name: Test nodetool without auth from shell
+  command: nodetool status
+
+- name: Test cqlsh access without auth
+  command: cqlsh localhost  --execute "DESC KEYSPACES"
+  register: cqlsh_login

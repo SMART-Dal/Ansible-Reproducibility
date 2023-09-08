@@ -1,0 +1,58 @@
+---
+- name: "[Debian] Determine required MySQL Python libraries"
+  set_fact:
+    mysql_python_package: "python3-mysqldb"
+  when:
+    - ("python3" in ansible_python_interpreter|default(''))
+    - ansible_os_family == 'Debian'
+
+- name: "[Debian] Determine required MySQL Python libraries"
+  set_fact:
+    mysql_python_package: "python-mysqldb"
+  when:
+    - ("python3" not in ansible_python_interpreter|default(''))
+    - ansible_os_family == 'Debian'
+
+- name: "[RedHat] Determine required MySQL Python libraries"
+  set_fact:
+    mysql_python_package: "MySQL-python"
+  when:
+    - ansible_os_family == 'RedHat'
+
+- name: Ensure required Python libraries are installed
+  package:
+    name: "{{ mysql_python_package }}"
+    state: present
+
+- name: Create a MySQL backup user
+  mysql_user:
+    name: "{{ xtrabackup_mysql_user_name }}"
+    host: localhost
+    password: "{{ xtrabackup_mysql_user_password }}"
+    state: present
+
+# mysql_user is buggy, which is why this is a "command"
+- name: Add full-backup privileges for MySQL backup user
+  command: >-
+    mysql -e
+    "GRANT {{ ','.join(xtrabackup_mysql_grants) }}
+    ON *.*
+    TO '{{ xtrabackup_mysql_user_name }}'@'localhost';"
+  changed_when: false
+
+- name: "Add SELECT on `performance_schema`"
+  command: >-
+    mysql -e
+    "GRANT SELECT
+    ON performance_schema.*
+    TO '{{ xtrabackup_mysql_user_name }}'@'localhost';"
+  changed_when: false
+
+- name: Create .my.cnf file with backup user credentials
+  template:
+    src: "my.cnf.j2"
+    dest: "{{ xtrabackup_system_user.home }}/.my.cnf"
+    owner: "{{ xtrabackup_system_user.name }}"
+    group: "{{ xtrabackup_system_user.name }}"
+    mode: 0600
+  when: xtrabackup_create_system_user

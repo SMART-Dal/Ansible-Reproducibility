@@ -1,0 +1,18 @@
+---
+- name: Validate parameters
+  ansible.builtin.assert:
+    that:
+      - cache is defined
+      - cache.name is defined
+      - infinispan_url is defined
+      - method is defined
+    quiet: true
+
+- name: "Ensure cache {{ cache.name }} exists"
+  ansible.builtin.uri:
+    url: "{{ infinispan_url }}{{ infinispan_rest_cache_api_path }}{{ cache.name }}"
+    method: "{{ method }}"
+    user: "{{ jdg_username | default(omit) }}"
+    password: "{{ jdg_password | default(omit) }}"
+    force_basic_auth: yes
+    status_code: 200

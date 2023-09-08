@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  role_name: xtrabackup
+  author: sagikazarmark
+  description: Percona XtraBackup
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - cosmic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: el
+  galaxy_tags:
+    - database
+    - backup
+    - mysql
+    - mariadb
+    - db
+    - sql
+    - percona
+    - xtrabackup
+
+dependencies: []

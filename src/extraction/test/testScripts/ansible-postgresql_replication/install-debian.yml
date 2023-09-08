@@ -1,0 +1,5 @@
+---
+
+- name: "Debian: Install rsync package"
+  apt:
+    name: rsync

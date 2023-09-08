@@ -1,4 +1,8 @@
+import importlib
 import os
+import subprocess
+import sys
+
 import requests
 
 
@@ -12,6 +16,25 @@ def check_url_validity(url):
         else:
             return False
     except requests.ConnectionError:
+        return False
+
+
+def is_newer_version_available(package_name, installed_version, package_manager):
+    try:
+        manager_module = importlib.import_module(package_manager)
+        available_version = subprocess.check_output(
+            [manager_module.find_program(package_manager), 'info', package_name]).decode("utf-8")
+
+        # Parse the available version from the package manager's output
+        available_version = available_version.splitlines()[0].split()[-1]
+
+        if installed_version == available_version:
+            return False  # No newer version available
+        else:
+            return True  # A newer version is available
+
+    except (ImportError, subprocess.CalledProcessError):
+        print(f"An error occurred while using {package_manager} to check for updates.")
         return False
 
 
@@ -109,6 +132,9 @@ def check_task_for_outdated_package(task):
                     if is_latest_install(installer, task[t]) or is_update_cache(task[t]):
                         messages.append(f"Task uses {installer['name']} to install the latest packages.")
                     else:
+                        if 'version' in task[t]:
+                            if is_newer_version_available(task['name'],task['version'], installer['name']):
+                                messages.append("Task is downloading an outdated version of the package")
                         messages.append(
                             "The installed package could become outdated because the script does not update it.")
 
@@ -149,6 +175,7 @@ def check_task_for_idempotency(task):
         'win_command': "Task violates idempotency because it executes a command on windows.",
         'win_shell': "Task violates idempotency because it executes a command on windows.",
         'ansible.windows.win_optional_feature': "Task violates idempotency because it executes a command on windows.",
+
         'ansible.windows.win_package': 'Task violates idempotency because it installs a package on windows.',
         'apt': "Task violates idempotency because it installs or upgrades packages with apt.",
         'snap': "Task violates idempotency because it installs or upgrades packages with snap.",
@@ -160,6 +187,7 @@ def check_task_for_idempotency(task):
         'pacman': "Task violates idempotency because it installs packages with pacman.",
         'pip': "Task violates idempotency because it installs packages with pip.",
         'apt_get': "Task violates idempotency because it installs packages with apt-get.",
+
         'volume': "Task violates idempotency because it creates an object without checking the existence.",
         'user': "Task violates idempotency because it creates a user without checking the existence.",
         'group': "Task violates idempotency because it creates a group without checking the existence.",

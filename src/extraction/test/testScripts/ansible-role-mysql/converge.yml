@@ -1,16 +1,17 @@
 ---
 - name: Converge
   hosts: all
-  become: true
+  become: yes
+  gather_facts: yes
 
   roles:
-    - role: geerlingguy.mysql
-
-  post_tasks:
-    - name: Make sure we can connect to MySQL via Unix socket.
-      ansible.builtin.command: "mysql -u root -proot -e 'show databases;'"
-      changed_when: false
-
-    - name: Make sure we can connect to MySQL via TCP.
-      ansible.builtin.command: "mysql -u root -proot -h 127.0.0.1 -e 'show databases;'"
-      changed_when: false
+    - role: ansible-role-mysql
+      mysql_databases:
+        - name: my_db
+          encoding: utf8
+          collation: utf8_bin
+      mysql_users:
+        - name: my_user
+          password: my_pass
+          priv: "my_db.*:ALL"
+          update_password: on_create
