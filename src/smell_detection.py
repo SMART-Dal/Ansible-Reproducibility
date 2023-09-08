@@ -132,9 +132,9 @@ def check_task_for_outdated_package(task):
                     if is_latest_install(installer, task[t]) or is_update_cache(task[t]):
                         messages.append(f"Task uses {installer['name']} to install the latest packages.")
                     else:
-                        if 'version' in task[t]:
-                            if is_newer_version_available(task['name'],task['version'], installer['name']):
-                                messages.append("Task is downloading an outdated version of the package")
+                        # if 'version' in task[t]:
+                        #     if is_newer_version_available(task['name'],task['version'], installer['name']):
+                        #         messages.append("Task is downloading an outdated version of the package")
                         messages.append(
                             "The installed package could become outdated because the script does not update it.")
 
