@@ -21,10 +21,8 @@ https://github.com/amotolani/fmc_collections.git
 https://github.com/F5Networks/f5-ansible-f5modules.git
 https://github.com/ansible-collections/ansible.snmp.git
 https://github.com/FragmentedPacket/netbox_modules.git
-https://github.com/ansible-collections/dellemc.os6.git
 https://github.com/vladgh/ansible-collection-vladgh-samba.git
 https://github.com/huaweicloud/huaweicloud-ansible-modules.git
-https://github.com/ansible-collections/openvswitch.openvswitch.git
 https://github.com/aristanetworks/ansible-cvp.git
 https://github.com/commscope-ruckus/commscope.icx.git
 https://github.com/infobloxopen/infoblox-ansible.git
