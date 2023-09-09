@@ -67,5 +67,5 @@ def clone_github_yml_files(links):
 
 if __name__ == '__main__':
     # Provide a list of GitHub repository links
-    repository_links = ['https://github.com/ansible-collections/community.proxysql.git']
+    repository_links = ['https://github.com/ansible-middleware.git']
     clone_github_yml_files(repository_links)

@@ -1,0 +1,9 @@
+---
+- name: Install additional packages (Debian/Ubuntu)
+  ansible.builtin.apt:
+    name: "{{ additional_packages }}"
+    update_cache: true
+  register: common_apt_task_result
+  until: common_apt_task_result is success
+  retries: 3
+  delay: 2
