@@ -1,5 +1,3 @@
-https://github.com/davidban77/ansible-collection-gns3.git
-https://github.com/ansible-collections/dellemc.enterprise_sonic.git
 https://github.com/aruba/aos-switch-ansible-collection.git
 https://github.com/CiscoDevNet/ansible-meraki.git
 https://github.com/ansible/receptor-collection.git
@@ -7,13 +5,11 @@ https://github.com/clay584/genie_collection.git
 https://github.com/ssol-smartcs/ansible-collections.git
 https://github.com/ansible-collections/cisco.asa.git
 https://github.com/skupperproject/skupper-ansible.git
-https://github.com/ansible-collections/asterfusion.asternos.git
 https://github.com/mrichardson03/mrichardson03.panos.git
 https://github.com/netbox-community/ansible_modules.git
 https://github.com/renatoalmeidaoliveira/netero.git
 https://github.com/CiscoDevNet/ansible-dcnm.git
 https://github.com/CiscoISE/ansible-ise.git
-https://github.com/yamaha-network/ansible-collection-swx.git
 https://github.com/opengear/opengear.om.git
 https://github.com/a10networks/a10-acos-cli.git
 https://github.com/lablabs/ansible-collection-wireguard.git
@@ -25,7 +21,6 @@ https://github.com/amotolani/fmc_collections.git
 https://github.com/F5Networks/f5-ansible-f5modules.git
 https://github.com/ansible-collections/ansible.snmp.git
 https://github.com/FragmentedPacket/netbox_modules.git
-https://github.com/ansible-collections/junipernetworks.junos.git
 https://github.com/ansible-collections/dellemc.os6.git
 https://github.com/vladgh/ansible-collection-vladgh-samba.git
 https://github.com/huaweicloud/huaweicloud-ansible-modules.git
@@ -33,8 +28,6 @@ https://github.com/ansible-collections/openvswitch.openvswitch.git
 https://github.com/aristanetworks/ansible-cvp.git
 https://github.com/commscope-ruckus/commscope.icx.git
 https://github.com/infobloxopen/infoblox-ansible.git
-https://github.com/alliedtelesis/ansible_awplus.git
-https://github.com/extremenetworks/ansible_collections.extreme.exos.git
 https://github.com/CiscoDevNet/ansible-nae.git
 https://github.com/ansible-collections/cisco.nxos.git
 https://github.com/CiscoDevNet/ansible-mso.git

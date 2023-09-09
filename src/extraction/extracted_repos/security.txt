@@ -4,7 +4,6 @@ https://github.com/dseeley/ansible_vault_pipe.git
 https://github.com/GMedian/vulners-ansible.git
 https://github.com/ansible-collections/cisco.asa.git
 https://github.com/joelwking/pensando.git
-https://github.com/sysdiglabs/agent-ansible-collection.git
 https://github.com/ansible-collections/community.asa.git
 https://github.com/illumio/illumio.core.git
 https://github.com/CiscoDevNet/FMCAnsible.git
@@ -12,7 +11,6 @@ https://github.com/manala/ansible-roles.git
 https://github.com/ansible-collections/ansible.network.git
 https://github.com/ansible-collections/ansible.netcommon.git
 https://github.com/ansible-collections/splunk.es.git
-https://github.com/fortinetps/ansible-galaxy-remote-console-collection.git
 https://github.com/ansible-middleware/keycloak.git
 https://github.com/borari/pentesting_collection.git
 https://github.com/PaloAltoNetworks/skillet_ansible.git
@@ -24,7 +22,6 @@ https://github.com/nleiva/capirca_acl.git
 https://github.com/mayaCostantini/sigstore-roles.git
 https://github.com/dimitry-dukhovny/ddansible.git
 https://github.com/charlesrocket/freebsd-collection.git
-https://github.com/RedHatInsights/ansible-collections-insights.git
 https://github.com/lablabs/ansible-collection-wireguard.git
 https://github.com/Tirasa/SyncopeAnsible.git
 https://github.com/DaftPyPosh/vSphereSCG.git
@@ -36,17 +33,13 @@ https://github.com/felixfontein/ansible-acme.git
 https://github.com/HewlettPackard/iLO-ansible-collection.git
 https://github.com/RedHatInsights.git
 https://github.com/vulnersCom/vulners-ansible.git
-https://gitlab.com/pensando/tbd/netops/ansible/dss-ansible-collection.git
 https://github.com/masterlittle/ansible_google-secret-manager.git
 https://github.com/jgoutin/ansible_home.git
 https://gitlab.com/shiftsystems/ansible-playbooks.git
 https://github.com/ansible-collections/symantec.epm.git
-https://github.com/1Password/ansible-onepasswordconnect-collection.git
 https://github.com/DelineaXPM/ansible-core-collection.git
-https://github.com/PaloAltoNetworks.git
 https://github.com/wesmarcum/ansible-collection-firewall.git
 https://github.com/vandycknick/ansible-collection-security.git
-https://gitlab.com/consensus.enterprises/ansible-roles/ansible-role-wireguard-cloud-gateway.git
 https://github.com/nginxinc/ansible-collection-nginx.git
 https://github.com/PaloAltoNetworks/pan-os-ansible.git
 https://github.com/ansible-collections/trendmicro.deepsec.git

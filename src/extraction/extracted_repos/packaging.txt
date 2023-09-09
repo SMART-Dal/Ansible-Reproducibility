@@ -1,18 +1,14 @@
 https://github.com/chocolatey/chocolatey-ansible.git
 https://github.com/geerlingguy/ansible-role-pip.git
 https://github.com/geerlingguy/ansible-role-packer.git
-https://github.com/mullholland/ansible-role-repository_hashicorp.git
 https://github.com/andrewrothstein/ansible-packer.git
-https://github.com/computology/packagecloud-ansible-role.git
 https://github.com/GROG/ansible-role-package.git
 https://github.com/zaxos/docker-ce-ansible-role.git
-https://github.com/igor-nikiforov/ansible-role-docker.git
 https://github.com/sbaerlocher/ansible.wp-cli.git
 https://github.com/alikins/top_geerlingguy.git
 https://github.com/geerlingguy/ansible-role-composer.git
 https://github.com/T2L/ansible-role-composer.git
 https://github.com/nickjj/ansible-docker.git
-https://github.com/geerlingguy/ansible-role-repo-remi.git
 https://github.com/kobanyan/jenkins-jnlp-slave.git
 https://github.com/arillso/ansible.docker.git
 https://github.com/geerlingguy/ansible-role-repo-epel.git
@@ -31,8 +27,6 @@ https://github.com/giovtorres/ansible-role-epel.git
 https://github.com/exploide/ansible-role-dnf-automatic.git
 https://github.com/elnappo/ansible-role-apt-cacher-ng.git
 https://github.com/moviedo/ansible-role-nvm.git
-https://github.com/markosamuli/ansible-linuxbrew.git
-https://github.com/RedHatInsights.git
 https://github.com/diodonfrost/ansible-role-vagrant.git
 https://github.com/ocha/ansible-role-yarn.git
 https://github.com/geerlingguy/ansible-role-jenkins.git
