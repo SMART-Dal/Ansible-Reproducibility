@@ -1,0 +1,24 @@
+# Install and configure Bacul-client on Debian
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+  changed_when: false
+
+- name: install bacula-client package on Debian/Ubuntu
+  apt:
+    name: bacula-client
+
+- name: Import bacula template
+  template:
+    src: bacula-fd.conf.j2
+    dest: /etc/bacula/bacula-fd.conf
+    owner: root
+    group: bacula
+    mode: 0660
+  notify: "(Handler: All Linux/Unix OSs) Restart bacula-fd"
+
+- name: Manage bacula-fd service
+  service:
+    name: bacula-fd
+    enabled: yes

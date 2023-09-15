@@ -1,0 +1,11 @@
+---
+# Install puppet-agent on Solaris
+
+- name: Solaris | Install puppet-agent
+  package:
+    name: "{{ puppet_agent_package_os }}"
+
+- name: Solaris | Puppet-agent service
+  service:
+    name: "{{ puppet_agent_service }}"
+    enabled: yes

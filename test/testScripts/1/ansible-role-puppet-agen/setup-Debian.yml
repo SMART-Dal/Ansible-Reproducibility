@@ -1,0 +1,25 @@
+---
+# add Puppetlabs repository in Debian
+
+- name: Debian | Add Puppetlabs apt key
+  apt_key:
+    data: "{{ lookup('url', item, split_lines=False) }}"
+  loop:
+    - 'https://apt.puppetlabs.com/DEB-GPG-KEY-puppet'
+    - 'https://apt.puppetlabs.com/DEB-GPG-KEY-puppet-20250406'
+    - 'https://apt.puppetlabs.com/DEB-GPG-KEY-puppetlabs'
+    - 'https://apt.puppetlabs.com/DEB-GPG-KEY-reductive'
+
+- name: Debian | Add Puppetlabs repository
+  apt_repository:
+    repo: deb http://apt.puppetlabs.com {{ ansible_distribution_release }} puppet{{ puppet_version }}
+
+- name: Debian | Add Puppetlabs source repository
+  apt_repository:
+    repo: deb-src http://apt.puppetlabs.com {{ ansible_distribution_release }} puppet{{ puppet_version }}
+    state: "{{ puppetlabs_repo_source }}"
+
+- name: Debian | Update apt cache
+  apt:
+    update_cache: yes
+  changed_when: false

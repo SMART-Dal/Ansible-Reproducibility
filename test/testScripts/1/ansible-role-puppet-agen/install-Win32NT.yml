@@ -1,0 +1,12 @@
+---
+# Install puppet-agent on Windows
+
+- name: Windows | Install puppet-agent from Puppetlabs reposiroty
+  win_package:
+    path: http://downloads.puppetlabs.com/windows/puppet{{ puppet_version }}/puppet-agent-x64-latest.msi
+    product_id: '{B7A6E325-91EB-4732-A243-4B992A950298}'
+
+- name: Windows | Puppet-agent service
+  win_service:
+    name: puppet
+    start_mode: auto
