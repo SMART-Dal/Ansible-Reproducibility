@@ -70,7 +70,6 @@ Smell Category: Outdated dependency
     version: "{{ item.version | default(omit, true) }}"
     virtualenv: "{{ _virtualenv_path }}"
   with_items: "{{ virtualenv_post_packages }}"
-  notify: "{{ virtualenv_notify_on_updated | default('virtualenv updated', true) }}"
 
 Fixed version:
 - name: Install virtualenv post packages
@@ -101,8 +100,11 @@ Fixed version:
     group: root
     mode: "0755"
     state: directory
+    assert:
+    that:
+      - 'systemd' in ansible_system"
+    fail_msg: "This task requires systemd, but the system is not using systemd."
   register: icinga2_service_d_result
-  ignore_errors: yes
 
 - name: Handle the directory if it wasn't present
   debug:
@@ -186,8 +188,12 @@ Fixed version:
     group: "{{ jupyterhub_system_group }}"
     mode: 0600
   become: true
+    stat:
+    path: "{{ local_tokens_dir }}/proxy_auth_token"
+  register: src_file_stat
  when: proxy_auth_token_stat.stat.exists == false or
  ansible.utils.file_checksum(src) != ansible.utils.file_checksum(dest)
+ and src_file_stat.stat.exists
 
 
 Source: https://github.com/linuxfabrik/lfops
