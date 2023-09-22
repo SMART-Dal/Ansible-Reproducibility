@@ -82,40 +82,40 @@
 import numpy as np
 from scipy.stats import pearsonr
 
-both_present = [14, 938, 998, 1550, 31, 3307,
-14, 0, 10, 0, 6,
-0, 463, 549, 0,
-101, 0, 802,
-4, 3625,
-28]
-
-neither_present = [26571, 26458, 25956, 22611, 26561, 17624,
-30814, 30238, 26351, 31810, 19603,
-29201, 25767, 30773, 19109,
-24843, 30211, 18800,
-26318, 17726,
-19598]
-
-cat1_without_cat2 = [5281, 4357, 4297, 3745, 5264, 1988,
-1, 15, 5, 15, 9,
-1052, 589, 1052, 503,
-1513, 1614, 812,
-5507,1886,
-14]
-
-cat2_without_cat1 = [1, 114, 616, 3961, 11, 8948,
-1038, 1614, 5501, 42, 12249,
-1614, 5048, 42, 11706,
-5410, 42, 11453,
-38, 8630,
-1227]
-
-
-# Calculate the Pearson correlation coefficient and p-value
-correlation_coefficient, p_value = pearsonr(cat1_without_cat2, cat2_without_cat1)
-
-print(f"Pearson Correlation Coefficient: {correlation_coefficient}")
-print(f"P-value: {p_value}")
+# both_present = [14, 938, 998, 1550, 31, 3307,
+# 14, 0, 10, 0, 6,
+# 0, 463, 549, 0,
+# 101, 0, 802,
+# 4, 3625,
+# 28]
+#
+# neither_present = [26571, 26458, 25956, 22611, 26561, 17624,
+# 30814, 30238, 26351, 31810, 19603,
+# 29201, 25767, 30773, 19109,
+# 24843, 30211, 18800,
+# 26318, 17726,
+# 19598]
+#
+# cat1_without_cat2 = [5281, 4357, 4297, 3745, 5264, 1988,
+# 1, 15, 5, 15, 9,
+# 1052, 589, 1052, 503,
+# 1513, 1614, 812,
+# 5507,1886,
+# 14]
+#
+# cat2_without_cat1 = [1, 114, 616, 3961, 11, 8948,
+# 1038, 1614, 5501, 42, 12249,
+# 1614, 5048, 42, 11706,
+# 5410, 42, 11453,
+# 38, 8630,
+# 1227]
+#
+#
+# # Calculate the Pearson correlation coefficient and p-value
+# correlation_coefficient, p_value = pearsonr(cat1_without_cat2, cat2_without_cat1)
+#
+# print(f"Pearson Correlation Coefficient: {correlation_coefficient}")
+# print(f"P-value: {p_value}")
 
 # import numpy as np
 # from scipy.stats import pearsonr
@@ -135,4 +135,45 @@ print(f"P-value: {p_value}")
 # print(f"P-value: {p_value}")
 
 
+import csv
 
+
+def get_column_values(csv_file, column_name):
+    column_size = 0
+    try:
+        column_values = []
+        with open(csv_file, 'r', newline='') as file:
+            reader = csv.DictReader(file)
+            if column_name not in reader.fieldnames:
+                return f"Column '{column_name}' not found in the CSV file."
+            for row in reader:
+                column_size = column_size + 1
+                value = row[column_name].strip()  # Remove leading/trailing whitespace
+
+                # Check if the value should be excluded
+                if value != column_name:
+                    if value not in (None, 'None', 'Error', '', '\n'):
+                        column_values.append(1)
+                    else:
+                        column_values.append(0)
+            # percentage = (len(column_values)/(column_size/2))*100
+            # percentage = len(column_values)
+        return column_values
+    except Exception as e:
+        return str(e)
+
+
+if __name__ == "__main__":
+    # Get the path to the CSV file and the column name from the user
+    csv_file = '/home/ghazal/Ansible-Reproducibility/Replication Package/combined_v2.csv'
+    # column_name = 'Idempotency'
+
+    # Get and print the column values
+    # percentage = get_column_values(csv_file, column_name)
+    # print(percentage)
+
+    # Calculate the Pearson correlation coefficient and p-value
+    correlation_coefficient, p_value = pearsonr(get_column_values(csv_file,'Version specific installation'), get_column_values(csv_file,'Idempotency'))
+
+    print(f"Pearson Correlation Coefficient: {correlation_coefficient}")
+    print(f"P-value: {p_value}")

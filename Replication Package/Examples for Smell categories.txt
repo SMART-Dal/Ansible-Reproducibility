@@ -112,24 +112,28 @@ Fixed version:
   when: icinga2_service_d_result.failed
 
 
-Source: https://github.com/Icinga/ansible-collection-icinga/tree/main
-File name: install.yml
+Source: https://github.com/chocolatey/chocolatey-ansible/blob/9bdc0d40437a7dc7f0181af42da7e35bbcfcae4a/chocolatey/tests/integration/targets/win_chocolatey/tasks/bootstrap_tests.yml#L4
+File name: bootstrap_tests.yml
 Smell Category: Assumption about environment
 
-- name: re-register ASP.NET with IIS on Server 2008 R2
-  win_command: C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i
-  when:
-  - pri_chocolatey_server_install is changed
-  - pri_chocolatey_server_os_version.win_file_version.product_version.startswith("6.1.")
+- name: checking if the bootstrap file has been created
+  win_shell: Get-Content -Path "C:/temp/confirm-bootstrap.txt" -Raw
+  register: bootstrap_file_check
 
 Fixed version:
-- name: Re-register ASP.NET with IIS on Server 2008 R2
-  ansible.builtin.win_shell: C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i
-  when:
-    - ansible_os_family == 'Windows'
-    - pri_chocolatey_server_install is changed
-    - pri_chocolatey_server_os_version.win_file_version.product_version.startswith("6.1.")
+- name: Checking if the bootstrap file has been created
+  tasks:
+    - name: Check if the environment is Windows
+      stat:
+        path: "C:/temp/confirm-bootstrap.txt"
+      register: bootstrap_file_check
+      ignore_errors: yes
+      when: ansible_os_family == 'Windows'
 
+    - name: Print file contents if it exists
+      debug:
+        var: bootstrap_file_check
+      when: bootstrap_file_check.stat.exists == true
 
 Source: https://github.com/aplatform64/aplatform64
 File name: hw_gpu_amd.yml
@@ -189,7 +193,7 @@ Fixed version:
     mode: 0600
   become: true
     stat:
-    path: "{{ local_tokens_dir }}/proxy_auth_token"
+        path: "{{ local_tokens_dir }}/proxy_auth_token"
   register: src_file_stat
  when: proxy_auth_token_stat.stat.exists == false or
  ansible.utils.file_checksum(src) != ansible.utils.file_checksum(dest)
