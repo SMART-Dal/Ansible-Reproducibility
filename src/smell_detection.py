@@ -248,6 +248,8 @@ def check_task_for_version_specific_package(task):
             for pm in package_managers:
                 if pm in t and 'version' in task[t]:
                     messages.append(f"Task uses {pm} to install a specific version of a package.")
+                else:
+                    messages.append(f"Task uses {pm} to install a latest version which could get incompatible.")
 
         if messages:
             return '\n'.join(messages)
