@@ -1,21 +1,24 @@
-# Reproducibility smell detector
+# A study on reproducibility smells
+This study, first, identifies such programming practices
+that we refer to as reproducibility smells by conducting a comprehensive multi-vocal review. We implement a
+tool viz. REDUSE to identify reproducibility smells in Ansible scripts. Furthermore, we carry out an empirical
+study to reveal the proliferation of reproducibility smells in open-source projects and explore correlation and
+co-occurrence relationships among them. 
+
 This tool detects programming practices, referred to as productivity smells, in Ansible scripts that can lead to reproducibility issues.
 
-The tool has a parser that reads the given Ansible script and creates a code model object from the playbook.
-The code model captures the Ansible tasks and their properties.
-Finally, the smell detector checks for the presence of smells by analyzing the source code model.
-As an output you will get 2 csv files in output repository with the name of the input script. 
-
 ## Contents
-**`Replication Package`**:
-- **`Manual validation`**:
-This directory contains the repositories used for manual validation of the tool.
-  In each directory, for each script we have manual.csv(smells detected by reviewers) file and cleaned.csv(smells detected by tool) file.
-- **`MLR`**:
-This directory contains all the files regarding grey literature review.
-- **`smell categories example`**: 
+### Replication Package
+#### Manual validation
+This directory contains the repositories used for manual validation of the tool. In each directory, for each script we have `manual.csv`(smells detected by reviewers) file and `cleaned.csv`(smells detected by tool) file.
+
+#### MLR
+This directory contains all the files regarding multi-vocal literature review.
+
+#### Reproducibility smell examples
 This file contains the code for the example scenarios mentioned in the category in the paper.
 
+### REDUSE - Tool for detecting Reproducibility Smells
 **`src`**:
 - **`extraction`**:
   - **`extracted_repos`**: 
@@ -53,15 +56,12 @@ This file contains the code for the example scenarios mentioned in the category 
 - **`unit_test`**:
   This directory contains the unit-tests for the smell_detection functions.
 
-### Build/Configure
+#### Build/Configure
 - This tool requires Python 3.8+
 - Install the packages from `requirements.txt`
 
-## Run the program
-
-### Run
+#### Run the program
 Navigate to the src directory of the project.
-
 Run the `detector.py` file with the path to your desired Ansible yaml file 
 `python detector.py '/path/to/file/directory`
 or 
