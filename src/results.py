@@ -1,25 +1,31 @@
 import csv
 import os
+from datetime import datetime
 
 
-def write_results_csv(output_tasks, new_output_tasks, input_file):
+def write_results_csv(output_tasks, new_output_tasks, input_file, output_directory):
     try:
-        # Create the output directory if it doesn't exist
-        # output_dir = "output"
-        # if not os.path.exists(output_dir):
-        #     os.makedirs(output_dir)
+
+        # Create a timestamp for uniqueness
+        timestamp = datetime.now().strftime("M%S")
+
+        if output_directory != None:
+            output_base = output_directory
+        else:
+            output_base = "../output"
 
         # Get the parent directory name of the input file
         input_parent_dir = os.path.basename(os.path.dirname(input_file))
 
         # Create the output directory if it doesn't exist
-        output_dir = os.path.join("output", input_parent_dir)
+        output_dir = os.path.join(output_base, input_parent_dir)
+
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        # Define the output file paths
-        output_file_v1 = os.path.join(output_dir, f"{os.path.basename(input_file)}_smells_v1.csv")
-        output_file_v2 = os.path.join(output_dir, f"{os.path.basename(input_file)}_smells_v2.csv")
+        # Define the output file paths with timestamp
+        output_file_v1 = os.path.join(output_dir, f"{os.path.basename(input_file)}_smells_v1_{timestamp}.csv")
+        output_file_v2 = os.path.join(output_dir, f"{os.path.basename(input_file)}_smells_v2_{timestamp}.csv")
 
         # Define the CSV column names
         csv_columns = ['Task name', 'Idempotency', 'Version specific installation', 'Outdated dependencies',
