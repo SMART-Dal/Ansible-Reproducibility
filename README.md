@@ -24,7 +24,7 @@ Or, add the path to the desired ansible files or repositories to the script and 
 ```
 
 #### Example
-After cloning this repository, you can use the repositories provided in the test/testScripts as sample script to try the tool. Choose one of the repositories, you can either run all the scripts in the repository at once by providing the full path of the repository or you can run just for one script by providing the path to that specific script. Navigate to the source code folder in your terminal and use this command: `python detector.py /path/to/file/folder`
+After cloning this repository, you can use the repositories provided in the test/testScripts as sample script to try the tool. Choose one of the repositories, you can either run all the scripts in the repository at once by providing the full path of the repository or you can run just for one script by providing the path to that specific script. Navigate to the source code folder in your terminal and use this command: `python detector.py /path/to/file/folder` or optionally you can provide path to the desired output directory as well `python detector.py /path/to/input/file/folder /path/to/output/folder`.
 
 ![image](https://github.com/SMART-Dal/Ansible-Reproducibility/assets/36522329/6ac58f18-4817-4d21-a574-32a19e3337d5)
 
