@@ -44,6 +44,9 @@ This folder contains all the files regarding multi-vocal literature review.
 ### Reproducibility smell examples
 This file contains the code for the example scenarios mentioned in the category in the paper.
 
+### Ansible galaxy issues.pdf
+### Qualitative analysis sheets
+These files contains the issues extracted from the top 8 ansible galaxy repositories that mapped to the reproducibility smells.
 ### REDUSE - Tool for detecting Reproducibility Smells
 **`src`**:
 - **`extraction`**:
