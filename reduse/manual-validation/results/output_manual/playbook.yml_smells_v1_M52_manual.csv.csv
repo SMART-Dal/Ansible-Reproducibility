@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,playbook.yml,1,Get host IP address.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,playbook.yml,1,Get host IP address.,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,playbook.yml,1,Get host IP address.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,playbook.yml,6,Copy Flask app into place.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,playbook.yml,10,Copy Flask templates into place.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,playbook.yml,10,Copy Flask templates into place.,Broken Dependency Chain

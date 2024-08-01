@@ -1,0 +1,59 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,1,"Exit playbook, if no rgw was given",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,1,"Exit playbook, if no rgw was given",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,14,"Exit playbook, if user did not mean to shrink cluster",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,14,"Exit playbook, if user did not mean to shrink cluster",Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,19,"Exit playbook, if no rgw was given",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,19,"Exit playbook, if no rgw was given",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,24,"Exit playbook, if user did not mean to shrink cluster",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,24,"Exit playbook, if user did not mean to shrink cluster",Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,34,Gather facts,Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,42,"Exit playbook, if no rgw was given",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,42,"Exit playbook, if no rgw was given",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,44,"Exit playbook, if user did not mean to shrink cluster",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,44,"Exit playbook, if user did not mean to shrink cluster",Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,45,Gather facts,Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,52,Stop rgw service,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,52,Stop rgw service,Missing Dependencies,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,52,Stop rgw service,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,53,Ensure that the rgw is stopped,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,53,Ensure that the rgw is stopped,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,54,Exit if rgw_to_kill is reported in ceph status,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,54,Exit if rgw_to_kill is reported in ceph status,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,56,Purge directories related to rgw,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,56,Purge directories related to rgw,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,56,Purge directories related to rgw,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,61,Import ceph-defaults role,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,65,Import ceph-facts role,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,70,Set_fact container_exec_cmd for mon0,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,75,"Exit playbook, if can not connect to the cluster",Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,75,"Exit playbook, if can not connect to the cluster",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,83,Get rgw instances,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,83,Get rgw instances,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,89,"Exit playbook, if the rgw_to_kill doesn't exist",Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,89,"Exit playbook, if the rgw_to_kill doesn't exist",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,97,Show ceph health,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,shrink-rgw.yml,97,Show ceph health,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,34 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,1,"Set current radosgw_address_block, radosgw_address, radosgw_interface  from node ""{{ ceph_dashboard_call_item }}""",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,2,Set_fact _radosgw_address to radosgw_address_block ipv4,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,5,Set_fact _radosgw_address to radosgw_address_block ipv6,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,11,Set_fact _radosgw_address to radosgw_address,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,15,"Set current radosgw_address_block, radosgw_address, radosgw_interface  from node ""{{ ceph_dashboard_call_item }}""",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,16,Set_fact _interface,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,16,Set_fact _interface,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,17,Set_fact _radosgw_address to radosgw_interface - ipv4,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,17,Set_fact _radosgw_address to radosgw_interface - ipv4,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,19,Set_fact _radosgw_address to radosgw_interface - ipv6,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,19,Set_fact _radosgw_address to radosgw_interface - ipv6,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,23,"Set current radosgw_address_block, radosgw_address, radosgw_interface  from node ""{{ ceph_dashboard_call_item }}""",Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,24,Set_fact _interface,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,24,Set_fact _interface,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,25,Set_fact _radosgw_address to radosgw_interface - ipv4,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,25,Set_fact _radosgw_address to radosgw_interface - ipv4,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,27,Set_fact _radosgw_address to radosgw_interface - ipv6,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,27,Set_fact _radosgw_address to radosgw_interface - ipv6,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,31,Reset rgw_instances (workaround),Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,set_radosgw_address.yml,32,Set_fact rgw_instances,Broken Dependency Chain,Task did not check the correctness of execution.

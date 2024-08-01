@@ -1,0 +1,5 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rgw_nfs_user.yml,1,"Create rgw nfs user ""{{ ceph_nfs_rgw_user }}""",Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rgw_nfs_user.yml,1,"Create rgw nfs user ""{{ ceph_nfs_rgw_user }}""",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rgw_nfs_user.yml,2,Set_fact ceph_nfs_rgw_access_key and ceph_nfs_rgw_secret_key,Broken Dependency Chain

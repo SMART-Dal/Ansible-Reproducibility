@@ -1,0 +1,16 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,1,Configure EC2 Security Groups.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,1,Configure EC2 Security Groups.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,2,Provision EC2 instances.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,12,Add EC2 instances to inventory groups.,None
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,15,Configure EC2 Security Groups.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,15,Configure EC2 Security Groups.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,18,Provision EC2 instances.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,21,Add EC2 instances to inventory groups.,None
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,aws.yml,24,Wait for hosts to become available.,Broken Dependency Chain

@@ -1,0 +1,14 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,1,Task 1,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,1,Task 1,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,1,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,2,Task 2,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,2,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,2,Task 2,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,4,Start NetworkManager,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,4,Start NetworkManager,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,5,Enable NetworkManager,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,rhel_prep.yml,5,Enable NetworkManager,Broken Dependency Chain

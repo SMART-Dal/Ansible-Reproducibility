@@ -1,0 +1,27 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,1,Make sure /tmp exists,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,1,Make sure /tmp exists,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,1,Make sure /tmp exists,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,2,Use mktemp to create name for rundep,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,2,Use mktemp to create name for rundep,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,2,Use mktemp to create name for rundep,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,8,Copy rundep,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,8,Copy rundep,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,8,Copy rundep,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,15,Install ceph dependencies,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,15,Install ceph dependencies,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,15,Install ceph dependencies,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,22,Ensure rsync is installed,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,22,Ensure rsync is installed,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,26,Synchronize ceph install,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,32,Create user group ceph,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,32,Create user group ceph,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,37,Create user ceph,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_redhat_local_installation.yml,37,Create user ceph,Broken Dependency Chain

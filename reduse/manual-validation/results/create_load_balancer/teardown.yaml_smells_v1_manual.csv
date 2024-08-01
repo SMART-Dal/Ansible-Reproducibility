@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,9,Delete instances,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,14,Delete  Public Load Balancer,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,15,Delete subnets,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,17,Delete Route Table,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,22,Delete Security List,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,27,Delete internet gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,28,Delete  VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_load_balancer,teardown.yaml,30,Clean artifact path,Assumption about Environment

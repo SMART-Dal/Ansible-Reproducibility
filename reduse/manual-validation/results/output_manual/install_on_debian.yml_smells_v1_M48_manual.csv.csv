@@ -1,0 +1,7 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_on_debian.yml,1,Install dependencies,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_on_debian.yml,1,Install dependencies,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_on_debian.yml,1,Install dependencies,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_on_debian.yml,1,Install dependencies,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_on_debian.yml,8,Include install_debian_packages.yml,Broken Dependency Chain

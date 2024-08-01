@@ -1,0 +1,7 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,1,Get keys from monitors,Idempotency
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,2,Copy ceph key(s) if needed,Idempotency
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,13,Copy SSL certificate & key data to certificate path,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,13,Copy SSL certificate & key data to certificate path,Broken Dependency Chain

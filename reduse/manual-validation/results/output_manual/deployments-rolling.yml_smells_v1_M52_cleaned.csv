@@ -1,0 +1,17 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,1,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,2,Update apt cache if needed.,Idempotency,Task violates idempotency because it installs or upgrades packages with apt.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,2,Update apt cache if needed.,Version Specific Installation,Task uses apt to install a latest version which could get incompatible.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,2,Update apt cache if needed.,Outdated Dependencies,Task uses apt to install the latest packages.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,2,Update apt cache if needed.,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,5,Ensure ping is present.,Idempotency,Task violates idempotency because it installs or upgrades packages with apt.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,5,Ensure ping is present.,Version Specific Installation,Task uses apt to install a latest version which could get incompatible.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,5,Ensure ping is present.,Outdated Dependencies,The installed package could become outdated because the script does not update it.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,5,Ensure ping is present.,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,10,Task 4,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,deployments-rolling.yml,13,Task 5,Broken Dependency Chain,Task did not check the correctness of execution.

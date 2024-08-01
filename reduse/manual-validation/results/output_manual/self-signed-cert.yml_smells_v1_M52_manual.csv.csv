@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,self-signed-cert.yml,1,Ensure directory exists for local self-signed TLS certs.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,self-signed-cert.yml,1,Ensure directory exists for local self-signed TLS certs.,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,self-signed-cert.yml,1,Ensure directory exists for local self-signed TLS certs.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,self-signed-cert.yml,2,Generate an OpenSSL private key.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,self-signed-cert.yml,6,Generate an OpenSSL CSR.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,self-signed-cert.yml,10,Generate a Self Signed OpenSSL certificate.,Broken Dependency Chain

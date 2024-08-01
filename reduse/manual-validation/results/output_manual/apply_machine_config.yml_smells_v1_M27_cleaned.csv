@@ -1,0 +1,35 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,9,Get worker ignition config,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,9,Get worker ignition config,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,10,Write worker ignition config to file,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,10,Write worker ignition config to file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,14,Get machine-config-operator image,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,14,Get machine-config-operator image,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,22,Task 8,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,25,Pull MCD image,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,25,Pull MCD image,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,26,Apply machine config,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,26,Apply machine config,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,30,Remove temp directory,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,30,Remove temp directory,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,30,Remove temp directory,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,34,Reboot the host and wait for it to come back,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,39,Pull MCD image,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,39,Pull MCD image,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,42,Apply machine config,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,42,Apply machine config,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,43,Wait for node to report ready,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,43,Wait for node to report ready,Broken Dependency Chain,Task did not check the correctness of execution.

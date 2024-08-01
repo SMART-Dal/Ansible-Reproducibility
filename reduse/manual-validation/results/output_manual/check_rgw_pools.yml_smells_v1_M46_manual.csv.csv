@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rgw_pools.yml,1,Fail if ec_profile is not set for ec pools,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rgw_pools.yml,1,Fail if ec_profile is not set for ec pools,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rgw_pools.yml,2,Fail if ec_k is not set for ec pools,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rgw_pools.yml,2,Fail if ec_k is not set for ec pools,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rgw_pools.yml,7,Fail if ec_m is not set for ec pools,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rgw_pools.yml,7,Fail if ec_m is not set for ec pools,Broken Dependency Chain

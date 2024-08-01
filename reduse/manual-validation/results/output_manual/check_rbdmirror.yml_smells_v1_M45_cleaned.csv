@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rbdmirror.yml,1,Ensure ceph_rbd_mirror_pool is set,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rbdmirror.yml,1,Ensure ceph_rbd_mirror_pool is set,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rbdmirror.yml,2,Ensure ceph_rbd_mirror_remote_cluster is set,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_rbdmirror.yml,2,Ensure ceph_rbd_mirror_remote_cluster is set,Broken Dependency Chain,Task did not check the correctness of execution.

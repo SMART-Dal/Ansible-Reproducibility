@@ -1,0 +1,7 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,1,Get cluster version,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,1,Get cluster version,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,7,Fail if not using RHEL8 beginning with version 4.10,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,7,Fail if not using RHEL8 beginning with version 4.10,Broken Dependency Chain

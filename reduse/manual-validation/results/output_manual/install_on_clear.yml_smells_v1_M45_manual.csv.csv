@@ -1,0 +1,2 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_on_clear.yml,1,Install ceph bundle,Broken Dependency Chain

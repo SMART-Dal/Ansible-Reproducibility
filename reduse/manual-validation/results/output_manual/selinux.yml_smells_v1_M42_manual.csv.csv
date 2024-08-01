@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,selinux.yml,1,Install policycoreutils-python,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,selinux.yml,1,Install policycoreutils-python,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,selinux.yml,2,Install python3-policycoreutils on RHEL 8,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,selinux.yml,2,Install python3-policycoreutils on RHEL 8,Broken Dependency Chain

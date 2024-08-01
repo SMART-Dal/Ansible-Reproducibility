@@ -1,0 +1,67 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance and API Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,15,Generate a Private Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,16,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,22,Generate a OpenSSH Public Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,27,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,30,Create test group,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,35,Task 9,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,38,Task 10,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,43,Create test user,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,48,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,54,Task 13,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,56,Add user to the test group,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,61,Task 15,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,67,Task 16,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,69,Add policy to allow test group to manage buckets,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,74,Task 18,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,80,Create a api private key for test user,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,82,Task 20,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,87,Create a public key from that temp private key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,93,Task 22,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,95,Upload the API Signing Key for test user,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,100,Task 24,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,107,Generate user data script from the template,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,111,Task 26,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,118,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,124,Task 28,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,129,Create a security list for the public subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,135,Task 30,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,139,Get OCI service details,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,144,Task 32,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,150,Task 33,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,161,Create a new Service Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,169,Task 35,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,174,Create a new NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,177,Task 37,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,181,Create a new Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,188,Task 39,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,194,Create a route table to connect internet gateway to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,196,Task 41,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,201,Create the public subnet to host the bastion instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,207,Task 43,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,212,Launch an instance in the public subnet to act as the bastion instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,219,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,224,Task 46,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,231,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,236,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,247,Task 49,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,252,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,266,Wait (upto 10 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,269,Create a security list for the private subnet,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,274,Task 53,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,279,Create a route table to connect all access from the private subnet to the NAT Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,283,Task 55,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,286,Create the private subnet to host the private instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,292,Task 57,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,310,Launch an instance in the private subnet from which object storage access would go through the Service Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,318,Task 59,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,325,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,332,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,337,Task 62,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,348,Print the private ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,353,Print ssh command for private instance via basion instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/service_gateway,setup.yaml,370,Wait (upto 5 mins) for private instance to start,Broken Dependency Chain

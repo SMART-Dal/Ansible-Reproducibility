@@ -1,0 +1,65 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,1,Get client.bootstrap-rbd-mirror from ceph monitor,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,1,Get client.bootstrap-rbd-mirror from ceph monitor,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,2,Ensure /var/lib/ceph/bootstrap-rbd-mirror exists,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,2,Ensure /var/lib/ceph/bootstrap-rbd-mirror exists,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,2,Ensure /var/lib/ceph/bootstrap-rbd-mirror exists,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,4,Copy ceph key(s),Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,4,Copy ceph key(s),Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,6,Create rbd-mirror keyrings,Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,20,Get client.rbd-mirror keyring from ceph monitor,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,27,Copy ceph key,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,27,Copy ceph key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,36,Start and add the rbd-mirror service instance,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,36,Start and add the rbd-mirror service instance,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,57,Set_fact ceph_rbd_mirror_pools,Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,59,Create pool if it doesn't exist,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,63,Enable mirroring on the pool,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,63,Enable mirroring on the pool,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,76,Get client.bootstrap-rbd-mirror from ceph monitor,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,76,Get client.bootstrap-rbd-mirror from ceph monitor,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,85,Ensure /var/lib/ceph/bootstrap-rbd-mirror exists,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,85,Ensure /var/lib/ceph/bootstrap-rbd-mirror exists,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,85,Ensure /var/lib/ceph/bootstrap-rbd-mirror exists,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,92,Copy ceph key(s),Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,92,Copy ceph key(s),Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,93,Create rbd-mirror keyrings,Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,95,Get client.rbd-mirror keyring from ceph monitor,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,98,Copy ceph key,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,98,Copy ceph key,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,101,List mirroring peer,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,101,List mirroring peer,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,121,Create a temporary file,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,121,Create a temporary file,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,121,Create a temporary file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,131,Write secret to temporary file,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,131,Write secret to temporary file,Broken Dependency Chain,Error
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,134,Add a mirroring peer,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,134,Add a mirroring peer,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,141,Rm temporary file,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,141,Rm temporary file,Missing Dependencies,"
+Task is using relative path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_mirroring.yml,141,Rm temporary file,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,composer.yml,1,Download Composer installer.,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,composer.yml,1,Download Composer installer.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,composer.yml,2,Run Composer installer.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,composer.yml,2,Run Composer installer.,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,composer.yml,8,Move Composer into globally-accessible location.,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,composer.yml,8,Move Composer into globally-accessible location.,Broken Dependency Chain

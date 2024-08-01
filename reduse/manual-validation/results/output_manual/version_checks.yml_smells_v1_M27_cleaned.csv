@@ -1,0 +1,7 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,1,Get cluster version,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,1,Get cluster version,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,7,Fail if not using RHEL8 beginning with version 4.10,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,version_checks.yml,7,Fail if not using RHEL8 beginning with version 4.10,Broken Dependency Chain,Task did not check the correctness of execution.

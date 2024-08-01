@@ -1,0 +1,12 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,1,Check if network interface exists,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,1,Check if network interface exists,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,2,Check if network interface is active,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,2,Check if network interface is active,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,7,Check if network interface has an IPv4 address,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,7,Check if network interface has an IPv4 address,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,12,Check if network interface has an IPv6 address,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_eth_rgw.yml,12,Check if network interface has an IPv6 address,Broken Dependency Chain,Task did not check the correctness of execution.

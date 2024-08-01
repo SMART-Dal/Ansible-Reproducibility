@@ -1,0 +1,17 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,11,Task 2,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,27,Launch an instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,52,Print instance details,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,53,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,55,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,58,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,73,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,76,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,79,Wait (upto 10 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,85,Task 11,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,89,Task 12,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,92,Attempt a ssh connection to the newly launched instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,96,Print SSH response from launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/launch_compute_instance,sample.yaml,106,Task 15,Broken Dependency Chain

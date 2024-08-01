@@ -1,0 +1,4 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/get_namespace,sample.yaml,8,Get namespace name,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/get_namespace,sample.yaml,11,Print namespace name,Assumption about Environment

@@ -1,0 +1,188 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,1,Check firewalld installation on redhat or SUSE/openSUSE,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,1,Check firewalld installation on redhat or SUSE/openSUSE,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,2,Install firewalld python binding,Idempotency,Task violates idempotency because it installs or upgrades packages.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,2,Install firewalld python binding,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,10,Start firewalld,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,10,Start firewalld,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,15,Open ceph networks on monitor,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,15,Open ceph networks on monitor,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,21,Open ceph networks on manager when collocated,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,21,Open ceph networks on manager when collocated,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,30,Open monitor and manager ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,30,Open monitor and manager ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,38,Open ceph networks on manager when dedicated,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,38,Open ceph networks on manager when dedicated,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,39,Open manager ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,41,Open ceph networks on osd,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,41,Open ceph networks on osd,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,49,Open osd ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,49,Open osd ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,49,Open osd ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,50,Open ceph networks on rgw,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,50,Open ceph networks on rgw,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,51,Open rgw ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,51,Open rgw ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,51,Open rgw ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,53,Open ceph networks on mds,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,53,Open ceph networks on mds,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,60,Open mds ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,60,Open mds ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,61,Open ceph networks on nfs,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,61,Open ceph networks on nfs,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,63,Open nfs ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,63,Open nfs ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,63,Open nfs ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,64,Open nfs ports (portmapper),Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,64,Open nfs ports (portmapper),Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,64,Open nfs ports (portmapper),Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,66,Open ceph networks on rbdmirror,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,66,Open ceph networks on rbdmirror,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,74,Open rbdmirror ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,74,Open rbdmirror ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,74,Open rbdmirror ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,75,Open dashboard ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,76,Open ceph networks on haproxy,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,76,Open ceph networks on haproxy,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+
+
+"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,78,Open haproxy ports,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,78,Open haproxy ports,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,78,Open haproxy ports,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,86,Add rich rule for keepalived vrrp,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,86,Add rich rule for keepalived vrrp,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_firewall.yml,86,Add rich rule for keepalived vrrp,Broken Dependency Chain,Task did not check the correctness of execution.

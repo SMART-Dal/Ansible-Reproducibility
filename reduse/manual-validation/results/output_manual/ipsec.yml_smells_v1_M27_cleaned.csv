@@ -1,0 +1,52 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,1,Enable ipsec service,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,1,Enable ipsec service,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,2,add nssdir to ipsec.conf,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,2,add nssdir to ipsec.conf,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,2,add nssdir to ipsec.conf,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,7,create nssdir,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,7,create nssdir,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,7,create nssdir,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,13,check if ipsec dir is empty,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,17,determine if selinux context is set,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,17,determine if selinux context is set,Assumption about Environment,"None 
+
+Task uses a ip command that may not be portable.
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,17,determine if selinux context is set,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,24,set nss selinux context,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,24,set nss selinux context,Assumption about Environment,"None 
+
+Task uses a ip command that may not be portable.
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,24,set nss selinux context,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,28,restore nss selinux context so it will be active,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,28,restore nss selinux context so it will be active,Assumption about Environment,"None 
+
+Task uses a ip command that may not be portable."
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,28,restore nss selinux context so it will be active,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,32,initialize nss db,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,32,initialize nss db,Assumption about Environment,"None 
+
+Task uses a ip command that may not be portable.
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,32,initialize nss db,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,35,make sure proper selinux label on nss db,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,35,make sure proper selinux label on nss db,Assumption about Environment,"None 
+
+Task uses a ip command that may not be portable."
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,ipsec.yml,35,make sure proper selinux label on nss db,Broken Dependency Chain,Task did not check the correctness of execution.

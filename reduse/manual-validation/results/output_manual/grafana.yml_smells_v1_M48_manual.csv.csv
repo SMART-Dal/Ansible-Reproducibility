@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,grafana.yml,1,Set grafana_server_addr fact - ipv4,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,grafana.yml,5,Set grafana_server_addr fact - ipv6,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name

@@ -1,0 +1,55 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,1,Set_fact exec_cmd_nfs - external,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,2,Set_fact exec_cmd_nfs - internal,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,4,Check if rados index object exists,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,4,Check if rados index object exists,Missing Dependencies,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,4,Check if rados index object exists,Assumption about Environment,"None 
+
+Task uses a pip command that may not be portable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,4,Check if rados index object exists,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,10,Create an empty rados index object,Idempotency,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,10,Create an empty rados index object,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,16,Create /etc/ganesha,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,16,Create /etc/ganesha,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,16,Create /etc/ganesha,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,26,Generate ganesha configuration file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,29,Generate ganesha idmap.conf file,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,30,Create exports directory,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,30,Create exports directory,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,30,Create exports directory,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,35,Create exports dir index file,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,35,Create exports dir index file,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,42,Include_tasks systemd.yml,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,51,Systemd start nfs container,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,51,Systemd start nfs container,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,62,Start nfs gateway service,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_nfs.yml,62,Start nfs gateway service,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,17 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,1,Install yum plugin priorities,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,1,Install yum plugin priorities,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,2,Configure red hat ceph community repository stable key,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,10,Configure red hat ceph stable community repository,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,10,Configure red hat ceph stable community repository,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,10,Configure red hat ceph stable community repository,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,10,Configure red hat ceph stable community repository,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,10,Configure red hat ceph stable community repository,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,16,Configure red hat ceph stable noarch community repository,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,16,Configure red hat ceph stable noarch community repository,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,16,Configure red hat ceph stable noarch community repository,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,16,Configure red hat ceph stable noarch community repository,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_community_repository.yml,16,Configure red hat ceph stable noarch community repository,Broken Dependency Chain

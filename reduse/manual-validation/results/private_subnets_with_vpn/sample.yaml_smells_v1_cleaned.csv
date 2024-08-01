@@ -1,0 +1,29 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,11,Create a dynamic routing gateway(DRG),Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,26,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,65,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,66,Attach the DRG to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,68,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,73,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,75,Create customer premises equipment(CPE),Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,78,Task 9,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,85,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,87,Create an IPSec connection,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,90,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,96,Task 13,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,98,Update default route table to enable communication via the VPN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,101,Task 15,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,108,create ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,110,load the variables defined in the ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,112,print loaded_ingress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,115,Update default security list to add additional rules,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,120,Task 20,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,123,Get images list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,127,Task 22,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,131,Get configuration information required for configuring CPE router - required by network administrator to configure on-premises router,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,135,Task 24,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,141,Get the connection status of IPSec connection,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,145,Task 26,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,sample.yaml,153,Task 27,Broken Dependency Chain

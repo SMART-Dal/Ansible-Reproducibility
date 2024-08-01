@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dev_setup.yml,2,Task 2,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dev_setup.yml,9,print contents of {{ group_vars_path }}/all,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dev_setup.yml,9,print contents of {{ group_vars_path }}/all,Broken Dependency Chain

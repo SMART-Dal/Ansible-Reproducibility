@@ -1,0 +1,2 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,nodes.yml,1,Task 1,Broken Dependency Chain

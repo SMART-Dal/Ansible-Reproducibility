@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_nfs.yml,1,Fail if ceph_nfs_rgw_access_key or ceph_nfs_rgw_secret_key are undefined (nfs standalone),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_nfs.yml,1,Fail if ceph_nfs_rgw_access_key or ceph_nfs_rgw_secret_key are undefined (nfs standalone),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_nfs.yml,2,Fail on openSUSE Leap 15.x using distro packages,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_nfs.yml,2,Fail on openSUSE Leap 15.x using distro packages,Broken Dependency Chain

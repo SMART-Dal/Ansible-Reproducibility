@@ -1,0 +1,444 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,1,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,4,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,4,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,11,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,11,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,17,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,21,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,21,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,26,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,26,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,37,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,40,Gather and delegate facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,40,Gather and delegate facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,41,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,42,Import ceph-validate role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,43,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,44,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,44,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,45,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,45,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,46,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,54,Gather and delegate facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,54,Gather and delegate facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,58,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,61,Import ceph-validate role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,62,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,63,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,71,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,75,Import ceph-mon role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,88,Stop non-containerized ceph mon,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,88,Stop non-containerized ceph mon,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,94,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,94,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,99,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,103,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,104,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,104,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,105,Check for existing old leveldb file extension (ldb),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,105,Check for existing old leveldb file extension (ldb),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,105,Check for existing old leveldb file extension (ldb),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,106,Rename leveldb extension from ldb to sst,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,106,Rename leveldb extension from ldb to sst,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,106,Rename leveldb extension from ldb to sst,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,108,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,108,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,108,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,112,Waiting for the monitor to join the quorum...,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,112,Waiting for the monitor to join the quorum...,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,112,Waiting for the monitor to join the quorum...,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,119,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,123,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,123,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,129,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,129,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,135,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,143,Gather and delegate facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,143,Gather and delegate facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,147,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,151,Import ceph-validate role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,155,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,160,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,168,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,182,Import ceph-mon role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,188,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,192,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,193,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,194,Import ceph-mgr role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,197,Stop non-containerized ceph mon,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,197,Stop non-containerized ceph mon,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,201,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,201,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,208,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,213,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,217,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,217,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,221,Check for existing old leveldb file extension (ldb),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,221,Check for existing old leveldb file extension (ldb),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,221,Check for existing old leveldb file extension (ldb),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,225,Rename leveldb extension from ldb to sst,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,225,Rename leveldb extension from ldb to sst,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,225,Rename leveldb extension from ldb to sst,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,230,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,230,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,230,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,234,Stop non-containerized ceph mgr(s),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,234,Stop non-containerized ceph mgr(s),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,234,Stop non-containerized ceph mgr(s),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,238,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,238,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,243,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,249,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,255,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,255,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,260,Waiting for the monitor to join the quorum...,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,260,Waiting for the monitor to join the quorum...,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,260,Waiting for the monitor to join the quorum...,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,265,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,272,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,272,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,273,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,273,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,278,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,286,Gather and delegate facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,286,Gather and delegate facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,287,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,290,Import ceph-validate role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,303,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,307,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,316,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,323,Import ceph-mon role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,330,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,335,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,339,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,340,Import ceph-mgr role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,341,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,342,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,343,Get pool list,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,343,Get pool list,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,344,Get balancer module status,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,344,Get balancer module status,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,353,Disable balancer,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,353,Disable balancer,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,376,Stop non-containerized ceph mon,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,376,Stop non-containerized ceph mon,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,383,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,383,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,392,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,396,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,400,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,400,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,404,Check for existing old leveldb file extension (ldb),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,404,Check for existing old leveldb file extension (ldb),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,404,Check for existing old leveldb file extension (ldb),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,409,Rename leveldb extension from ldb to sst,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,409,Rename leveldb extension from ldb to sst,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,409,Rename leveldb extension from ldb to sst,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,423,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,423,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,423,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,427,Stop non-containerized ceph mgr(s),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,427,Stop non-containerized ceph mgr(s),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,427,Stop non-containerized ceph mgr(s),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,431,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,431,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,436,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,443,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,444,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,444,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,449,Waiting for the monitor to join the quorum...,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,449,Waiting for the monitor to join the quorum...,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,449,Waiting for the monitor to join the quorum...,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,458,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,459,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,459,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,461,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,461,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,467,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,479,Gather and delegate facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,479,Gather and delegate facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,484,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,488,Import ceph-validate role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,489,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,490,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,491,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,493,Import ceph-mon role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,497,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,504,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,509,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,513,Import ceph-mgr role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,517,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,521,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,526,Get pool list,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,526,Get pool list,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,537,Get balancer module status,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,537,Get balancer module status,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,545,Disable balancer,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,545,Disable balancer,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,564,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,568,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,569,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,570,Import ceph-osd role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,573,Stop non-containerized ceph mon,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,573,Stop non-containerized ceph mon,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,577,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,577,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,581,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,585,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,590,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,590,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,601,Check for existing old leveldb file extension (ldb),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,601,Check for existing old leveldb file extension (ldb),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,601,Check for existing old leveldb file extension (ldb),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,606,Rename leveldb extension from ldb to sst,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,606,Rename leveldb extension from ldb to sst,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,606,Rename leveldb extension from ldb to sst,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,613,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,613,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,613,Copy mon initial keyring in /etc/ceph to satisfy fetch config task in ceph-container-common,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,617,Stop non-containerized ceph mgr(s),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,617,Stop non-containerized ceph mgr(s),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,617,Stop non-containerized ceph mgr(s),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,618,Remove old systemd unit files,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,618,Remove old systemd unit files,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,619,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,620,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,622,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,622,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,626,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,633,Collect running osds,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,633,Collect running osds,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,633,Collect running osds,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,633,Collect running osds,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,638,Disable ceph-osd@.service runtime-enabled,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,638,Disable ceph-osd@.service runtime-enabled,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,642,Stop/disable/mask non-containerized ceph osd(s) (if any),Idempotency
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,646,Disable ceph.target,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,646,Disable ceph.target,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,650,Remove old ceph-osd systemd units,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,650,Remove old ceph-osd systemd units,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,655,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,670,Set proper ownership on ceph directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,670,Set proper ownership on ceph directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,676,Check for existing old leveldb file extension (ldb),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,676,Check for existing old leveldb file extension (ldb),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,676,Check for existing old leveldb file extension (ldb),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,680,Rename leveldb extension from ldb to sst,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,680,Rename leveldb extension from ldb to sst,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,680,Rename leveldb extension from ldb to sst,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,687,Check if containerized osds are already running,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,687,Check if containerized osds are already running,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,687,Check if containerized osds are already running,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,692,Get osd directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,692,Get osd directories,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,692,Get osd directories,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,696,Unmount all the osd directories,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,696,Unmount all the osd directories,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,700,Waiting for the monitor to join the quorum...,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,700,Waiting for the monitor to join the quorum...,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,700,Waiting for the monitor to join the quorum...,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,704,Container - waiting for clean pgs...,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,704,Container - waiting for clean pgs...,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,708,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,711,Fail when less than three monitors,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,711,Fail when less than three monitors,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,712,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,712,"Exit playbook, if user did not mean to switch from non-containerized to containerized daemons?",Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,713,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,714,Gather and delegate facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,714,Gather and delegate facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,715,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,716,Import ceph-validate role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,722,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,727,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,731,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,736,Import ceph-mon role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,740,Import ceph-handler role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,744,Import ceph-container-engine role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,747,Import ceph-container-common role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,748,Import ceph-mgr role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,749,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,750,Import ceph-facts role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,751,Get pool list,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,751,Get pool list,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,752,Get balancer module status,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,752,Get balancer module status,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,762,Disable balancer,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,switch-from-non-containerized-to-containerized-ceph-daemons.yml,762,Disable balancer,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name

@@ -1,0 +1,14 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,1,Install dependencies for apt modules,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,1,Install dependencies for apt modules,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,2,Configure debian ceph community repository stable key,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,2,Configure debian ceph community repository stable key,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,2,Configure debian ceph community repository stable key,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,2,Configure debian ceph community repository stable key,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,8,Configure debian ceph stable community repository,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,8,Configure debian ceph stable community repository,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,8,Configure debian ceph stable community repository,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,8,Configure debian ceph stable community repository,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_community_repository.yml,8,Configure debian ceph stable community repository,Broken Dependency Chain

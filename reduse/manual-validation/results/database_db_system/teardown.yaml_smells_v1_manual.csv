@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,8,Clean artifact path,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,8,Clean artifact path,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,13,Delete DB system,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,18,Delete the subnet,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,23,Delete the security list,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,28,Delete the route table,None
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,33,Delete the Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/database_db_system,teardown.yaml,38,Delete the VCN,Broken Dependency Chain

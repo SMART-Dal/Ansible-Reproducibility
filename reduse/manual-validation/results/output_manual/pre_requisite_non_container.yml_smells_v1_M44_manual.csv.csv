@@ -1,0 +1,13 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,pre_requisite_non_container.yml,1,Include red hat based system related tasks,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,pre_requisite_non_container.yml,2,Include debian based system related tasks,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,pre_requisite_non_container.yml,10,Create rados gateway and ganesha directories,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,pre_requisite_non_container.yml,15,Get keys from monitors,Idempotency
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,pre_requisite_non_container.yml,16,Copy ceph key(s) if needed,Idempotency
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,pre_requisite_non_container.yml,17,Nfs object gateway related tasks,Broken Dependency Chain

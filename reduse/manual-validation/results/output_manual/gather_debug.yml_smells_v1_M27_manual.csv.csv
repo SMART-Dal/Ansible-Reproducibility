@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,gather_debug.yml,1,Gather Debug - Get service status,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,gather_debug.yml,1,Gather Debug - Get service status,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,gather_debug.yml,3,Gather Debug - Get complete node objects,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,gather_debug.yml,3,Gather Debug - Get complete node objects,Broken Dependency Chain

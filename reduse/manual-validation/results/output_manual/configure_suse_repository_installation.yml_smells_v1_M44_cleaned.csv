@@ -1,0 +1,2 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_suse_repository_installation.yml,1,Include suse_obs_repository.yml,Broken Dependency Chain,Task did not check the correctness of execution.

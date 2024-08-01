@@ -1,0 +1,18 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,1,Ensure systemd service override directory exists,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,1,Ensure systemd service override directory exists,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,1,Ensure systemd service override directory exists,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,2,Add ceph-mgr systemd service overrides,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,7,Include_tasks systemd.yml,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,8,Enable ceph-mgr.target,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,8,Enable ceph-mgr.target,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,10,Systemd start mgr,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_mgr.yml,10,Systemd start mgr,Broken Dependency Chain,Task did not check the correctness of execution.

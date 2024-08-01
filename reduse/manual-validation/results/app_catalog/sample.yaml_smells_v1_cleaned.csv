@@ -1,0 +1,14 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,11,Launch an instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,27,Print instance details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,50,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,51,Get the VNIC attachment details of instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,53,Get details of the VNIC,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,70,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,73,Print the public ip of the newly launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,76,Wait (upto 5 minutes) for port 22 to become open,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,82,Attempt a ssh connection to the newly launced instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,86,Print SSH response from launched instance,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,sample.yaml,89,Task 12,Broken Dependency Chain

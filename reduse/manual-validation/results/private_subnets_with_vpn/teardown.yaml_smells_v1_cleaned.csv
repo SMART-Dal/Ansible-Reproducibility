@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,8,Delete IPSec connection,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,13,Update default route table to drop reference to DRG,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,18,Task 3,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,21,Delete CPE,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,26,Delete DRG attachment,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,31,Delete DRG,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,36,Delete subnets,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/private_subnets_with_vpn,teardown.yaml,41,Delete the VCN,Broken Dependency Chain

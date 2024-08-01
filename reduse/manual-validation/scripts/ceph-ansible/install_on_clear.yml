@@ -1,0 +1,6 @@
+---
+- name: Install ceph bundle
+  community.general.swupd:
+    name: storage-cluster
+  register: result
+  until: result is succeeded
