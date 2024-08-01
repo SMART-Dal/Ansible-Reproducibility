@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,suse_obs_repository.yml,1,Configure openSUSE ceph OBS repository,Assumption about Environment,"Task assumes that the package repository is available at a specific URL structure. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,suse_obs_repository.yml,1,Configure openSUSE ceph OBS repository,Broken Dependency Chain,Task did not check the correctness of execution.

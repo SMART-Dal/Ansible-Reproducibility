@@ -1,0 +1,19 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,11,Create a new Autonomous Container Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,43,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,45,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,50,Create a new Autonomous Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,53,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,61,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,64,"List All Autonomous Databases in a compartment, filtered by Display Name",Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,66,Assert that specified Autonomous Database is listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,70,Stop an Autonomous Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,83,Assert that specified Autonomous Database is stopped,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,86,Start Autonomous Database,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,88,Assert that specified Autonomous Database is started and available,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,91,Get a specific Autonomous Database's facts,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,97,Task 15,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,100,Assert that specified Autonomous Database is listed,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/autonomous_database/dedicated,sample.yaml,103,Task 17,Broken Dependency Chain

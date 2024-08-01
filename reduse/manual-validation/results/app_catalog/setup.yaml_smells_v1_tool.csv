@@ -1,0 +1,34 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,13,Create a temporary directory to house a temporary SSH keypair we will later use to connect to instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,16,Generate a Private Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,21,Task 5,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,23,Generate a Public Key,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,28,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,30,Task 8,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,36,Create a new Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,43,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,46,Create route table to connect internet gateway to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,54,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,57,create ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,65,create egress yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,71,load the variables defined in the ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,73,print loaded_ingress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,76,load the variables defined in the egress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,80,print loaded_egress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,83,Create a security list for allowing access to public instance,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,87,Task 20,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,90,Create a subnet to host the public instance. Link security_list and route_table.,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,98,Task 22,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,101,Get the app catalog listings,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,113,Task 24,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,116,Get the app catalog listing,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,120,Get all the resource versions of the listing,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,123,Task 27,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,128,Task 28,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,133,Create an agreement for the listing,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,136,Task 30,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,141,Create subscription if it does not exist,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/compute/app_catalog,setup.yaml,147,Task 32,Assumption about Environment

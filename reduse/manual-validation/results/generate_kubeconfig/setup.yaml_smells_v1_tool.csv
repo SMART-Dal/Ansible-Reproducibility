@@ -1,0 +1,29 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,8,Check pre-requisites,Assumption about Environment
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,13,Create a VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,14,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,15,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,16,Create an internet gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,17,Task 6,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,21,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,28,Update default route table of VCN to connect internet gateway to the VCN,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,30,Task 9,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,35,Task 10,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,42,"Create subnets for worker nodes in AD1, AD2 & AD3",Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,44,Task 12,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,49,Task 13,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,54,create ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,56,create egress yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,61,load the variables defined in the ingress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,69,print loaded_ingress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,70,load the variables defined in the egress rules yaml body,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,71,print loaded_egress,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,73,Update default security list to add additional rules,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,75,Task 21,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,83,Create a security list for load balancers,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,86,Task 23,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,90,Task 24,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,94,Create load balancer subnets in AD1 & AD2,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,98,Task 26,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,setup.yaml,102,Task 27,Assumption about Environment

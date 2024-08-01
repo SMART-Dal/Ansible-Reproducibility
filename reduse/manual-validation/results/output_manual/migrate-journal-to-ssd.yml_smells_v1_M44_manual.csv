@@ -1,0 +1,29 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,1,Get osd(s) if directory stat,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,32,Exit playbook osd(s) is not on this host,Missing Dependencies
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,40,Install sgdisk(gdisk),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,40,Install sgdisk(gdisk),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,45,Generate uuid for osds journal,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,45,Generate uuid for osds journal,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,46,Make osd partitions on ssd,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,46,Make osd partitions on ssd,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,48,Stop osd(s) service,Idempotency
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,55,Flush osd(s) journal,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,55,Flush osd(s) journal,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,62,Update osd(s) journal soft link,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,62,Update osd(s) journal soft link,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,66,Update osd(s) journal uuid,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,66,Update osd(s) journal uuid,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,67,Initialize osd(s) new journal,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,67,Initialize osd(s) new journal,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,migrate-journal-to-ssd.yml,69,Start osd(s) service,Idempotency

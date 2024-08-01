@@ -1,0 +1,12 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,1,Configure debian custom apt key,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,1,Configure debian custom apt key,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,1,Configure debian custom apt key,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,1,Configure debian custom apt key,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,1,Configure debian custom apt key,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,2,Configure debian custom repository,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,2,Configure debian custom repository,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,2,Configure debian custom repository,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,2,Configure debian custom repository,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_custom_repository.yml,2,Configure debian custom repository,Broken Dependency Chain

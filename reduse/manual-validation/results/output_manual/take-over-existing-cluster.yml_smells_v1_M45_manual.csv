@@ -1,0 +1,22 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,1,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,14,Import ceph-fetch-keys role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,18,Import ceph-defaults role,None
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,22,Import ceph-fetch-keys role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,26,Import ceph-defaults role,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,28,Get the name of the existing ceph cluster,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,28,Get the name of the existing ceph cluster,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,28,Get the name of the existing ceph cluster,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,29,Run stat module on Ceph configuration file,none
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,30,Make a backup of original Ceph configuration file,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,30,Make a backup of original Ceph configuration file,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,30,Make a backup of original Ceph configuration file,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,take-over-existing-cluster.yml,31,Generate ceph configuration file,Broken Dependency Chain

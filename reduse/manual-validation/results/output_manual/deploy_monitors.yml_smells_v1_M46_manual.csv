@@ -1,0 +1,50 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,1,Check if monitor initial keyring already exists,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,1,Check if monitor initial keyring already exists,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,2,Generate monitor initial keyring,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,2,Generate monitor initial keyring,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,5,Set_fact _initial_mon_key_success,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,23,Get initial keyring when it already exists,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,32,Create monitor initial keyring,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,36,Copy the initial key in /etc/ceph (for containers),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,36,Copy the initial key in /etc/ceph (for containers),Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,36,Copy the initial key in /etc/ceph (for containers),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,40,Create monitor directory,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,40,Create monitor directory,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,40,Create monitor directory,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,46,Recursively fix ownership of monitor directory,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,46,Recursively fix ownership of monitor directory,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,46,Recursively fix ownership of monitor directory,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,63,Create admin keyring,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,63,Create admin keyring,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,71,Slurp admin keyring,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,71,Slurp admin keyring,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,83,Copy admin keyring over to mons,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,83,Copy admin keyring over to mons,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,90,Import admin keyring into mon keyring,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,112,Set_fact ceph-mon container command,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,115,Set_fact monmaptool container command,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,122,Generate initial monmap,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,122,Generate initial monmap,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,133,Ceph monitor mkfs with keyring,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,133,Ceph monitor mkfs with keyring,Hardware Specific Commands
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,133,Ceph monitor mkfs with keyring,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,145,Ceph monitor mkfs without keyring,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,145,Ceph monitor mkfs without keyring,Hardware Specific Commands
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,deploy_monitors.yml,145,Ceph monitor mkfs without keyring,Broken Dependency Chain

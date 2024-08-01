@@ -1,0 +1,36 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,1,Get osd ids,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,1,Get osd ids,Missing Dependencies,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,1,Get osd ids,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,3,Collect osd ids,Idempotency,Task violates idempotency because it creates an object without checking the existence.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,3,Collect osd ids,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,11,Include_tasks systemd.yml,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,20,Ensure systemd service override directory exists,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,20,Ensure systemd service override directory exists,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,20,Ensure systemd service override directory exists,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,24,Add ceph-osd systemd service overrides,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task uses a fixed ID which can become outdated or incorrect across platforms.
+Task did not check the correctness of execution."
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,29,Ensure /var/lib/ceph/osd/<cluster>-<item> is present,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,29,Ensure /var/lib/ceph/osd/<cluster>-<item> is present,Missing Dependencies,"
+Task is using absolute path for source path"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,29,Ensure /var/lib/ceph/osd/<cluster>-<item> is present,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+None"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,30,Write run file in /var/lib/ceph/osd/xxxx/run,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+None"
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,32,Systemd start osd,Idempotency,Task violates idempotency because it executes a command.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_osds.yml,32,Systemd start osd,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
+None"

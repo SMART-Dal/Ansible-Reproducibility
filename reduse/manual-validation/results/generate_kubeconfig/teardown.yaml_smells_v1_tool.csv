@@ -1,0 +1,9 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,8,Delete node pool,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,13,Delete cluster,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,18,Delete subnets,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,23,Delete the security list,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,24,Update default route table to drop reference to internet gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,25,Delete the Internet Gateway,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/container_engine/generate_kubeconfig,teardown.yaml,26,Delete the VCN,Broken Dependency Chain

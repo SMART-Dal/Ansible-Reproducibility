@@ -1,0 +1,52 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,1,Retrieve rendered-worker name,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,1,Retrieve rendered-worker name,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,2,Check cluster FIPS status,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,2,Check cluster FIPS status,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,2,Check cluster FIPS status,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,5,Fail if host FIPS status does not match cluster FIPS status,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,5,Fail if host FIPS status does not match cluster FIPS status,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,6,Update Yum Cache,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,6,Update Yum Cache,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,6,Update Yum Cache,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,6,Update Yum Cache,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,11,Get cluster version,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,11,Get cluster version,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,17,Get kubernetes server version,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,17,Get kubernetes server version,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,23,Get available cri-o RPM versions,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,23,Get available cri-o RPM versions,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,33,Fail if cri-o is less than current kubernetes server version,Missing Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,33,Fail if cri-o is less than current kubernetes server version,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,37,Install openshift packages,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,37,Install openshift packages,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,37,Install openshift packages,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,37,Install openshift packages,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,43,reload systemd daemons,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,43,reload systemd daemons,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,46,gather service facts,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,46,gather service facts,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,47,Restart openvswitch,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,47,Restart openvswitch,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,51,Enable the CRI-O service,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,51,Enable the CRI-O service,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,54,Task 17,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,58,Enable persistent storage on journal,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,install.yml,58,Enable persistent storage on journal,Broken Dependency Chain

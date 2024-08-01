@@ -1,0 +1,24 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,1,Uninstall old docker versions,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,1,Uninstall old docker versions,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,2,Allow apt to use a repository over https (debian),Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,2,Allow apt to use a repository over https (debian),Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,7,Add docker's gpg key,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,7,Add docker's gpg key,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,7,Add docker's gpg key,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,7,Add docker's gpg key,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,7,Add docker's gpg key,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,13,Add docker repository,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,13,Add docker repository,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,13,Add docker repository,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,13,Add docker repository,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,13,Add docker repository,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,20,Add podman ppa repository,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,20,Add podman ppa repository,Version Specific Installation
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,20,Add podman ppa repository,Outdated Dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,20,Add podman ppa repository,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_prerequisites.yml,20,Add podman ppa repository,Broken Dependency Chain

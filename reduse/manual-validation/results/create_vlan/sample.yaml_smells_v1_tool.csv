@@ -1,0 +1,7 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,sample.yaml,11,Create a vlan,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,sample.yaml,27,Task 3,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,sample.yaml,31,Print vlan details,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/networking/create_vlan,sample.yaml,32,Task 5,Broken Dependency Chain

@@ -1,0 +1,6 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,get_def_crush_rule_name.yml,1,Get current default crush rule details,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,get_def_crush_rule_name.yml,1,Get current default crush rule details,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,get_def_crush_rule_name.yml,2,Get current default crush rule name,Idempotency
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,get_def_crush_rule_name.yml,2,Get current default crush rule name,Broken Dependency Chain

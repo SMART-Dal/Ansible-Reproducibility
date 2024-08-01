@@ -1,0 +1,64 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,1,Open node_exporter port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,1,Open node_exporter port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,1,Open node_exporter port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,2,Open dashboard port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,2,Open dashboard port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,2,Open dashboard port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,9,Open mgr/prometheus port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,9,Open mgr/prometheus port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,9,Open mgr/prometheus port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,11,Open dashboard port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,11,Open dashboard port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,11,Open dashboard port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,12,Open mgr/prometheus port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,12,Open mgr/prometheus port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,12,Open mgr/prometheus port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,15,Open grafana port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,15,Open grafana port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,15,Open grafana port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,22,Open prometheus port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,22,Open prometheus port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,22,Open prometheus port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,29,Open alertmanager port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,29,Open alertmanager port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,29,Open alertmanager port,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,31,Open alertmanager cluster port,Idempotency,Task changes the state of the firewall without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,dashboard_firewall.yml,31,Open alertmanager cluster port,Assumption about Environment,"Task assumes the firewall and changes the state without checking. 
+
+
+
+
+"

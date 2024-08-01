@@ -1,0 +1,12 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,1,Add ubuntu cloud archive key package,Idempotency,Task violates idempotency because it installs or upgrades packages.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,1,Add ubuntu cloud archive key package,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,2,Add ubuntu cloud archive repository,Idempotency,Task violates idempotency because it installs or upgrades packages with apt.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,2,Add ubuntu cloud archive repository,Version Specific Installation,Task uses apt to install a latest version which could get incompatible.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,2,Add ubuntu cloud archive repository,Outdated Dependencies,Task uses apt to install the latest packages.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,2,Add ubuntu cloud archive repository,Assumption about Environment,"Task assumes that the package repository is available at a specific URL structure. 
+
+
+"
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_uca_repository.yml,2,Add ubuntu cloud archive repository,Broken Dependency Chain,Task did not check the correctness of execution.

@@ -1,0 +1,19 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,1,Include vars of lv_vars.yaml,Missing Dependencies,Error
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,1,Include vars of lv_vars.yaml,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,2,Fail if nvme_device is not defined,Missing Dependencies,Task has missing dependencies
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,2,Fail if nvme_device is not defined,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,9,Install lvm2,Idempotency,Task violates idempotency because it installs or upgrades packages.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,9,Install lvm2,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,11,Add nvme device as lvm pv,Broken Dependency Chain,Task did not check the correctness of execution.
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,52,Write output for osds.yml,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,lv-create.yml,52,Write output for osds.yml,Broken Dependency Chain,Task did not check the correctness of execution.

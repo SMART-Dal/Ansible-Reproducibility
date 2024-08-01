@@ -1,0 +1,4 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rbd_client_dir.yml,1,Create rbd client directory,Idempotency,Task changes the state of the file without checking.
+/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rbd_client_dir.yml,1,Create rbd client directory,Missing Dependencies,"
+Task is using relative path for source path"

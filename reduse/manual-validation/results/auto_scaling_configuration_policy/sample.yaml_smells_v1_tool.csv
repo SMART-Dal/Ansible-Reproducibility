@@ -1,0 +1,10 @@
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,8,Task 1,Broken Dependency Chain
+Repository Name,File Name,Line Number,Task Name,Smell Name
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,11,Create auto_scaling_configuration for threshold policy instance pool,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,27,Print auto scaling configuration policy details for threshold based policy,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,61,Task 4,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,62,Create auto_scaling_configuration for scheduled policy instance pool,Broken Dependency Chain
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,66,Print auto scaling policy details for scheduled,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,73,Task 7,Assumption about Environment
+/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/autoscaling/auto_scaling_configuration_policy,sample.yaml,80,Task 8,Broken Dependency Chain
