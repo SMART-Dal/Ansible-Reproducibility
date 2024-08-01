@@ -1,6 +1,0 @@
-- hosts: all
-  name: Deploy Latest Version of Hugo
-  tasks:
-    - name: Hugo
-      ansible.builtin.import_role:
-        name: hugo

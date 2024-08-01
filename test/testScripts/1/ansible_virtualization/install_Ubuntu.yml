@@ -1,7 +1,0 @@
----
-# Install kvm on Ubuntu
-
-- name: install Ubuntu packages
-  package:
-    name: "{{ ubuntu_packages }}"
-  become: yes

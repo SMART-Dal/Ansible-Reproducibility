@@ -1,8 +1,0 @@
----
-- name: Playbook to backup IPA server
-  hosts: ipaserver
-  become: true
-
-  roles:
-  - role: ipabackup
-    state: present

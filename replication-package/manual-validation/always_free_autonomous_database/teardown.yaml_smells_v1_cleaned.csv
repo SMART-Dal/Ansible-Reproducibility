@@ -1,4 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,teardown.yaml,9,Delete Autonomous Database,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/database/always_free_autonomous_database,teardown.yaml,15,Assert that specified Autonomous Database is deleted,Assumption about Environment

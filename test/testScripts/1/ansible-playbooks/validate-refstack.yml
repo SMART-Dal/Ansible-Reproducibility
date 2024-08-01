@@ -1,6 +1,0 @@
----
-- name: Run refstack validator
-  hosts: localhost
-
-  roles:
-    - role: osism.validations.refstack

@@ -1,8 +1,0 @@
----
-# Deletes a temporary directory and files
-
-- name: Delete temporary directory and files
-  file:
-    path: "{{ oracle_java.path }}"
-    state: absent
-  ignore_errors: true

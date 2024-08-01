@@ -1,7 +1,0 @@
----
-
-- name: 'Stop and disable instance systemd service'
-  systemd:
-    name: '{{ instance_info.systemd_service }}'
-    enabled: false
-  tags: cartridge-instances

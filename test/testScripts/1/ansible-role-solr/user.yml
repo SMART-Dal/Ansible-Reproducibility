@@ -1,8 +1,0 @@
----
-- name: Ensure solr_group exists.
-  group: "name={{ solr_group }} state=present"
-
-- name: Ensure solr_user exists.
-  user:
-    name: "{{ solr_user }}"
-    group: "{{ solr_group }}"

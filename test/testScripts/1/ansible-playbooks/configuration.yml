@@ -1,6 +1,0 @@
----
-- name: Update configuration
-  hosts: "{{ hosts_manager|default('manager') }}"
-
-  roles:
-    - role: osism.commons.configuration

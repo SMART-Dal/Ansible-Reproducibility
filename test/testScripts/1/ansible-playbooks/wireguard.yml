@@ -1,7 +1,0 @@
----
-- name: Apply role wireguard
-  hosts: "{{ hosts_wireguard|default('wireguard') }}"
-  serial: "{{ osism_serial['wireguard']|default('0') }}"
-
-  roles:
-    - role: osism.services.wireguard

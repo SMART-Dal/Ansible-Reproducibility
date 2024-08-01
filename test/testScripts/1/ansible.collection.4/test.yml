@@ -1,6 +1,0 @@
----
-- name: Test play for user_init
-  hosts: localhost
-  remote_user: root
-  roles:
-    - container_init

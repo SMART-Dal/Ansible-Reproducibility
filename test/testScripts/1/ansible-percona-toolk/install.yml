@@ -1,7 +1,0 @@
-# tasks file
----
-- name: install | dependencies
-  ansible.builtin.apt:
-    name: "{{ percona_toolkit_dependencies }}"
-  tags:
-    - percona-toolkit-install-dependencies

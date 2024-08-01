@@ -1,6 +1,0 @@
-- hosts: all
-  name: Install Brave
-  tasks:
-    - name: Brave
-      ansible.builtin.import_role:
-        name: brave

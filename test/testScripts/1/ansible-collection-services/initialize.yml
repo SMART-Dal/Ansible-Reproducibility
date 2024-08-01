@@ -1,9 +1,0 @@
----
-- name: Flush handlers
-  ansible.builtin.meta: flush_handlers
-
-- name: Include vault initialize tasks
-  ansible.builtin.include_tasks: initialize-vault.yml
-  when:
-    - enable_vault | bool
-    - not ansible_local.osism.vault.status | default("False") | bool

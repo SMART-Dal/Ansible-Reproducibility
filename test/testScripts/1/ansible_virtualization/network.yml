@@ -1,8 +1,0 @@
----
-# DNS fix
-- name: fix slow DNS
-  lineinfile:
-    dest: /etc/sysconfig/network
-    regexp: '^RES_OPTIONS'
-    line: 'RES_OPTIONS="single-request-reopen"'
-  become: yes

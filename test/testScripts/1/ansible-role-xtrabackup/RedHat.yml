@@ -1,3 +1,0 @@
----
-xtrabackup_percona_yum_repository: https://repo.percona.com/yum/percona-release-latest.noarch.rpm
-xtrabackup_package_name: percona-xtrabackup-80

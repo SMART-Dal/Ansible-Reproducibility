@@ -1,6 +1,0 @@
----
-- name: Apply role openstackclient
-  hosts: "{{ hosts_openstackclient|default('openstackclient') }}"
-
-  roles:
-    - role: osism.services.openstackclient

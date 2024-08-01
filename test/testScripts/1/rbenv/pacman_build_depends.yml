@@ -1,5 +1,0 @@
----
-- name: Pacman build depends
-  pacman:
-    name: base-devel
-    update_cache: yes

@@ -1,6 +1,0 @@
----
-- name: Install ipmitool package
-  become: true
-  ansible.builtin.apt:
-    name: "{{ ipmitool_package_name }}"
-    lock_timeout: "{{ apt_lock_timeout | default(300) }}"

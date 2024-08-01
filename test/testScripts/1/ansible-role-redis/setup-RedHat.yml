@@ -1,5 +1,0 @@
----
-- name: Ensure Redis is installed.
-  package:
-    name: "{{ redis_package }}"
-    enablerepo: "{{ redis_enablerepo | default(omit, true) }}"

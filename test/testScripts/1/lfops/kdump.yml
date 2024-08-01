@@ -1,7 +1,0 @@
-- name: 'Stop and disable kdump'
-  hosts:
-    - 'lfops_kdump'
-
-  roles:
-
-    - role: 'linuxfabrik.lfops.kdump'

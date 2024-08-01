@@ -1,6 +1,0 @@
-- hosts: all
-  name: Deploy VScode
-  tasks:
-    - name: VSCode
-      ansible.builtin.import_role:
-        name: vscode

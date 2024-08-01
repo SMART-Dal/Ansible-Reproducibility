@@ -1,6 +1,0 @@
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Make sure gitea_register_email_confirm is false when gitea_register_manual_confirm is true,None,None,None,Task has missing dependencies,None None,None,None
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Configure gitea,None,None,None,None,None None,None,Task did not check the correctness of execution.
-Task name,Idempotency,Version specific installation,Outdated dependencies,Missing dependencies,Assumption about environment,Hardware specific commands,Broken Dependency
-Service gitea,Task violates idempotency because it executes a command.,None,None,None,None None,None,Task did not check the correctness of execution.

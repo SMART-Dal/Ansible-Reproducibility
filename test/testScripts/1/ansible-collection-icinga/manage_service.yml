@@ -1,5 +1,0 @@
----
-- name: Ensure IcingaDB Service is running
-  ansible.builtin.service:
-    enabled: yes
-    name: "{{ icingadb_service_name }}"

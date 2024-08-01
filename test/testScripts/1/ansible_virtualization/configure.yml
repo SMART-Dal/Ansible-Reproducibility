@@ -1,8 +1,0 @@
----
-# Configure kvm
-
-- name: Enable service libvirt, and start if not started
-  service:
-    name: libvirtd
-    enabled: yes
-  become: yes

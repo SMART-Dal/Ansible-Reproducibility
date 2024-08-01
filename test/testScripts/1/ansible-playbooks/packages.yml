@@ -1,8 +1,0 @@
----
-- name: Apply role packages
-  hosts: all
-  serial: "{{ osism_serial['packages']|default(osism_serial_default)|default(0) }}"
-  strategy: "{{ osism_strategy|default('linear') }}"
-
-  roles:
-    - role: osism.commons.packages

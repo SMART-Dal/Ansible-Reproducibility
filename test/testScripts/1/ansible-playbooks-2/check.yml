@@ -1,5 +1,0 @@
----
-- name: Ensure vic-vmagent service started
-  ansible.builtin.service:
-    name: vic-vmagent
-    enabled: yes

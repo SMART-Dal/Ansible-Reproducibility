@@ -1,7 +1,0 @@
-- hosts: all
-  name: Deploy Podman
-  strategy: free
-  tasks:
-    - name: Podman
-      ansible.builtin.import_role:
-        name: podman

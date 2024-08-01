@@ -1,8 +1,0 @@
----
-- name: Install selected components (Linux)
-  ansible.builtin.include_tasks: "{{ ansible_pkg_mgr }}/install.yml"
-  when: ansible_facts.os_family != "Windows"
-
-- name: Install selected components (Windows)
-  ansible.builtin.include_tasks: "msi/install.yml"
-  when: ansible_facts.os_family == "Windows"

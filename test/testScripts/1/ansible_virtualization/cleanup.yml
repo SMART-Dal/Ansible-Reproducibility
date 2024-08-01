@@ -1,8 +1,0 @@
----
-- name: remove vbox path
-  file:
-    path: "/tmp/vbox"
-
-- name: rm vbox guest additions iso
-  file:
-    path: "/tmp/VBoxGuestAdditions.iso"

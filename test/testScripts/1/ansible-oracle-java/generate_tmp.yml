@@ -1,8 +1,0 @@
----
-# Generates a temporary directory for local file storage
-
-- name: Generate a temporary directory for local file storage
-  tempfile:
-    state: directory
-    suffix: build
-  register: oracle_java

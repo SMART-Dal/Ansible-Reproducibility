@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  remote_user: root
-  roles:
-    - role: ansible-role-sonar-scanner
-      vars:
-        sonar_scanner_version: 3.3.0.1492

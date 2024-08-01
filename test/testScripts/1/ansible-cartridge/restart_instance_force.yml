@@ -1,7 +1,0 @@
----
-
-- name: 'Restart and enable instance systemd service'
-  systemd:
-    name: '{{ instance_info.systemd_service }}'
-    enabled: true
-  tags: cartridge-instances

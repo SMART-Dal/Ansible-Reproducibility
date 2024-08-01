@@ -1,7 +1,0 @@
----
-- name: Apply role homer
-  hosts: "{{ hosts_homer|default('homer') }}"
-  serial: "{{ osism_serial['homer']|default(osism_serial_default)|default(0) }}"
-
-  roles:
-    - role: osism.services.homer

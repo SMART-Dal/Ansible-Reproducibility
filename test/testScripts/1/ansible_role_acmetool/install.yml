@@ -1,5 +1,0 @@
----
-- name: Install acmetool
-  become: true
-  ansible.builtin.package:
-    name: 'acmetool'

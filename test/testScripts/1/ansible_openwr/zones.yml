@@ -1,6 +1,0 @@
----
-- name: check every zone individually
-  include_tasks: zone.yml
-  loop: "{{ zones | dict2items }}"
-  loop_control:
-    loop_var: zone

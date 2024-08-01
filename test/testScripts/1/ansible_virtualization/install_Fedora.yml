@@ -1,7 +1,0 @@
----
-# Install kvm on Fedora
-
-- name: install Fedora packages
-  package:
-    name: "{{ fedora_packages }}"
-  become: yes

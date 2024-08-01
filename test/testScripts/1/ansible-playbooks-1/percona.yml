@@ -1,6 +1,0 @@
-- hosts: all
-  name: Deploy Percona build of MySQL
-  tasks:
-    - name: Percona
-      ansible.builtin.import_role:
-        name: percona

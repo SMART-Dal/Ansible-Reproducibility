@@ -1,7 +1,0 @@
-- hosts: all
-  name: Deploy Adguardhome
-  strategy: free
-  tasks:
-    - name: Adguardhome
-      ansible.builtin.import_role:
-        name: adguardhome

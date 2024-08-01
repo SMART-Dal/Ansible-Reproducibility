@@ -1,9 +1,0 @@
----
-
-network_service: NetworkManager
-
-network_packages: 
-- ethtool
-- network-manager
-
-network_scripts_dir: /etc/NetworkManager/dispatcher.d

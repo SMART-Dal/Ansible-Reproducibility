@@ -1,7 +1,0 @@
----
-
-- name: Stop and disable service firewalld
-  ansible.builtin.systemd:
-    name: firewalld
-    enabled: no
-  when: "'firewalld' in ansible_facts.packages"

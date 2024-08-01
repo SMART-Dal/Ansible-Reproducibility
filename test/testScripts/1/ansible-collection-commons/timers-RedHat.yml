@@ -1,9 +1,0 @@
----
-- name: Disable dnf-makecache timers
-  become: true
-  ansible.builtin.systemd:
-    name: "{{ item }}.timer"
-    enabled: false
-  when: item + ".timer" in ansible_facts.services
-  loop:
-    - dnf-makecache

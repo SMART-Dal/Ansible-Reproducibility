@@ -1,9 +1,0 @@
----
-
-- name: 'Remove temporary files'
-  file:
-    path: '{{ filepath }}'
-  loop_control:
-    loop_var: filepath
-  with_items: '{{ temporary_files }}'
-  when: cartridge_remove_temporary_files

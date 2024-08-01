@@ -1,8 +1,0 @@
----
-- hosts: all
-  collections:
-    - skupper.network
-  tasks:
-  - ansible.builtin.include_tasks: setup-k8s.yml
-  - import_role:
-      name: skupper

@@ -1,6 +1,0 @@
-- hosts: all
-  name: Hardening
-  tasks:
-    - name: Hardening
-      ansible.builtin.import_role:
-        name: hardening

@@ -1,5 +1,0 @@
-- name: Install deps
-  hosts: EmotoAghMasterNode
-  tasks:
-  - name: Install collection ansible.posix
-    shell: ansible-galaxy collection install ansible.posix

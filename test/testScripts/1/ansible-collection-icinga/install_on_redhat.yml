@@ -1,3 +1,0 @@
-- name: RedHat - Install IcingaDB packages
-  ansible.builtin.yum:
-    name: "{{ icingadb_packages }}"

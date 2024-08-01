@@ -1,6 +1,0 @@
-- hosts: all
-  name: Deploy SSH server
-  tasks:
-    - name: SSH
-      ansible.builtin.import_role:
-        name: ssh

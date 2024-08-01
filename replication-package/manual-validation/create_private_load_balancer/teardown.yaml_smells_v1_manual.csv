@@ -1,9 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,9,Delete Private Load Balancer,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,14,Delete instances,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,19,Delete subnets,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,20,Delete Security List,None
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,22,Delete Route table,None
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,27,Delete NAT Gateway,None
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/load_balancing/create_private_load_balancer,teardown.yaml,29,Delete  VCN,None

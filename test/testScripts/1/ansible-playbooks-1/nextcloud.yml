@@ -1,7 +1,0 @@
-- hosts: all
-  name: Deploy Nextcloud
-  strategy: free
-  tasks:
-    - name: Nextcloud
-      ansible.builtin.import_role:
-        name: nextcloud

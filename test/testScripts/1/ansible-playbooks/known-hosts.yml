@@ -1,8 +1,0 @@
----
-- name: Apply role known_hosts
-  hosts: "{{ hosts_known_hosts|default('manager') }}"
-  serial: "{{ osism_serial['known_hosts']|default(osism_serial_default)|default(0) }}"
-  strategy: "{{ osism_strategy|default('linear') }}"
-
-  roles:
-    - role: osism.commons.known_hosts

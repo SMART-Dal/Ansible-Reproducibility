@@ -1,6 +1,0 @@
----
-
-- name: Disable kdump
-  ansible.builtin.include_tasks: disable-services.yml
-  vars:
-    line_item: kdump
