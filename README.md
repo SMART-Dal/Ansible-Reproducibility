@@ -1,9 +1,27 @@
 # A study on reproducibility smells
 This study, first, identifies such programming practices
-that we refer to as **reproducibility smells** by conducting a comprehensive multi-vocal review. We implement a
+that we refer to as **reproducibility smells** by conducting a comprehensive multi-vocal review and propose a first-ever validated catalog of reproducibility smells for IaC scripts. We implement a
 tool viz. **REDUSE** to identify reproducibility smells in Ansible scripts. Furthermore, we carry out an empirical
 study to reveal the proliferation of reproducibility smells in open-source projects and explore correlation and
 co-occurrence relationships among them.
+
+
+We elaborate on the contents of the individual folder of this repository below.
+
+## Multi-vocal literature review(`mlr`)
+
+This folder contains the following files.
+
+- `grey-literature-source.xlsx`: This Excel file contains all the information about the grey literature resources. It has following sheets.
+  - `Links`: contains information about the type of the documents, content of the document, what IaC language or concept it is related to and the corresponding link to the document.
+  - `Reviewer-1-QA`: contains the marking assessment of each document from the reviewer-1 for the grey literature.
+  - `Reviewer-2-QA`: contains the marking assessment of each document from the reviewer-2 for the grey literature.
+  - `Grey Literature Sources`: contains the source numbers, best practice/ bad practice that each of the literature are mentioning and a summary.
+  - `Search Queries`: shows that how many documents we gain for each search query, how many filtered with the exclusion/inclusion criteria and number of final documents. 
+  - `smell-reference`: shows a list of references that each of the smells are extracted from the them. 
+  - `Quality Assessment final`: contains the final and merged marking assessment of each document from the both reviewers for the grey literature.
+
+
 
 ## REDUCE - a reproducibility smells detection tool
 The tool is designed to detect reproducibility smells in Ansible scripts.
