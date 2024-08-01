@@ -55,3 +55,8 @@ This folder contains all the scripts that are used to calculate the metrics requ
 - `extracted-repos`: this folder contains the list of the open-source repositories from nine categories hosted by the Ansible Galaxy platform.
 - `extraction-scripts`: scripts to check the criteria and clone the repositories from the Ansbile Galaxy platform.
 - `repos`: contains Ansible scripts for all the selected repositories used for the empirical studies.
+
+## Qualitative analysis (`qualitative-analysis`)
+
+- `Ansible-galaxy-issues.pdf`: contains links to the repositories, issues, and the justification for the issue related to reproducibility smell from the qualitative analysis section.
+- `Qualitative-analysis.xlsx`: contains information such as repository name, issue number, root cause, smell description, and link of the issue for all the issues considered for this analysis.
