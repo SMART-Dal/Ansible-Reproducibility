@@ -1,0 +1,6 @@
+---
+
+helper_dependencies:
+  - make
+
+git_package: git

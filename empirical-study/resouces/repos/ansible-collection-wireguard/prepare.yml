@@ -1,0 +1,8 @@
+---
+- name: Prepare local runner
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Install Python dependency
+      ansible.builtin.shell: pip3 install --user -r ../../requirements.txt

@@ -1,0 +1,37 @@
+---
+
+- name: Check if Chrony configuration was updated by RPM
+  ansible.builtin.stat:
+    path: /etc/chrony.conf.rpmnew
+  register: chrony_conf_rpmnew
+
+- name: Ensure latest Chrony configuration from RPM is used
+  ansible.builtin.copy:
+    remote_src: true
+    src: /etc/chrony.conf.rpmnew
+    dest: /etc/chrony.conf
+  when: chrony_conf_rpmnew.stat.exists
+
+- name: Ensure Chrony is configured
+  ansible.builtin.lineinfile:
+    path: /etc/chrony.conf
+    regexp: "^#?{{ item.line.split('=') }} "
+    line: "{{ item.line }}"
+  when: item.when | default(true)
+  with_items:
+    - line: "pool {{ common_ntp_server }} iburst{{ common_nts | ternary(' nts', '') }}"
+      when: common_ntp_server is defined
+    - line: "port 0"
+    - line: "cmdport 0"
+
+- name: Ensure Chrony is restarted
+  ansible.builtin.systemd:
+    name: chronyd
+  changed_when: false
+
+- name: Ensure Chrony "rpmnew" and "rpmsave" files are absent
+  ansible.builtin.file:
+    path: "{{ item }}"
+  with_items:
+    - /etc/chrony.conf.rpmnew
+    - /etc/chrony.conf.rpmsave

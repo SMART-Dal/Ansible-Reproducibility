@@ -1,0 +1,37 @@
+---
+- name: "Generate container cluster name"
+  ansible.builtin.set_fact:
+    kubelink_cluster_name: "CC-ANSIBLE-{{ lookup('password', '/dev/null chars=ascii_lowercase,digits length=8') }}"
+  when: kubelink_cluster_name is not defined
+
+- name: "Create container cluster"
+  illumio.core.container_cluster:
+    pce_hostname: "{{ illumio_pce_hostname }}"
+    pce_port: "{{ illumio_pce_port }}"
+    pce_org_id: "{{ illumio_pce_org_id }}"
+    api_key_username: "{{ illumio_pce_api_key }}"
+    api_key_secret: "{{ illumio_pce_api_secret }}"
+    pce_tls_verify: "{{ illumio_pce_tls_verify | default(omit) }}"
+    pce_tls_ca: "{{ illumio_pce_tls_ca | default(omit) }}"
+    pce_tls_client_certs: "{{ illumio_pce_tls_client_certs | default(omit) }}"
+    pce_http_proxy: "{{ illumio_pce_http_proxy | default(omit) }}"
+    pce_https_proxy: "{{ illumio_pce_https_proxy | default(omit) }}"
+    name: "{{ kubelink_cluster_name }}"
+    description: Container cluster created by Ansible
+    state: present
+  delegate_to: '127.0.0.1'
+  register: kubelink_cluster_result
+
+- name: "Fail if cluster token is missing"
+  ansible.builtin.fail:
+    msg: "kubelink_cluster_token is not defined. Did you specify kubelink_cluster_name without setting the token?"
+  when: kubelink_cluster_token is not defined and 'container_cluster_token' not in kubelink_cluster_result.container_cluster
+
+- name: "Set container cluster ID"
+  ansible.builtin.set_fact:
+    kubelink_cluster_id: "{{ kubelink_cluster_result.container_cluster['href'] | split('/') | last }}"
+
+- name: "Set container cluster token"
+  ansible.builtin.set_fact:
+    kubelink_cluster_token: "{{ kubelink_cluster_result.container_cluster['container_cluster_token'] }}"
+  when: kubelink_cluster_token is not defined

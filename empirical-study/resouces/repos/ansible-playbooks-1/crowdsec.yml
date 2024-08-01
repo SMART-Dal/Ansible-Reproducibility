@@ -1,0 +1,7 @@
+- hosts: all
+  strategy: free
+  name: Crowdsec
+  tasks:
+    - name: Crowdsec
+      ansible.builtin.import_role:
+        name: crowdsec

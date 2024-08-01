@@ -1,0 +1,5 @@
+---
+- name: Install java packages
+  win_package:
+    path: '{{ java_artifact }}'
+    product_id: '{{ java_product_id }}'

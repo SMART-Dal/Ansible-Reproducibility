@@ -1,0 +1,7 @@
+---
+# Install kvm on Debian
+
+- name: install Debian packages
+  package:
+    name: "{{ debian_packages }}"
+  become: yes

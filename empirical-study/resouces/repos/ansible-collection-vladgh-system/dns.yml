@@ -1,0 +1,8 @@
+---
+- name: DNS Configuration
+  hosts: dns
+  become: true
+  tasks:
+    - name: Include dns role
+      ansible.builtin.include_role:
+        name: vladgh.system.dns

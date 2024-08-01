@@ -1,0 +1,6 @@
+---
+
+- name: Configuring service
+  service:
+    name: nginx
+    enabled: "{{ nginx_service_enabled }}"

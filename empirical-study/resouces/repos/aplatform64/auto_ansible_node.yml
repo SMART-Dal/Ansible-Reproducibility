@@ -1,0 +1,19 @@
+---
+- name: "Automation / Ansible / Node / Usage example"
+  hosts: "**changeme**"                   # Target hostname where the Ansible Node will be setup
+  gather_facts: true
+  vars:
+    ansible_ssh_common_args: "-o PreferredAuthentications=password -o PubkeyAuthentication=no -o StrictHostKeyChecking=no" # For SSH password
+    ansible_user: "**changeme**"          # Bootstrap user's login name
+    ansible_password: "**changeme**"      # Bootstrap user's password
+    ansible_become_method: "sudo"         # Tool used to become root
+    ansible_become_password: "{{ ansible_password }}"
+
+  tasks:
+    - name: "Example: Prepare (bootstrap) the managed node for Ansible operation"
+      vars:
+        auto_ansible_node:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.automation.auto_ansible_node"
+...

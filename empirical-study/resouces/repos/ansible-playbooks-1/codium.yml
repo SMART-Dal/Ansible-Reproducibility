@@ -1,0 +1,6 @@
+- hosts: all
+  name: Codium
+  tasks:
+    - name: Import Codium
+      ansible.builtin.import_role:
+        name: codium

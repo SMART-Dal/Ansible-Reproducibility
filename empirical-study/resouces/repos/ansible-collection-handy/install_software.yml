@@ -1,0 +1,106 @@
+---
+- name: Install admin software groups
+  ansible.builtin.package:
+    state: latest
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.admin }}"
+  when: "'admin' in software_groups_to_install"
+
+- name: Install apps software groups
+  ansible.builtin.package:
+    state: latest
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.apps }}"
+  when: "'apps' in software_groups_to_install"
+
+- name: Install configuration software groups
+  ansible.builtin.package:
+    state: latest
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.configuration }}"
+  when: "'configuration' in software_groups_to_install"
+
+- name: Install cgroups software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.cgroups }}"
+  when: "'cgroups' in software_groups_to_install"
+
+- name: Install debug software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.debug }}"
+  when: "'debug' in software_groups_to_install"
+
+- name: Install development software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.development }}"
+  when: "'development' in software_groups_to_install"
+
+- name: Install editors software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.editors }}"
+  when: "'editors' in software_groups_to_install"
+
+- name: Install fonts software groups
+  block:
+
+    - name: Install packages EL 9
+      ansible.builtin.dnf:
+        enablerepo: devel
+        name: "{{ item }}"
+      loop:
+        - "{{ software_packages.fonts }}"
+      when: (ansible_distribution_major_version == '9' and ansible_os_family == "RedHat")
+
+    - name: Install packages for other releases
+      ansible.builtin.package:
+        name: "{{ item }}"
+      loop:
+        - "{{ software_packages.fonts }}"
+      when: (not ansible_distribution_major_version == '9')
+
+  when: "'fonts' in software_groups_to_install"
+
+- name: Install services software groups
+  ansible.builtin.package:
+    name: "{{ item.package_name }}"
+  loop: "{{ software_packages.services }}"
+  when: "'services' in software_groups_to_install"
+
+- name: Ensure services are enabled + started
+  systemd:
+    name: "{{ item.daemon_name }}"
+    enabled: true
+  loop: "{{ software_packages.services }}"
+  when: "'services' in software_groups_to_install"
+
+- name: Install pdf_export_deps software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.pdf_export_deps }}"
+  when: "'pdf_export_deps' in software_groups_to_install"
+
+- name: Install terminals software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.terminals }}"
+  when: "'terminals' in software_groups_to_install"
+
+- name: Install utils software groups
+  ansible.builtin.package:
+    name: "{{ item }}"
+  loop:
+    - "{{ software_packages.utils }}"
+  when: "'utils' in software_groups_to_install"

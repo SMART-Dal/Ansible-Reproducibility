@@ -1,0 +1,6 @@
+- hosts: all
+  name: Install Macchina
+  tasks:
+    - name: Macchina
+      ansible.builtin.import_role:
+        name: macchina

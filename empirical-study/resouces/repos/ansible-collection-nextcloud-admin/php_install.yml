@@ -1,0 +1,40 @@
+---
+- name: "[PHP] - External repository is installed."
+  ansible.builtin.import_role:
+    name: geerlingguy.php-versions
+  vars:
+    php_version: "{{ php_ver }}"
+  when: php_install_external_repos
+
+- name: "[PHP] - Required and recommended packages are installed."
+  ansible.builtin.package:
+    name:
+      - imagemagick
+      - smbclient
+      - "php{{ php_ver }}-fpm"
+      - "php{{ php_ver }}-gd"
+      - "php{{ php_ver }}-ldap"
+      - "php{{ php_ver }}-imap"
+      - "php{{ php_ver }}-curl"
+      - "php{{ php_ver }}-intl"
+      - "php{{ php_ver }}-bz2"
+  notify:
+    - Start php-fpm
+
+- name: "[PHP] - Extra packages are installed."
+  ansible.builtin.package:
+    name: "{{ php_pkg_spe }}"
+
+- name: "[PHP] - Database client - MySQL."
+  ansible.builtin.package:
+    name: "php{{ php_ver }}-mysql"
+  when: (nextcloud_db_backend == "mysql") or (nextcloud_db_backend == "mariadb")
+
+- name: "[PHP] - Database client - PostgreSQL."
+  ansible.builtin.package:
+    name: "php{{ php_ver }}-pgsql"
+  when: (nextcloud_db_backend == "pgsql")
+
+- name: "[PHP] - APCu is installed."
+  ansible.builtin.package:
+    name: "php{{ php_ver }}-apcu"

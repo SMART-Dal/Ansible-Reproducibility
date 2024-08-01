@@ -1,0 +1,6 @@
+- hosts: all
+  name: Reboot
+  tasks:
+    - name: Reboot
+      ansible.builtin.import_role:
+        name: reboot

@@ -1,0 +1,7 @@
+---
+
+- name: MySQL | Configuring service
+  systemd:
+    name: mysql
+    enabled: "{{ mysql_service_enabled }}"
+    daemon_reload: true

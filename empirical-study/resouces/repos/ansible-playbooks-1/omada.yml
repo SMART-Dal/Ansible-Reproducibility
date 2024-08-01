@@ -1,0 +1,7 @@
+- hosts: all
+  name: Install Omada Controller
+  strategy: free
+  tasks:
+    - name: Omada
+      ansible.builtin.import_role:
+        name: omada

@@ -1,0 +1,110 @@
+---
+- name: "Create Sites."
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    omd -V {{ item.version }}.{{ checkmk_server_edition | lower }} create {{ item.name }}
+  args:
+    executable: /bin/bash
+    creates: "/omd/sites/{{ item.name }}"
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  when: item.state != "absent"
+  register: checkmk_server_sites_created
+  tags:
+    - create-sites
+
+- name: "Get site version."
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    omd version {{ item.name }} | egrep -o '[^ ]+$'
+  args:
+    executable: /bin/bash
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  changed_when: "checkmk_server_sites_versions.stdout != item.version + '.' + checkmk_server_edition | lower"
+  when: item.state != "absent"
+  register: checkmk_server_sites_versions
+  tags:
+    - update-sites
+
+- name: "Include update site tasks."  # noqa no-handler
+  ansible.builtin.include_tasks: update-site.yml
+  loop: "{{ checkmk_server_sites_versions.results }}"
+  when: "item.changed"
+  tags:
+    - update-sites
+
+- name: "Start Sites."
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    omd start {{ item.name }}
+  args:
+    executable: /bin/bash
+    creates: "/opt/omd/sites/{{ item.name }}/tmp/run/live"
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  when: item.state == "started"
+  register: checkmk_server_sites_started
+  tags:
+    - start-sites
+
+- name: "Stop Sites."
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    omd stop {{ item.name }}
+  args:
+    executable: /bin/bash
+    removes: "/opt/omd/sites/{{ item.name }}/tmp/run/live"
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  when: (item.state == "absent") or (item.state == "stopped")
+  register: checkmk_server_sites_stopped
+  tags:
+    - stop-sites
+
+- name: "Destroy Sites."
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    (yes yes || true) | omd rm {{ item.name }}
+  args:
+    executable: /bin/bash
+    removes: "/omd/sites/{{ item.name }}"
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  when: item.state == "absent"
+  register: checkmk_server_sites_removed
+  tags:
+    - destroy-sites
+
+- name: "Update Site Admin Password for Checkmk < 2.1."  # noqa no-changed-when
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    echo '{{ item.admin_pw }}' | htpasswd -i /omd/sites/{{ item.name }}/etc/htpasswd cmkadmin
+  args:
+    executable: /bin/bash
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  when: (item.state != "absent") and (item.version | regex_replace('p.*', '') is version('2.1', '<'))
+  tags:
+    - set-site-admin-pw
+
+# In the future this should be done with 'cmk-passwd' available from 2.1.0p16 (https://checkmk.com/werk/14389)
+# To keep things simple, we do it in a more generic way here, which works in all 2.1 releases
+- name: "Update Site Admin Password for Checkmk >= 2.1."  # noqa no-changed-when
+  become: true
+  ansible.builtin.shell: |
+    set -o pipefail
+    echo '{{ item.admin_pw }}' | htpasswd -i -B -C 12 /omd/sites/{{ item.name }}/etc/htpasswd cmkadmin
+  args:
+    executable: /bin/bash
+  no_log: true
+  loop: "{{ checkmk_server_sites }}"
+  when: (item.state != "absent") and (item.version | regex_replace('p.*', '') is version('2.1', '>='))
+  tags:
+    - set-site-admin-pw

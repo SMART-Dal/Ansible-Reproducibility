@@ -1,0 +1,49 @@
+---
+- name: Wireguard deployment
+  hosts: '{{target|default("all")}}'
+  become: true
+  gather_facts: true
+
+  roles:
+    - name: wireguard
+
+  post_tasks:
+    - name: Install iptables
+      ansible.builtin.package:
+        name:
+          - iptables
+
+    - name: Install iptables-persistent for Debian family
+      ansible.builtin.package:
+        name:
+          - iptables-persistent
+      when:
+        - ansible_os_family == "Debian"
+
+    - name: Install iptables-persistent for Redhat family
+      ansible.builtin.package:
+        name:
+          - iptables-services
+      when:
+        - ansible_os_family == "RedHat"
+
+    - name: Setup MASQUERADE for server access through vpn server
+      ansible.builtin.iptables:
+        chain: POSTROUTING
+        jump: MASQUERADE
+        table: nat
+        source: "{{ wireguard_address }}"
+        out_interface: "{{ wireguard_out_interface }}"
+
+    - name: Save current state of the firewall in system file
+      community.general.iptables_state:
+        state: saved
+        path: /etc/iptables/rules.v4
+
+    - name: Setup ipv4 IP forward
+      ansible.posix.sysctl:
+        name: net.ipv4.ip_forward
+        value: 1
+        sysctl_set: true
+        state: present
+        reload: true

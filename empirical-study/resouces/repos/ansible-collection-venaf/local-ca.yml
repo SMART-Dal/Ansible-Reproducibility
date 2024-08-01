@@ -1,0 +1,45 @@
+# Locally retrieves Certificate Authority configuration
+# Copy CA public key to remote host from inventory
+---
+- name: "Create directory {{ ssh_ca_dir }}"
+  ansible.builtin.file:
+    path: "{{ ssh_ca_dir }}"
+    mode: 0755
+  delegate_to: localhost
+
+- name: "Retrieve CA public key on local host"
+  venafi.machine_identity.venafi_ssh_ca:
+    url: "{{ venafi.url | default(omit) }}"
+    test_mode: "{{ venafi.test_mode if venafi.test_mode is defined else 'false' }}"
+    user: "{{ venafi.user | default(omit) }}"
+    password: "{{ venafi.password | default(omit) }}"
+    access_token: "{{ venafi.access_token | default(omit) }}"
+    trust_bundle: "{{ venafi.trust_bundle | default(omit) }}"
+    token: "{{ venafi.token | default(omit) }}"
+    state: "{{ ssh_ca_state | default(omit) }}"
+    force: "{{ ssh_ca_force | default(omit) }}"
+    ca_template: "{{ ssh_ca_template | default(omit) }}"
+    ca_guid: "{{ ssh_ca_guid | default(omit) }}"
+    public_key_path: "{{ ssh_ca_public_key_path | default(omit) }}"
+  delegate_to: localhost
+  register: ssh_ca_output
+
+- name: "Dump test output"
+  ansible.builtin.debug:
+    msg: "{{ ssh_ca_output }}"
+
+- name: "Set fact"
+  ansible.builtin.set_fact:
+    ssh_ca_principals_fact: "{{ ssh_ca_output.ssh_ca_principals | trim }}"
+
+- name: "Check CA public key file exists"
+  ansible.builtin.stat:
+    path: "{{ ssh_ca_public_key_path }}"
+  register: ssh_ca_pub_key
+
+- name: "Copy CA public key file to remote location {{ ssh_ca_remote_public_key_path if ssh_ca_remote_public_key_path else ssh_ca_public_key_path }}"
+  ansible.builtin.copy:
+    src: "{{ ssh_ca_public_key_path }}"
+    dest: "{{ ssh_ca_remote_public_key_path if ssh_ca_remote_public_key_path else ssh_ca_public_key_path }}"
+    mode: 0644
+  when: ssh_ca_pub_key.stat.exists

@@ -1,0 +1,16 @@
+---
+
+- name: check that the required check parameters are defined
+  assert:
+    that:
+      - check.name | length > 0
+      - >
+        check.type == 'host' or
+        (
+          check.type == 'service' and
+          check.service | length > 0
+        ) or
+        check.type == 'node'
+  loop: "{{ node.checks }}"
+  loop_control:
+    loop_var: check

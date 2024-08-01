@@ -1,0 +1,9 @@
+---
+- name: Apply role sosreport
+  hosts: all
+  gather_facts: false
+  serial: "{{ osism_serial['sosreport']|default(osism_serial_default)|default(0) }}"
+  strategy: "{{ osism_strategy|default('linear') }}"
+
+  roles:
+    - role: osism.commons.sosreport

@@ -1,0 +1,5 @@
+---
+
+- name: Yum - install package icinga2-ido-mysql
+  yum:
+    name: icinga2-ido-mysql

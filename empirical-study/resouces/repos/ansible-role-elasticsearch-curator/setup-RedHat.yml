@@ -1,0 +1,5 @@
+---
+- name: Ensure pip is installed.
+  yum:
+    name: '{{ elasticsearch_curator_pip_package }}'
+    enablerepo: epel

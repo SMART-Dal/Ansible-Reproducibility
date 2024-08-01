@@ -1,0 +1,19 @@
+---
+
+- when: cartridge_auth is not none
+  tags: cartridge-config
+  block:
+    - name: 'BLOCK: Select control instance'
+      include_tasks: 'blocks/set_control_instance.yml'
+      run_once: true
+      when: not control_instance
+
+    - name: 'Configure cartridge auth via {{ control_instance.name }}'
+      cartridge_configure_auth:
+        auth: '{{ cartridge_auth }}'
+        console_sock: '{{ control_instance.console_sock }}'
+        netbox_call_timeout: '{{ twophase_netbox_call_timeout }}'
+        upload_config_timeout: '{{ twophase_upload_config_timeout }}'
+        apply_config_timeout: '{{ twophase_apply_config_timeout }}'
+      run_once: true
+      delegate_to: '{{ control_instance.name }}'

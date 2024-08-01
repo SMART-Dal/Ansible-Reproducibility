@@ -1,0 +1,8 @@
+---
+- name: WireGuard
+  hosts: wireguard
+  become: true
+  tasks:
+    - name: Include wireguard role
+      ansible.builtin.include_role:
+        name: vladgh.system.wireguard

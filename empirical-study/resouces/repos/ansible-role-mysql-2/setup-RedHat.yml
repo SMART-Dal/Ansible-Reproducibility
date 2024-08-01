@@ -1,0 +1,6 @@
+---
+- name: Ensure MySQL packages are installed.
+  yum:
+    name: "{{ mysql_packages }}"
+    enablerepo: "{{ mysql_enablerepo | default(omit, true) }}"
+  register: rh_mysql_install_packages

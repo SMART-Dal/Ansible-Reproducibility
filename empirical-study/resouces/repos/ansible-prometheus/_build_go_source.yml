@@ -1,0 +1,190 @@
+---
+
+- name: Make directories for {{ prometheus_software_name_version }} build
+  become: true
+  file:
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    mode: 0750
+    path: '{{ prometheus_build_directory }}'
+  with_items:
+    - '{{ prometheus_software_src_dir }}'
+    - '{{ prometheus_software_build_dir }}'
+  loop_control:
+    loop_var: prometheus_build_directory
+
+- block:
+    - name: Include task to local_archive directories for {{ prometheus_software_name_version }} installation
+      include_tasks: _setup_local_archive.yml
+
+    - name: Set variables for {{ prometheus_software_name_version }} build
+      set_fact:
+        prometheus_software_local_archive_file: >-
+            {{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_src_url | basename }}
+
+    - name: Download {{ prometheus_software_name_version }} source to local archive
+      delegate_to: localhost
+      connection: local
+      run_once: true
+      get_url:
+        dest: '{{ prometheus_software_local_archive_file }}'
+        url: '{{ prometheus_software_src_url }}'
+      register: prometheus_download
+      retries: 5
+      delay: 10
+      until: prometheus_download is succeeded
+
+    - name: Copy locally archived {{ prometheus_software_name_version }} source archive to remote host
+      become: true
+      copy:
+        src: '{{ prometheus_software_local_archive_file }}'
+        dest: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
+        owner: '{{ prometheus_user }}'
+        group: '{{ prometheus_group }}'
+        mode: 0644
+
+    - name: Extract {{ prometheus_software_name_version }} source archive on remote host
+      become: true
+      unarchive:
+        extra_opts: '{{ prometheus_software_src_unarchive_opts | default(prometheus_default_src_unarchive_opts) }}'
+        src: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
+        dest: '{{ prometheus_software_src_dir }}'
+        creates: '{{ prometheus_software_src_dir }}/*'
+        owner: '{{ prometheus_user }}'
+        group: '{{ prometheus_group }}'
+        remote_src: true
+
+    - name: Remove temporary {{ prometheus_software_name_version }} source archive from remote host
+      become: true
+      file:
+        path: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
+        state: absent
+  when:
+    - prometheus_software_src_url is match('.*(tar.gz|zip)$')
+    - prometheus_local_archive | bool
+
+- name: Download and extract the {{ prometheus_software_name_version }} project source to {{ prometheus_software_build_dir }}
+  become: true
+  unarchive:
+    extra_opts: '{{ prometheus_software_src_unarchive_opts | default(prometheus_default_src_unarchive_opts) }}'
+    creates: '{{ prometheus_software_src_dir }}/*'
+    src: '{{ prometheus_software_src_url }}'
+    dest: '{{ prometheus_software_src_dir }}'
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    remote_src: true
+  register: prometheus_download
+  retries: 5
+  delay: 10
+  until: prometheus_download is succeeded
+  when:
+    - prometheus_software_src_url is match('.*(tar.gz|zip)$')
+    - not prometheus_local_archive | bool
+
+- name: Clone the {{ prometheus_software_name_version }} project source from {{ prometheus_software_src_url }} to {{ prometheus_software_src_dir }}
+  become: true
+  # become_user: '{{ prometheus_user }}'
+  git:
+    repo: '{{ prometheus_software_src_url }}'
+    dest: '{{ prometheus_software_src_dir }}'
+    version: '{{ prometheus_software_version }}'
+  register: prometheus_git_clone
+  retries: 5
+  delay: 10
+  until: prometheus_git_clone is succeeded
+  when: prometheus_software_src_url is not match('.*(tar.gz|zip)$')
+
+- name: 'Gather statistics on the file {{ prometheus_software_src_dir }}/Makefile'
+  become: true
+  # become_user: '{{ prometheus_user }}'
+  stat:
+    path: '{{ prometheus_software_src_dir }}/Makefile'
+  register: makefile
+
+- name: Prepare {{ prometheus_software_name_version }} source code
+  become: true
+  shell: 'go mod init ; go mod vendor'
+  register: prometheus_software_prepare
+  retries: 5
+  delay: 10
+  until: prometheus_software_prepare is succeeded
+  args:
+    chdir: '{{ prometheus_software_src_dir }}'
+    creates: '{{ prometheus_software_name }}'
+  environment:
+    GOPATH: '{{ prometheus_software_build_gopath }}'
+    GOROOT: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+    PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
+
+- name: Build {{ prometheus_software_name_version }} source code with Makefile
+  become: true
+  shell: '{{ prometheus_software_makefile_make_command }}'  # noqa 305
+  register: prometheus_software_build
+  retries: 5
+  delay: 10
+  until: prometheus_software_build is succeeded
+  args:
+    chdir: '{{ prometheus_software_src_dir }}'
+    creates: '{{ prometheus_software_name }}'
+  environment:
+    GOPATH: '{{ prometheus_software_build_gopath }}'
+    GOROOT: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+    PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
+  when: makefile.stat.exists
+
+- name: Build {{ prometheus_software_name_version }} source code without Makefile
+  become: true
+  # become_user: '{{ prometheus_user }}'
+  shell: '{{ prometheus_software_make_command }}'  # noqa 305
+  register: prometheus_software_build
+  retries: 5
+  delay: 10
+  args:
+    chdir: '{{ prometheus_software_src_dir }}'
+    creates: '{{ prometheus_software_name }}'
+  environment:
+    GOPATH: '{{ prometheus_software_build_gopath }}'
+    GOROOT: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+    PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
+  when: not makefile.stat.exists
+
+- name: Copy {{ prometheus_software_name_version }} to {{ prometheus_software_install_dir }}
+  become: true
+  copy:
+    remote_src: true
+    src: '{{ prometheus_software_src_dir }}/{{ prometheus_built_file }}'
+    dest: '{{ prometheus_software_install_dir }}'
+    mode: 0755
+    owner: root
+    group: '{{ prometheus_group }}'
+  with_items: '{{ prometheus_software_files | default([prometheus_software_binary_name], true) }}'
+  loop_control:
+    loop_var: prometheus_built_file
+  notify:
+    - Restart Prometheus service
+  register: prometheus_software_installation
+
+- name: Synchronize the additional {{ prometheus_software_name_version }} directories to {{ prometheus_software_install_dir }} (where applicable)
+  include_tasks: _copy_remote_directory_contents.yml
+  vars:
+    prometheus_copy_dest_dir: '{{ prometheus_software_install_dir }}/{{ prometheus_software_copy_dir.name }}'
+    prometheus_copy_src_dir: '{{ prometheus_software_src_dir }}/{{ prometheus_software_copy_dir.name }}'
+    prometheus_copy_dir_mode: '{{ prometheus_software_copy_dir.dir_mode }}'
+    prometheus_copy_file_mode: '{{ prometheus_software_copy_dir.file_mode }}'
+  with_items: '{{ prometheus_software_build_copy_dirs }}'
+  loop_control:
+    loop_var: prometheus_software_copy_dir
+  when: prometheus_software_build_copy_dirs is defined and prometheus_software_build_copy_dirs | length >= 1
+
+- name: Delete {{ prometheus_tmp_dir }} directory following {{ prometheus_software_name_version }} build
+  become: true
+  file:
+    path: '{{ prometheus_tmp_dir }}'
+
+- name: Create {{ prometheus_tmp_dir }} directory
+  become: true
+  file:
+    path: '{{ prometheus_tmp_dir }}'
+    mode: 0755
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'

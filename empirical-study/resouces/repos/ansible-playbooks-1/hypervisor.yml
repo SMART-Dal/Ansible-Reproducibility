@@ -1,0 +1,7 @@
+- hosts: all
+  name: Turn Server into hypervisor
+  strategy: free
+  tasks:
+    - name: Hypervisor
+      ansible.builtin.import_role:
+        name: hypervisor

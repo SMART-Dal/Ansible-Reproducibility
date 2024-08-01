@@ -1,0 +1,25 @@
+---
+- name: "[Debian] Discover repository"
+  block:
+    - name: Install dependencies for percona-release
+      apt:
+        name: curl
+
+    - name: Install Repository
+      apt:
+        deb: "{{ xtrabackup_repository_package }}"
+      notify:
+        - "Enable repository"
+        - "[Debian] update cache"
+
+    - meta: flush_handlers
+  when:
+    - ansible_os_family == 'Debian'
+
+- name: "[RedHat] Install yum repository"
+  yum:
+    name: "{{ xtrabackup_percona_yum_repository }}"
+  notify:
+    - "Enable repository"
+  when:
+    - ansible_os_family == 'RedHat'

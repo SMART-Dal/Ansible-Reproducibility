@@ -1,0 +1,16 @@
+---
+- name: Remove cloud-user user
+  ansible.builtin.user:
+    name: cloud-user
+    remove: true
+- name: Remove cloud-init file from /etc/sudoers.d
+  ansible.builtin.file:
+    path: /etc/sudoers.d/90-cloud-init-users
+- name: Remove cloud-user from /etc/sudoers file
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    regexp: '^cloud-user'
+- name: Remove cloud-init package
+  ansible.builtin.dnf:
+    name: cloud-init
+    disablerepo: "*"

@@ -1,0 +1,15 @@
+- name: Run the equivalent of "yum update" as a separate step
+  yum:
+    name: '*'
+    state: latest
+  tags:
+    - yum
+    - update_packages
+
+- name: Update all packages to their latest version
+  yum:
+    name: '*'
+    state: latest
+  tags:
+    - yum
+    - upgrade_all

@@ -1,0 +1,7 @@
+---
+- name: Apply role clevis
+  hosts: "{{ hosts_clevis|default('clevis') }}"
+  serial: "{{ osism_serial['clevis']|default(osism_serial_default)|default(0) }}"
+
+  roles:
+    - role: osism.commons.clevis

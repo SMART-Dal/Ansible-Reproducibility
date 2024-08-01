@@ -1,0 +1,12 @@
+- name: Run a Windows command
+  win_command: "echo {{ item }}"
+  register: command_output
+  when: ansible_os_family == 'Windows'
+  assert:
+  that: command_output.results | map(attribute='rc') | list == [0, 0]
+
+- name: Run hardware-specific command
+  command: "lspci"
+  register: lspci_output
+  debug:
+    var: lspci_output.stdout_lines

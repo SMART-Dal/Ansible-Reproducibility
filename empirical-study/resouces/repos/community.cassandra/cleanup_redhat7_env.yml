@@ -1,0 +1,10 @@
+- name: redhat_remove_cassandra
+  yum:
+    name: "{{ cassandra_yum_pkg }}"
+
+- name: Downgrade pip when CentOS 7
+  pip:
+    name: pip==8.1.2
+  when:
+    - ansible_os_family == 'RedHat'
+    - ansible_distribution_major_version == "7"

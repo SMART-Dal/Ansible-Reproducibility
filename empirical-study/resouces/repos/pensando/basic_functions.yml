@@ -1,0 +1,217 @@
+#!/usr/bin/ansible-playbook
+---
+#
+#      Copyright (c) 2020 World Wide Technology, LLC
+#      All rights reserved.
+#
+#      author: Joel W. King, World Wide Technology
+#
+#      Playbook to test and demonstrate the basic functionality of module network_security_policy
+#
+#      usage: ./basic_functions.yml -e "password=foo"
+#                                    --start-at-task "Query app" -v
+#                                    --step
+#
+#  
+- hosts: localhost
+  gather_facts: no
+  connection: local
+
+  vars_files:
+    # None
+
+  vars:
+    password: "Pensando0$"                    # I only show it because it is the documented default
+    policy_name: quarantine
+    psm_host: 10.255.40.39
+    #
+    #  YAML format of a policy
+    #
+    quarantine:
+      - action: deny
+        from-ip-addresses: 
+          - 198.51.100.0/24
+        proto-ports:
+          - ports: '123'
+            protocol: udp
+        to-ip-addresses:
+          - 192.0.2.0/24
+
+  collections:
+    - joelwking.pensando
+
+  module_defaults:
+    network_security_policy:
+      hostname: '{{ psm_host }}'
+      username: admin
+      password: '{{ password }}'
+      api_version: v1
+      tenant: default
+      namespace: default
+
+    app:
+      hostname: '{{ psm_host }}'
+      username: admin
+      password: '{{ password }}'
+      api_version: v1
+      tenant: default
+      namespace: default
+
+  tasks:
+    - name: Query All Policy  (even though only one may be allowed)
+      network_security_policy:
+        state: query
+      register: all_policy
+
+    - name: Reference elements of the Policy
+      debug:
+        msg: '{{ all_policy.policy["items"][0].meta.name }}'
+
+    - name: Query a Policy
+      network_security_policy:
+        state: query
+        policy_name: '{{ policy_name }}'
+      register: named_policy
+
+    - name: Reference elements of the Policy
+      debug:
+        msg: '{{ named_policy.policy.meta.name }} : {{named_policy.policy.meta.uuid }}'
+
+    - name: Attempt to Delete Policy which does not exist
+      network_security_policy:
+        state: absent
+        policy_name: foo
+          
+    - name: Add a network_security_policy
+      network_security_policy:
+        state: present
+        policy_name: '{{ policy_name }}'
+        rules: '{{ quarantine }}'
+      ignore_errors: True
+
+    - name: Delete Policy which does exist
+      network_security_policy:
+        state: absent
+        policy_name: '{{ policy_name }}'
+      ignore_errors: True 
+
+    - name: Add a network_security_policy
+      network_security_policy:
+        state: present
+        policy_name: '{{ policy_name }}'
+        rules: '{{ quarantine }}'
+      ignore_errors: True
+
+    - name: Replace a network_security_policy
+      network_security_policy:
+        state: present
+        operation: replace
+        policy_name: '{{ policy_name }}'
+        rules: 
+          - apps: 
+              - "Wordpress-cl3_v2"
+              - "PolicyPubApp_latest"
+            action: permit
+            from-ip-addresses: 
+              - "198.51.100.0/24"
+            to-ip-addresses: 
+              - "192.0.2.0/23"
+          - proto-ports: 
+              - protocol: udp
+                ports: '123'
+              - protocol: tcp
+                ports: '22'
+            action: permit
+            from-ip-addresses: 
+              - "198.18.0.0/24"
+            to-ip-addresses: 
+              - "198.18.0.0/15"
+      ignore_errors: True
+
+    - name: Update a network_security_policy
+      network_security_policy:
+        state: present
+        operation: append
+        policy_name: '{{ policy_name }}'
+        rules: 
+          - apps: 
+              - "Wordpress-cl3_v2"
+            action: permit
+            from-ip-addresses: 
+              - "203.0.113.0/24"
+            to-ip-addresses: 
+              - "203.0.113.0/24"
+          - action: deny
+            from-ip-addresses: 
+              - 198.51.100.0/24
+              - 192.0.2.128/25
+            proto-ports:
+              - ports: '123'
+                protocol: udp
+            to-ip-addresses:
+              - 192.0.2.0/24
+      ignore_errors: True
+    #
+    #    --start-at-task "Query all apps" -v    to skip over network_security_policy
+    #
+    - name: Query all apps
+      app:
+        state: query
+      register: all_apps
+
+    - name: Query app by name
+      app: 
+        state: query
+        app_name: "ACI-Demo-Wordpress_latest"
+      ignore_errors: True
+      register: named_app
+
+    - debug:
+        msg: '{{ named_app.app.meta["self-link"] }}'
+
+    - name: Delete app
+      app:
+        state: absent
+        app_name: SAMPLE
+
+    - name: Create app
+      app:
+        state: present
+        app_name: SAMPLE
+        proto_ports:
+            - protocol: icmp                 # This is valid
+            - protocol: icmp                 # This is valid
+              ports: ""
+        #    - protocol: icmp                # This will fail.
+        #      ports: "unspecified"
+            - protocol: tcp
+              ports: "21"
+            - protocol: tcp
+              ports: "137-138"
+            - protocol: udp
+              ports: "8000,8001,8002"
+            - protocol: udp
+              ports: "1001-1010"
+            - protocol: tcp
+              ports: "1492-1492"
+            - protocol: tcp                  # Remove duplicates
+              ports: "22"
+            - protocol: tcp 
+              ports: "22"
+        #    - protocol: tcp
+        #      ports: "21-20"                #  first number cannot be higher than second
+
+    - name: Create app which currently exists
+      app:
+        state: present
+        app_name: SAMPLE
+        proto_ports:
+          - protocol: icmp
+      ignore_errors: True                    # Should fail
+    
+    - name: Create app with empty list, should fail
+      app:
+        state: present
+        app_name: NOPOLICY
+        proto_ports: []                      # Empty list
+      ignore_errors: True                    # Should fail

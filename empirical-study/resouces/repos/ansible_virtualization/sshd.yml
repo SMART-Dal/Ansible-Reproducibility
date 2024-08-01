@@ -1,0 +1,13 @@
+---
+- name: Configure SSH daemon.
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - { regexp: '^PermitRootLogin', line: 'PermitRootLogin no' }
+    - { regexp: '^UseDNS', line: 'UseDNS no' }
+    - { regexp: '^GSSAPIAuthentication', line: 'GSSAPIAuthentication no' }
+    - { regexp: '^AddressFamily', line: 'AddressFamily inet' }
+  notify: restart sshd
+  become: yes

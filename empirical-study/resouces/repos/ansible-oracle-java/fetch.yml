@@ -1,0 +1,9 @@
+---
+# Fetches .rpm, .tar.gz or .dmg files directly from Oracle
+
+- name: Download JDK (as {{ install_file_extension }} file)
+  get_url:
+    url: "{{ jdk_file_url }}.{{ install_file_extension }}"
+    headers: {Cookie: "oraclelicense=accept-securebackup-cookie"}
+    dest: "{{ java_download_path }}/{{ jdk_file_name }}.{{ install_file_extension }}"
+  register: jdk_download_response

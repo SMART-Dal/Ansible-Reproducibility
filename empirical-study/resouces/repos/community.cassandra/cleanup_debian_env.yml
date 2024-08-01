@@ -1,0 +1,4 @@
+---
+- name: Remove cassandra rpm
+  apt:
+    name: "{{ cassandra_deb_pkg }}"

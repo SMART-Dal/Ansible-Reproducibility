@@ -1,0 +1,72 @@
+---
+
+- when: not expelled
+  tags: cartridge-instances
+  block:
+    - name: 'BLOCK: Extend systemd unit files'
+      include_tasks: 'blocks/extend_systemd_unit_files.yml'
+      when: cartridge_extra_env is not none
+
+    - name: 'Manage instance parameters in runtime'
+      cartridge_patch_instance_in_runtime:
+        console_sock: '{{ instance_info.console_sock }}'
+        instance_config: '{{ config }}'
+        cartridge_defaults: '{{ cartridge_defaults }}'
+      when: (restarted == false) or (restarted is none and not needs_restart)
+
+    - name: 'Check if instance restart is required to use new config'
+      cartridge_get_needs_restart:
+        app_name: '{{ cartridge_app_name }}'
+        config: '{{ config }}'
+        cartridge_defaults: '{{ cartridge_defaults }}'
+        cluster_cookie: '{{ cartridge_cluster_cookie }}'
+        cartridge_not_save_cookie_in_app_config: '{{ cartridge_not_save_cookie_in_app_config }}'
+        stateboard: '{{ stateboard }}'
+        instance_info: '{{ instance_info }}'
+        check_config_updated: true
+      when:
+        - restarted is none
+        - not needs_restart
+      register: needs_restart_res
+
+    - name: 'Set "needs_restart" fact'
+      set_fact:
+        needs_restart: '{{ needs_restart_res.fact }}'
+      when: "'fact' in needs_restart_res"
+
+    - name: 'Check that cluster cookie is specified or cartridge_not_save_cookie_in_app_config is true'
+      assert:
+        that: cartridge_not_save_cookie_in_app_config or cartridge_cluster_cookie is not none
+        msg: 'cartridge_cluster_cookie should be specified to configure instance'
+        quiet: true
+      when: inventory_hostname in single_instances_for_each_machine
+
+    - name: 'Place default config'
+      copy:
+        content: >-
+          {{
+            {
+              cartridge_app_name: cartridge_defaults | combine(
+                {"cluster_cookie": cartridge_cluster_cookie}
+                if not cartridge_not_save_cookie_in_app_config
+                else {}
+              )
+            } | to_nice_yaml
+          }}
+        dest: '{{ instance_info.app_conf_file }}'
+        owner: '{{ cartridge_app_user }}'
+        group: '{{ cartridge_app_group }}'
+        mode: '644'
+      when: inventory_hostname in single_instances_for_each_machine
+
+    - name: 'Place instance config'
+      copy:
+        content: >-
+          {{
+            { instance_info.instance_id: config }
+              | to_nice_yaml
+          }}
+        dest: '{{ instance_info.conf_file }}'
+        owner: '{{ cartridge_app_user }}'
+        group: '{{ cartridge_app_group }}'
+        mode: '644'

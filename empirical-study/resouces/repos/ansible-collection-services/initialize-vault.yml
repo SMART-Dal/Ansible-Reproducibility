@@ -1,0 +1,31 @@
+---
+- name: Initialize vault
+  community.docker.docker_container_exec:
+    container: "{{ vault_container_name }}"
+    command: sh -c 'VAULT_ADDR=http://localhost:8200 vault operator init -format yaml'
+  register: result
+
+- name: Set vault_key_shares fact
+  ansible.builtin.set_fact:
+    vault_key_shares: "{{ result.stdout | from_yaml }}"
+
+- name: Output vault key shares
+  ansible.builtin.debug:
+    var: vault_key_shares
+  when: vault_output_key_shares|bool
+
+- name: Write vault key shares
+  ansible.builtin.template:
+    src: config-vault-key.j2
+    dest: "{{ vault_key_shares_path }}"
+    mode: 0600
+  when: vault_write_key_shares|bool
+
+- name: Set osism.vault.status fact
+  ansible.builtin.include_role:
+    name: osism.commons.state
+  vars:
+    state_name: osism
+    state_section: vault
+    state_option: status
+    state_value: "True"

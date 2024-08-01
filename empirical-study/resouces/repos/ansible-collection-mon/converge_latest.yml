@@ -1,0 +1,67 @@
+---
+- name: Prepare earlier package
+  hosts: all
+  tasks:
+    - name: Import defaults, vars from zabbix_agent role
+      ansible.builtin.include_role:
+        name: zabbix_agent
+        tasks_from: init
+        public: true
+
+    - name: Install earlier agent version with apt
+      when: ansible_distribution == "Ubuntu"
+      ansible.builtin.apt:
+        force: true
+        deb: >-
+          {{ "http://repo.zabbix.com/zabbix/"
+            + agent_major_version | string
+            + "/ubuntu"
+            + (ansible_architecture == 'aarch64') | ternary('-arm64', '')
+            + "/pool/main/z/zabbix/zabbix-agent_"
+            + agent_major_version | string
+            + "." + agent_minor_version | string
+            + "-1%2Bubuntu"
+            + ansible_distribution_version
+            + (ansible_architecture == 'aarch64') | ternary('_arm', '_amd')
+            + "64.deb" }}
+      vars:
+        agent_minor_version: 14
+
+    - name: Install earier agent version with yum
+      when: ansible_os_family == "RedHat"
+      ansible.builtin.yum:
+        allow_downgrade: true
+        name: >-
+          {{ "http://repo.zabbix.com/zabbix/"
+            + agent_major_version | string
+            + "/rhel/"
+            + ansible_distribution_version
+            + "/x86_64/"
+            + "zabbix-agent-"
+            + agent_major_version | string
+            + "." + agent_minor_version | string
+            + "-release1.el9.x86_64.rpm" }}
+      vars:
+        agent_minor_version: 14
+
+- name: Present
+  hosts: all
+  roles:
+    - role: zabbix_agent
+      #######################################
+      remove_previous_packages: false
+      report_path: '/tmp/latest_verify_zabbix_agent.report'
+      test_name: '{{ ansible_play_name }}'
+      #######################################
+      package_state: present
+
+- name: Latest
+  hosts: all
+  roles:
+    - role: zabbix_agent
+      #######################################
+      remove_previous_packages: false
+      report_path: '/tmp/latest_verify_zabbix_agent.report'
+      test_name: '{{ ansible_play_name }}'
+      #######################################
+      package_state: latest

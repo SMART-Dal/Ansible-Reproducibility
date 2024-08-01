@@ -1,0 +1,16 @@
+---
+- name: "Automation / Ansible / Control / Usage example"
+  hosts: "localhost"
+  gather_facts: true
+
+  tasks:
+    - name: "Example: Create directory structure for Ansible and create the site test"
+      vars:
+        auto_ansible_control:
+          resolve_prereq: true
+          prepare: true
+          setup: true
+        auto_ansible_control_site: "test"
+      ansible.builtin.include_role:
+        name: "serdigital64.automation.auto_ansible_control"
+...

@@ -1,0 +1,31 @@
+---
+- name: "Evaluate conga_aemdst_facts."
+  conga_aemdst_facts:
+    conga_config: "{{ response_test_config }}"
+
+- name: "Output conga_aemdst_config."
+  debug:
+    var: conga_aemdst_config
+    verbosity: 1
+
+- name: "Debug output."
+  debug:
+    msg:
+      - "initial url  : {{ conga_aemdst_config.response_test_initial_url }}"
+      - "expected url : {{ conga_aemdst_config.response_test_expected_url }}"
+      - "response_test_expected_http_code : {{ response_test_expected_http_code }}"
+
+- name: "Check for correct response code when following redirects."
+  include_tasks: curl.yml
+  vars:
+    conga_aemdst_curl_url: "{{ conga_aemdst_config.response_test_initial_url }}"
+    conga_aemdst_curl_server_port: "{{ conga_aemdst_config.listen_port }}"
+    conga_aemdst_curl_server_port_ssl: "{{ conga_aemdst_config.listen_port_ssl }}"
+    conga_aemdst_curl_resolve_ip: "{{ conga_aemdst_config.server_listen_address }}"
+    conga_aemdst_curl_resolve_ip_ssl: "{{ conga_aemdst_config.server_listen_address_ssl }}"
+    conga_aemdst_curl_expected_url: "{{ conga_aemdst_config.response_test_expected_url }}"
+    conga_aemdst_curl_expected_url_test_lazy: "{{ response_test_lazy }}"
+    conga_aemdst_curl_response_test_http_code_override: "{{ conga_aemdst_config.response_test_http_code_override }}"
+    conga_aemdst_curl_follow_redirects_expected_http_code: "{{ response_test_expected_http_code }}"
+    conga_aemdst_curl_follow_redirects: "{{ response_test_follow_redirects }}"
+    conga_aemdst_curl_headers: "{{ conga_aemdst_config.response_test_headers }}"

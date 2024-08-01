@@ -1,0 +1,55 @@
+---
+
+- name: "Debian: Add postgresql.org repository GPG key"
+  ansible.builtin.apt_key:
+    url: "{{ postgresql__gpg_url }}"
+
+- name: "Debian: Configure postgresql.org apt repository"
+  ansible.builtin.apt_repository:
+    repo: "{{ postgresql__apt_repo }}"
+    state: present
+    update_cache: yes
+
+- name: "Debian: Install postgresql-common"
+  ansible.builtin.apt:
+    name: "postgresql-common"
+
+- name: Disable initdb
+  ansible.builtin.lineinfile:
+    path: /etc/postgresql-common/createcluster.conf
+    regexp: "^create_main_cluster ="
+    line: create_main_cluster = false
+    insertafter: "^#create_main_cluster ="
+  when: postgresql__disable_initdb
+
+- name: "Debian: Install postgresql package"
+  ansible.builtin.apt:
+    name: "postgresql-{{ postgresql__version }}"
+  notify:
+    - Restart postgresql
+
+- name: "Debian: Install python-psycopg2"
+  ansible.builtin.apt:
+    name: "python-psycopg2"
+  when: ansible_python.version.major == 2
+
+- name: "Debian: Install python3-psycopg2"
+  ansible.builtin.apt:
+    name: "python3-psycopg2"
+  when: ansible_python.version.major == 3
+
+- name: "Debian: Install postgresql extensions"
+  ansible.builtin.apt:
+    name: "postgresql-{{ postgresql__version }}-{{ item }}"
+  notify: Restart postgresql
+  with_items: "{{ postgresql__extensions }}"
+
+- name: "Debian: Install pgbackrest"
+  ansible.builtin.apt:
+    name: "pgbackrest"
+  when: postgresql__install_pgbackrest
+
+- name: "Debian: Install pg_auto_failover"
+  ansible.builtin.apt:
+    name: [ "pg-auto-failover-cli", "postgresql-{{ postgresql__version }}-auto-failover" ]
+  when: postgresql__install_pg_auto_failover

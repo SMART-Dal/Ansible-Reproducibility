@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-gitlab_runner
+      gitlab_runner_tags:
+        - docker
+        - my_runner

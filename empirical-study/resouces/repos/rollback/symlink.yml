@@ -1,0 +1,5 @@
+---
+- name: ANSISTRANO | Change symlink from current release to a previous one
+  file:
+    path: "{{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}"
+    src: "./{{ ansistrano_version_dir }}/{{ ansistrano_rollback_release_version }}"

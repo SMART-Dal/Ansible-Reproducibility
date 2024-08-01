@@ -1,0 +1,8 @@
+---
+- name: Apply role fail2ban
+  hosts: all
+  serial: "{{ osism_serial['fail2ban']|default(osism_serial_default)|default(0) }}"
+  strategy: "{{ osism_strategy|default('linear') }}"
+
+  roles:
+    - role: osism.services.fail2ban
