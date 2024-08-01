@@ -1,4 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_debian_packages.yml,1,Install ceph for debian,Version Specific Installation
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_debian_packages.yml,1,Install ceph for debian,Outdated Dependencies
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,install_debian_packages.yml,1,Install ceph for debian,Broken Dependency Chain

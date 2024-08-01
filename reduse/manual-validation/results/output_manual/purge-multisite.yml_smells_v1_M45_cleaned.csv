@@ -1,2 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,purge-multisite.yml,1,Task 1,Broken Dependency Chain,Task did not check the correctness of execution.

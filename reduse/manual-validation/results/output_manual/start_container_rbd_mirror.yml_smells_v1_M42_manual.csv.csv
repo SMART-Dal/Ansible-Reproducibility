@@ -1,5 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_container_rbd_mirror.yml,1,Include_tasks systemd.yml,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_container_rbd_mirror.yml,3,Systemd start rbd mirror container,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_container_rbd_mirror.yml,3,Systemd start rbd mirror container,Broken Dependency Chain

@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,rgw_systemd_environment_file.yml,1,Create rados gateway instance directories,Idempotency,Task changes the state of the file without checking.
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,rgw_systemd_environment_file.yml,1,Create rados gateway instance directories,Missing Dependencies,"
-Task is using absolute path for source path"
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,rgw_systemd_environment_file.yml,2,Generate environment file,Idempotency,Task changes the state of the file without checking.

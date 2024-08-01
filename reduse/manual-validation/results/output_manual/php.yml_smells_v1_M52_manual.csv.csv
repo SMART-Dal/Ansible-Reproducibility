@@ -1,3 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,php.yml,1,Adjust OpCache memory setting.,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,php.yml,1,Adjust OpCache memory setting.,Broken Dependency Chain

@@ -1,4 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_ceph_initial_dirs.yml,1,Create ceph initial directories,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_ceph_initial_dirs.yml,1,Create ceph initial directories,Missing Dependencies
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_ceph_initial_dirs.yml,1,Create ceph initial directories,Broken Dependency Chain

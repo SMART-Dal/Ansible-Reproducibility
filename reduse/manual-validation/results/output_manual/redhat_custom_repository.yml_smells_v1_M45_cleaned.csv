@@ -1,8 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_custom_repository.yml,1,Configure red hat custom rpm key,Broken Dependency Chain,Task did not check the correctness of execution.
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_custom_repository.yml,2,Configure red hat custom repository,Assumption about Environment,"Task assumes that the package repository is available at a specific URL structure. 
-
-
-"
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_custom_repository.yml,2,Configure red hat custom repository,Broken Dependency Chain,Error

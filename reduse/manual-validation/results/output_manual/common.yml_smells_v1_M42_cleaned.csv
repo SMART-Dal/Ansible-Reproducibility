@@ -1,9 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,1,Get keys from monitors,Idempotency,Error
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,2,Copy ceph key(s) if needed,Idempotency,Task changes the state of the file without checking.
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,13,Copy SSL certificate & key data to certificate path,Idempotency,Task changes the state of the file without checking.
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,common.yml,13,Copy SSL certificate & key data to certificate path,Broken Dependency Chain,"Task uses a fixed certificate which can become outdated.
-Task uses a fixed certificate which can become outdated.
-Task did not check the correctness of execution."

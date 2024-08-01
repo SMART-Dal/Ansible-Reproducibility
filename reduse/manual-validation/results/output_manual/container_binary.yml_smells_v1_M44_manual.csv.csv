@@ -1,4 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,container_binary.yml,1,Check if podman binary is present,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,container_binary.yml,2,Set_fact container_binary,Broken Dependency Chain

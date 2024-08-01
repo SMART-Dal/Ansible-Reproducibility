@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,setup_container.yml,1,Include_tasks systemd.yml,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,setup_container.yml,2,Start the node_exporter service,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,setup_container.yml,2,Start the node_exporter service,Missing Dependencies
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,setup_container.yml,2,Start the node_exporter service,Broken Dependency Chain

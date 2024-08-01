@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,helm-cleanup.yml,1,Remove phpMyAdmin with Helm.,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,helm-cleanup.yml,2,Delete helm binary.,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,helm-cleanup.yml,2,Delete helm binary.,Missing Dependencies
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,helm-cleanup.yml,2,Delete helm binary.,Broken Dependency Chain

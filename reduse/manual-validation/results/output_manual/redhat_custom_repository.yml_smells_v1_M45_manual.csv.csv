@@ -1,5 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_custom_repository.yml,1,Configure red hat custom rpm key,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_custom_repository.yml,2,Configure red hat custom repository,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,redhat_custom_repository.yml,2,Configure red hat custom repository,Broken Dependency Chain

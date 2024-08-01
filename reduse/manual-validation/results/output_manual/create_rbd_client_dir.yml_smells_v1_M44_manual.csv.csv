@@ -1,3 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rbd_client_dir.yml,1,Create rbd client directory,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,create_rbd_client_dir.yml,1,Create rbd client directory,Missing Dependencies

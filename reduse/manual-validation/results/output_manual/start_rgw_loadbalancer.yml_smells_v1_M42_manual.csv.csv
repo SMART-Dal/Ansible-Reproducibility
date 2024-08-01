@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_rgw_loadbalancer.yml,1,Start haproxy,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_rgw_loadbalancer.yml,1,Start haproxy,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_rgw_loadbalancer.yml,2,Start keepalived,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,start_rgw_loadbalancer.yml,2,Start keepalived,Broken Dependency Chain

@@ -1,8 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,https-self-signed.yml,1,Ensure apt cache is updated.,Idempotency,Task violates idempotency because it installs or upgrades packages with apt.
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,https-self-signed.yml,1,Ensure apt cache is updated.,Version Specific Installation,Task uses apt to install a latest version which could get incompatible.
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,https-self-signed.yml,1,Ensure apt cache is updated.,Outdated Dependencies,The installed package could become outdated because the script does not update it.
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,https-self-signed.yml,1,Ensure apt cache is updated.,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
-Task did not check the correctness of execution."
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,https-self-signed.yml,2,Task 2,Broken Dependency Chain,Task did not check the correctness of execution.

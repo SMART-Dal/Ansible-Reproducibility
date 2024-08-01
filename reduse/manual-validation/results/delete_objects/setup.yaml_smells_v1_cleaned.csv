@@ -1,8 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,setup.yaml,8,Check pre-requisites,Assumption about Environment
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,setup.yaml,13,Create a bucket in OCI to create sample objects,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,setup.yaml,14,Create a temporary sample file to upload,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,setup.yaml,16,Put content in the temporary sample file,Broken Dependency Chain
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,setup.yaml,16,Put content in the temporary sample file,Idempotency
-/home/ghazal/Ansible-Reproducibility/test/testScripts/samples/object_storage/delete_objects,setup.yaml,22,Create an OCI object,Broken Dependency Chain

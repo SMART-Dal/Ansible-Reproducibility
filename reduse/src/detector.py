@@ -102,7 +102,7 @@ def process_file(input_file, output_directory=None):
     try:
         # Check if the input file exists
         if not os.path.isfile(input_file):
-            print(f"Error: The specified input file '{input_file}' does not exist.")
+            print("Error: The specified input file '{}' does not exist.".format(input_file))
             return
 
         # Open playbook file and extract tasks
@@ -115,9 +115,9 @@ def process_file(input_file, output_directory=None):
                 output_tasks, new_output_tasks = detector.detect_smells(task, task_number, input_file)
                 write_results_csv(output_tasks, new_output_tasks, input_file, output_directory)
     except FileNotFoundError:
-        print(f"Error: File '{input_file}' not found.")
+        print("Error: File '{}' not found.".format(input_file))
     except Exception as e:
-        print(f"An error occurred while processing file '{input_file}':", str(e))
+        print("An error occurred while processing file '{input_file}':", str(e))
 
 
 def get_files_from_directory(directory):

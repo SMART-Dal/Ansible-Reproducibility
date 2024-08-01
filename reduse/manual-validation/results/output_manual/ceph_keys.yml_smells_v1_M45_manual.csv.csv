@@ -1,5 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,ceph_keys.yml,1,Waiting for the monitor(s) to form the quorum...,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,ceph_keys.yml,1,Waiting for the monitor(s) to form the quorum...,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,ceph_keys.yml,2,Fetch ceph initial keys,Broken Dependency Chain

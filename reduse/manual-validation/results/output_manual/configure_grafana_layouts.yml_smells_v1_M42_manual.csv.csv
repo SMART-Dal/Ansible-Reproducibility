@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_grafana_layouts.yml,1,Set grafana url,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_grafana_layouts.yml,1,Set grafana url,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_grafana_layouts.yml,2,Inject grafana dashboard layouts,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_grafana_layouts.yml,2,Inject grafana dashboard layouts,Broken Dependency Chain

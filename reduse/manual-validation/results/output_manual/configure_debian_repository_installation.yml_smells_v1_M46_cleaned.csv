@@ -1,8 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_debian_repository_installation.yml,1,Include debian_community_repository.yml,Broken Dependency Chain,Task did not check the correctness of execution.
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_debian_repository_installation.yml,2,Include debian_dev_repository.yml,Broken Dependency Chain,Task did not check the correctness of execution.
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_debian_repository_installation.yml,6,Include debian_custom_repository.yml,Broken Dependency Chain,Task did not check the correctness of execution.
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_debian_repository_installation.yml,10,Include debian_uca_repository.yml,Broken Dependency Chain,Task did not check the correctness of execution.

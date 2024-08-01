@@ -1,9 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,1,Fetch ceph debian development repository,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,1,Fetch ceph debian development repository,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,2,Configure ceph debian development repository,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,2,Configure ceph debian development repository,Version Specific Installation
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,2,Configure ceph debian development repository,Outdated Dependencies
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,2,Configure ceph debian development repository,Assumption about Environment
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,debian_dev_repository.yml,2,Configure ceph debian development repository,Broken Dependency Chain

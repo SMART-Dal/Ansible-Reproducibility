@@ -1,2 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,check_pools.yml,1,Fail if target_size_ratio is not set when pg_autoscale_mode is True,Missing Dependencies,Task has missing dependencies

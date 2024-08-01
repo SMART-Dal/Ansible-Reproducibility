@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_memory_allocator.yml,1,Configure TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES for debian,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_memory_allocator.yml,1,Configure TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES for debian,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_memory_allocator.yml,2,Configure TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES for redhat,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ceph-ansible,configure_memory_allocator.yml,2,Configure TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES for redhat,Broken Dependency Chain

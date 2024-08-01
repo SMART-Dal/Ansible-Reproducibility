@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,main.yml,1,Allow sshd to listen on tcp port 2849.,Broken Dependency Chain,Task did not check the correctness of execution.
-Repository Name,File Name,Line Number,Task Name,Smell Name,Smell Description
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,main.yml,2,Update SSH configuration to be more secure.,Idempotency,Task changes the state of the file without checking.
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops,main.yml,2,Update SSH configuration to be more secure.,Broken Dependency Chain,"Task uses a fixed ID which can become outdated or incorrect across platforms.
-None"

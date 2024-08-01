@@ -1,6 +1,0 @@
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,1,Create temp directory,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,1,Create temp directory,Broken Dependency Chain
-Repository Name,File Name,Line Number,Task Name,Smell Name
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,2,Get worker machine current config name,Idempotency
-/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/openshift-ansible,apply_machine_config.yml,2,Get worker machine current config name,Broken Dependency Chain
