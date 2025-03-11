@@ -17,7 +17,6 @@
 
       perSystem =
         {
-          config,
           pkgs,
           lib,
           ...
@@ -29,13 +28,14 @@
             venvDir = "./.venv";
 
             packages = [
+              pkgs.python3
               # This execute some shell code to initialize a venv in $venvDir before
               # dropping into the shell
               pkgs.python3Packages.venvShellHook
-              # UV for Python dependency management
-              pkgs.uv
               # Ruff for python code analysis and code formatting
               pkgs.ruff
+              # UV for Python dependency management
+              pkgs.uv
             ];
 
             # Run this command, only after creating the virtual environment
