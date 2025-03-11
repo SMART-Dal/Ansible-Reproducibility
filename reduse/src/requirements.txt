@@ -1,8 +1,0 @@
-ansible==2.9.6
-apturl==0.5.2
-python-apt==2.0.0+ubuntu0.20.4.4
-pytz==2019.3
-PyYAML==5.3.1
-requests==2.22.0
-systemd-python==234
-urllib3==1.25.8

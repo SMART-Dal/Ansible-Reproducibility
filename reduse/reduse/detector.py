@@ -69,10 +69,9 @@
 
 import os
 import sys
-from datetime import datetime
-import smell_detection as detector
-import parser as parser
-from results import write_results_csv
+from . import smell_detection as detector
+from . import parser
+from .results import write_results_csv
 
 
 def main_method(input_path, output_directory=None):
@@ -102,18 +101,26 @@ def process_file(input_file, output_directory=None):
     try:
         # Check if the input file exists
         if not os.path.isfile(input_file):
-            print("Error: The specified input file '{}' does not exist.".format(input_file))
+            print(
+                "Error: The specified input file '{}' does not exist.".format(
+                    input_file
+                )
+            )
             return
 
         # Open playbook file and extract tasks
-        with open(input_file) as f:
+        with open(input_file):
             # Get the parsed tasks as a dictionary
             tasks = parser.get_parsed_tasks(input_file=input_file)
             task_number = 0
             for task in tasks:
                 task_number += 1
-                output_tasks, new_output_tasks = detector.detect_smells(task, task_number, input_file)
-                write_results_csv(output_tasks, new_output_tasks, input_file, output_directory)
+                output_tasks, new_output_tasks = detector.detect_smells(
+                    task, task_number, input_file
+                )
+                write_results_csv(
+                    output_tasks, new_output_tasks, input_file, output_directory
+                )
     except FileNotFoundError:
         print("Error: File '{}' not found.".format(input_file))
     except Exception as e:
