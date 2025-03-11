@@ -1,7 +1,7 @@
 import typer
-import detector as dt
-import parser as parser
-import smell_detection as sd
+from . import detector as dt
+from . import parser
+from . import smell_detection as sd
 
 app = typer.Typer()
 
@@ -18,7 +18,3 @@ def check_idempotency(path: str = typer.Argument(..., help="Path to the file")):
     for task in tasks:
         idempotency = sd.check_task_for_idempotency(task=task)
         typer.echo("Idempotency detection process has finished. " + idempotency)
-
-
-if __name__ == "__main__":
-    app(detect_all('/home/ghazal/Ansible-Reproducibility/src/extraction/test/manual_validation/ansible-for-devops/apache.yml'))
